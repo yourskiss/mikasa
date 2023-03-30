@@ -1,0 +1,68 @@
+
+.getintouchcontainer { 
+    display:none; z-index:9; position: fixed; left: 0; top: 0; height: 100%; width: 100%; 
+    article { display:block; z-index:1; position: fixed; left: 0; top: 0; height: 100%; width: 100%; background-color: $black8; background:#000000E0;  }
+    section { 
+        display: block;  z-index:2;  position:absolute; left:50%; top:50%; transform: translate(-50%, -45%); width: 95%; max-width:560px; height: auto;  max-height: 90%; background:$black8 url('../images/participate-form-bg.png') no-repeat center center; background-size: cover;   border-radius:0; margin:0 auto; padding:3rem 2rem; 
+        aside { 
+            z-index: 3; position: absolute;right:0;top:-20px; width: 24px; height: 24px; border-radius:0; padding:0; background:none; border: none; cursor: pointer; 
+            span { 
+                position: absolute; top: 0; width: 24px; height: 2.5px; background-color: $white; transition:all 0.5s ease-out; 
+                &:first-child { left: 0; transform: rotate(45deg); }
+                &:last-child { right: 0; transform: rotate(-45deg); }
+            }
+            &:hover {
+                 span { background-color: $green; transition:all 0.5s ease-in;  }
+            }
+        } 
+        h2 { width: 100%; float: left; text-align: center; color:$white; line-height: 1; font-size:34px; @include cutthecrap();  }
+        h3 { width: 100%; float: left; margin:1rem 0 0 0; text-align: center; color:$white; line-height: 1; font-size:14px; @include latosemibold(); }
+        ul { 
+            width: 100%; float: left; padding-left: 25%;
+            li { 
+                list-style: none; width: 100%; float: left;  margin:2rem 0 0 0; padding:0; @include fSC(); 
+                img { width: 40px; margin-right: 1rem; }
+                p { 
+                    text-align: left; 
+                    span { display: block;  @include latosemibold(); font-size: 16px; color: $white; }
+                    a { 
+                        @include latoregular(); font-size: 14px; color: $blue; @include tdu(); @include outT();
+                        &:hover {  color: $white; @include inT(); }
+                    }
+                }
+            } 
+        }
+    }
+ }
+ 
+ 
+
+@media only screen and (max-width:1023px) 
+{
+    .getintouchcontainer { 
+        section { 
+            max-width:300px; padding:2rem; 
+            aside { 
+                top:-15px; width: 20px; height: 20px;  
+                span { width: 20px; height: 2px; }
+            } 
+            h2 { font-size:24px; }
+            h3 {  margin:1rem 0 0 0; font-size:12px; line-height: 22px; }
+            ul { 
+                padding-left: 0;
+                li { 
+                    margin:1.5rem 0 0 0;
+                    img { width: 34px; margin-right:0.8rem; }
+                    p { 
+                        span {  font-size: 12px;  }
+                        a { font-size: 12px; }
+                    }
+                } 
+            }
+        }
+     }
+     
+}
+
+
+ 

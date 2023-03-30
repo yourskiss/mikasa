@@ -1,0 +1,68 @@
+.banner { 
+    background-color: $black; width: 100%;  float: left;  height: calc(100vh - 110px); 
+    .bannerSlideWeb { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
+    .bannerSlideMob { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
+    .bannerDown {
+         z-index: 4; position: absolute; left:50%; bottom:-35px; transform: translateX(-50%); width: 100%; float: left; text-align: center;
+         img { 
+            width: 59px; height: auto; display: inline-block; margin: 0 auto; @include tdn(); filter: brightness(0) invert(1); 
+            &:hover { filter:none;cursor: pointer;  @include inT(); }
+        }
+    }
+}
+
+
+
+.bannerSlider.slick-slider { width: 100%;  height: 100%; float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  }
+.bannerSlider.slick-slider .slick-list {  height: 100%; z-index: 2; margin: 0; padding: 0; overflow: visible; }
+.bannerSlider.slick-slider .slick-track {  height: 100%; display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;  }
+.bannerSlider.slick-slider .slick-slide {  height: 100%; margin: 0; padding: 0;  }
+.bannerSlider.slick-slider .slick-slide div {  height: 100%; }
+/*  arrows */
+.bannerSlider.slick-slider .slick-arrow { z-index: 3; opacity: 0; top:auto; top:50%; transform: translateY(-55%); width:35px; height:35px; border-radius: 50%; margin: 0; padding: 0; border:0; line-height: 1; background-color:$black; color:$white; @include fCC(); @include outT();  }
+.bannerSlider.slick-slider:hover .slick-arrow { opacity: 1; @include inT(); }
+.bannerSlider.slick-slider .slick-arrow:hover { background-color:$orange; color:$white; @include inT(); }
+.bannerSlider.slick-slider .slick-arrow.slick-disabled { opacity: 0; user-select: none; pointer-events:none; }
+.bannerSlider.slick-slider:hover .slick-arrow.slick-disabled { opacity: 0.4; user-select: none; pointer-events:none; }
+.bannerSlider.slick-slider .slick-next  { right:20px; } 
+.bannerSlider.slick-slider .slick-prev { left:20px; }
+.bannerSlider.slick-slider .slick-arrow:before { text-align: center; font-size:20px; line-height:0; font-family: 'fontawesome'; }
+.bannerSlider.slick-slider .slick-next:before { content: "\f105"; }
+.bannerSlider.slick-slider .slick-prev:before { content: "\f104"; }
+.bannerSlider.slick-slider .slick-arrow.slick-disabled { user-select: none; pointer-events: none; }
+/*  dots */
+.bannerSlider.slick-slider .slick-dots { z-index:3; bottom: 14%;  text-align: center; width: auto; left: 45%; }
+.bannerSlider.slick-slider .slick-dots li { position: relative; display: inline-block; width:32px; height:6px; margin: 0 5px; padding: 0; border: none; cursor: pointer; background:#656565; border-radius:5px; }
+.bannerSlider.slick-slider .slick-dots li.slick-active { transform: scale(1); background:$orange; }
+.bannerSlider.slick-slider .slick-dots li button { display: none; }
+
+.bannerItem { position: relative; width: 100%; height: 100%; float: left; }
+.bs1 { 
+    background-color: $blue; 
+    .bscontainer { 
+        position: absolute; z-index: 2; top:35%; left: 45%; transform: translateY(-50%); width: 500px; height: auto !important;
+        h2{
+            width: 100%;  float: left; text-align: left; @include fmedium(); font-weight: normal; color:$white;  font-size: 59px; line-height: 78px;
+            span { display: inline-block; color: $orange;}
+        }
+        h3{width: 100%;  float: left; text-align: left; @include fmedium(); font-weight: normal; color:$white;  font-size: 24px; line-height: 32px;}
+        h4{width: 100%;  float: left; text-align: left; @include fbold();   color:$orange;  font-size: 59px; line-height: 78px;}
+        p{
+            width: 100%;  float: left; text-align: left; @include fbook(); color:$white;  font-size: 15px; line-height: 25px; letter-spacing: 0.75px;
+            span { display: block; @include fbold(); }
+        }
+        aside {
+            width: 100%; float:right; margin-top: 2rem;
+            .bs_knowmore { 
+                 padding:1rem 2rem; width:auto; float: left; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 10px; font-size: 14px; letter-spacing:0.7px; line-height: 19px;
+                &:hover { background-color: $black;  color:$white; @include inT();  } 
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:599px) 
+{
+ 
+    
+}

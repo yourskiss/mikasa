@@ -1,0 +1,76 @@
+.header { 
+    z-index:8; position:fixed; left: 50%; top: 0; transform: translateX(-50%); @include fCC();  background-color: $white; width: 100%; max-width: 1600px; height: 110px;  
+    .headerInsider { 
+        display: flow-root; width: 95%;max-width: 1085px; margin: 0 auto; float:none;
+        .logo {
+             width:184px; float: left; 
+             img { width: 100%; }
+        }
+        .headerRight { 
+            display: block;  width: auto; float:right; margin: 0.4rem 1rem 0 0; 
+                ul { 
+                    @include fCC(); width: auto; float: left; 
+                    li { 
+                        list-style: none; margin: 0 1rem; display: inline-block;
+                        a { 
+                            float: left; width: auto; padding:0.5rem 0; @include outT();   text-align: center;  color:$black; @include tdn(); @include fbook(); background: none; border-bottom: solid 6px $white;  font-size: 13px; letter-spacing: 1.3px; line-height: 16px;
+                            &:hover, &.active { border-bottom-color: $orange; color:$orange;  @include inT(); }
+                        }
+                        ul {
+                            display: none;
+                        }
+                    }
+                }  
+        }
+        p {
+            display: block;  width: auto; float:right; margin-top: 0.5rem;
+            .enquirenowBtn { 
+                position: relative; padding:0.6rem 1.5rem; width: 100%; float: right; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center;cursor: pointer; @include tdn();  border-radius: 10px; font-size: 11px; letter-spacing: 1.1px; line-height: 14px;
+                &:hover { background-color: $black;  color:$white; @include inT();  } 
+            }
+        }
+        aside { 
+            display: none; float: right; width: 24px; height: 24px; position: relative; line-height: 1; 
+            span {
+               position: absolute;  float: left; width:100%; height: 2px; background-color: $black; line-height:2px; font-size: 2px; border-radius: 2px; padding: 0;
+                &:first-child { left: 0;  top: 0; @include outT(); }
+                &:nth-child(2) {left: 0;  top: 7px; @include outT(); }
+                &:last-child { right: 0;  top: 14px; @include outT(); }
+            }
+            &.active { 
+                span {
+                    &:first-child {top: 50%; transform: rotate(45deg);  @include inT(); }
+                    &:nth-child(2) { display: none; @include inT(); }
+                    &:last-child {top: 50%; transform: rotate(-45deg); @include inT(); }
+                }
+            }
+        }
+    }
+    
+}
+ 
+ 
+ 
+@media only screen and (max-width:599px) 
+{
+    .header { 
+        height: 70px;  
+        .headerInsider { 
+            .logo { width:100px;  }
+            aside { display: block;}
+            .headerRight { 
+                display: none; position: absolute;top: 70px; right: 0;width: 100%; background: $black; padding:0.8rem 2.5%; 
+                    ul { 
+                         margin-right: 0.5rem;width: 100%;
+                        li { 
+                            margin: 0 0.3rem; 
+                            a { width: 26px; height: 26px; line-height: 26px; font-size: 14px;  }
+                        }
+                    }
+            }
+        }
+        
+    }
+    
+}
+ 

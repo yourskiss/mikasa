@@ -1,0 +1,25 @@
+.hm_aboutwrap { 
+    @include fCC();  background: $orange; background-image: url('../images/bg_bott.png'), url('../images/home_about.png'); background-repeat:  no-repeat no-repeat; background-position: left top, bottom right; background-size: auto auto, auto 100%; width: 100%; float: left;  height: calc(100vh - 110px); padding: 3rem 0 5rem 0; border-top: solid 2px $blue3;
+   .hm_aboutInsider { 
+       display: flow-root; width: 95%;max-width: 1084px; margin: 0 auto; float:none;
+       .hm_abouttext{
+            width: 100%; max-width: 600px;  float: left; 
+            h2{width: 100%;  float: left; text-align: left; @include fbold();   color:$blue2;  font-size: 45px; line-height: 50px;}
+            p{width: 100%; margin: 1rem 0 2rem 0; float: left; text-align: left; @include fbook(); color:$white;  font-size: 16px; line-height: 28px; }
+            aside {
+                width: 100%; float:right;  
+                .hm_about_knowmoreBTN { 
+                    padding:1rem 2rem; width:auto; float: left; background-color: $blue2;  @include fmedium(); font-weight: normal; color:$white;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 10px; font-size: 14px; letter-spacing:0.7px; line-height: 19px;
+                    &:hover { background-color: $black;  color:$white; @include inT();  } 
+                }
+            }
+       }
+   }
+}
+
+
+@media only screen and (max-width:599px) 
+{
+
+   
+}

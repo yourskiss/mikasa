@@ -1,0 +1,47 @@
+.rangewrap { 
+     @include fCC();  background-color: $blue2; width: 100%; float: left;  height: calc(100vh - 110px); padding: 3rem 0 5rem 0;
+    .rangeInsider { 
+        display: flow-root; width: 95%;max-width: 1084px; margin: 0 auto; float:none;
+        .rangeheading {
+            width: 100%;  float: left; 
+            h2 { width: 100%;  float: left; text-align: left; @include fbold();   color:$orange;  font-size: 45px; line-height:60px; }
+            p {  width: 100%; max-width: 600px; margin:1.5rem 0 2.5rem 0; float: left; text-align: left; @include fbook(); color:$white;  font-size: 16px; line-height: 28px;  }
+        }
+        .rangcontainer {
+            width: 100%;  float: left; @include fBS(); align-items: stretch; height: 100%;
+            .rangbox { 
+                width:19%; float: left; background-color: $orange;
+                aside {
+                    position: relative; width: 100%; float: left;
+                    img { width: 100%; float: left;}
+                    span { position: absolute; left: 0; bottom: 0; background-color: $white; background: rgba(255,255,255, 0.5); width: 100%; padding: 1rem;  text-align: center; @include fbook(); color:$black;  font-size: 16px; line-height: 25px; letter-spacing: 0.8px; text-transform:uppercase; font-weight: bold; }
+                }
+                section { 
+                    width: 100%; float: left; padding: 1rem;
+                    p {  width: 100%;   float: left; text-align: center; @include fbook(); color:$white;  font-size: 16px; line-height: 22px;  }
+                    h5 { 
+                        position: relative; width: 100%; min-height: 60px; float: left; text-align: center; 
+                        img { max-width: 100%; margin: 0 auto; display: inline-block; }
+                        &:after { 
+                            content:''; position: absolute; left:50%; bottom: 0; transform: translateX(-50%); width: 25px; height:1px; background: $white;
+                        }
+                    }
+                    h6 { 
+                        width: 100%; float: left; text-align: center; margin-top: 1.5rem;
+                        .rangeKnowmoreBTN { 
+                            @include fmedium(); font-weight: normal; color:$white; cursor: pointer; @include tdn();  font-size: 14px; letter-spacing:0.7px; line-height: 19px;  @include outT(); text-transform: uppercase;
+                            &:hover {  color:$black; @include inT(); }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:599px) 
+{
+ 
+    
+}

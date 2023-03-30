@@ -1,0 +1,43 @@
+.hm_whyuswrap { 
+    @include fCC();  background: $blue2 url('../images/bg_top.png') no-repeat left bottom; width: 100%; float: left;  height: calc(100vh - 110px); padding: 3rem 0 5rem 0; border-top: solid 2px $blue3;
+
+   .hm_whyusInsider { 
+       display: flow-root; width: 95%;max-width: 1084px; margin: 0 auto; float:none;
+       .hm_whyusleft {
+           width: 50%;  float: left; 
+           h2{width: 100%;  float: left; margin-bottom:3rem; text-align: left; @include fbold();  color:$orange;  font-size: 45px; line-height: 50px;}
+           ul {
+                width: 100%;  float: left; @include fSS(); align-items: stretch;
+                li { 
+                    width: 50%;  float: left; list-style: none; border-left: solid 1px $orange; padding: 0.5rem 1rem 0.5rem 0;
+                    aside { 
+                        width: 100%; float: left; text-align: center;
+                        img { max-width: 100%; margin: 0 auto; display: inline-block; } 
+                    }
+                    h3 { 
+                        width: 100%; float: left; @include fSS(); margin: 1.5rem 0;
+                        img { max-width: 100%; float: left; }
+                        span { margin-left: 1rem; width: calc(100% - 62px); float: left; text-align: left; @include fmedium(); color:$white;  font-size: 18px; line-height: 26px; letter-spacing: 0.95px;  }
+                    }
+                    p {  width: 100%; padding:0 0 0 1rem; float: left; text-align: left; @include fbook(); color:$white;  font-size: 16px; line-height: 28px; letter-spacing: 0.8px; }
+                }
+           }
+       }
+       .hm_whyusright {
+           width: 45%;  float: right;   background-color: $orange; padding:2rem;
+            h2 {
+                position: relative; width: 100%; float: left; @include fSC(); 
+                img { width: auto; max-width: 100%; float: right; margin-left: 1rem;}
+                span { width: auto; float: left; text-align: left; @include fbold(); color:$white;  font-size: 29px; line-height: 34px;   }
+            }
+            p {  width: 100%; padding:2rem 0 0 0; float: left; text-align: left; @include fbook(); color:$white;  font-size: 16px; line-height: 28px; letter-spacing: 0.8px; }
+       }
+   }
+}
+
+
+@media only screen and (max-width:599px) 
+{
+
+   
+}

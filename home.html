@@ -121,7 +121,7 @@
 
 
     <!-- our range start -->
-    <section class="hm_rangewrap fitheight">
+    <section class="hm_rangewrap fitheight" id="productrang">
         <div class="hm_rangeInsider">
              <div class="hm_rangeheading">
                 <h2>OUR RANGE</h2>
@@ -272,6 +272,59 @@
         </div>
     </section>
     <!-- about end -->
+
+
+
+    <!-- getintouch  start -->
+    <section class="hm_getintouchwrap fitheight"> 
+        <div class="hm_getintouchInsider">
+            <h2>GET IN TOUCH</h2>
+            <div class="hm_getintouchForm">
+                <div class="hm_getintouchField">
+                    <img src="images/getintouch1.png" alt="getintouch" />
+                    <input class="hm_getintouchInput" type="text" name="name" id="fullname" placeholder="Name" maxlength="50" onkeypress="return isLetter(event)" />
+                    <span class="hm_getintouchError" id="name_error">Name</span>
+                </div>
+                
+                <div class="hm_getintouchField">
+                    <img src="images/getintouch2.png" alt="getintouch" />
+                    <input  class="hm_getintouchInput"  type="text" name="contactno" id="contactno" placeholder="Contact No." maxlength="10"  onkeypress="return isNumber(event)" />
+                    <span class="hm_getintouchError" id="contactno_error">Contact No.</span>
+                </div>
+                
+                <div class="hm_getintouchField">
+                    <img src="images/getintouch3.png" alt="getintouch" />
+                    <input  class="hm_getintouchInput"  type="text" name="emailid" id="emailid" placeholder="Email ID" maxlength="50" />
+                    <span class="hm_getintouchError" id="emailid_error">Email ID</span>
+                </div>
+                
+                <div class="hm_getintouchField">
+                    <img src="images/getintouch4.png" alt="getintouch" />
+                    <select  class="hm_getintouchSelect"  name="typeofquery" id="typeofquery">
+                        <option value="0" selected="" disabled="">Type of Query</option>
+                        <option>Billing/Finance</option>
+                        <option>Complaint</option>
+                        <option>Emergency</option>
+                        <option>General Enquiry</option>
+                        <option>New Connection</option>
+                        <option>Technical</option>
+                    </select>
+                    <span class="hm_getintouchError" id="typeofquery_error">Type of Query</span>
+                </div>
+                
+                <div class="hm_getintouchField">
+                    <img src="images/getintouch5.png" alt="getintouch" />
+                    <textarea class="hm_getintouchTextarea" name="message" id="message" placeholder="Message"  maxlength="500"></textarea>
+                    <span class="hm_getintouchError" id="message_error">Message</span>
+                </div>
+                
+                <div class="hm_getintouchField">
+                    <span class="hm_getintouchButton" onclick="getInTouchValidation();">Submit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- getintouch end -->
     
 
 </main>

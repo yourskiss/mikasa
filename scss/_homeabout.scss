@@ -1,5 +1,5 @@
 .hm_aboutwrap { 
-    @include fCC();  background: $orange; background-image: url('../images/bg_bott.png'), url('../images/home_about.png'); background-repeat:  no-repeat no-repeat; background-position: left top, bottom right; background-size: auto auto, auto 100%; width: 100%; float: left;  height: calc(100vh - 110px); padding: 3rem 0 5rem 0; border-top: solid 2px $blue3;
+    @include fCC();  background: $orange; background-image: url('../images/bg_bott.png'), url('../images/home_about.png'); background-repeat:  no-repeat no-repeat; background-position: left top, bottom right; background-size: auto auto, auto 100%; width: 100%; float: left; padding: 3rem 0 5rem 0; border-top: solid 2px $blue3;
    .hm_aboutInsider { 
        display: flow-root; width: 95%;max-width: 1084px; margin: 0 auto; float:none;
        .hm_abouttext{

@@ -1,5 +1,5 @@
 .hm_whyuswrap { 
-    @include fCC();  background: $blue2 url('../images/bg_top.png') no-repeat left bottom; width: 100%; float: left;  height: calc(100vh - 110px); padding: 3rem 0 5rem 0; border-top: solid 2px $blue3;
+    @include fCC();  background: $blue2 url('../images/bg_top.png') no-repeat left bottom; width: 100%; float: left;  padding: 3rem 0 5rem 0; border-top: solid 2px $blue3;
 
    .hm_whyusInsider { 
        display: flow-root; width: 95%;max-width: 1084px; margin: 0 auto; float:none;

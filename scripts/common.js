@@ -72,87 +72,54 @@ function isLetter(e)
 
 
 /* validation === start */
-function formvalidation()
+function getInTouchValidation()
 {
     // debugger;
     var emailReg = /( )|(^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$)/;
-    $(".participate-errormsg").hide().html('');
-    $(".participate-input, .participate-select").removeClass('participate-border');
+    $(".hm_getintouchError").hide().html('');
     if($("#fullname").val() == '')
     {
-        $("#fullname_errormsg").show().html('Please enter your name');
-        $("#fullname").addClass('participate-border');
+        $("#name_error").show().html('Please enter your name');
         return false;
     }
-    else if($("#contactnumber").val() == '')
+    else if($("#contactno").val() == '')
     {
-        $("#contactnumber_errormsg").show().html('Please enter your mobile number');
-        $("#contactnumber").addClass('participate-border');
+        $("#contactno_error").show().html('Please enter your mobile number');
         return false;
     }
-    else if($("#contactnumber").val().length != 10)
+    else if($("#contactno").val().length != 10)
     {
-        $("#contactnumber_errormsg").show().html('Invalid mobile number');
-        $("#contactnumber").addClass('participate-border');
+        $("#contactno_error").show().html('Invalid mobile number');
         return false;
     }
-    else if (($("#contactnumber").val().indexOf('9')) != 0 && ($("#contactnumber").val().indexOf('8')) != 0 && ($("#contactnumber").val().indexOf('7')) != 0 && ($("#contactnumber").val().indexOf('6')) != 0) 
+    else if (($("#contactno").val().indexOf('9')) != 0 && ($("#contactno").val().indexOf('8')) != 0 && ($("#contactno").val().indexOf('7')) != 0 && ($("#contactno").val().indexOf('6')) != 0) 
     {
-        $("#contactnumber_errormsg").show().html('Mobile number start with digits like 9, 8, 7, 6');
-        $("#contactnumber").addClass('participate-border');
+        $("#contactno_error").show().html('Mobile number start with digits like 9, 8, 7, 6');
         return false;
     }
-    else if($("#emailaddress").val() == '')
+    else if($("#emailid").val() == '')
     {
-        $("#emailaddress_errormsg").show().html('Please enter your email id');
-        $("#emailaddress").addClass('participate-border');
+        $("#emailid_error").show().html('Please enter your email id');
         return false;
     }
-    else if ($("#emailaddress").val() != "" && !emailReg.test($("#emailaddress").val())) 
+    else if (!emailReg.test($("#emailid").val())) 
     {
-        $("#emailaddress_errormsg").show().html('Please enter valid email id');
-        $("#emailaddress").addClass('participate-border');
+        $("#emailid_error").show().html('Please enter valid email id');
         return false;
     }
-    else if($("#address").val() == '')
+    else if($("#typeofquery").val() == null || $("#typeofquery").val() == '' || $("#typeofquery").val() == 0)
     {
-        $("#address_errormsg").show().html('Please enter your address');
-        $("#address").addClass('participate-border');
+        $("#typeofquery_error").show().html('Please select entery type');
         return false;
     }
-    else if($("#entrytype").length == 1 && $("#entrytype").val() == null || $("#entrytype").val() == '' || $("#entrytype").val() == 0)
+    else if($("#message").val() == '')
     {
-        $("#entrytype_errormsg").show().html('Please select entery type');
-        $("#entrytype").addClass('participate-border');
-        return false;
-    }
-    else if($("#fearconquered").val() == '')
-    {
-        $("#fearconquered_errormsg").show().html('Please enter a fear conquered');
-        $("#fearconquered").addClass('participate-border');
-        return false;
-    }
-    else if($("#uploadphoto").length == 1 && $("#entrytype").val() == 'photo' && $("#uploadphoto").val() == '')
-    {
-        $("#uploadphoto_errormsg").show().html('Please select photo');
-        $("#uploadphoto").addClass('participate-border');
-        return false;
-    }
-    else if($("#uploadvideo").length == 1 && $("#entrytype").val() == 'video' && $("#uploadvideo").val() == '')
-    {
-        $("#uploadvideo_errormsg").show().html('Please select video');
-        $("#uploadvideo").addClass('participate-border');
-        return false;
-    }
-    else if($("#agreeterm").prop("checked") == false)
-    {
-        $("#agreeterm_errormsg").show().html('Please agree tearm and condition');
+        $("#message_error").show().html('Please enter your message');
         return false;
     }
     else 
     {
-        otppopupscreen(1);
-        $(".participate-errormsg").hide().html('');
+        $(".hm_getintouchError").hide().html('');
         return true;
     }
 }
@@ -183,10 +150,13 @@ function showhidemsg(val)
 
 var homejump = 0;
 if($(window).width() > 1255)  homejump = 110;
-$("#donwscrollhome").click(function()
+if($("#donwscrollhome").length == 1 && $("#productrang").length == 1)
 {
-    $('html, body').animate({scrollTop: $(".rangewrap").offset().top - homejump }, 300);
-});
+    $("#donwscrollhome").click(function()
+    {
+        $('html, body').animate({ scrollTop: $("#productrang").offset().top - homejump }, 500);
+    });
+}
 
     
 

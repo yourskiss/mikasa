@@ -1,0 +1,15 @@
+.hm_sustainabilitywrap { 
+     position: relative; width: 100%; float: left; padding:0; 
+    .hm_sustainabilitybg { width: 100%; height: 100%; float: left; object-fit: cover; }
+    .hm_sustainabilityInsider { 
+        position: absolute; left: 0; top: 0; height: 100%; width: 100%; @include fCC(); background: url('../images/sustainability_bg.png') no-repeat center center; background-size:cover;
+       .hm_sustainabilitytext {
+            display: flow-root; width: 95%; max-width:450px; margin: 0 auto; float:none;
+            h2{
+                width: 100%;  float: left; text-align: center; @include fbold(); color:$orange;  font-size: 45px; line-height: 45px;
+                span { display: inline-block; color: $white;}
+            }
+            p{width: 100%; margin: 1rem 0 2rem 0; float: left; text-align: center; @include fbook(); color:$white;  font-size: 16px; line-height: 24px; }
+       }
+    }
+}

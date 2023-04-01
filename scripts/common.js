@@ -150,9 +150,9 @@ function showhidemsg(val)
 
 var homejump = 0;
 if($(window).width() > 1255)  homejump = 110;
-if($("#donwscrollhome").length == 1 && $("#productrang").length == 1)
+if($("#downscrollhome").length == 1 && $("#productrang").length == 1)
 {
-    $("#donwscrollhome").click(function()
+    $("#downscrollhome").click(function()
     {
         $('html, body').animate({ scrollTop: $("#productrang").offset().top - homejump }, 500);
     });

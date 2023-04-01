@@ -550,39 +550,32 @@ template {
   max-width: 1600px;
   height: 110px;
 }
-.header .headerInsider {
-  display: flow-root;
-  width: 95%;
-  max-width: 1085px;
-  margin: 0 auto;
-  float: none;
-}
-.header .headerInsider .logo {
+.header .warrper .logo {
   width: 184px;
   float: left;
 }
-.header .headerInsider .logo img {
+.header .warrper .logo img {
   width: 100%;
 }
-.header .headerInsider .headerRight {
+.header .warrper .headerRight {
   display: block;
   width: auto;
   float: right;
   margin: 0.4rem 1rem 0 0;
 }
-.header .headerInsider .headerRight ul {
+.header .warrper .headerRight ul {
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;
   float: left;
 }
-.header .headerInsider .headerRight ul li {
+.header .warrper .headerRight ul li {
   list-style: none;
   margin: 0 1rem;
   display: inline-block;
 }
-.header .headerInsider .headerRight ul li a {
+.header .warrper .headerRight ul li a {
   float: left;
   width: auto;
   padding: 0.5rem 0;
@@ -598,21 +591,21 @@ template {
   letter-spacing: 1.3px;
   line-height: 16px;
 }
-.header .headerInsider .headerRight ul li a:hover, .header .headerInsider .headerRight ul li a.active {
+.header .warrper .headerRight ul li a:hover, .header .warrper .headerRight ul li a.active {
   border-bottom-color: #EB4525;
   color: #EB4525;
   transition: all 0.4s ease-in;
 }
-.header .headerInsider .headerRight ul li ul {
+.header .warrper .headerRight ul li ul {
   display: none;
 }
-.header .headerInsider p {
+.header .warrper p {
   display: block;
   width: auto;
   float: right;
   margin-top: 0.5rem;
 }
-.header .headerInsider p .enquirenowBtn {
+.header .warrper p .enquirenowBtn {
   position: relative;
   padding: 0.6rem 1.5rem;
   width: 100%;
@@ -630,12 +623,12 @@ template {
   letter-spacing: 1.1px;
   line-height: 14px;
 }
-.header .headerInsider p .enquirenowBtn:hover {
+.header .warrper p .enquirenowBtn:hover {
   background-color: #000000;
   color: #ffffff;
   transition: all 0.4s ease-in;
 }
-.header .headerInsider aside {
+.header .warrper aside {
   display: none;
   float: right;
   width: 24px;
@@ -643,7 +636,7 @@ template {
   position: relative;
   line-height: 1;
 }
-.header .headerInsider aside span {
+.header .warrper aside span {
   position: absolute;
   float: left;
   width: 100%;
@@ -654,31 +647,31 @@ template {
   border-radius: 2px;
   padding: 0;
 }
-.header .headerInsider aside span:first-child {
+.header .warrper aside span:first-child {
   left: 0;
   top: 0;
   transition: all 0.4s ease-out;
 }
-.header .headerInsider aside span:nth-child(2) {
+.header .warrper aside span:nth-child(2) {
   left: 0;
   top: 7px;
   transition: all 0.4s ease-out;
 }
-.header .headerInsider aside span:last-child {
+.header .warrper aside span:last-child {
   right: 0;
   top: 14px;
   transition: all 0.4s ease-out;
 }
-.header .headerInsider aside.active span:first-child {
+.header .warrper aside.active span:first-child {
   top: 50%;
   transform: rotate(45deg);
   transition: all 0.4s ease-in;
 }
-.header .headerInsider aside.active span:nth-child(2) {
+.header .warrper aside.active span:nth-child(2) {
   display: none;
   transition: all 0.4s ease-in;
 }
-.header .headerInsider aside.active span:last-child {
+.header .warrper aside.active span:last-child {
   top: 50%;
   transform: rotate(-45deg);
   transition: all 0.4s ease-in;
@@ -717,26 +710,212 @@ template {
     font-size: 14px;
   }
 }
-.banner {
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+  float: left;
+  padding: 3rem 0;
+}
+.footer .warrper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer .warrper .footerLeft {
+  width: 310px;
+  float: left;
+}
+.footer .warrper .footerLeft aside {
+  width: 100%;
+  float: left;
+}
+.footer .warrper .footerLeft aside img {
+  max-width: 100%;
+}
+.footer .warrper .footerLeft h2 {
+  float: left;
+  width: 100%;
+  margin: 1rem 0 2rem 0;
+  text-align: left;
+  color: #000000;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer .warrper .footerLeft p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  float: left;
+  width: auto;
+  padding-right: 1rem;
+  text-align: left;
+  color: #000000;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+.footer .warrper .footerLeft p img {
+  display: inline-block;
+  max-width: 20px;
+  margin-right: 0.3rem;
+}
+.footer .warrper .footerLeft p a {
+  color: #000000;
+  transition: all 0.4s ease-out;
+  text-decoration: none;
+}
+.footer .warrper .footerLeft p a:hover {
+  color: #EB4525;
+  transition: all 0.4s ease-in;
+}
+.footer .warrper .footerRight {
+  width: 220px;
+  float: right;
+}
+.footer .warrper .footerRight img {
+  max-width: 100%;
+}
+.footer .warrper .footerMid {
+  width: calc(100% - 550px);
+  float: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.footer .warrper .footerMid .footbox {
+  width: auto;
+  max-width: 40%;
+  float: left;
+}
+.footer .warrper .footerMid .footbox h2 {
+  float: left;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  color: #707070;
+  font-family: "futura-medium", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.footer .warrper .footerMid .footbox ul {
+  float: left;
+  width: 100%;
+}
+.footer .warrper .footerMid .footbox ul li {
+  list-style: none;
+  width: 100%;
+  float: left;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+  color: #707070;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+.footer .warrper .footerMid .footbox ul li::before {
+  content: "\f105";
+  margin-right: 0.5rem;
+  font-family: "FontAwesome";
+  font-weight: 300;
+  line-height: 1;
+}
+.footer .warrper .footerMid .footbox ul li a {
+  color: #707070;
+  text-decoration: none;
+  transition: all 0.4s ease-out;
+}
+.footer .warrper .footerMid .footbox ul li a:hover {
+  color: #EB4525;
+  transition: all 0.4s ease-in;
+}
+
+.sectionbottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #19305B;
+  width: 100%;
+  float: left;
+  padding: 3rem 0;
+}
+.sectionbottom .warrper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sectionbottom .warrper p {
+  float: left;
+  width: auto;
+  color: #ffffff;
+  text-align: left;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+.sectionbottom .warrper ul {
+  float: right;
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sectionbottom .warrper ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 0.5rem 0 1rem;
+}
+.sectionbottom .warrper ul li span {
+  display: inline-block;
+  color: #ffffff;
+  text-align: left;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+}
+.sectionbottom .warrper ul li a {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s ease-out;
+}
+.sectionbottom .warrper ul li a:hover {
+  color: #EB4525;
+  transition: all 0.4s ease-in;
+}
+
+.hm_banner {
   background-color: #000000;
   width: 100%;
   float: left;
 }
-.banner .bannerSlideWeb {
+.hm_banner .bannerSlideWeb {
   display: block;
   width: 100%;
   height: 100%;
   float: left;
   object-fit: fill;
 }
-.banner .bannerSlideMob {
+.hm_banner .bannerSlideMob {
   display: none;
   width: 100%;
   height: 100%;
   float: left;
   object-fit: fill;
 }
-.banner .bannerDown {
+.hm_banner .bannerDown {
   z-index: 4;
   position: absolute;
   left: 50%;
@@ -746,7 +925,7 @@ template {
   float: left;
   text-align: center;
 }
-.banner .bannerDown img {
+.hm_banner .bannerDown img {
   width: 59px;
   height: auto;
   display: inline-block;
@@ -754,7 +933,7 @@ template {
   text-decoration: none;
   filter: brightness(0) invert(1);
 }
-.banner .bannerDown img:hover {
+.hm_banner .bannerDown img:hover {
   filter: none;
   cursor: pointer;
   transition: all 0.4s ease-in;
@@ -1010,18 +1189,11 @@ template {
   float: left;
   padding: 3rem 0 5rem 0;
 }
-.hm_rangewrap .hm_rangeInsider {
-  display: flow-root;
-  width: 95%;
-  max-width: 1084px;
-  margin: 0 auto;
-  float: none;
-}
-.hm_rangewrap .hm_rangeInsider .hm_rangeheading {
+.hm_rangewrap .warrper .hm_rangeheading {
   width: 100%;
   float: left;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangeheading h2 {
+.hm_rangewrap .warrper .hm_rangeheading h2 {
   width: 100%;
   float: left;
   text-align: left;
@@ -1031,7 +1203,7 @@ template {
   font-size: 45px;
   line-height: 60px;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangeheading p {
+.hm_rangewrap .warrper .hm_rangeheading p {
   width: 100%;
   max-width: 600px;
   margin: 1.5rem 0 2.5rem 0;
@@ -1043,7 +1215,7 @@ template {
   font-size: 16px;
   line-height: 28px;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer {
+.hm_rangewrap .warrper .hm_rangcontainer {
   width: 100%;
   float: left;
   display: flex;
@@ -1052,21 +1224,21 @@ template {
   align-items: stretch;
   height: 100%;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox {
   width: 19%;
   float: left;
   background-color: #EB4525;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox aside {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox aside {
   position: relative;
   width: 100%;
   float: left;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox aside img {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox aside img {
   width: 100%;
   float: left;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox aside span {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox aside span {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1084,12 +1256,12 @@ template {
   text-transform: uppercase;
   font-weight: bold;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox section {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section {
   width: 100%;
   float: left;
   padding: 1rem;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox section p {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section p {
   width: 100%;
   float: left;
   text-align: center;
@@ -1099,19 +1271,19 @@ template {
   font-size: 16px;
   line-height: 22px;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox section h5 {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h5 {
   position: relative;
   width: 100%;
   min-height: 60px;
   float: left;
   text-align: center;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox section h5 img {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h5 img {
   max-width: 100%;
   margin: 0 auto;
   display: inline-block;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox section h5:after {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h5:after {
   content: "";
   position: absolute;
   left: 50%;
@@ -1121,13 +1293,13 @@ template {
   height: 1px;
   background: #ffffff;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox section h6 {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h6 {
   width: 100%;
   float: left;
   text-align: center;
   margin-top: 1.5rem;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox section h6 .hm_rangeKnowmoreBTN {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h6 .hm_rangeKnowmoreBTN {
   font-family: "futura-medium", Arial, sans-serif;
   font-weight: 600;
   font-weight: normal;
@@ -1140,7 +1312,7 @@ template {
   transition: all 0.4s ease-out;
   text-transform: uppercase;
 }
-.hm_rangewrap .hm_rangeInsider .hm_rangcontainer .hm_rangbox section h6 .hm_rangeKnowmoreBTN:hover {
+.hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h6 .hm_rangeKnowmoreBTN:hover {
   color: #000000;
   transition: all 0.4s ease-in;
 }
@@ -1155,18 +1327,11 @@ template {
   padding: 3rem 0 5rem 0;
   border-top: solid 2px #253b63;
 }
-.hm_whyuswrap .hm_whyusInsider {
-  display: flow-root;
-  width: 95%;
-  max-width: 1084px;
-  margin: 0 auto;
-  float: none;
-}
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft {
+.hm_whyuswrap .warrper .hm_whyusleft {
   width: 50%;
   float: left;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft h2 {
+.hm_whyuswrap .warrper .hm_whyusleft h2 {
   width: 100%;
   float: left;
   margin-bottom: 3rem;
@@ -1177,7 +1342,7 @@ template {
   font-size: 45px;
   line-height: 50px;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft ul {
+.hm_whyuswrap .warrper .hm_whyusleft ul {
   width: 100%;
   float: left;
   display: flex;
@@ -1185,24 +1350,24 @@ template {
   align-items: flex-start;
   align-items: stretch;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft ul li {
+.hm_whyuswrap .warrper .hm_whyusleft ul li {
   width: 50%;
   float: left;
   list-style: none;
   border-left: solid 1px #EB4525;
   padding: 0.5rem 1rem 0.5rem 0;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft ul li aside {
+.hm_whyuswrap .warrper .hm_whyusleft ul li aside {
   width: 100%;
   float: left;
   text-align: center;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft ul li aside img {
+.hm_whyuswrap .warrper .hm_whyusleft ul li aside img {
   max-width: 100%;
   margin: 0 auto;
   display: inline-block;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft ul li h3 {
+.hm_whyuswrap .warrper .hm_whyusleft ul li h3 {
   width: 100%;
   float: left;
   display: flex;
@@ -1210,11 +1375,11 @@ template {
   align-items: flex-start;
   margin: 1.5rem 0;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft ul li h3 img {
+.hm_whyuswrap .warrper .hm_whyusleft ul li h3 img {
   max-width: 100%;
   float: left;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft ul li h3 span {
+.hm_whyuswrap .warrper .hm_whyusleft ul li h3 span {
   margin-left: 1rem;
   width: calc(100% - 62px);
   float: left;
@@ -1226,7 +1391,7 @@ template {
   line-height: 26px;
   letter-spacing: 0.95px;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusleft ul li p {
+.hm_whyuswrap .warrper .hm_whyusleft ul li p {
   width: 100%;
   padding: 0 0 0 1rem;
   float: left;
@@ -1238,13 +1403,13 @@ template {
   line-height: 28px;
   letter-spacing: 0.8px;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusright {
+.hm_whyuswrap .warrper .hm_whyusright {
   width: 45%;
   float: right;
   background-color: #EB4525;
   padding: 2rem;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusright h2 {
+.hm_whyuswrap .warrper .hm_whyusright h2 {
   position: relative;
   width: 100%;
   float: left;
@@ -1252,13 +1417,13 @@ template {
   justify-content: flex-start;
   align-items: center;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusright h2 img {
+.hm_whyuswrap .warrper .hm_whyusright h2 img {
   width: auto;
   max-width: 100%;
   float: right;
   margin-left: 1rem;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusright h2 span {
+.hm_whyuswrap .warrper .hm_whyusright h2 span {
   width: auto;
   float: left;
   text-align: left;
@@ -1268,7 +1433,7 @@ template {
   font-size: 29px;
   line-height: 34px;
 }
-.hm_whyuswrap .hm_whyusInsider .hm_whyusright p {
+.hm_whyuswrap .warrper .hm_whyusright p {
   width: 100%;
   padding: 2rem 0 0 0;
   float: left;
@@ -1295,19 +1460,12 @@ template {
   padding: 3rem 0 5rem 0;
   border-top: solid 2px #253b63;
 }
-.hm_aboutwrap .hm_aboutInsider {
-  display: flow-root;
-  width: 95%;
-  max-width: 1084px;
-  margin: 0 auto;
-  float: none;
-}
-.hm_aboutwrap .hm_aboutInsider .hm_abouttext {
+.hm_aboutwrap .warrper .hm_abouttext {
   width: 100%;
   max-width: 600px;
   float: left;
 }
-.hm_aboutwrap .hm_aboutInsider .hm_abouttext h2 {
+.hm_aboutwrap .warrper .hm_abouttext h2 {
   width: 100%;
   float: left;
   text-align: left;
@@ -1317,7 +1475,7 @@ template {
   font-size: 45px;
   line-height: 50px;
 }
-.hm_aboutwrap .hm_aboutInsider .hm_abouttext p {
+.hm_aboutwrap .warrper .hm_abouttext p {
   width: 100%;
   margin: 1rem 0 2rem 0;
   float: left;
@@ -1328,11 +1486,11 @@ template {
   font-size: 16px;
   line-height: 28px;
 }
-.hm_aboutwrap .hm_aboutInsider .hm_abouttext aside {
+.hm_aboutwrap .warrper .hm_abouttext aside {
   width: 100%;
   float: right;
 }
-.hm_aboutwrap .hm_aboutInsider .hm_abouttext aside .hm_about_knowmoreBTN {
+.hm_aboutwrap .warrper .hm_abouttext aside .hm_about_knowmoreBTN {
   padding: 1rem 2rem;
   width: auto;
   float: left;
@@ -1350,7 +1508,7 @@ template {
   letter-spacing: 0.7px;
   line-height: 19px;
 }
-.hm_aboutwrap .hm_aboutInsider .hm_abouttext aside .hm_about_knowmoreBTN:hover {
+.hm_aboutwrap .warrper .hm_abouttext aside .hm_about_knowmoreBTN:hover {
   background-color: #000000;
   color: #ffffff;
   transition: all 0.4s ease-in;
@@ -1422,14 +1580,10 @@ template {
   float: left;
   padding: 3rem 0;
 }
-.hm_getintouchwrap .hm_getintouchInsider {
-  display: flow-root;
-  width: 95%;
+.hm_getintouchwrap .warrper {
   max-width: 716px;
-  margin: 0 auto;
-  float: none;
 }
-.hm_getintouchwrap .hm_getintouchInsider h2 {
+.hm_getintouchwrap .warrper h2 {
   width: 100%;
   float: left;
   text-align: center;
@@ -1439,20 +1593,20 @@ template {
   font-size: 45px;
   line-height: 60px;
 }
-.hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm {
+.hm_getintouchwrap .warrper .hm_getintouchForm {
   width: 100%;
   float: left;
 }
-.hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField {
+.hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField {
   width: 100%;
   float: left;
   margin-top: 1.5rem;
 }
-.hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField img {
+.hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField img {
   width: 30px;
   float: left;
 }
-.hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField .hm_getintouchInput, .hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField .hm_getintouchSelect, .hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField .hm_getintouchTextarea {
+.hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField .hm_getintouchInput, .hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField .hm_getintouchSelect, .hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField .hm_getintouchTextarea {
   width: calc(100% - 40px);
   float: right;
   padding: 0.5rem 0;
@@ -1467,11 +1621,11 @@ template {
   font-family: "futura-book", Arial, sans-serif;
   font-weight: 500;
 }
-.hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField .hm_getintouchTextarea {
+.hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField .hm_getintouchTextarea {
   height: 90px;
   resize: none;
 }
-.hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField .hm_getintouchSelect {
+.hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField .hm_getintouchSelect {
   text-indent: 1px;
   text-overflow: "";
   -webkit-appearance: none;
@@ -1479,7 +1633,7 @@ template {
   background: transparent url("../images/getintouch_dropdown.png") no-repeat;
   background-position: right 5px center;
 }
-.hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField .hm_getintouchButton {
+.hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField .hm_getintouchButton {
   position: relative;
   padding: 0.8rem 2rem;
   width: auto;
@@ -1498,25 +1652,26 @@ template {
   line-height: 19px;
   text-transform: uppercase;
 }
-.hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField .hm_getintouchButton:hover {
+.hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField .hm_getintouchButton:hover {
   background-color: #000000;
   color: #ffffff;
   transition: all 0.4s ease-in;
 }
-.hm_getintouchwrap .hm_getintouchInsider .hm_getintouchForm .hm_getintouchField .hm_getintouchError {
+.hm_getintouchwrap .warrper .hm_getintouchForm .hm_getintouchField .hm_getintouchError {
   display: none;
   width: 100%;
+  padding-left: 40px;
   float: left;
   margin-top: 10px;
   font-size: 12px;
   color: #F22310;
   font-family: "futura-light", Arial, sans-serif;
   font-weight: 300;
-  text-align: center;
+  text-align: left;
 }
 
 /*
-@import "_footer.scss";
+
 @import "_socialwall.scss";
 @import "_msgpopup.scss";
 @import "_page404.scss";
@@ -1545,16 +1700,16 @@ html, body {
   overflow: hidden;
 }
 
+.fitheight {
+  height: calc(100vh - 110px);
+}
+
 .warrper {
   display: flow-root;
   width: 95%;
-  max-width: 1256px;
+  max-width: 1084px;
   margin: 0 auto;
   float: none;
-}
-
-.fitheight {
-  height: calc(100vh - 110px);
 }
 
 /* ################### Loader ################### */
@@ -1590,15 +1745,5 @@ html, body {
     float: none;
     max-width: 1600px;
     margin: 0 auto;
-  }
-}
-@media only screen and (max-width: 1255px) {
-  .main {
-    padding: 90px 0 0 0;
-  }
-}
-@media only screen and (max-width: 599px) {
-  .main {
-    padding: 70px 0 0 0;
   }
 }

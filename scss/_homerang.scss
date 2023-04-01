@@ -1,7 +1,6 @@
 .hm_rangewrap { 
      @include fCC();  background-color: $blue2; width: 100%; float: left;  padding: 3rem 0 5rem 0;
-    .hm_rangeInsider { 
-        display: flow-root; width: 95%;max-width: 1084px; margin: 0 auto; float:none;
+    .warrper { 
         .hm_rangeheading {
             width: 100%;  float: left; 
             h2 { width: 100%;  float: left; text-align: left; @include fbold();   color:$orange;  font-size: 45px; line-height:60px; }

@@ -2,8 +2,8 @@
  
 .hm_getintouchwrap { 
     @include fCC();  background-color: $gray; width: 100%; float: left;  padding: 3rem 0;
-   .hm_getintouchInsider { 
-       display: flow-root; width: 95%;max-width: 716px; margin: 0 auto; float:none;
+   .warrper { 
+       max-width: 716px;
        h2 { width: 100%;  float: left; text-align: center; @include fbold(); color:$blue;  font-size: 45px; line-height:60px; }
        .hm_getintouchForm {
             width: 100%;  float: left;
@@ -40,11 +40,12 @@
                 .hm_getintouchError {
                     display: none;
                     width: 100%;
+                    padding-left:40px;
                     float: left;
                     margin-top: 10px;
                     font-size: 12px;
                     color: $red; @include flight();
-                    text-align: center;
+                    text-align: left;
                 }
             }
         }

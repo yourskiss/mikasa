@@ -1,7 +1,6 @@
 .header { 
     z-index:8; position:fixed; left: 50%; top: 0; transform: translateX(-50%); @include fCC();  background-color: $white; width: 100%; max-width: 1600px; height: 110px;  
-    .headerInsider { 
-        display: flow-root; width: 95%;max-width: 1085px; margin: 0 auto; float:none;
+    .warrper { 
         .logo {
              width:184px; float: left; 
              img { width: 100%; }

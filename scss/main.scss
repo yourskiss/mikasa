@@ -29,7 +29,7 @@
 
 html, body {margin:0; padding:0; font-family:'futura-book', Arial, sans-serif;font-weight: 400;line-height:1.2; letter-spacing: normal;letter-spacing: normal;color: #000000;background-color: #ddd;box-sizing:border-box; }
 .main { display: block; float: left; width: 100%; margin: 0; padding: 110px 0 0 0; overflow: hidden; }
-.fitheight { height: calc(100vh - 110px); }
+.fitheight { min-height: calc(100vh - 110px); }
 .warrper { display: flow-root; width: 95%;max-width: 1084px; margin: 0 auto; float:none; }
 
 
@@ -48,15 +48,12 @@ html, body {margin:0; padding:0; font-family:'futura-book', Arial, sans-serif;fo
   .main {display:flow-root; float:none; max-width: 1600px; margin: 0 auto; }
 }
 
-@media only screen and (max-width:1255px) 
+@media only screen and (max-width:1100px) 
 {
- 
+  .main { padding: 70px 0 0 0; }
+  .fitheight { min-height:auto; }
 
 }
 
-
-@media only screen and (max-width:599px) 
-{
  
-}
 

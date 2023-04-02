@@ -1,5 +1,5 @@
 .hm_whyuswrap { 
-    @include fCC();  background: $blue2 url('../images/bg_top.png') no-repeat left bottom; width: 100%; float: left;  padding: 3rem 0 5rem 0; border-top: solid 2px $blue3;
+    @include fCC();  background: $blue2 url('../images/bg_top.png') no-repeat left bottom; width: 100%; float: left;  padding:5rem 0; border-top: solid 2px $blue3;
    .warrper { 
        .hm_whyusleft {
            width: 50%;  float: left; 
@@ -24,18 +24,59 @@
        .hm_whyusright {
            width: 45%;  float: right;   background-color: $orange; padding:2rem;
             h2 {
-                position: relative; width: 100%; float: left; @include fSC(); 
+                position: relative; width: 100%; float: left; @include fSC();  padding:0 0 2rem 0; 
                 img { width: auto; max-width: 100%; float: right; margin-left: 1rem;}
                 span { width: auto; float: left; text-align: left; @include fbold(); color:$white;  font-size: 29px; line-height: 34px;   }
             }
-            p {  width: 100%; padding:2rem 0 0 0; float: left; text-align: left; @include fbook(); color:$white;  font-size: 16px; line-height: 28px; letter-spacing: 0.8px; }
-       }
+        }
    }
 }
 
+.hm_whyus_slider  { float: left; width: 100%;  margin:0 !important; padding: 0 0 2rem 0; }
+.hm_whyus_item {  width: 100%; float: left; text-align: left; @include fbook(); color:$white;  font-size: 16px; line-height: 28px; letter-spacing: 0.8px;  }
+.hm_whyus_slider.slick-slider .slick-list { margin:0; padding: 0; }
+.hm_whyus_slider.slick-slider .slick-list .slick-track { margin:0; padding: 0;  }
+.hm_whyus_slider.slick-slider .slick-list .slick-track .slick-slide {  margin:0; padding: 0;  }
 
-@media only screen and (max-width:599px) 
+.hm_whyus_slider.slick-slider .slick-dots { bottom: 0;  text-align: left;   }
+.hm_whyus_slider.slick-slider .slick-dots li { position: relative; display: inline-block; width:15px; height:15px; margin: 0 5px; padding: 0; border: none; cursor: pointer; background:$white; border-radius:50%; opacity: 0.3; }
+.hm_whyus_slider.slick-slider .slick-dots li.slick-active { transform: scale(1); background:$white; opacity: 1; }
+.hm_whyus_slider.slick-slider .slick-dots li button { display: none; }
+ 
+
+@media only screen and (max-width:1023px) 
 {
-
+    .hm_whyuswrap { 
+        padding:4rem 0; 
+       .warrper { 
+           .hm_whyusleft {
+               width: 100%;  
+               h2{ margin-bottom:2rem; font-size: 28px; line-height:30px;}
+               ul {
+                    li { 
+                        width: 50%; padding:0 1rem 0 0; position: relative;
+                        &:after { content: ''; position: absolute; left: -1px; bottom: 0; width: 1px;height:35px; background-color: $blue2; font-size: 1px; line-height: 1; }
+                        aside { 
+                            img { max-width:90px;  } 
+                        }
+                        h3 { 
+                            margin: 1.5rem 0;
+                            img { max-width: 50px; }
+                            span {  font-size: 16px; line-height: 24px; letter-spacing: 0;  }
+                        }
+                        p { padding:0 0 0 1rem; font-size: 16px; line-height: 24px; letter-spacing: 0; }
+                    }
+               }
+           }
+           .hm_whyusright {
+               width: 100%; padding:2rem; margin-top: 2rem;
+                h2 {
+                     padding:0 0 2rem 0; 
+                    img { max-width: 100px; margin-left: 15px;}
+                    span { width: calc(100% - 115px); font-size: 17px; line-height: 31px;   }
+                }
+            }
+       }
+    }
    
 }

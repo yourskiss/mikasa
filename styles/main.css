@@ -571,6 +571,7 @@ template {
   float: left;
 }
 .header .warrper .headerRight ul li {
+  position: relative;
   list-style: none;
   margin: 0 1rem;
   display: inline-block;
@@ -596,8 +597,55 @@ template {
   color: #EB4525;
   transition: all 0.4s ease-in;
 }
+.header .warrper .headerRight ul li a i.fa-angle-down {
+  margin-left: 0.3rem;
+  font-weight: 400;
+  line-height: 1;
+  font-size: 120%;
+}
 .header .warrper .headerRight ul li ul {
   display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 160px;
+  float: left;
+  flex-wrap: wrap;
+}
+.header .warrper .headerRight ul li ul li {
+  list-style: none;
+  width: 100%;
+  float: left;
+  margin: 0;
+}
+.header .warrper .headerRight ul li ul li a {
+  float: left;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: #000000;
+  transition: all 0.4s ease-out;
+  text-align: left;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  border-bottom: solid 1px #F4F1EC;
+  font-size: 12px;
+  letter-spacing: normal;
+  line-height: 1;
+}
+.header .warrper .headerRight ul li ul li a:hover, .header .warrper .headerRight ul li ul li a.active {
+  border-bottom-color: #F4F1EC;
+  background: #F4F1EC;
+  color: #000000;
+  transition: all 0.4s ease-in;
+}
+.header .warrper .headerRight ul li:hover a {
+  border-bottom-color: #EB4525;
+  color: #EB4525;
+}
+.header .warrper .headerRight ul li:hover ul {
+  display: block;
 }
 .header .warrper p {
   display: block;
@@ -630,90 +678,151 @@ template {
 }
 .header .warrper aside {
   display: none;
-  float: right;
-  width: 24px;
-  height: 24px;
-  position: relative;
-  line-height: 1;
-}
-.header .warrper aside span {
-  position: absolute;
-  float: left;
-  width: 100%;
-  height: 2px;
-  background-color: #000000;
-  line-height: 2px;
-  font-size: 2px;
-  border-radius: 2px;
-  padding: 0;
-}
-.header .warrper aside span:first-child {
-  left: 0;
-  top: 0;
-  transition: all 0.4s ease-out;
-}
-.header .warrper aside span:nth-child(2) {
-  left: 0;
-  top: 7px;
-  transition: all 0.4s ease-out;
-}
-.header .warrper aside span:last-child {
-  right: 0;
-  top: 14px;
-  transition: all 0.4s ease-out;
-}
-.header .warrper aside.active span:first-child {
-  top: 50%;
-  transform: rotate(45deg);
-  transition: all 0.4s ease-in;
-}
-.header .warrper aside.active span:nth-child(2) {
-  display: none;
-  transition: all 0.4s ease-in;
-}
-.header .warrper aside.active span:last-child {
-  top: 50%;
-  transform: rotate(-45deg);
-  transition: all 0.4s ease-in;
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 1100px) {
   .header {
     height: 70px;
+    padding-top: 0.7rem;
   }
-  .header .headerInsider .logo {
-    width: 100px;
+  .header .warrper .logo {
+    width: 130px;
   }
-  .header .headerInsider aside {
+  .header .warrper aside {
     display: block;
+    float: right;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    line-height: 1;
+    margin: 0.2rem 0 0 1rem;
   }
-  .header .headerInsider .headerRight {
+  .header .warrper aside span {
+    position: absolute;
+    float: left;
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    line-height: 3px;
+    font-size: 3px;
+    border-radius: 3px;
+    padding: 0;
+  }
+  .header .warrper aside span:first-child {
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease-out;
+  }
+  .header .warrper aside span:nth-child(2) {
+    left: 0;
+    top: 9px;
+    transition: all 0.4s ease-out;
+  }
+  .header .warrper aside span:last-child {
+    right: 0;
+    top: 18px;
+    transition: all 0.4s ease-out;
+  }
+  .header .warrper aside.active span:first-child {
+    top: 45%;
+    transform: rotate(45deg);
+    transition: all 0.4s ease-in;
+  }
+  .header .warrper aside.active span:nth-child(2) {
+    display: none;
+    transition: all 0.4s ease-in;
+  }
+  .header .warrper aside.active span:last-child {
+    top: 45%;
+    transform: rotate(-45deg);
+    transition: all 0.4s ease-in;
+  }
+  .header .warrper p {
+    margin-top: 0;
+  }
+  .header .warrper .headerRight {
     display: none;
     position: absolute;
     top: 70px;
     right: 0;
     width: 100%;
-    background: #000000;
-    padding: 0.8rem 2.5%;
+    height: calc(100vh - 70px);
+    background: #152c55;
+    padding: 1rem 0;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: scroll;
   }
-  .header .headerInsider .headerRight ul {
-    margin-right: 0.5rem;
+  .header .warrper .headerRight ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .header .warrper .headerRight ul li {
+    margin: 0;
+    display: block;
+    width: 100%;
+    float: left;
+  }
+  .header .warrper .headerRight ul li:last-child a {
+    border-bottom: none;
+  }
+  .header .warrper .headerRight ul li a {
+    float: left;
+    width: 100%;
+    padding: 0.7rem 2rem;
+    text-align: left;
+    color: #ffffff;
+    border-bottom: solid 1px #ffffff;
+  }
+  .header .warrper .headerRight ul li a:hover, .header .warrper .headerRight ul li a.active {
+    border-bottom-color: #EB4525;
+    color: #EB4525;
+    transition: all 0.4s ease-in;
+  }
+  .header .warrper .headerRight ul li ul {
+    display: none;
+    position: relative;
+    left: 0;
+    top: 0;
     width: 100%;
   }
-  .header .headerInsider .headerRight ul li {
-    margin: 0 0.3rem;
+  .header .warrper .headerRight ul li ul li a {
+    float: left;
+    width: 100%;
+    padding: 0.7rem 3rem;
+    background: none;
+    transition: all 0.4s ease-out;
+    text-align: left;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "futura-book", Arial, sans-serif;
+    font-weight: 500;
+    border-bottom: solid 1px #ffffff;
+    font-size: 12px;
+    letter-spacing: normal;
+    line-height: 1;
   }
-  .header .headerInsider .headerRight ul li a {
-    width: 26px;
-    height: 26px;
-    line-height: 26px;
-    font-size: 14px;
+  .header .warrper .headerRight ul li ul li a:hover, .header .warrper .headerRight ul li ul li a.active {
+    border-bottom-color: #000000;
+    background: none;
+    color: #000000;
+    transition: all 0.4s ease-in;
+  }
+  .header .warrper .headerRight ul li:hover a {
+    border-bottom-color: #EB4525;
+    color: #EB4525;
+  }
+  .header .warrper .headerRight ul li:hover ul {
+    display: block;
   }
 }
 .footer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: #ffffff;
   width: 100%;
   float: left;
@@ -838,6 +947,120 @@ template {
   transition: all 0.4s ease-in;
 }
 
+@media only screen and (max-width: 1100px) {
+  .footer {
+    padding: 2.5rem 0;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .footer {
+    padding: 3rem 0 5rem 0;
+  }
+  .footer .warrper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .footer .warrper .footerLeft {
+    width: 100%;
+  }
+  .footer .warrper .footerLeft aside img {
+    max-width: 100%;
+  }
+  .footer .warrper .footerLeft h2 {
+    margin: 1rem 0 2rem 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .footer .warrper .footerLeft p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    float: left;
+    width: auto;
+    padding-right: 1rem;
+    text-align: left;
+    color: #000000;
+    font-family: "futura-book", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  .footer .warrper .footerLeft p img {
+    display: inline-block;
+    max-width: 20px;
+    margin-right: 0.3rem;
+  }
+  .footer .warrper .footerLeft p a {
+    color: #000000;
+    transition: all 0.4s ease-out;
+    text-decoration: none;
+  }
+  .footer .warrper .footerLeft p a:hover {
+    color: #EB4525;
+    transition: all 0.4s ease-in;
+  }
+  .footer .warrper .footerRight {
+    width: 100%;
+  }
+  .footer .warrper .footerRight img {
+    max-width: 100%;
+  }
+  .footer .warrper .footerMid {
+    width: 100%;
+    margin: 3rem 0;
+  }
+  .footer .warrper .footerMid .footbox {
+    width: auto;
+    max-width: 40%;
+    float: left;
+  }
+  .footer .warrper .footerMid .footbox h2 {
+    float: left;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    color: #707070;
+    font-family: "futura-medium", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+  .footer .warrper .footerMid .footbox ul {
+    float: left;
+    width: 100%;
+  }
+  .footer .warrper .footerMid .footbox ul li {
+    list-style: none;
+    width: 100%;
+    float: left;
+    margin: 0 0 0.5rem 0;
+    text-align: left;
+    color: #707070;
+    font-family: "futura-book", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .footer .warrper .footerMid .footbox ul li::before {
+    content: "\f105";
+    margin-right: 0.5rem;
+    font-family: "FontAwesome";
+    font-weight: 300;
+    line-height: 1;
+  }
+  .footer .warrper .footerMid .footbox ul li a {
+    color: #707070;
+    text-decoration: none;
+    transition: all 0.4s ease-out;
+  }
+  .footer .warrper .footerMid .footbox ul li a:hover {
+    color: #EB4525;
+    transition: all 0.4s ease-in;
+  }
+}
 .sectionbottom {
   display: flex;
   justify-content: center;
@@ -896,10 +1119,43 @@ template {
   transition: all 0.4s ease-in;
 }
 
+@media only screen and (max-width: 1100px) {
+  .sectionbottom {
+    padding: 2rem 0;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .sectionbottom {
+    padding: 3rem 0;
+  }
+  .sectionbottom .warrper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .sectionbottom .warrper p {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .sectionbottom .warrper ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 3rem 0;
+  }
+  .sectionbottom .warrper ul li {
+    margin: 0 0.7rem;
+  }
+}
 .hm_banner {
   background-color: #000000;
   width: 100%;
   float: left;
+  height: calc(100vh - 110px);
 }
 .hm_banner .bannerSlideWeb {
   display: block;
@@ -1093,9 +1349,8 @@ template {
 .bs1 .bscontainer {
   position: absolute;
   z-index: 2;
-  top: 35%;
+  top: 20%;
   left: 45%;
-  transform: translateY(-50%);
   width: 500px;
   height: auto !important;
 }
@@ -1180,6 +1435,86 @@ template {
   transition: all 0.4s ease-in;
 }
 
+@media only screen and (max-width: 1100px) {
+  .hm_banner {
+    height: calc(100vh - 70px);
+  }
+  .hm_banner .bannerDown {
+    bottom: -30px;
+  }
+  .hm_banner .bannerDown img {
+    width: 49px;
+  }
+  .bs1 .bscontainer {
+    width: 400px;
+  }
+  .bs1 .bscontainer h2 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  .bs1 .bscontainer h3 {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .bs1 .bscontainer h4 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  .bs1 .bscontainer p {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: normal;
+  }
+  .bs1 .bscontainer aside {
+    margin-top: 2rem;
+  }
+  .bs1 .bscontainer aside .bs_knowmore {
+    padding: 0.8rem 1.2rem;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    line-height: 15px;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .hm_banner {
+    height: auto;
+  }
+  .hm_banner .bannerDown {
+    display: none;
+  }
+  .bs1 .bscontainer {
+    top: 10%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .bs1 .bscontainer {
+    width: 250px;
+  }
+  .bs1 .bscontainer h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .bs1 .bscontainer h3 {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .bs1 .bscontainer h4 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .bs1 .bscontainer p {
+    display: none;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .bs1 .bscontainer aside {
+    margin-top: 1rem;
+  }
+  /*  dots */
+  .bannerSlider.slick-slider .slick-dots {
+    bottom: 7%;
+  }
+}
 .hm_rangewrap {
   display: flex;
   justify-content: center;
@@ -1187,7 +1522,7 @@ template {
   background-color: #19305B;
   width: 100%;
   float: left;
-  padding: 3rem 0 5rem 0;
+  padding: 5rem 0;
 }
 .hm_rangewrap .warrper .hm_rangeheading {
   width: 100%;
@@ -1263,6 +1598,7 @@ template {
 }
 .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section p {
   width: 100%;
+  min-height: 130px;
   float: left;
   text-align: center;
   font-family: "futura-book", Arial, sans-serif;
@@ -1317,6 +1653,72 @@ template {
   transition: all 0.4s ease-in;
 }
 
+@media only screen and (max-width: 1023px) {
+  .hm_rangewrap {
+    padding: 4rem 0;
+  }
+  .hm_rangewrap .warrper .hm_rangeheading h2 {
+    font-size: 25px;
+    line-height: 33px;
+  }
+  .hm_rangewrap .warrper .hm_rangeheading p {
+    margin: 1rem 0;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox {
+    width: 31.3%;
+    margin: 1rem 1% 0 1%;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox aside span {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.7px;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section p {
+    min-height: 130px;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h5 {
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+    float: left;
+    text-align: center;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h5 img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h5:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 1px;
+    background: #ffffff;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h6 {
+    margin-top: 1rem;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox section h6 .hm_rangeKnowmoreBTN {
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    line-height: 15px;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox {
+    width: 48%;
+    margin: 1rem 1% 0 1%;
+  }
+}
 .hm_whyuswrap {
   display: flex;
   justify-content: center;
@@ -1324,7 +1726,7 @@ template {
   background: #19305B url("../images/bg_top.png") no-repeat left bottom;
   width: 100%;
   float: left;
-  padding: 3rem 0 5rem 0;
+  padding: 5rem 0;
   border-top: solid 2px #253b63;
 }
 .hm_whyuswrap .warrper .hm_whyusleft {
@@ -1416,6 +1818,7 @@ template {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 0 0 2rem 0;
 }
 .hm_whyuswrap .warrper .hm_whyusright h2 img {
   width: auto;
@@ -1433,9 +1836,16 @@ template {
   font-size: 29px;
   line-height: 34px;
 }
-.hm_whyuswrap .warrper .hm_whyusright p {
+
+.hm_whyus_slider {
+  float: left;
   width: 100%;
-  padding: 2rem 0 0 0;
+  margin: 0 !important;
+  padding: 0 0 2rem 0;
+}
+
+.hm_whyus_item {
+  width: 100%;
   float: left;
   text-align: left;
   font-family: "futura-book", Arial, sans-serif;
@@ -1446,6 +1856,116 @@ template {
   letter-spacing: 0.8px;
 }
 
+.hm_whyus_slider.slick-slider .slick-list {
+  margin: 0;
+  padding: 0;
+}
+
+.hm_whyus_slider.slick-slider .slick-list .slick-track {
+  margin: 0;
+  padding: 0;
+}
+
+.hm_whyus_slider.slick-slider .slick-list .slick-track .slick-slide {
+  margin: 0;
+  padding: 0;
+}
+
+.hm_whyus_slider.slick-slider .slick-dots {
+  bottom: 0;
+  text-align: left;
+}
+
+.hm_whyus_slider.slick-slider .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.hm_whyus_slider.slick-slider .slick-dots li.slick-active {
+  transform: scale(1);
+  background: #ffffff;
+  opacity: 1;
+}
+
+.hm_whyus_slider.slick-slider .slick-dots li button {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  .hm_whyuswrap {
+    padding: 4rem 0;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft {
+    width: 100%;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft h2 {
+    margin-bottom: 2rem;
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li {
+    width: 50%;
+    padding: 0 1rem 0 0;
+    position: relative;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li:after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    bottom: 0;
+    width: 1px;
+    height: 35px;
+    background-color: #19305B;
+    font-size: 1px;
+    line-height: 1;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li aside img {
+    max-width: 90px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li h3 {
+    margin: 1.5rem 0;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li h3 img {
+    max-width: 50px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li h3 span {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li p {
+    padding: 0 0 0 1rem;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+  .hm_whyuswrap .warrper .hm_whyusright {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  .hm_whyuswrap .warrper .hm_whyusright h2 {
+    padding: 0 0 2rem 0;
+  }
+  .hm_whyuswrap .warrper .hm_whyusright h2 img {
+    max-width: 100px;
+    margin-left: 15px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusright h2 span {
+    width: calc(100% - 115px);
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
 .hm_aboutwrap {
   display: flex;
   justify-content: center;
@@ -1457,16 +1977,16 @@ template {
   background-size: auto auto, auto 100%;
   width: 100%;
   float: left;
-  padding: 3rem 0 5rem 0;
-  border-top: solid 2px #253b63;
+  padding: 5rem 0;
 }
-.hm_aboutwrap .warrper .hm_abouttext {
+.hm_aboutwrap .warrper .hm_aboutcontainer {
   width: 100%;
   max-width: 600px;
   float: left;
 }
-.hm_aboutwrap .warrper .hm_abouttext h2 {
+.hm_aboutwrap .warrper .hm_aboutcontainer h2 {
   width: 100%;
+  margin: 0 0 1rem 0;
   float: left;
   text-align: left;
   font-family: "futura-bold", Arial, sans-serif;
@@ -1475,22 +1995,12 @@ template {
   font-size: 45px;
   line-height: 50px;
 }
-.hm_aboutwrap .warrper .hm_abouttext p {
-  width: 100%;
-  margin: 1rem 0 2rem 0;
-  float: left;
-  text-align: left;
-  font-family: "futura-book", Arial, sans-serif;
-  font-weight: 500;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 28px;
-}
-.hm_aboutwrap .warrper .hm_abouttext aside {
+.hm_aboutwrap .warrper .hm_aboutcontainer aside {
   width: 100%;
   float: right;
+  margin-top: 1.5rem;
 }
-.hm_aboutwrap .warrper .hm_abouttext aside .hm_about_knowmoreBTN {
+.hm_aboutwrap .warrper .hm_aboutcontainer aside .hm_about_knowmoreBTN {
   padding: 1rem 2rem;
   width: auto;
   float: left;
@@ -1508,12 +2018,98 @@ template {
   letter-spacing: 0.7px;
   line-height: 19px;
 }
-.hm_aboutwrap .warrper .hm_abouttext aside .hm_about_knowmoreBTN:hover {
+.hm_aboutwrap .warrper .hm_aboutcontainer aside .hm_about_knowmoreBTN:hover {
   background-color: #000000;
   color: #ffffff;
   transition: all 0.4s ease-in;
 }
 
+.hm_about_slider {
+  float: left;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 0 2.5rem 0;
+}
+
+.hm_about_item {
+  width: 100%;
+  float: left;
+  text-align: left;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.hm_about_slider.slick-slider .slick-list {
+  margin: 0;
+  padding: 0;
+}
+
+.hm_about_slider.slick-slider .slick-list .slick-track {
+  margin: 0;
+  padding: 0;
+}
+
+.hm_about_slider.slick-slider .slick-list .slick-track .slick-slide {
+  margin: 0;
+  padding: 0;
+}
+
+.hm_about_slider.slick-slider .slick-dots {
+  bottom: 0;
+  text-align: left;
+}
+
+.hm_about_slider.slick-slider .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.hm_about_slider.slick-slider .slick-dots li.slick-active {
+  transform: scale(1);
+  background: #ffffff;
+  opacity: 1;
+}
+
+.hm_about_slider.slick-slider .slick-dots li button {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  .hm_aboutwrap {
+    background: #EB4525;
+    background-image: url("../images/bg_bott.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: auto auto;
+    width: 100%;
+    float: left;
+    padding: 4rem 0;
+  }
+  .hm_aboutwrap .warrper .hm_aboutcontainer h2 {
+    margin: 0 0 1rem 0;
+    color: #19305B;
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .hm_aboutwrap .warrper .hm_aboutcontainer aside .hm_about_knowmoreBTN {
+    padding: 0.7rem 1.2rem;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    line-height: 15px;
+  }
+}
 .hm_sustainabilitywrap {
   position: relative;
   width: 100%;
@@ -1521,7 +2117,8 @@ template {
   padding: 0;
 }
 .hm_sustainabilitywrap .hm_sustainabilitybg {
-  width: 100%;
+  width: auto;
+  min-width: 100%;
   height: 100%;
   float: left;
   object-fit: cover;
@@ -1571,6 +2168,21 @@ template {
   line-height: 24px;
 }
 
+@media only screen and (max-width: 1023px) {
+  .hm_sustainabilitywrap .hm_sustainabilityInsider .hm_sustainabilitytext {
+    max-width: 380px;
+  }
+  .hm_sustainabilitywrap .hm_sustainabilityInsider .hm_sustainabilitytext h2 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .hm_sustainabilitywrap .hm_sustainabilityInsider .hm_sustainabilitytext h2 span {
+    display: block;
+  }
+  .hm_sustainabilitywrap .hm_sustainabilityInsider .hm_sustainabilitytext p {
+    margin: 1rem 0 0 0;
+  }
+}
 .hm_getintouchwrap {
   display: flex;
   justify-content: center;
@@ -1578,7 +2190,7 @@ template {
   background-color: #F4F1EC;
   width: 100%;
   float: left;
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 .hm_getintouchwrap .warrper {
   max-width: 716px;
@@ -1670,6 +2282,16 @@ template {
   text-align: left;
 }
 
+@media only screen and (max-width: 1023px) {
+  .hm_getintouchwrap {
+    padding: 4rem 0;
+  }
+  .hm_getintouchwrap .warrper h2 {
+    margin-bottom: 1rem;
+    font-size: 25px;
+    line-height: 33px;
+  }
+}
 /*
 
 @import "_socialwall.scss";
@@ -1701,7 +2323,7 @@ html, body {
 }
 
 .fitheight {
-  height: calc(100vh - 110px);
+  min-height: calc(100vh - 110px);
 }
 
 .warrper {
@@ -1745,5 +2367,13 @@ html, body {
     float: none;
     max-width: 1600px;
     margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .main {
+    padding: 70px 0 0 0;
+  }
+  .fitheight {
+    min-height: auto;
   }
 }

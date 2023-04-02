@@ -1,5 +1,5 @@
 .hm_rangewrap { 
-     @include fCC();  background-color: $blue2; width: 100%; float: left;  padding: 3rem 0 5rem 0;
+     @include fCC();  background-color: $blue2; width: 100%; float: left;  padding:5rem 0;
     .warrper { 
         .hm_rangeheading {
             width: 100%;  float: left; 
@@ -17,7 +17,7 @@
                 }
                 section { 
                     width: 100%; float: left; padding: 1rem;
-                    p {  width: 100%;   float: left; text-align: center; @include fbook(); color:$white;  font-size: 16px; line-height: 22px;  }
+                    p {  width: 100%; min-height: 130px;  float: left; text-align: center; @include fbook(); color:$white;  font-size: 16px; line-height: 22px;  }
                     h5 { 
                         position: relative; width: 100%; min-height: 60px; float: left; text-align: center; 
                         img { max-width: 100%; margin: 0 auto; display: inline-block; }
@@ -39,8 +39,53 @@
 }
 
 
+@media only screen and (max-width:1023px) 
+{
+    .hm_rangewrap { 
+        padding:4rem 0;
+       .warrper { 
+           .hm_rangeheading {
+               h2 { font-size:25px; line-height:33px; }
+               p {  margin:1rem 0;   }
+           }
+           .hm_rangcontainer {
+                @include fCS(); flex-wrap: wrap;
+               .hm_rangbox { 
+                   width:31.3%; margin:1rem 1% 0 1%;
+                   aside {
+                       span {  font-size: 14px; line-height: 22px; letter-spacing: 0.7px;  }
+                   }
+                   section { 
+                       p { min-height: 130px;  }
+                       h5 { 
+                           position: relative; width: 100%; min-height: 60px; float: left; text-align: center; 
+                           img { max-width: 100%; margin: 0 auto; display: inline-block; }
+                           &:after { 
+                               content:''; position: absolute; left:50%; bottom: 0; transform: translateX(-50%); width: 25px; height:1px; background: $white;
+                           }
+                       }
+                       h6 { 
+                           margin-top: 1rem;
+                           .hm_rangeKnowmoreBTN { font-size: 12px; letter-spacing:0.6px; line-height: 15px; }
+                       }
+                   }
+               }
+           }
+       }
+   }
+    
+}
+
 @media only screen and (max-width:599px) 
 {
- 
+    .hm_rangewrap { 
+       .warrper { 
+           .hm_rangcontainer {
+               .hm_rangbox { 
+                   width:48%; margin:1rem 1% 0 1%;
+               }
+           }
+       }
+   }
     
 }

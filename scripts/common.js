@@ -1,5 +1,5 @@
 /* page refresh on orientation change === START */
-$(window).on('orientationchange', function (event) 
+$(window).on('orientationchange', function () 
 {
     location.reload(true);
 });
@@ -23,24 +23,16 @@ $("#menubar").click(function(e)
     {
         $("#menubar").removeClass("active");
         $("#menucontainer").slideUp(300);
+        $('body').css('overflow','auto');
     }
     else 
     {
         $("#menubar").addClass("active");
         $("#menucontainer").slideDown(300);
+        $('body').css('overflow','hidden');
     }
 });
-$('body').click(function(e) // close on click body
-{    
-    if($(window).width() < 499)
-    {
-        if (e.target != $('#menubar') || e.target != $('#menucontainer')) 
-        {
-            $("#menubar").removeClass("active");
-            $("#menucontainer").slideUp(300);
-        }
-    }
-});
+
 /* show/hide menu === end */
 
 
@@ -149,7 +141,8 @@ function showhidemsg(val)
 /* show/hide msg === end */
 
 var homejump = 0;
-if($(window).width() > 1255)  homejump = 110;
+if($(window).width() > 1100) { homejump = 110; }
+else { homejump = 70; }
 if($("#downscrollhome").length == 1 && $("#productrang").length == 1)
 {
     $("#downscrollhome").click(function()
@@ -171,9 +164,43 @@ $(function($)
             slidesToScroll: 1,
             dots: true,
             arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true,
+            adaptiveHeight: false,
+            centerMode: false,
+            centerPadding: '0',
+            initialSlide:0
+        });
+    }
+
+    if($(".hm_about_slider").length > 0)
+    {
+        $('.hm_about_slider').slick({
+            slidesToShow:1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
             autoplay: false,
             autoplaySpeed: 3000,
-            infinite: false,
+            infinite: true,
+            adaptiveHeight: false,
+            centerMode: false,
+            centerPadding: '0',
+            initialSlide:0
+        });
+    }
+
+    if($(".hm_whyus_slider").length > 0)
+    {
+        $('.hm_whyus_slider').slick({
+            slidesToShow:1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: false,
+            autoplay: false,
+            autoplaySpeed: 3000,
+            infinite: true,
             adaptiveHeight: false,
             centerMode: false,
             centerPadding: '0',

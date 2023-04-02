@@ -1,7 +1,7 @@
 
  
 .hm_getintouchwrap { 
-    @include fCC();  background-color: $gray; width: 100%; float: left;  padding: 3rem 0;
+    @include fCC();  background-color: $gray; width: 100%; float: left;  padding:5rem 0;
    .warrper { 
        max-width: 716px;
        h2 { width: 100%;  float: left; text-align: center; @include fbold(); color:$blue;  font-size: 45px; line-height:60px; }
@@ -55,7 +55,14 @@
 
 @media only screen and (max-width:1023px) 
 {
-    
+
+    .hm_getintouchwrap { 
+        padding:4rem 0;
+       .warrper { 
+           h2 { margin-bottom: 1rem; font-size: 25px; line-height:33px; }
+        }
+    }
+     
 }
 
 

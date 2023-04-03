@@ -89,3 +89,13 @@
    }
     
 }
+
+
+@media only screen and (max-width:479px) 
+{
+    .hm_rangewrap { 
+        background: $blue2 url('../images/bg_up.png') no-repeat left bottom; 
+   }
+    
+}
+  

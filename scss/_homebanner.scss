@@ -110,7 +110,33 @@
             aside {margin-top: 1rem; }
         }
     }
-
-    /*  dots */
     .bannerSlider.slick-slider .slick-dots {  bottom:7%;   }
+}
+
+
+@media only screen and (max-width:479px) 
+{
+    .hm_banner { 
+        .bannerSlideWeb { display:none; }
+        .bannerSlideMob { display: block; }
+        .bannerDown {
+            display: block;
+        }
+    }
+
+    .bs1 { 
+        .bscontainer { 
+            width: 90%; left: 7%; top: 5%;
+            h2{font-size: 34px; line-height: 50px;}
+            h3{font-size: 14px; line-height: 21px;}
+            h4{ font-size: 34px; line-height: 50px;}
+            p{ display: block; font-size: 14px; line-height:22px; }
+            aside {
+                margin-top: 3rem;
+                .bs_knowmore { float: right; margin-right: 1rem; }
+             }
+        }
+    }
+    .bannerSlider.slick-slider .slick-dots { left: auto; right:5%;  bottom: 15%;  }
+
 }

@@ -1061,6 +1061,12 @@ template {
     transition: all 0.4s ease-in;
   }
 }
+@media only screen and (max-width: 479px) {
+  .footer .warrper .footerMid .footbox {
+    width: 50%;
+    max-width: 50%;
+  }
+}
 .sectionbottom {
   display: flex;
   justify-content: center;
@@ -1510,9 +1516,53 @@ template {
   .bs1 .bscontainer aside {
     margin-top: 1rem;
   }
-  /*  dots */
   .bannerSlider.slick-slider .slick-dots {
     bottom: 7%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .hm_banner .bannerSlideWeb {
+    display: none;
+  }
+  .hm_banner .bannerSlideMob {
+    display: block;
+  }
+  .hm_banner .bannerDown {
+    display: block;
+  }
+  .bs1 .bscontainer {
+    width: 90%;
+    left: 7%;
+    top: 5%;
+  }
+  .bs1 .bscontainer h2 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+  .bs1 .bscontainer h3 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .bs1 .bscontainer h4 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+  .bs1 .bscontainer p {
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .bs1 .bscontainer aside {
+    margin-top: 3rem;
+  }
+  .bs1 .bscontainer aside .bs_knowmore {
+    float: right;
+    margin-right: 1rem;
+  }
+  .bannerSlider.slick-slider .slick-dots {
+    left: auto;
+    right: 5%;
+    bottom: 15%;
   }
 }
 .hm_rangewrap {
@@ -1717,6 +1767,11 @@ template {
   .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox {
     width: 48%;
     margin: 1rem 1% 0 1%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .hm_rangewrap {
+    background: #19305B url("../images/bg_up.png") no-repeat left bottom;
   }
 }
 .hm_whyuswrap {
@@ -1950,8 +2005,55 @@ template {
   }
   .hm_whyuswrap .warrper .hm_whyusright {
     width: 100%;
-    padding: 2rem;
+    padding: 1.5rem;
     margin-top: 2rem;
+  }
+  .hm_whyuswrap .warrper .hm_whyusright h2 {
+    padding: 0 0 2rem 0;
+  }
+  .hm_whyuswrap .warrper .hm_whyusright h2 img {
+    max-width: 100px;
+    margin-left: 15px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusright h2 span {
+    width: calc(100% - 115px);
+    font-size: 17px;
+    line-height: 31px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .hm_whyuswrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #19305B url("../images/bg_down.png") no-repeat left top;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li {
+    padding: 0 0.5rem 0 0;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li:after {
+    height: 50px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li aside img {
+    max-width: 75px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li h3 {
+    margin: 1rem 0;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li h3 img {
+    max-width: 40px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li h3 span {
+    margin-left: 0.5rem;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusleft ul li p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .hm_whyuswrap .warrper .hm_whyusright {
+    padding: 1rem;
   }
   .hm_whyuswrap .warrper .hm_whyusright h2 {
     padding: 0 0 2rem 0;
@@ -1971,13 +2073,27 @@ template {
   justify-content: center;
   align-items: center;
   background: #EB4525;
-  background-image: url("../images/bg_bott.png"), url("../images/home_about.png");
-  background-repeat: no-repeat no-repeat;
-  background-position: left top, bottom right;
-  background-size: auto auto, auto 100%;
+  background-image: url("../images/bg_bott.png");
+  background-repeat: no-repeat;
+  background-position: left top;
   width: 100%;
   float: left;
-  padding: 5rem 0;
+  padding: 0;
+}
+.hm_aboutwrap .hm_about_web {
+  display: block;
+  float: left;
+  width: auto;
+  min-width: 100%;
+  height: calc(100vh - 110px);
+}
+.hm_aboutwrap .hm_about_mob {
+  display: none;
+  width: 100%;
+  float: left;
+}
+.hm_aboutwrap .warrper {
+  position: absolute;
 }
 .hm_aboutwrap .warrper .hm_aboutcontainer {
   width: 100%;
@@ -2088,14 +2204,16 @@ template {
 
 @media only screen and (max-width: 1023px) {
   .hm_aboutwrap {
-    background: #EB4525;
-    background-image: url("../images/bg_bott.png");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: auto auto;
-    width: 100%;
-    float: left;
     padding: 4rem 0;
+  }
+  .hm_aboutwrap .hm_about_web {
+    display: none;
+  }
+  .hm_aboutwrap .warrper {
+    position: static;
+  }
+  .hm_aboutwrap .warrper .hm_aboutcontainer {
+    max-width: 100%;
   }
   .hm_aboutwrap .warrper .hm_aboutcontainer h2 {
     margin: 0 0 1rem 0;
@@ -2110,18 +2228,42 @@ template {
     line-height: 15px;
   }
 }
+@media only screen and (max-width: 479px) {
+  .hm_aboutwrap {
+    padding: 2rem 0 0 0;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: none;
+    background: #EB4525;
+  }
+  .hm_aboutwrap .hm_about_web {
+    display: none;
+  }
+  .hm_aboutwrap .hm_about_mob {
+    display: block;
+  }
+}
 .hm_sustainabilitywrap {
   position: relative;
   width: 100%;
   float: left;
   padding: 0;
 }
-.hm_sustainabilitywrap .hm_sustainabilitybg {
-  width: auto;
-  min-width: 100%;
-  height: 100%;
+.hm_sustainabilitywrap .hm_sustainability_web {
+  display: block;
   float: left;
   object-fit: cover;
+  width: auto;
+  min-width: 100%;
+  height: calc(100vh - 110px);
+}
+.hm_sustainabilitywrap .hm_sustainability_mob {
+  display: none;
+  width: 100%;
+  height: auto;
+  float: left;
 }
 .hm_sustainabilitywrap .hm_sustainabilityInsider {
   position: absolute;
@@ -2181,6 +2323,18 @@ template {
   }
   .hm_sustainabilitywrap .hm_sustainabilityInsider .hm_sustainabilitytext p {
     margin: 1rem 0 0 0;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .hm_sustainabilitywrap .hm_sustainability_web {
+    display: none;
+  }
+  .hm_sustainabilitywrap .hm_sustainability_mob {
+    display: block;
+  }
+  .hm_sustainabilitywrap .hm_sustainabilityInsider .hm_sustainabilitytext {
+    max-width: 100%;
+    margin-bottom: 3rem;
   }
 }
 .hm_getintouchwrap {

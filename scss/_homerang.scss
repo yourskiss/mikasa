@@ -35,6 +35,9 @@
                 }
             }
         }
+        .hm_rangeshowmore {
+            display: none;
+        }
     }
 }
 
@@ -95,7 +98,22 @@
 {
     .hm_rangewrap { 
         background: $blue2 url('../images/bg_up.png') no-repeat left bottom; 
-   }
+        .warrper { 
+            .hm_rangcontainer {
+                .hm_rangbox { 
+                   display: none;
+                   &:nth-of-type(1), &:nth-of-type(2) { display: block; }
+                }
+            }
+            .hm_rangeshowmore {
+                display: block; width: 100%; float: left; text-align: center; margin-top:2.5rem;
+                span {
+                    display: inline-block; padding:0.8rem 1.5rem; width: auto; float: none; margin: 0 auto; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center; cursor: pointer; @include tdn(); border-radius: 10px; font-size: 12px; letter-spacing: 0.6px; line-height: 15px; text-transform: uppercase;
+                    &:hover { background-color: $black;  color:$white; @include inT();  } 
+                }
+            }
+        }
+    }
     
 }
   

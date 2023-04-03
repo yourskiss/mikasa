@@ -1702,6 +1702,9 @@ template {
   color: #000000;
   transition: all 0.4s ease-in;
 }
+.hm_rangewrap .warrper .hm_rangeshowmore {
+  display: none;
+}
 
 @media only screen and (max-width: 1023px) {
   .hm_rangewrap {
@@ -1772,6 +1775,44 @@ template {
 @media only screen and (max-width: 479px) {
   .hm_rangewrap {
     background: #19305B url("../images/bg_up.png") no-repeat left bottom;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox {
+    display: none;
+  }
+  .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox:nth-of-type(1), .hm_rangewrap .warrper .hm_rangcontainer .hm_rangbox:nth-of-type(2) {
+    display: block;
+  }
+  .hm_rangewrap .warrper .hm_rangeshowmore {
+    display: block;
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  .hm_rangewrap .warrper .hm_rangeshowmore span {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    width: auto;
+    float: none;
+    margin: 0 auto;
+    background-color: #EB4525;
+    font-family: "futura-medium", Arial, sans-serif;
+    font-weight: 600;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+  .hm_rangewrap .warrper .hm_rangeshowmore span:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transition: all 0.4s ease-in;
   }
 }
 .hm_whyuswrap {

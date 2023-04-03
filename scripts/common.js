@@ -32,7 +32,6 @@ $("#menubar").click(function(e)
         $('body').css('overflow','hidden');
     }
 });
-
 /* show/hide menu === end */
 
 
@@ -150,9 +149,15 @@ if($("#downscrollhome").length == 1 && $("#productrang").length == 1)
         $('html, body').animate({ scrollTop: $("#productrang").offset().top - homejump }, 500);
     });
 }
-
-    
-
+ 
+if($(".hm_rangeshowmore").length == 1 && $(".hm_rangcontainer").length == 1)
+{
+    $("#knowmore_ourrang").click(function()
+    {
+        $(".hm_rangcontainer .hm_rangbox").slideDown(500);
+        $(".hm_rangeshowmore").slideUp(200);
+    });
+}
 
 // slider   === start 
 $(function($) 

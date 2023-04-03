@@ -603,49 +603,45 @@ template {
   line-height: 1;
   font-size: 120%;
 }
-.header .warrper .headerRight ul li ul {
+.header .warrper .headerRight ul li .dropdownmenu {
   display: none;
+}
+.header .warrper .headerRight ul li:hover a {
+  border-bottom-color: #EB4525;
+  color: #EB4525;
+}
+.header .warrper .headerRight ul li:hover .dropdownmenu {
+  display: block;
+  z-index: 2;
   position: absolute;
   left: 0;
   top: 100%;
   width: 160px;
   float: left;
-  flex-wrap: wrap;
 }
-.header .warrper .headerRight ul li ul li {
-  list-style: none;
-  width: 100%;
-  float: left;
-  margin: 0;
-}
-.header .warrper .headerRight ul li ul li a {
+.header .warrper .headerRight ul li:hover .dropdownmenu a {
   float: left;
   width: 100%;
   padding: 0.7rem 1rem;
-  background: #000000;
+  background: #EB4525;
   transition: all 0.4s ease-out;
   text-align: left;
   color: #ffffff;
   text-decoration: none;
   font-family: "futura-book", Arial, sans-serif;
   font-weight: 500;
-  border-bottom: solid 1px #F4F1EC;
+  border-bottom: solid 1px #ffffff;
   font-size: 12px;
   letter-spacing: normal;
   line-height: 1;
 }
-.header .warrper .headerRight ul li ul li a:hover, .header .warrper .headerRight ul li ul li a.active {
-  border-bottom-color: #F4F1EC;
-  background: #F4F1EC;
-  color: #000000;
+.header .warrper .headerRight ul li:hover .dropdownmenu a:hover, .header .warrper .headerRight ul li:hover .dropdownmenu a.active {
+  background: #152c55;
+  color: #ffffff;
   transition: all 0.4s ease-in;
 }
-.header .warrper .headerRight ul li:hover a {
-  border-bottom-color: #EB4525;
-  color: #EB4525;
-}
-.header .warrper .headerRight ul li:hover ul {
-  display: block;
+.header .warrper .headerRight ul li:hover .dropdownmenu a:last-child {
+  border-bottom: 0px;
 }
 .header .warrper p {
   display: block;
@@ -775,21 +771,24 @@ template {
     padding: 0.7rem 2rem;
     text-align: left;
     color: #ffffff;
-    border-bottom: solid 1px #ffffff;
+    border-bottom: solid 2px #ffffff;
   }
   .header .warrper .headerRight ul li a:hover, .header .warrper .headerRight ul li a.active {
     border-bottom-color: #EB4525;
     color: #EB4525;
     transition: all 0.4s ease-in;
   }
-  .header .warrper .headerRight ul li ul {
-    display: none;
+  .header .warrper .headerRight ul li:hover a {
+    border-bottom-color: #EB4525;
+    color: #EB4525;
+  }
+  .header .warrper .headerRight ul li:hover .dropdownmenu {
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
   }
-  .header .warrper .headerRight ul li ul li a {
+  .header .warrper .headerRight ul li:hover .dropdownmenu a {
     float: left;
     width: 100%;
     padding: 0.7rem 3rem;
@@ -800,23 +799,19 @@ template {
     text-decoration: none;
     font-family: "futura-book", Arial, sans-serif;
     font-weight: 500;
-    border-bottom: solid 1px #ffffff;
+    border-bottom: dotted 1px #F4F1EC;
     font-size: 12px;
     letter-spacing: normal;
     line-height: 1;
   }
-  .header .warrper .headerRight ul li ul li a:hover, .header .warrper .headerRight ul li ul li a.active {
-    border-bottom-color: #000000;
+  .header .warrper .headerRight ul li:hover .dropdownmenu a:hover, .header .warrper .headerRight ul li:hover .dropdownmenu a.active {
+    border-bottom: dotted 1px #F4F1EC;
     background: none;
-    color: #000000;
+    color: #EB4525;
     transition: all 0.4s ease-in;
   }
-  .header .warrper .headerRight ul li:hover a {
-    border-bottom-color: #EB4525;
-    color: #EB4525;
-  }
-  .header .warrper .headerRight ul li:hover ul {
-    display: block;
+  .header .warrper .headerRight ul li:hover .dropdownmenu a:last-child {
+    border-bottom: dotted 1px #F4F1EC;
   }
 }
 .footer {
@@ -1062,6 +1057,9 @@ template {
   }
 }
 @media only screen and (max-width: 479px) {
+  .footer .warrper .footerMid {
+    flex-wrap: wrap;
+  }
   .footer .warrper .footerMid .footbox {
     width: 50%;
     max-width: 50%;

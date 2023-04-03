@@ -12,24 +12,22 @@
                     li { 
                         position: relative; list-style: none; margin: 0 1rem; display: inline-block;
                         a { 
-                            float: left; width: auto; padding:0.5rem 0; @include outT();   text-align: center;  color:$black; @include tdn(); @include fbook(); background: none; border-bottom: solid 6px $white;  font-size: 13px; letter-spacing: 1.3px; line-height: 16px;
+                            float: left; width: auto; padding:0.5rem 0; @include outT(); text-align: center;  color:$black; @include tdn(); @include fbook(); background: none; border-bottom: solid 6px $white;  font-size: 13px; letter-spacing: 1.3px; line-height: 16px;
                             &:hover, &.active { border-bottom-color: $orange; color:$orange;  @include inT(); }
                             i.fa-angle-down { margin-left: 0.3rem; font-weight: 400; line-height: 1; font-size: 120%; }
                         }
                         
-                        ul {
-                            display: none; position:absolute; left: 0; top:100%; width:160px; float: left; flex-wrap: wrap;
-                            li { 
-                                list-style: none; width: 100%; float: left; margin: 0;
+                        .dropdownmenu { display: none; }
+                        &:hover {
+                            a { border-bottom-color:$orange; color: $orange; }
+                            .dropdownmenu { 
+                                display: block;  z-index: 2; position:absolute; left: 0; top:100%; width:160px; float: left; 
                                 a { 
-                                    float: left; width: 100%; padding:0.7rem 1rem; background: $black; @include outT();   text-align: left;  color:$white; @include tdn(); @include fbook();  border-bottom: solid 1px $gray;  font-size: 12px; letter-spacing:normal; line-height: 1;
-                                    &:hover, &.active { border-bottom-color: $gray; background: $gray; color:$black;  @include inT(); }
+                                    float: left; width: 100%; padding:0.7rem 1rem; background: $orange; @include outT(); text-align: left; color:$white; @include tdn(); @include fbook();  border-bottom: solid 1px $white;  font-size: 12px; letter-spacing:normal; line-height: 1;
+                                    &:hover, &.active { background: $blue; color:$white;  @include inT(); }
+                                    &:last-child { border-bottom: 0px; }
                                 }
                             }
-                        }
-                        &:hover {
-                            a { border-bottom-color: $orange; color:$orange;  }
-                            ul { display: block;}
                         }
                     }
                 }  
@@ -80,21 +78,19 @@
                             a { border-bottom:none;}
                         }
                         a { 
-                            float: left; width: 100%; padding:0.7rem 2rem; text-align: left;  color:$white; border-bottom: solid 1px $white;   
+                            float: left; width: 100%; padding:0.7rem 2rem; text-align: left;  color:$white; border-bottom: solid 2px $white;   
                             &:hover, &.active { border-bottom-color: $orange; color:$orange;  @include inT(); }
-                        }
-                        ul {
-                            display: none; position:relative; left: 0; top:0; width:100%;  
-                            li { 
-                                a { 
-                                    float: left; width: 100%; padding:0.7rem 3rem; background:none; @include outT();   text-align: left;  color:$white; @include tdn(); @include fbook();  border-bottom: solid 1px $white;  font-size: 12px; letter-spacing:normal; line-height: 1;
-                                    &:hover, &.active { border-bottom-color: $black; background:none; color:$black;  @include inT(); }
-                                }
-                            }
                         }
                         &:hover {
                             a { border-bottom-color: $orange; color:$orange;  }
-                            ul { display: block;}
+                            .dropdownmenu {
+                                position:relative; left: 0; top:0; width:100%;  
+                                    a { 
+                                        float: left; width: 100%; padding:0.7rem 3rem; background:none; @include outT();   text-align: left;  color:$white; @include tdn(); @include fbook();  border-bottom: dotted 1px $gray;  font-size: 12px; letter-spacing:normal; line-height: 1;
+                                        &:hover, &.active { border-bottom: dotted 1px $gray; background:none; color:$orange;  @include inT(); }
+                                        &:last-child {  border-bottom: dotted 1px $gray; }
+                                    }
+                            }
                         }
                     }
                 } 

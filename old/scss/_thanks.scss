@@ -1,0 +1,76 @@
+.thankswrap { 
+    background: $black3 url('../images/thankyou-bg-web.png') no-repeat center center; background-size: cover; width: 100%;  float: left;  min-height: calc(100vh - 165px);  padding:0;  @include fCC(); 
+    .thankswrap-inner { 
+        width:95%; max-width: 580px; margin: 0 auto; float:none;
+        h2 { margin: 0; width: 100%; float: left; text-align: center;  @include cutthecrap(); color: $white; font-size: 34px; line-height: 1; }
+        h3 { margin: 0.6rem 0 2rem 0; width: 100%; float: left; text-align: center;  @include latosemibold(); color: $white; font-size: 14px; line-height: 22px;  }
+        .thanks_desktop { display: block; width: 100%; float: left;  }
+        .thanks_mobile { display: none; width: 100%; float: left;  }
+        .thanks_cont { 
+            width: 100%; float: left; margin:1.5rem 0 0 0;  
+            p { margin:0.8rem 0 0 0; width: auto; float: left; text-align: center;  @include latosemibold(); color: $white; font-size: 16px; line-height: 20px; }
+            ul { 
+                @include fCC(); width: auto; float: left;  margin:0.4rem 1rem 0 1rem;
+                li { 
+                    list-style: none; margin: 0 0.3rem; display: inline-block;
+                    a { 
+                        float: left; @include outT(); @include tdn(); background-color: $white; border-radius: 50%; width: 28px; height: 28px; line-height: 28px; font-size: 14px; font-weight: 400; color:$black;  text-align: center;
+                        &:hover { background-color: $green2; color:$white;  @include inT(); }
+                    }
+                }
+            }
+            aside { 
+                width: 143px; float:right;   
+                a { 
+                    position: relative; width: 100%; height:44px; padding:0;  @include fCC(); background-color: $green4;  @include latosemibold();  line-height: 1; font-size: 16px; font-weight: 400; color:$white;  text-align: center;cursor: pointer;  overflow: hidden; text-decoration: none;
+                    b { position: relative; z-index: 2; }
+                    &:after { content:''; z-index: 1; position: absolute; left: -100%; top: 0; width: 100%; height: 100%; background-color: $green;  @include outT();  }
+                    &:hover {  
+                          &:after { left: 0; @include inT(); }
+                    }
+                 }
+            }
+        }
+ 
+    }
+}
+
+@media only screen and (max-width:1255px) 
+{
+ .thankswrap { min-height: calc(100vh - 132px); }
+}
+
+@media only screen and (max-width:599px) 
+{
+    .thankswrap { min-height: calc(100vh - 140px); }
+}
+
+
+@media only screen and (max-width:479px) 
+{
+    .thankswrap {  
+        padding: 3rem 0; background: $black3 url('../images/thankyou-bg-mob.png') no-repeat center center; background-size: cover; 
+        .thankswrap-inner { 
+            h2 { font-size:24px; }
+            h3 { margin: 0.5rem 0 1.5rem 0; font-size: 14px; }
+            .thanks_desktop { display:none; }
+            .thanks_mobile { display:block;  }
+            .thanks_cont { 
+                margin:2rem 0 0 0;  @include fCS(); flex-wrap: wrap;
+                p { margin:0.1rem 0 0 0; font-size: 14px; line-height: 20px; }
+                ul { 
+                    margin:0 0 0 0.5rem;
+                    li { 
+                         margin: 0 0.3rem;
+                        a { width: 24px; height: 24px; line-height: 24px; font-size: 14px; }
+                    }
+                }
+                aside { 
+                    width: 100%; float:right; margin-top: 1.5rem; @include fCS(); 
+                    a {  width:106px; height:36px;  font-size: 14px; }
+                }
+            }
+     
+        }  
+    }
+}

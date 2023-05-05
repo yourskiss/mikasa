@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+	<title>Mountain Dew</title>
+
+    <link rel="stylesheet" href="css/main.min.css" />
+    
+</head>
+<body>
+<!-- main start -->
+<main class="main">
+ 
+
+
+    <!-- header start -->
+    <header class="header">
+        <div class="headerInsider">
+            <a href="/"><img class="logo" src="images/logo.png" alt="logo" /></a>
+            <aside class="menubar" id="menubar">
+                <span></span><span></span><span></span>
+            </aside>
+            <div class="headerRight" id="menucontainer">
+                <div class="headercontainer">
+                    <ul>
+                        <li><a href="https://www.youtube.com/user/MountainDewIndia?app=desktop" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.facebook.com/mountaindewindia/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="https://twitter.com/mountaindewin?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/mountaindewin/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <span onclick="showhidegetintouch('show');"><b>Get in touch</b></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+
+    <!-- banner start -->
+    <section class="banner">
+        <img class="banner-desktop" src="images/banner-desktop.png" alt="banner" />
+        <img class="banner-mobile" src="images/banner-mobile.png" alt="banner" />
+    </section>
+    <!-- banner end -->
+
+
+
+
+    <!-- participatewrap start -->
+    <section class="participatewrap">
+        <div class="participate-inner">
+
+            <div class="participate-heading">
+                <h2>PARTICIPATE AND WIN</h2>
+                <ul>
+                    <li>
+                        <span><img src="images/step_icon1.png" alt="step 1" /></span>
+                        <p>Fill in your details</p>
+                    </li>
+                    <li class="line"><aside></aside></li>
+                    <li>
+                        <span><img src="images/step_icon2.png" alt="step 2" /></span>
+                        <p>Upload your entry</p>
+                    </li>
+                    <li class="line"><aside></aside></li>
+                    <li>
+                        <span><img src="images/step_icon3.png" alt="step 3" /></span>
+                        <p>Stand a chance to win</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="participate-body">
+                <div class="participate-img">
+                    <img class="participate-img-desktop" src="images/participate_desktop.png" alt="participate" />
+                    <img class="participate-img-mobile" src="images/participate_mobile.png" alt="participate" />
+                </div>
+                <div class="participate-form">
+                    <div class="participate-field pfield33">
+                        <p>Full Name*</p>
+                        <input class="participate-input" type="text" name="fullname" id="fullname" placeholder="Full Name"  onkeypress="return isLetter(event)" />
+                        <span class="participate-errormsg" id="fullname_errormsg">Please Enter Full Name</span>
+                    </div>
+                    <div class="participate-field pfield33">
+                        <p>Contact Number*</p>
+                        <input class="participate-input" type="text" name="contactnumber" id="contactnumber" placeholder="Contact Number" maxlength="10" onkeypress="return isNumber(event)" />
+                        <span class="participate-errormsg" id="contactnumber_errormsg">Please Enter Contact Number</span>
+                    </div>
+                    <div class="participate-field pfield33">
+                        <p>E-mail Address*</p>
+                        <input class="participate-input" type="text" name="emailaddress" id="emailaddress" placeholder="E-mail Address" />
+                        <span class="participate-errormsg" id="emailaddress_errormsg">Please Enter  E-mail Address</span>
+                    </div>
+                    <div class="participate-field pfield67">
+                        <p>Address*</p>
+                        <input class="participate-input" type="text" name="address" id="address" placeholder="Address (Please include your Pincode)" />
+                        <span class="participate-errormsg" id="address_errormsg">Please Enter Address</span>
+                    </div>
+
+                    <div class="participate-field pfield33">
+                        <p>A fear you have conquered and how?*</p>
+                        <textarea role="" cols="" class="participate-textarea" name="fearconquered" id="fearconquered" placeholder="A fear you have conquered and how?"></textarea>
+                        <span class="participate-errormsg" id="fearconquered_errormsg">Please Enter A fear you have conquered and how?*</span>
+                    </div>
+                    
+                    <div class="participate-field pfield100">
+                        <input type="checkbox" name="agreeterm" id="agreeterm" value="agreeterm" onclick="agreeterms()" />
+                        <label for="agreeterm" class="participate-agreeterm">By clicking submit, I agree to the <span onclick="window.open('https://contact.pepsico.com/mtndew/terms-conditions','_blank');">Terms & Conditions</span> and <span onclick="window.open('https://contact.pepsico.com/mtndew/privacy-policy','_blank');">Privacy Policy</span></label>
+                        <span class="participate-errormsg" id="agreeterm_errormsg">Please Upload your video</span>
+                    </div>
+                    <div class="participate-field pfield100">
+                        <span class="participate-submit disabaled" onclick="formvalidation();">Submit</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- participatewrap end -->
+    
+
+
+
+    <!-- socialwall start -->
+    <section class="socialwall">
+        <div class="socialwall-insider">
+            <h2>
+                <b>SOCIAL WALL</b>
+                <span>#conquerwithcourage</span>
+            </h2>
+            <div class="socialslider">
+                <div class="socialitem"><img src="images/socialwall1.jpg" alt="socialwall" /></div>
+                <div class="socialitem"><img src="images/socialwall2.jpg" alt="socialwall" /></div>
+                <div class="socialitem"><img src="images/socialwall3.jpg" alt="socialwall" /></div>
+                <div class="socialitem"><img src="images/socialwall1.jpg" alt="socialwall" /></div>
+                <div class="socialitem"><img src="images/socialwall2.jpg" alt="socialwall" /></div>
+                <div class="socialitem"><img src="images/socialwall3.jpg" alt="socialwall" /></div>
+            </div>
+        </div>
+    </section>
+    <!-- socialwall end -->
+    
+
+
+    <!-- footer start -->
+    <footer class="footer">
+        <div class="footer-insider">
+            <p>Copyright &copy; 2022 Pepsico inc. all rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy </a></li>
+                <li> &nbsp; | &nbsp; </li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- footer end -->
+    
+
+</main>
+<!-- main end -->
+
+
+<!-- loader === start -->
+<div id="pageloader" class="pageloader">
+    <div><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+<!-- loader === end -->
+
+
+
+
+<!-- get in touch popup === start -->
+<div id="getintouchpopup" class="getintouchcontainer">
+    <article onclick="showhidegetintouch('hide');"></article>
+    <section>
+        <aside onclick="showhidegetintouch('hide');"><span></span><span></span></aside>
+        <h2>GET IN TOUCH</h2>
+        <h3>We’d love to hear from you. Here’s how you can reach us:</h3>
+        <ul>
+            <li>
+                <img src="images/icon_email.png" alt="Email" />
+                <p>
+                    <span>Email</span>
+                    <a href="mailto:consumer.feedback@pepsico.com">consumer.feedback@pepsico.com</a>
+                </p>
+            </li>
+            <li>
+                <img src="images/icon_call.png" alt="Call" />
+                <p>
+                    <span>Call</span>
+                    <a href="tel:1800224020">1800224020</a>
+                </p>
+            </li>
+        </ul>
+    </section>
+</div>
+<!-- get in touch popup === end -->
+
+
+<!-- otppopup === start -->
+<div id="otppopup" class="otpcontainer">
+    <article></article>
+    <section>
+        <div class="otpback" onclick="otppopupscreen(0);" title="back">&#10229;</div>
+        <aside>
+            <img src="images/icon_otp.png" alt="otp" />
+        </aside>
+        <h2>Enter Verification Code</h2>
+        <h3>Please enter the code sent to <span>+91XXXXXXX120</span></h3>
+        <div class="fourdigitotp">
+            <div>
+                <h6>
+                    <input type="text" name="textotp"  id="textotp" maxlength="4" onkeypress="return isNumber(event)" onkeyup="otpvalidation()" />
+                </h6>
+            </div>
+        </div>
+        <p id="otp_error_msg">The OTP entered is invalid. Please try again.</p>
+        <h4 id="resend_counter">You shall receive OTP in  <span id="resend_timer">0:30</span> Seconds</h4>
+        <h5 id="resend_button">Did not receive OTP? <span onclick="otppopupscreen(1);" >Resend OTP</span></h5>
+    </section>
+</div>
+<!-- otppopup === end -->
+
+
+<!-- msgpopup === start -->
+<div id="msgpopup" class="msgcontainer">
+    <article onclick="showhidemsg('hide');"></article>
+    <section>
+        <aside>
+            <img src="images/error-dismiss.png" alt="Dismiss" />
+        </aside>
+        <h2>Something went wrong</h2>
+        <h3>We are facing an error, please try again later.</h3>
+        <p>
+            <span onclick="showhidemsg('hide');">Dismiss</span>
+        </p>
+    </section>
+</div>
+<!-- msgpopup === end -->
+ 
+
+<script src="scripts/jquery-min.js"></script>
+<script src="scripts/slick.min.js"></script>
+<script src="scripts/common.js"></script>
+</body>
+</html>
+ 

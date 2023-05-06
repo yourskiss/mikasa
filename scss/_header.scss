@@ -1,8 +1,9 @@
 .header { 
-    z-index:8; position:fixed; left: 50%; top: 0; transform: translateX(-50%); @include fCC();  background-color: $white; width: 100%; max-width: 1600px; height: 110px;  
+     position: relative; z-index: 4; @include fCC();  background-color: $white; width: 100%; float: left; padding: 1.5rem 0;
     .warrper { 
+        @include fBC();  position: relative;
         .logo {
-             width:184px; float: left; 
+             width:220px; float: left; 
              img { width: 100%; }
         }
         .headerRight { 
@@ -11,15 +12,24 @@
                     @include fCC(); width: auto; float: left; 
                     li { 
                         position: relative; list-style: none; margin: 0 1rem; display: inline-block;
+                        &.enquirenow_li { margin: 0; }
+                        &.search_li { margin-left: 1rem; }
                         a { 
-                            float: left; width: auto; padding:0.5rem 0; @include outT(); text-align: center;  color:$black; @include tdn(); @include fbook(); background: none; border-bottom: solid 6px $white;  font-size: 13px; letter-spacing: 1.3px; line-height: 16px;
-                            &:hover, &.active { border-bottom-color: $orange; color:$orange;  @include inT(); }
+                            float: left; width: auto; padding:0.5rem 0; @include outT(); text-align: center;  color:$black; @include tdn(); @include fmedium(); background: none; border: none;  font-size: 13px; letter-spacing: 1px; line-height: 16px;
+                            &:hover, &.active { color:$orange;  @include inT(); }
                             i.fa-angle-down { margin-left: 0.3rem; font-weight: 400; line-height: 1; font-size: 120%; }
                         }
-                        
+                        .enquirenowBtn { 
+                            position: relative; padding:0.6rem 1.5rem; width: 100%; float: right; background-color: $blue;  @include fbold(); font-weight: normal; color:#C2D1F9;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:9px; letter-spacing:0.7px; line-height: 14px;
+                            &:hover { background-color: $orange; color:$white; @include inT();  } 
+                        }
+                        .searchBtn { 
+                            position: relative; padding:0; width:auto; float: right; background-color:transparent;  @include fbold(); font-weight: normal; color:$blue;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:24px; letter-spacing:normal; line-height: 1;
+                            &:hover { color:$orange; @include inT();  } 
+                        }
                         .dropdownmenu { display: none; }
                         &:hover {
-                            a { border-bottom-color:$orange; color: $orange; }
+                            a {  color: $orange; }
                             .dropdownmenu { 
                                 display: block;  z-index: 2; position:absolute; left: 0; top:100%; width:160px; float: left; 
                                 a { 
@@ -32,61 +42,85 @@
                     }
                 }  
         }
-        p {
-            display: block;  width: auto; float:right; margin-top: 0.5rem;
-            .enquirenowBtn { 
-                position: relative; padding:0.6rem 1.5rem; width: 100%; float: right; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center;cursor: pointer; @include tdn();  border-radius: 10px; font-size: 11px; letter-spacing: 1.1px; line-height: 14px;
-                &:hover { background-color: $black;  color:$white; @include inT();  } 
+        .headermenumobile { display: none; }
+        .searchinheader {
+            display: none;z-index: 1;position: absolute;right: 0;top: 83px;width: 100%; max-width: 350px;background: #ccc;
+            article {display: block;z-index: 1;position: fixed;left: 0;top:83px; width: 100%; height:calc(100% - 83px); background: #000;background: rgba(0,0,0,0);}
+            section {
+                z-index: 2; position: relative; width: 100%; float: right; @include fCC(); align-items: stretch;
+                .searchHeadBack {
+                    background: $gray; width:30px; float: left; @include fCC(); padding: 0.8rem 0; text-decoration: none;font-size: 20px; color:$blue; line-height: 1; @include outT(); cursor: pointer; text-decoration: none;
+                    &:hover { color:$orange; @include inT();  }
+                }
+                .searchHeadInput {width: calc(100% - 130px);float: left;padding: 0.8rem 0.5rem;background: $gray; outline: none;border: none;text-align: left;font-size: 14px;line-height: 1;color: #000; @include fbook(); }
+                .searchHeadButton {
+                    width: 100px;float: left;text-align: center;text-decoration: none;padding: 0.8rem 0; border: none;outline: none;cursor: pointer;text-decoration: none;background-color:$orange;color: $white; @include fbook(); font-size: 14px;letter-spacing: normal;line-height: 1;text-transform: uppercase; @include outT();
+                    &:hover { @include inT(); color:$white;background: $blue; }
+                }
             }
         }
-        aside { display: none; }
+
     }
     
 }
  
 
-@media only screen and (max-width:1100px) 
+@media only screen and (max-width:1255px) 
 {
     .header { 
-        height: 70px;  padding-top: 0.7rem;
+        padding: 1rem 0;
         .warrper { 
-            .logo { width:130px;  }
-            aside { 
-                display: block; float: right; width: 30px; height: 30px; position: relative; line-height: 1; margin: 0.2rem 0 0 1rem;
-                span {
-                   position: absolute;  float: left; width:100%; height: 3px; background-color: $black; line-height:3px; font-size: 3px; border-radius: 3px; padding: 0;
-                    &:first-child { left: 0;  top: 0; @include outT(); }
-                    &:nth-child(2) {left: 0;  top: 9px; @include outT(); }
-                    &:last-child { right: 0;  top: 18px; @include outT(); }
-                }
-                &.active { 
+            .logo { width:183px;  }
+            .headermenumobile{
+                @include fBC(); float: right; width: auto;   position: relative; line-height: 1; margin: 0.2rem 0 0 1.5rem;
+                aside { 
+                    display: block; float: right; width: 30px; height: 25px; position: relative; line-height: 1; margin: 4px 0 0 1rem; cursor: pointer;
                     span {
-                        &:first-child {top: 45%; transform: rotate(45deg);  @include inT(); }
-                        &:nth-child(2) { display: none; @include inT(); }
-                        &:last-child {top: 45%; transform: rotate(-45deg); @include inT(); }
+                       position: absolute;  float: left; width:100%; height: 4px; background-color: $gray6; line-height:4px; font-size: 4px; border-radius: 0; padding: 0;
+                        &:first-child { left: 0;  top: 0; @include outT(); }
+                        &:nth-child(2) {left: 0;  top: 9px; @include outT(); }
+                        &:last-child { right: 0;  top: 18px; @include outT(); }
+                    }
+                    &.active { 
+                        span {
+                            background-color: $orange;
+                            &:first-child {top: 45%; transform: rotate(45deg);  @include inT(); }
+                            &:nth-child(2) { display: none; @include inT(); }
+                            &:last-child {top: 45%; transform: rotate(-45deg); @include inT(); }
+                        }
                     }
                 }
+                i.fa-search {
+                    width:auto;   background-color:transparent; font-weight: normal; color:$blue;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:24px; letter-spacing:normal; line-height: 1;
+                    &:hover { color:$orange; @include inT();  } 
+                }
             }
-            p { margin-top: 0; }
+            .searchinheader { 
+                position: fixed; top:82px; max-width: 100%; 
+            }
+           
             .headerRight { 
-                display: none; position: absolute;top: 70px; right: 0; width: 100%; height: calc(100vh - 70px); background: $blue; padding:1rem 0;  margin: 0; overflow: hidden; overflow-y: scroll;
+                display: none; position: fixed;top:82px; right: 0; width: 100%; height: calc(100vh - 82px); background: $gray5; padding:1rem 0;  margin: 0; overflow: hidden; overflow-y: scroll;
                 ul { 
                     @include fSS(); width: 100%; flex-wrap: wrap;
                     li { 
                         margin: 0; display:block; width: 100%; float: left;
-                        &:last-child {
-                            a { border-bottom:none;}
+                        &.enquirenow_li {
+                            padding: 1rem;
+                            a { border-bottom:none;} 
+                            .enquirenowBtn { float: left; padding: 0.8rem 0; width: 170px; font-size: 12px; }
                         }
+                        &.search_li { display: none; }
                         a { 
-                            float: left; width: 100%; padding:0.7rem 2rem; text-align: left;  color:$white; border-bottom: solid 2px $white;   
+                            float: left; width: 100%; padding:1rem 2rem; text-align: left;  color:$black2; border-bottom: solid 1px $black2;   
                             &:hover, &.active { border-bottom-color: $orange; color:$orange;  @include inT(); }
                         }
                         &:hover {
                             a { border-bottom-color: $orange; color:$orange;  }
                             .dropdownmenu {
-                                position:relative; left: 0; top:0; width:100%;  
+                                position:relative; left: 0; top:0; width:100%;  border-bottom: solid 1px $black2;
                                     a { 
-                                        float: left; width: 100%; padding:0.7rem 3rem; background:none; @include outT();   text-align: left;  color:$white; @include tdn(); @include fbook();  border-bottom: dotted 1px $gray;  font-size: 12px; letter-spacing:normal; line-height: 1;
+                                        float: left; width: 100%; padding:0.7rem 3rem; background:none; @include outT();   text-align: left;  color:$black2; @include tdn(); @include fbook();  border-bottom: dotted 1px $gray;  font-size: 12px; letter-spacing:normal; line-height: 1;
                                         &:hover, &.active { border-bottom: dotted 1px $gray; background:none; color:$orange;  @include inT(); }
                                         &:last-child {  border-bottom: dotted 1px $gray; }
                                     }

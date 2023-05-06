@@ -1,0 +1,111 @@
+
+ 
+.enquirenowpopup { 
+   display: none; z-index: 9; position: fixed; top: 0; left: 0; width: 100%; height: 100%; float: left;  padding:0; margin: 0;  background-color:none;  
+   article { z-index: 2; position: absolute; top: 0; left: 0; width: 100%; height: 100%; float: left;  padding:0; margin: 0;  background-color:$black; background: rgba(0,0,0,0.5); }
+   section { 
+       @include fBC(); width: 96%; max-width: 1000px; position: absolute; left: 50%; top: 50%;  z-index: 3; transform: translate(-50%, -50%); background: $white; padding:3rem 4rem 2rem 2rem;
+       .enquireClose { 
+           position: fixed; top:1rem; right: 1rem; z-index: 4; width: 19px; height: 20px; background: url('../images/enquire-close.png') no-repeat center center; background-size: 100% 100%; cursor: pointer; text-decoration: none;  @include outT();
+           &:hover { transform:scale(1.1); @include inT(); }
+       }
+        .enquirenowInfo{
+            width: 40%;  float: left;
+            h2 { 
+                width: 100%;  float: left; text-align: left; @include fbold(); color:$blue;  font-size:28px; line-height:1.2; 
+            }
+            h3 { 
+                width: 100%;  margin:2rem 0; float: left; text-align: left; @include fbook(); color:$black;  font-size: 16px; line-height:26px; 
+            }
+            p { 
+                @include fSC();  float: left; width:100%; margin:0 0 1rem 0;
+               img { display: inline-block; width: 22px; margin-right: 0.5rem; }
+               a { 
+                    text-align: left; @include flt();  font-size: 13px; line-height: 16px; letter-spacing: 1px; color: $black2; @include outT(); @include tdn(); 
+                   &:hover {  color:$orange; @include inT(); }
+               }
+           }
+        }
+       .enquirenowForm {
+            width: 55%;  float: right;
+            .enquirenowField {  
+                width: 100%;  float: left; margin-bottom:1.5rem; 
+                &:last-child { margin-bottom: 0; }
+                .enquirenowInput, .enquirenowSelect, .enquirenowTextarea {
+                    width: 100%;
+                    float: right;
+                    padding: 0.5rem 1rem;
+                    background:transparent;
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 2px $gray5;
+                    text-align: left;
+                    font-size: 12px;
+                    line-height: 1;
+                    color: $gray4;
+                    @include fmedium();
+                }
+                .enquirenowInput:focus, .enquirenowSelect:focus, .enquirenowTextarea:focus {border-color:$orange; }
+                .enquirenowTextarea { height: 90px; resize: none;}
+                .enquirenowSelect {
+                    text-indent: 1px;
+                    text-overflow: "";
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background:transparent url('../images/getintouch_dropdown.png') no-repeat;
+                    background-position: right 8px center;
+                }
+                .enquirenowButton {
+                    position: relative; padding:0.8rem 3rem; width: auto; float: left; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center;cursor: pointer; @include tdn(); border-radius: 25px; font-size: 14px; letter-spacing: 0.7px; line-height: 19px; text-transform: uppercase;
+                    &:hover { background-color: $black;  color:$white; @include inT();  } 
+                }
+                .enquirenowError {
+                    display: none;
+                    width: 100%;
+                    float: left;
+                    padding-left: 1rem;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    color: $red; @include flight();
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+ 
+
+ 
+
+ 
+
+@media only screen and (max-width:1023px) 
+{
+
+    .enquirenowpopup { 
+        section { 
+             @include fCS(); flex-wrap: wrap; padding:2rem 1rem; max-height: 90%; overflow: hidden; overflow-y: scroll;
+                .enquireClose {  top:0.5rem; right:0.5rem; }
+                .enquirenowInfo{
+                    width: 100%; 
+                    h2 { text-align: center;  font-size:20px; }
+                    h3 { text-align: center; margin:0.5rem 0 1rem 0;  font-size: 14px;  line-height:1.2;  }
+                    p { 
+                        justify-content: center;  margin:0 0 0.5rem 0;
+                        img {  width: 18px; }
+                        a { text-align: left;  }
+                    }
+                }
+                .enquirenowForm {
+                    margin-top: 1rem; width: 100%;  
+                    .enquirenowField {  
+                        margin-bottom: 1rem; text-align: center;
+                        .enquirenowTextarea { height:40px; }
+                        .enquirenowButton { float: none; margin: 0 auto; display: inline-block; }
+                    }
+                }
+        }
+    }
+}
+
+ 

@@ -28,7 +28,16 @@
   src: url('../fonts/futura_light.woff2') format('woff2'), url('../fonts/futura_light.woff') format('woff');
   font-weight: normal; font-stretch:normal; font-style: normal;
 }
+@font-face {
+  font-family: 'futuraLT';
+  src: url('../fonts/futura_lt.woff2') format('woff2'), url('../fonts/futura_lt.woff') format('woff');
+  font-weight: normal; font-stretch:normal; font-style: normal;
+}
 
+@mixin flt {
+  font-family:'futuraLT', Arial, sans-serif;
+  font-weight: 300;
+}
 @mixin flight {
   font-family:'futura-light', Arial, sans-serif;
   font-weight: 300;

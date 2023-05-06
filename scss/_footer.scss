@@ -1,16 +1,16 @@
 .footer { 
-    @include fCS(); background-color: $white; width: 100%;  float: left; padding: 3rem 0; 
+    @include fCS(); background-color: $gray; width: 100%;  float: left; padding: 3rem 0 3rem 0; 
     .warrper { 
         @include fBS(); 
         .footerLeft {
-            width: 310px; float: left;
+            width: 300px; float: left;
             aside {
                 width: 100%; float: left;
                 img { max-width: 100%;}
             }
-            h2 { float: left; width:100%; margin: 1rem 0 2rem 0; text-align: left; color: $black; @include fbook(); font-size: 16px; line-height: 24px; }
+            h2 { float: left; width:100%; margin: 1rem 0; padding-right: 25%; text-align: left; color: $black; @include fmedium(); font-size: 13px; line-height: 18px; }
             p { 
-                 @include fSC(); float: left; width:auto; padding-right: 1rem; text-align: left; color: $black; @include fbook(); font-size: 13px; line-height: 16px; 
+                 @include fSC();  margin: 0.5rem 0; float: left; width:100%;  text-align: left; color: $black; @include flt(); font-size: 13px; line-height: 16px; 
                 img { display: inline-block; max-width: 20px; margin-right: 0.3rem; }
                 a { 
                     color: $black; @include outT(); @include tdn();
@@ -19,19 +19,35 @@
             }
          }
         .footerRight { 
-            width: 220px; float: right; 
-            img { max-width: 100%;}
+            width: 250px; float: right; 
+            aside { 
+                float: left; width:100%;  @include fCC(); 
+                img { max-width:170px;}
+            }
+            h2 { 
+               margin: 2rem 0 0.7rem 0;  float: left; width:100%; color: $black3; text-align: center;  @include flt(); font-size: 13px; line-height: 16px;
+            }
+            ul { 
+                float: left; width:100%;  @include fCC(); 
+                li { 
+                    list-style: none; display: inline-block; margin:0 0.7rem;  
+                    a {  
+                        color: $gray3;  font-size: 24px; line-height: 1; cursor: pointer;  @include tdn(); @include outT(); 
+                        &:hover {  color: $orange; @include inT(); }
+                    }
+                }
+            } 
         }
         .footerMid { 
             width: calc(100% - 550px); float: left; @include fSS();
             .footbox { 
-                width: auto; max-width: 40%; float: left;
-                h2 { float: left; width:100%; margin-bottom:1.5rem; text-align: left; color: $black2; @include fmedium(); font-size: 16px; line-height: 24px; text-transform: uppercase; }
+                width: 33.3%; float: left;
+                h2 { float: left; width:100%; margin-bottom:1rem; text-align: left; color: $black2; @include fmedium(); font-size: 15px; line-height: 24px;   }
                 ul { 
                     float: left; width:100%; 
                     li { 
-                        list-style: none; width: 100%; float: left; margin: 0 0 0.5rem 0;  text-align: left; color: $black2; @include fbook();  font-size: 12px; line-height: 18px;
-                        &::before { content: "\f105"; margin-right: 0.5rem; font-family:'FontAwesome'; font-weight:300; line-height: 1; }
+                       @include fSC(); list-style: none; width: 100%; float: left; margin: 0 0 0.5rem 0;  text-align: left; color: $black2; @include fbook();  font-size: 14px; line-height: 18px;  
+                        &::before { content: "\f105"; font-size: 80%; margin-right: 0.5rem; font-family:'FontAwesome'; font-weight:300; line-height: 1; }
                         a {  
                             color: $black2; @include tdn(); @include outT(); 
                             &:hover {  color: $orange;   @include inT(); }
@@ -46,10 +62,16 @@
   
 
 
-@media only screen and (max-width:1100px) 
+@media only screen and (max-width:1255px) 
 {
     .footer { 
-        padding: 2.5rem 0; 
+        padding:2rem 0; 
+        .warrper { 
+            .footerLeft { width: 260px;  }
+            .footerRight { width: 180px;  }
+            .footerMid { width: calc(100% - 440px); }
+     
+        }
     }
 }
  
@@ -57,17 +79,18 @@
 @media only screen and (max-width:1023px) 
 {
     .footer { 
-         padding:3rem 0 5rem 0; 
+         padding:2rem 0; 
         .warrper { 
             @include fSS(); flex-wrap: wrap;
             .footerLeft {
-                width: 100%; 
+                width: 100%; border-bottom: solid 1px $gray2; padding:1rem 0 2rem 0;
                 aside {
+                    text-align: center;
                     img { max-width: 100%;}
                 }
-                h2 {  margin: 1rem 0 2rem 0; font-size: 16px; line-height: 24px; }
+                h2 { text-align: center; padding: 0; margin: 1rem 0 1.5rem 0; font-size: 16px; line-height: 24px; }
                 p { 
-                     @include fSC(); float: left; width:auto; padding-right: 1rem; text-align: left; color: $black; @include fbook(); font-size: 13px; line-height: 16px; 
+                    justify-content: center; color: $black; @include fbook(); font-size: 13px; line-height: 16px; text-align: center;
                     img { display: inline-block; max-width: 20px; margin-right: 0.3rem; }
                     a { 
                         color: $black; @include outT(); @include tdn();
@@ -76,23 +99,26 @@
                 }
              }
             .footerRight { 
-                width: 100%; 
-                img { max-width: 100%;}
+                width: 100%; border-top: solid 1px $gray2;  padding:2rem 0 0 0;
+                aside { 
+                    img { max-width:230px;}
+                }
+                h2 { margin: 3rem 0 2rem 0;  font-size: 16px; line-height: 16px; letter-spacing: 0.48px; }
+                ul { 
+                    li { 
+                        margin:0 1.5rem;  
+                        a { font-size: 23px; }
+                    }
+                } 
             }
             .footerMid { 
-                width: 100%;  margin: 3rem 0;
+                width: 100%;  margin:2rem 0;
                 .footbox { 
-                    width: auto; max-width: 40%; float: left;
-                    h2 { float: left; width:100%; margin-bottom:1.5rem; text-align: left; color: $black2; @include fmedium(); font-size: 16px; line-height: 24px; text-transform: uppercase; }
+                    h2 {  margin-bottom:1rem;  @include fmedium(); font-size: 16px; line-height: 24px;  color:$black2; }
                     ul { 
                         float: left; width:100%; 
                         li { 
-                            list-style: none; width: 100%; float: left; margin: 0 0 0.5rem 0;  text-align: left; color: $black2; @include fbook();  font-size: 12px; line-height: 18px;
-                            &::before { content: "\f105"; margin-right: 0.5rem; font-family:'FontAwesome'; font-weight:300; line-height: 1; }
-                            a {  
-                                color: $black2; @include tdn(); @include outT(); 
-                                &:hover {  color: $orange;   @include inT(); }
-                            }
+                             margin: 0 0 0.5rem 0;  font-size: 16px; letter-spacing: 1.28px; 
                         }
                     }
                 }
@@ -105,17 +131,28 @@
 
 
 
-@media only screen and (max-width:479px) 
+
+@media only screen and (max-width:599px) 
 {
     .footer { 
+         padding:2rem 0; 
         .warrper { 
             .footerMid { 
-                flex-wrap: wrap;
+                width: 100%;  margin: 0;   flex-wrap: wrap;
                 .footbox { 
-                    width: 50%; max-width: 50%;  
+                    width: 100%; padding: 2rem 0; border-top: solid 1px $gray2; 
+                    &:first-child { border-top: none; }
+                    h2 { text-align: center; }
+                    ul {
+                        li { justify-content: center; }
+                    }
                 }
             }
+            
         }
     }
       
 }
+
+
+ 

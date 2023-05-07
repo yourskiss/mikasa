@@ -1,58 +1,9 @@
 @import "_var.scss";
 @import "_mixin.scss"; 
-
-.homebanner { 
-    background-color: $white; width: 100%;  float: left;  position: relative;
-    .homebanner_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
-    .homebanner_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
-    .homebannerslider.slick-slider { width: 100%;  height: 100%; float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  }
-    .homebannerslider.slick-slider .slick-list {  height: 100%; z-index: 2; margin: 0; padding: 0; overflow: hidden; }
-    .homebannerslider.slick-slider .slick-track {  height: 100%; display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;  }
-    .homebannerslider.slick-slider .slick-slide {  height: 100%; margin: 0; padding: 0;  }
-    .homebannerslider.slick-slider .slick-slide div {  height: 100%; }
-
-    .homebannerslider.slick-slider .slick-arrow { z-index: 3; opacity:1; top:auto; bottom:1rem;  width:50px; height:50px; border-radius: 50%; margin: 0; padding: 0; border:0; line-height: 1; background-color:$white; color:$black; @include fCC(); @include outT(); background: rgba(255,255,255,0.6); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
-    .homebannerslider.slick-slider .slick-arrow:hover { background-color:$orange; color:$white; @include inT(); }
-    .homebannerslider.slick-slider .slick-arrow.slick-disabled { opacity: 0.4; user-select: none; pointer-events:none; }
-    .homebannerslider.slick-slider .slick-next  { left: auto; right:20px; } 
-    .homebannerslider.slick-slider .slick-prev {left: auto; right:80px; }
-    .homebannerslider.slick-slider .slick-arrow:before { color: $black; text-align: center; font-size:36px; line-height:0; font-family: 'fontawesome';  @include outT(); }
-    .homebannerslider.slick-slider .slick-arrow:hover:before {  color:$white; @include inT();  }
-    .homebannerslider.slick-slider .slick-next:before { content: "\f107"; }
-    .homebannerslider.slick-slider .slick-prev:before { content: "\f106"; }
-    .homebannercounter {
-        z-index: 3; position: absolute; opacity:1; top:auto; bottom:10%; left:12%;  width:80px; height:2px; border-radius: 0; margin: 0; padding: 0; border:0; background: $white;  
-        span { 
-            position: absolute; top: 50%; transform: translateY(-50%); width:30px; height:auto; border-radius: 0; margin: 0; padding: 0; border:0; color: $white; @include fmedium(); font-size: 14px; line-height: 1; letter-spacing: normal; text-align: center; 
-            &:first-child { left:-30px;}
-            &:last-child { right:-30px;} 
-        }
-    }
+ 
+@import "home/_banner.scss";
+@import "home/_introducing.scss";
+@import "home/_ourrang.scss";
 
 
-    .homebanneritem { 
-        position: relative; width: 100%; height: 100%; float: left; 
-        .homebannercontainer { 
-            position: absolute; z-index: 2; top:25%; left: 10%; width: 1000px; height: auto !important; @include fBC();
-            .homebannerleft {
-                width: 60%;  float: left;
-                h4{width: 100%;  float: left; text-align: left; @include fbold(); color:$orange;  font-size: 40px; line-height: 48px;  letter-spacing: normal;  text-transform: uppercase; }
-                p{
-                    width: 100%;  float: left; text-align: left; @include fmedium(); font-weight: normal; color:$white;  font-size: 24px; line-height: 34px; letter-spacing: 4px; text-transform: uppercase;
-                    b { display: block; @include fbold(); }
-                }
-                aside {
-                    width: 100%; float:right; margin-top: 2rem;
-                    .bs_knowmore { 
-                         padding:0.8rem 3rem; width:auto; float: left; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 25px; font-size: 13px; letter-spacing:1px; line-height: 21px; text-transform: uppercase;
-                        &:hover { background-color: $black;  color:$white; @include inT();  } 
-                    }
-                }
-            }
-            .homebannerright { 
-                width: 35%;  float: left;
-                img { width: 100%; max-width:250px;}
-            }
-        }
-    }
-}
+ 

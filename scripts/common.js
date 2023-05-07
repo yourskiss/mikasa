@@ -13,6 +13,15 @@ $(window).on('load', function()
 });
 /* onLoad === end */
 
+
+// before adding zero if less then 10 === start
+function minTwoDigits(n) 
+{
+  return (n < 10 ? '0' : '') + n;
+}
+// before adding zero if less then 10 === end */
+
+
 // only number validation === start
 function isNumber(evt) {
     evt = (evt) ? evt : window.event;
@@ -224,7 +233,7 @@ function enquirenowValidation()
 
 
 
-// slider   === start 
+// home banner slider   === start 
 $(function($) 
 {
     if($(".homebannerslider").length > 0)
@@ -242,12 +251,40 @@ $(function($)
             centerPadding: '0',
             initialSlide:0
         }).on("afterChange", function(event, slick, currentSlide){
-            $("#homebannercurrentslide").html(currentSlide+1);
-            $("#homebannertotalslide").html(slick.slideCount);
+            $("#homebannercurrentslide").html(minTwoDigits(currentSlide+1));
+            $("#homebannertotalslide").html(minTwoDigits(slick.slideCount));
         });
     }    
-    
- 
 });
-//  slider   === end  
+// home banner slider   === end  
 
+
+
+// home product slider   === start 
+$('.homeproductslider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+    autoplay: false,
+    infinite: true,
+    adaptiveHeight: false,
+    centerMode: false,
+    centerPadding: '0',
+    initialSlide:0,
+    asNavFor: '.homeproductnav'
+  });
+  $('.homeproductnav').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.homeproductslider',
+    dots: false,
+    arrows: false,
+    infinite: false,
+    centerMode: false,
+    focusOnSelect: true,
+    adaptiveHeight: false,
+    centerMode: false,
+    centerPadding: '0'
+  });
+// home product slider   === end 

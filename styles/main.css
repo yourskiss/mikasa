@@ -3479,6 +3479,7 @@ template {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  max-width: 100%;
 }
 .header .warrper .logo {
   width: 220px;

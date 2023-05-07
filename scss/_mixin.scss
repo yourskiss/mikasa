@@ -1,4 +1,35 @@
-  @mixin uc {
+
+@mixin flt {
+  font-family:'futuraLT', Arial, sans-serif;
+  font-weight: 300;
+}
+@mixin flight {
+  font-family:'futura-light', Arial, sans-serif;
+  font-weight: 300;
+}
+@mixin fregular {
+    font-family:'futura-regular', Arial, sans-serif;
+    font-weight: 400;
+}
+@mixin fbook {
+  font-family:'futura-book', Arial, sans-serif;
+  font-weight: 500;
+}
+@mixin fmedium {
+    font-family:'futura-medium', Arial, sans-serif;
+    font-weight: 600;
+}
+@mixin fbold {
+    font-family:'futura-bold', Arial, sans-serif;
+    font-weight: 700;
+}
+@mixin fblack {
+    font-family:'futura-black', Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+@mixin uc {
     text-transform:uppercase;
   }
   @mixin lc {

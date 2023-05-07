@@ -227,13 +227,13 @@ function enquirenowValidation()
 // slider   === start 
 $(function($) 
 {
-    if($(".bannerSlider").length > 0)
+    if($(".homebannerslider").length > 0)
     {
-        $('.bannerSlider').slick({
+        $('.homebannerslider').slick({
             slidesToShow:1,
             slidesToScroll: 1,
-            dots: true,
-            arrows: false,
+            dots: false,
+            arrows: true,
             autoplay: true,
             autoplaySpeed: 3000,
             infinite: true,
@@ -241,8 +241,12 @@ $(function($)
             centerMode: false,
             centerPadding: '0',
             initialSlide:0
+        }).on("afterChange", function(event, slick, currentSlide){
+            $("#homebannercurrentslide").html(currentSlide+1);
+            $("#homebannertotalslide").html(slick.slideCount);
         });
-    }
+    }    
+    
  
 });
 //  slider   === end  

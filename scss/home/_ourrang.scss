@@ -1,6 +1,6 @@
  
 .homeproductrange { 
-     background:$white; width: 100%;  float: left;  position: relative; padding:3rem 0;
+     background:$white; width: 100%;  float: left;  position: relative; padding:3rem 0 0 0;
     .warrper { 
         max-width: 100%;
         .homeproducthead { 
@@ -16,10 +16,10 @@
                     width: 100%; float:right; text-align: left;
                     a { 
                          display: inline-block; padding:0; width:auto; float: none; margin: 0; background-color:transparent;  @include fmedium();  color:$black5;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 25px; font-size: 14px; letter-spacing:0.24px; line-height: 1; text-transform: uppercase;
-                         i.fa { padding-left: 5px; @include outT(); }
+                         i.fa { padding-left: 1rem; @include outT(); }
                         &:hover { 
                             color:$orange; @include inT();  
-                            i.fa { padding-left: 10px;  @include inT();  }
+                            i.fa { padding-left: 0.5rem;  @include inT();  }
                         } 
                     }
                 } 
@@ -41,37 +41,66 @@
 
         .homeproductcontainer {
             width: 100%; margin:-60px 0 0 0; float: left; position: relative;
-            .homeproduct_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
-            .homeproduct_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
-            .homeproductslider.slick-slider { width: 100%;  height: 100%; float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  }
-            .homeproductslider.slick-slider .slick-list { height: 100%; z-index: 2; margin: 0; padding: 0; overflow: hidden; }
-            .homeproductslider.slick-slider .slick-track { height: 100%; display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;  }
-            .homeproductslider.slick-slider .slick-slide { height: 100%; margin: 0; padding: 0; }
-            .homeproductslider.slick-slider .slick-slide div { height: 100%; }
-            .homeproductslider.slick-slider .hpitem { width: 100%;  float: left; }
-            .homeproductslider.slick-slider .slick-arrow { z-index: 3; opacity:1; top:auto; bottom:18%;  width:50px; height:50px; border-radius: 50%; margin: 0; padding: 0; border:0; line-height: 1; background-color:$white; color:$black; @include fCC(); @include outT(); background: rgba(255,255,255,0.6); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
-            .homeproductslider.slick-slider .slick-arrow:hover { background-color:$orange; color:$white; @include inT(); }
-            .homeproductslider.slick-slider .slick-arrow.slick-disabled { opacity: 0.4; user-select: none; pointer-events:none; }
-            .homeproductslider.slick-slider .slick-next  { left: auto; right:20px; } 
-            .homeproductslider.slick-slider .slick-prev {left: auto; right:80px; }
-            .homeproductslider.slick-slider .slick-arrow:before { color: $black; text-align: center; font-size:36px; line-height:0; font-family: 'fontawesome';  @include outT(); }
-            .homeproductslider.slick-slider .slick-arrow:hover:before {  color:$white; @include inT(); }
-            .homeproductslider.slick-slider .slick-next:before { content: "\f105"; }
-            .homeproductslider.slick-slider .slick-prev:before { content: "\f104"; }
+            .homeproductslider.slick-slider { 
+                width: 100%;  height: 100%; float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  
+                .slick-list { 
+                    height: 100%; z-index: 2; margin: 0; padding: 0; overflow: hidden; 
+                    .slick-track { 
+                        height: 100%; display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;  
+                        .slick-slide { 
+                            height: 100%; margin: 0; padding: 0; 
+                            div { height: 100%; }
+                        }
+                    }
+                }
+                .slick-arrow { 
+                    z-index: 3; opacity:1; top:auto; bottom:18%;  width:50px; height:50px; border-radius: 50%; margin: 0; padding: 0; border:0; line-height: 1; background-color:$white; color:$black; @include fCC(); @include outT(); background: rgba(255,255,255,0.6); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); 
+                    &:hover {
+                         background-color:$orange; color:$white; @include inT(); 
+                         &:before {  color:$white; @include inT(); }
+                    }
+                    &.slick-disabled { opacity: 0.4; user-select: none; pointer-events:none; }
+                    &:before { color: $black; text-align: center; font-size:36px; line-height:0; font-family: 'fontawesome';  @include outT(); }
+                    &.slick-next  { 
+                        left: auto; right:20px; 
+                        &:before { content: "\f105"; }
+                    } 
+                    &.slick-prev {
+                        left: auto; right:80px; 
+                        &:before { content: "\f104"; }
+                    }
+                }
+                .hpitem { 
+                    width: 100%;  float: left; 
+                    .homeproduct_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
+                    .homeproduct_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
+                }
+            }
+            
 
             .homeproductthumb { 
                 position: absolute; left: 0; top: auto; bottom: 0; width: 100%;  float: left;  
-                .homeproductnav.slick-slider {  width: 100%;  float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  }
-                .homeproductnav.slick-slider .slick-list {   z-index: 2; margin: 0; padding: 0; overflow: hidden; }
-                .homeproductnav.slick-slider .slick-track {  display: flex; justify-content:center; align-items: stretch; height: inherit; margin: 0; padding: 0;  }
-                .homeproductnav.slick-slider .slick-slide { height: 100%; margin: 0; padding: 0; height: inherit; }
-                .homeproductnav.slick-slider .slick-slide div { height: 100%; margin: 0; padding: 0; }
-                .homeproductnav.slick-slider .hpnav { 
-                    width: 100%; height: 100%;  padding:3rem 1.5rem 2rem 1.5rem; float: left; background-color:$gray;  @include fCC(); flex-direction: column; border-bottom: solid 8px transparent; cursor: pointer; background: rgba(223,223,224, 0.9); border-right: solid 2px $gray5;
-                    h2{ width: 100%; margin: 0 0 1rem 0; float: left; text-align: center; @include fmedium(); color:$black; font-size: 21px; line-height: 1;  letter-spacing:0.84px;  text-transform: uppercase; }
-                    p { width: 100%;  float: left;  text-align: center; @include fbook();  color:$black; font-size: 12px; line-height: 1.3; letter-spacing: 0.72px; }
+                .homeproductnav.slick-slider {  
+                    width: 100%;  float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  
+                    .slick-list {   
+                        z-index: 2; margin: 0; padding: 0; overflow: hidden; 
+                        .slick-track {  
+                            display: flex; justify-content:center; align-items: stretch; height: inherit; margin: 0; padding: 0;  
+                            .slick-slide { 
+                                height: 100%; margin: 0; padding: 0; height: inherit; 
+                                div { height: 100%; margin: 0; padding: 0; }
+                                .hpnav { 
+                                    width: 100%; height: 100%;  padding:3rem 1.5rem 2rem 1.5rem; float: left; background-color:$gray;  @include fCC(); flex-direction: column; border-bottom: solid 8px transparent; cursor: pointer; background: rgba(223,223,224, 0.9); border-right: solid 2px $gray5;
+                                    h2{ width: 100%; margin: 0 0 1rem 0; float: left; text-align: center; @include fmedium(); color:$black; font-size: 21px; line-height: 1;  letter-spacing:0.84px;  text-transform: uppercase; }
+                                    p { width: 100%;  float: left;  text-align: center; @include fbook();  color:$black; font-size: 12px; line-height: 1.3; letter-spacing: 0.72px; }
+                                }
+                                &.slick-current { 
+                                    .hpnav { background: $white; border-bottom-color:$orange; cursor: none; }
+                                }
+                            }
+                        }
+                    }
                 }
-                .homeproductnav.slick-slider .slick-slide.slick-current .hpnav { background: $white; border-bottom-color:$orange; cursor: none; }
             }
 
 

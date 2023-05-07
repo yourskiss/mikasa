@@ -1,0 +1,65 @@
+ .homeadvantage { 
+    background:$white; width: 100%;  float: left; padding:4rem;  
+   .warrper { 
+       max-width: 100%; @include fBC();
+       .homeadvantageleft { 
+            width:30%;  float: left; 
+            h2{width: 100%; float: left; text-align: left; @include fmedium(); color:$black5; font-size: 30px; line-height: 1;  letter-spacing: normal;    }
+            h3{
+                width: 100%; margin:0.7rem 0;  float: left; text-align: left;  color:$blue; font-size: 40px; line-height:1;  letter-spacing: normal;  @include flt(); 
+                span { @include fbold();  }
+            }
+            h4 { width: 100%; float: left; text-align: left; @include flt(); font-weight: 500; color:$black5; font-size: 40px; line-height: 1; letter-spacing: normal; }
+            aside {
+                width: 100%; float:right; text-align: left; margin-top:2rem;
+                a { 
+                     display: inline-block; padding:0; width:auto; float: none; margin: 0; background-color:transparent;  @include fmedium();  color:$black5;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 25px; font-size: 14px; letter-spacing:0.24px; line-height: 1; text-transform: uppercase;
+                     i.fa { padding-left: 1rem; @include outT(); }
+                    &:hover { 
+                        color:$orange; @include inT();  
+                        i.fa { padding-left: 0.5rem;  @include inT();  }
+                    } 
+                }
+            } 
+       }
+       .homeadvantageright { 
+            width:65%;  float: right; 
+            .homeadvantageslider{  
+                width: 100%;  float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  @include fCS(); align-items: stretch; 
+                .homeadvantagebox { 
+                    width: 25%;  padding:0.5rem 0 1rem 0; float: left;  border-right: solid 2px $gray5;
+                    &:last-child { border-right: none; }
+                    aside { 
+                        width: 100%; margin: 0 0 1rem 0; float: left; text-align: center; 
+                        img { max-width: 100%; }
+                    }
+                    p { width: 100%;  float: left;  text-align: center; @include fmedium(); color:$black6; font-size: 11px; line-height:14px; letter-spacing: 0.55px; }
+                } 
+            }
+       }
+   }
+}
+
+
+                /*
+                .homeadvantageslider.slick-slider }
+                    .slick-list {   
+                        z-index: 2; margin: 0; padding: 0; overflow: hidden; 
+                        .slick-track {  
+                            display: flex; justify-content:center; align-items: stretch; height: inherit; margin: 0; padding: 0;  
+                            .slick-slide { 
+                                height: 100%; margin: 0; padding: 0; height: inherit; 
+                                div { height: 100%; margin: 0; padding: 0; }
+                                .homeadvantagebox { 
+                                    width: 100%; height: 100%;  padding:3rem 1.5rem 2rem 1.5rem; float: left; background-color:$gray;  @include fCC(); flex-direction: column; border-bottom: solid 8px transparent; cursor: pointer; background: rgba(223,223,224, 0.9); border-right: solid 2px $gray5;
+                                    h2{ width: 100%; margin: 0 0 1rem 0; float: left; text-align: center; @include fmedium(); color:$black; font-size: 21px; line-height: 1;  letter-spacing:0.84px;  text-transform: uppercase; }
+                                    p { width: 100%;  float: left;  text-align: center; @include fbook();  color:$black; font-size: 12px; line-height: 1.3; letter-spacing: 0.72px; }
+                                }
+                                &.slick-current { 
+                                    .homeadvantagebox { background: $white; border-bottom-color:$orange; cursor: none; }
+                                }
+                            }
+                        }
+                    }
+                }
+                */

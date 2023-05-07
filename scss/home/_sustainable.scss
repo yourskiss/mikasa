@@ -1,0 +1,26 @@
+ .homesustainable { 
+    position: relative;  background:$white; width: 100%;  float: left;   padding: 3rem 0 0 0;
+    .hsf_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
+    .hsf_ipad { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
+    .hsf_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
+
+       .home_sf_container { 
+            z-index: 2; position: absolute; left:50%; top: 50%; transform: translate(-50%, -50%); height: auto; width:50%; float: left; margin: 0; padding: 0;
+            h2 {
+                width: 100%; float: left; text-align: center; @include fmedium(); color:$orange; font-size: 40px; line-height: 1;  letter-spacing: 0; 
+                span { display: block; color: $white; @include fbold(); }
+            }
+            p { width: 100%; float: left; margin: 2rem 0 3rem 0; text-align: center; @include fmedium(); font-weight: 500; color:$white; font-size: 16px; line-height:25px; letter-spacing:0.32px; }
+            aside {
+                width: 100%; float:right; text-align: center;
+                a { 
+                   display: inline-block; padding:0.8rem 3rem; margin: 0 auto; width:auto; float: none; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 25px; font-size: 13px; letter-spacing:1px; line-height: 21px; text-transform: uppercase;
+                   &:hover { background-color: $blue;  color:$white; @include inT();  } 
+               }
+            } 
+       }
+
+ 
+
+   }
+ 

@@ -1,0 +1,520 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*slider section starts here*/
+
+.home-slide {
+    position: relative;
+}
+
+.home-slide img {
+    width: 100%;
+}
+
+.home-txt {
+    z-index: 2;
+    position: absolute;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.4;
+    width: 40%;
+    float: left;
+    margin: 6% 0 0 14%;
+    top: 0;
+}
+
+.home-txt h4 {
+    margin-bottom: 0;
+    font-size: 26px;
+    font-family: 'futura-book', Arial, sans-serif;
+    font-weight: 500;
+    letter-spacing: 6px;
+    line-height: 1.5;
+}
+
+.home-txt h4 span {
+    font-family: 'futura-black', Arial, sans-serif;
+    font-weight: 800;
+}
+
+.home-txt h2 {
+    font-family: 'futura-black', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    margin-top: 0;
+    color: #e94e20;
+    margin: 10px 0 60px 0;
+}
+
+.home-txt aside {
+    margin-left: 15px;
+}
+
+a.button1 {
+    padding: 0.8rem 2.8rem;
+    width: auto;
+    display: inline-block;
+    background-color: #e94e20;
+    font-family: 'futura-light', Arial, sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    letter-spacing: .7px;
+    text-transform: uppercase;
+}
+
+a.button1:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all .4s ease-in;
+}
+
+/*slider section ends here*/
+
+/*intro section starts here*/
+.intro {
+    background-image: url(../images/vec-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    padding: 4.5rem 0;
+}
+
+
+.intro h1 {
+    margin: 0;
+    color: #565659;
+    font-size: 2.5rem;
+}
+
+.intro .intro-text p {
+    color: #000000;
+    font-family: 'futura-medium', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 45px 0;
+}
+
+.intro .img-box img {
+    width: 500px;
+    padding-top: 20px;
+}
+
+/* intro section ends here*/
+
+/* Range section starts here*/
+
+.range .range-strip {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3rem;
+    height: 178px;
+    position: relative;
+}
+
+.range .range-img img {
+    width: 100%;
+    height: 100%
+}
+
+.range .range-strip .our-rng h2 {
+    color: #e94e20;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'futura-book', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.range .range-strip .our-rng h2 span {
+    font-family: 'futura-black', Arial, sans-serif;
+    font-weight: bold;
+    color: #172c60;
+}
+
+.range .range-strip .our-rng p {
+    font-family: 'futura-regular', Arial, sans-serif;
+    font-weight: 400;
+    color: #282828;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
+}
+
+.range .range-strip .our-rng span.explore {
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    color: #282828;
+    margin: 15px 0;
+}
+
+.explore img {
+    width: 20px;
+    height: 14px;
+    margin: 0px 0 0 20px;
+}
+
+
+.catalogue {
+    display: flex;
+    flex-direction: revert;
+    align-items: center;
+}
+
+.catalogue img {
+    height: 30px;
+    margin-right: 20px;
+}
+
+.catalogue p {
+    color: #092A67;
+    font-family: 'futura-medium', Arial, sans-serif;
+    font-weight: 600;
+}
+
+
+.mid {
+    height: 250px;
+    width: 500px;
+    position: absolute;
+    z-index: 1;
+    background: #fff;
+}
+
+.mar {
+    width: 80%;
+    margin: 42px auto 0 auto;
+}
+
+
+.experience {
+    display: flex;
+    margin: 5rem 3rem;
+    justify-content: space-between;
+}
+
+.exp-txt h2:first-child {
+    font-family: 'futura-medium', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    color: #333333;
+}
+
+.exp-txt h2:nth-child(2) {
+    color: #172C60;
+    font-family: 'futura-medium', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.exp-txt h2 span {
+    font-family: 'futura-black', Arial, sans-serif;
+    font-weight: 900;
+}
+
+.exp-txt h1 {
+    margin: 0 0 20px 0;
+    font-family: 'futura-book', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 41px;
+}
+
+
+.exp-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.exp-img-box img {
+    width: 160px;
+}
+
+.exp-img-box {
+    text-align: center;
+    width: 175px;
+}
+
+.exp-img-box.bord {
+    border-right: 1.5px solid #707070;
+}
+
+.exp-img-box span {
+    font-family: 'futura-regular', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #707070;
+}
+
+
+.state-art {
+    background: url(../images/state-of-art.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 110vh;
+    text-align: center;
+    display: grid;
+    align-content: center;
+}
+
+
+.state-art h2 {
+    color: #e94e20;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'futura-medium', Arial, sans-serif;
+    font-weight: 600;
+    margin-top: 60px;
+}
+
+.state-art h2 span {
+    color: #fff;
+    font-family: 'futura-black', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 2.7rem;
+}
+
+.state-art p {
+    color: #ffffff;
+    font-family: 'futura-regular', Arial, sans-serif;
+    font-weight: 400;
+    margin-top: 40px;
+}
+
+.watch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.watch img {
+    height: 35px;
+}
+
+.watch span {
+    color: #ffffff;
+    font-family: 'futura-regular', Arial, sans-serif;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+
+
+/*-------------About Us starts here-----------*/
+
+
+.about-banner img {
+    width: 100%;
+    position: relative;
+}
+
+.about-txt {
+    position: absolute;
+    top: 38%;
+    left: 40%;
+    text-align: center;
+}
+
+.about-txt h4 {
+    font-family: 'futura-regular', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 29px;
+    color: #ffffff;
+    letter-spacing: 3px;
+}
+
+.about-txt h2 {
+    font-family: 'futura-bold', Arial, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 42px;
+}
+
+.discover {
+    background: url(../images/vec-background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+p.headtxt {
+    color: #000000;
+    font-family: 'futura-medium', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 45px 0;
+    letter-spacing: 1px;
+}
+
+
+h2.vhead {
+    color: #e94e20;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'futura-book', Arial, sans-serif;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+h2.vhead span {
+    font-family: 'futura-bold', Arial, sans-serif;
+    font-weight: 800;
+    color: #172c60;
+}
+
+
+
+.manufacture img {
+    width: 100%;
+    position: relative;
+}
+
+.manufacture h2 {
+    color: #fff;
+    font-family: 'futura-bold', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 43%;
+    left: 34%;
+}
+
+.next-gen {
+    background: url(../images/vec-background.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ran-text {
+    text-align: center;
+}
+
+.man-video {
+    background: url(../images/manufacturing/state-of-art.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.man-video img {
+    width: 120px;
+}
+
+
+
+.res-banner img{
+width: 100%;
+    position: relative;
+}
+
+.res-banner h2 {
+    color: #fff;
+    font-family: 'futura-bold', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+.unlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.res-txt {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.lorem {
+    margin: 0 5% 20px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.lorem-box {
+    text-align: start;
+    width: 31%;
+    border: 1.5px solid #ececec;
+    padding: 30px 20px;
+    margin: 10px;
+}
+
+.lorem-box span {
+    font-size: 12px;
+}
+
+.down img {
+    height: 25px;
+    margin-right: 15px;
+}
+
+.down {
+    display: flex;
+}
+
+.lorem-box p {
+    padding: 15px 0;
+    font-family: 'futura-book', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #2c2c2c;
+}
+
+.down span {
+    color: #6C6C6C;
+    font-size: 11px;
+}
+
+
+
+
+.contact-banner img {
+    width: 100%;
+    position: relative;
+}
+
+.contact-banner h2 {
+    color: #fff;
+    font-family: 'futura-bold', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 42%;
+    left: 39%;
+}

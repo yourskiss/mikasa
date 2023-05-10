@@ -1,0 +1,124 @@
+
+ 
+.getintouchwrap { 
+    @include fCC();  background-color: $white; width: 100%; float: left;  padding:5rem 0;
+   .warrper { 
+       max-width: 1000px; @include fBC();
+       
+        .getintouchInfo{
+            width: 30%;  float: left;
+            h2 { 
+                width: 100%;  float: left; text-align: left; @include fbold(); color:$orange;  font-size: 40px; line-height:1; 
+                span { display: block; color:$blue;  }
+            }
+            h3 { 
+                width: 100%;  margin:2rem 0; float: left; text-align: left; @include fmedium(); color:$black2;  font-size: 14px; line-height:20px; 
+            }
+            p { 
+                @include fSC();  float: left; width:100%; 
+               img { display: inline-block; width: 31px; margin-right: 0.5rem; }
+               a { 
+                    text-align: left; @include fmedium();  font-size: 13px; line-height: 16px; letter-spacing: 1px; color: $black2; @include outT(); @include tdn(); text-transform: uppercase;
+                    span { display: block;  color: $black2; @include fmedium();}                    
+                   &:hover {  
+                        span { color: $orange; @include inT(); }
+                    }
+               }
+           }
+        }
+       .getintouchForm {
+            width: 55%;  float: right;
+            .getintouchField {  
+                width: 100%;  float: left; margin-bottom:1.5rem; 
+                &:last-child { margin-bottom: 0; }
+                .getintouchInput, .getintouchSelect, .getintouchTextarea {
+                    width: 100%;
+                    float: right;
+                    padding: 0.5rem 1rem;
+                    background:transparent;
+                    outline: none;
+                    border: none;
+                    border-bottom: solid 2px $gray5;
+                    text-align: left;
+                    font-size: 14px;
+                    line-height: 1;
+                    color: $gray4;
+                    @include fmedium();
+                }
+                .getintouchInput:focus, .getintouchSelect:focus, .getintouchTextarea:focus {border-color:$orange; }
+                .getintouchTextarea { height: 90px; resize: none;}
+                .getintouchSelect {
+                    text-indent: 1px;
+                    text-overflow: "";
+                    -webkit-appearance: none;
+                    appearance: none;
+                    background:transparent url('../images/getintouch_dropdown.png') no-repeat;
+                    background-position: right 8px center;
+                }
+                .getintouchButton {
+                    position: relative; padding:0.8rem 3rem; width: auto; float: left; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center;cursor: pointer; @include tdn(); border-radius: 25px; font-size: 14px; letter-spacing: 0.7px; line-height: 19px; text-transform: uppercase;
+                    &:hover { background-color: $black;  color:$white; @include inT();  } 
+                }
+                .getintouchError {
+                    display: none;
+                    width: 100%;
+                    float: left;
+                    padding-left: 1rem;
+                    margin-top: 10px;
+                    font-size: 12px;
+                    color: $red; @include flight();
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+ 
+
+@media only screen and (max-width:1023px) 
+{
+
+    .getintouchwrap { 
+        padding:3rem 0;
+       .warrper { 
+            max-width: 90%;
+            .getintouchInfo{ width: 30%;  }
+            .getintouchForm { width: 65%;  }
+        }
+    }
+     
+}
+
+
+ 
+
+@media only screen and (max-width:767px) 
+{
+
+    .getintouchwrap { 
+        .warrper { 
+            max-width: 90%; @include fCS(); flex-wrap: wrap;
+            
+                .getintouchInfo{
+                    width: 100%; 
+                    h2 {
+                         text-align: center; @include fmedium(); 
+                         span { @include fbold(); }
+                    }
+                    h3 { text-align: center; margin:1rem 0 2rem 0; color: $black;  }
+                    p { 
+                        justify-content: center; 
+                        img { color: $black; display: inline-block; width: 27px; margin-right: 0.5rem; }
+                        a { text-align: left;  color: $black; }
+                    }
+                }
+                .getintouchForm {
+                    margin-top: 2rem; width: 100%;  
+                    .getintouchField { 
+                        text-align: center;
+                        .getintouchButton {float: none;  margin: 0 auto; display: inline-block;}
+                    }
+                }
+        }
+    }
+}

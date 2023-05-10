@@ -1,0 +1,53 @@
+.productinfo { 
+    background:$gray url('../images/product/bottom_bg.png') no-repeat center bottom; background: auto 80%; width: 100%;  float: left;  position: relative; padding:5rem 0; 
+   .warrper { 
+       max-width: 90%; min-height: 600px;
+       .productinfoleft { 
+            width: 30%;  float: left;
+            .productinfoslider {
+                width: 100%; float:left;
+                .slick-list {   
+                    z-index: 2; margin: 0; padding: 0; overflow: hidden; 
+                    .slick-track {  
+                        display: flex; justify-content:center; align-items: stretch; height: inherit; margin: 0; padding: 0;  
+                        .slick-slide { 
+                            height: 100%; margin: 0; padding: 0; height: inherit; 
+                            div { height: 100%; margin: 0; padding: 0; }
+                        }
+                    }
+                }
+                /* dots */
+                .slick-dots { 
+                    z-index:2; bottom:-1.5rem; 
+                    li { 
+                        position: relative; display: inline-block; width:16px; height:16px; margin: 0 5px; padding: 0; border: none; cursor: pointer; background:$black; border-radius:0 !important; 
+                        &.slick-active { background:$orange; }
+                        button { display: none; }
+                    }
+                }
+                .productinfoitem {
+                    display: block; width: 100%; float:left; text-align: left;
+                    img { width: 100%; }
+                }
+            }
+            aside {
+                display: none; width: 100%; float:left; text-align: left;
+                img { max-width: 100%; }
+            }
+       }
+       .productinforight { 
+            width: 65%;  float: right;
+            h2{
+                width: 100%; margin: 0 0 1rem 0; float: left; text-align: left; @include flt(); color:$orange; font-size: 40px; line-height: 1;  letter-spacing: normal;  text-transform: uppercase;
+                span { @include fbold(); color:$blue;  }
+            }
+            p { width: 100%;  float: left; text-align: left; @include flt();  color:$black; font-size: 16px; line-height: 27px; letter-spacing: 0.96px; }
+            aside {
+                display: block; margin-top: 3rem; width: 100%; float:left; text-align: left;
+                img { max-width: 100%; }
+            }
+        }
+        
+       
+   }
+}

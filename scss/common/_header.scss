@@ -13,7 +13,7 @@
                     li { 
                         position: relative; list-style: none; margin: 0 1rem; display: inline-block;
                         &.enquirenow_li { margin: 0; }
-                        &.search_li { margin-left: 1rem; }
+                        &.search_li { margin:0 1rem; }
                         a { 
                             float: left; width: auto; padding:0.5rem 0; @include outT(); text-align: center;  color:$black; @include tdn(); @include fmedium(); background: none; border: none;  font-size: 13px; letter-spacing: 1px; line-height: 16px;
                             &:hover, &.active { color:$orange;  @include inT(); }
@@ -64,12 +64,12 @@
     
 }
  
-
 @media only screen and (max-width:1255px) 
 {
     .header { 
         padding: 1rem 0;
         .warrper { 
+            max-width: 92%;
             .logo { width:183px;  }
             .headermenumobile{
                 @include fBC(); float: right; width: auto;   position: relative; line-height: 1; margin: 0.2rem 0 0 1.5rem;

@@ -3511,7 +3511,7 @@ template {
   margin: 0;
 }
 .header .warrper .headerRight ul li.search_li {
-  margin-left: 1rem;
+  margin: 0 1rem;
 }
 .header .warrper .headerRight ul li a {
   float: left;
@@ -3721,6 +3721,9 @@ template {
   .header {
     padding: 1rem 0;
   }
+  .header .warrper {
+    max-width: 92%;
+  }
   .header .warrper .logo {
     width: 183px;
   }
@@ -3907,7 +3910,7 @@ template {
   background-color: #F0F0F0;
   width: 100%;
   float: left;
-  padding: 3rem 0 3rem 0;
+  padding: 3rem 0;
 }
 .footer .warrper {
   display: flex;

@@ -1,0 +1,41 @@
+.productsliderwrap { 
+    background:$white; width: 100%;  float: left;  position: relative; padding:0; 
+    .pro_slider {
+        width: 100%; float:left;
+        .slick-list {   
+            z-index: 2; margin: 0; padding: 0; overflow: hidden; 
+            .slick-track {  
+                display: flex; justify-content:center; align-items: stretch; height: inherit; margin: 0; padding: 0;  
+                .slick-slide { 
+                    height: 100%; margin: 0; padding: 0; height: inherit; 
+                    div { height: 100%; margin: 0; padding: 0; }
+                }
+            }
+        }
+        .slick-arrow { 
+            z-index: 3; opacity:1; top:auto; bottom:1rem;  width:36px; height:36px; border-radius: 50%; margin: 0; padding: 0; border:0; line-height: 1; background-color:transparent; color:$black; @include fCC(); @include outT(); 
+            &:hover {
+                 background-color:transparent; color:$orange; @include inT(); 
+                 &:before {  color:$orange; @include inT(); }
+            }
+            &.slick-disabled { opacity: 0.4; user-select: none; pointer-events:none; }
+            &:before { color: $black; text-align: center; font-size:36px; line-height:0; font-family: 'fontawesome';  @include outT(); }
+            &.slick-next  { 
+                left: auto; right:1rem; 
+                &:before { content: "\f105"; }
+            } 
+            &.slick-prev {
+                left: auto; right:3.5rem; 
+                &:before { content: "\f104"; }
+            }
+        }
+        .pro_item { 
+            width: 100%;  float: left; position: relative;
+            .pro_short_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
+            .pro_short_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
+            h2 { z-index: 2; position: absolute; bottom: 0; right: 0; background: $white; background: rgba(255,255,255, 0.8); padding: 2rem 200px 2rem 3rem;  text-align: left; @include fbold(); color:$black2; font-size: 28px; line-height: 1;  letter-spacing: normal; text-transform:uppercase; }
+        }
+ 
+
+    }
+}

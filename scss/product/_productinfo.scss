@@ -1,7 +1,7 @@
 .productinfo { 
     background:$gray url('../images/product/bottom_bg.png') no-repeat center bottom; background: auto 80%; width: 100%;  float: left;  position: relative; padding:5rem 0; 
    .warrper { 
-       max-width: 90%; min-height: 600px;
+       max-width: 90%;  
        .productinfoleft { 
             width: 30%;  float: left;
             .productinfoslider {
@@ -16,13 +16,12 @@
                         }
                     }
                 }
-                /* dots */
                 .slick-dots { 
-                    z-index:2; bottom:-1.5rem; 
+                    z-index:2; bottom:-2rem; 
                     li { 
-                        position: relative; display: inline-block; width:16px; height:16px; margin: 0 5px; padding: 0; border: none; cursor: pointer; background:$black; border-radius:0 !important; 
-                        &.slick-active { background:$orange; }
+                        position: relative;  margin:0 5px; padding: 0; border: none;  width:8px; height:8px; background:$gray2; border-radius:50%; cursor: pointer; 
                         button { display: none; }
+                        &.slick-active { background:$blue; }
                     }
                 }
                 .productinfoitem {
@@ -30,7 +29,7 @@
                     img { width: 100%; }
                 }
             }
-            aside {
+            .pinfo_short_mobile {
                 display: none; width: 100%; float:left; text-align: left;
                 img { max-width: 100%; }
             }
@@ -42,7 +41,7 @@
                 span { @include fbold(); color:$blue;  }
             }
             p { width: 100%;  float: left; text-align: left; @include flt();  color:$black; font-size: 16px; line-height: 27px; letter-spacing: 0.96px; }
-            aside {
+            .pinfo_short_desktop {
                 display: block; margin-top: 3rem; width: 100%; float:left; text-align: left;
                 img { max-width: 100%; }
             }

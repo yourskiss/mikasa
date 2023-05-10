@@ -339,6 +339,46 @@ $(function($)
     }   
     // home advantages slider   === end  
 
+
+    
+    // product info slider   === start
+    if($(".productinfoslider").length > 0)
+    {
+        $('.productinfoslider').slick({
+            slidesToShow:1,
+            slidesToScroll: 1,
+            dots:true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true,
+            adaptiveHeight: true,
+            centerMode: true,
+            centerPadding: '0',
+            initialSlide:0
+        });
+    }   
+    // product info slider   === end  
+
+    // product  slider   === start
+    if($(".pro_slider").length > 0)
+    {
+        $('.pro_slider').slick({
+            slidesToShow:1,
+            slidesToScroll: 1,
+            dots:false,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true,
+            adaptiveHeight: true,
+            centerMode: true,
+            centerPadding: '0',
+            initialSlide:0
+        });
+    }   
+    // product slider   === end
+
 });
 
 

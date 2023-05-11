@@ -1281,6 +1281,22 @@
   float: left;
   margin: 0;
   padding: 0;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.7);
+}
+.homestatemanufacturing .home_sm_video_wrap section {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  max-width: 740px;
+  max-height: 416px;
+  margin: 0;
+  padding: 0;
+  border: 0;
   background: #ffffff url("../images/loading.gif") no-repeat center center;
 }
 .homestatemanufacturing .home_sm_video_wrap aside {
@@ -1356,6 +1372,16 @@
   }
   .homestatemanufacturing .home_sm_container aside span img {
     margin-right: 0.5rem;
+  }
+  .homestatemanufacturing .home_sm_video_wrap section {
+    max-width: 320px;
+    max-height: auto;
+    height: 180px;
+  }
+  .homestatemanufacturing .home_sm_video_wrap aside {
+    height: 32px;
+    width: 32px;
+    font-size: 20px;
   }
 }
 .homesustainable {

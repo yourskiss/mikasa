@@ -266,15 +266,13 @@ function watchVideoPlay(val, src)
     var setSrc = "https://www.youtube.com/embed/"+src+"?rel=0&autoplay=1&mute=0&loop=0&showinfo=0&controls=0&modestbranding=1&playsinline=1";
     if(val == 'show')
     {
-        $(".home_sm_video_wrap iframe").attr('src',setSrc);
-        $(".home_sm_video_wrap").fadeIn(500);
-       // $("body").css("overflow","hidden");
+        $("#manufacturevideoIframe").attr('src',setSrc);
+        $("#manufacturevideoWrap").fadeIn(500);
     }
     else if(val == 'hide')
     {
-        $(".home_sm_video_wrap").fadeOut(500);
-        $(".home_sm_video_wrap iframe").attr('src', src);
-       // $("body").css("overflow","auto");
+        $("#manufacturevideoIframe").attr('src', src);
+        $("#manufacturevideoWrap").fadeOut(500);
     }
     else 
     {
@@ -282,6 +280,7 @@ function watchVideoPlay(val, src)
     }
 }
 // watchVideoPlay === end
+
 
 
 

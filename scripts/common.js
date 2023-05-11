@@ -166,6 +166,9 @@ function getInTouchValidation()
     }
     else 
     {
+        showHideErrorCase('show'); // error
+       // showHideSuccessCase('show'); // success 
+
         $(".getintouchError").hide().html('');
         return true;
     }
@@ -222,6 +225,11 @@ function enquirenowValidation()
     }
     else 
     {
+        
+       // showHideErrorCase('show'); // error
+        showHideSuccessCase('show'); // success 
+
+        showHideEnquireNow('hide');
         $(".enquirenowError").hide().html('');
         return true;
     }
@@ -249,6 +257,53 @@ function watchVideoPlay(val)
     }
 }
 // watchVideoPlay === end
+
+
+
+
+// success cass popup === start
+function showHideSuccessCase(val)
+{
+    if(val == 'hide')
+    {
+        $("#case_success").fadeOut(300);
+        $("body").css("overflow","auto");
+    }
+    else if(val == 'show')
+    {
+        $("#case_success").fadeIn(300);
+        $("body").css("overflow","hidden");
+    }
+    else 
+    {
+        // nothing
+    }
+}
+// success cass popup === end
+
+
+// error cass popup === start
+function showHideErrorCase(val)
+{
+    if(val == 'hide')
+    {
+        $("#case_error").fadeOut(300);
+        $("body").css("overflow","auto");
+    }
+    else if(val == 'show')
+    {
+        $("#case_error").fadeIn(300);
+        $("body").css("overflow","hidden");
+    }
+    else 
+    {
+        // nothing
+    }
+}
+// error cass popup === end
+ 
+
+
 
  
 $(function($) 

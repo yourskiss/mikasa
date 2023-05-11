@@ -3,315 +3,6 @@ body {
     padding: 0;
 }
 
-/*slider section starts here*/
-
-.home-slide {
-    position: relative;
-}
-
-.home-slide img {
-    width: 100%;
-}
-
-.home-txt {
-    z-index: 2;
-    position: absolute;
-    color: #fff;
-    text-transform: uppercase;
-    line-height: 1.4;
-    width: 40%;
-    float: left;
-    margin: 6% 0 0 14%;
-    top: 0;
-}
-
-.home-txt h4 {
-    margin-bottom: 0;
-    font-size: 26px;
-    font-family: 'futura-book', Arial, sans-serif;
-    font-weight: 500;
-    letter-spacing: 6px;
-    line-height: 1.5;
-}
-
-.home-txt h4 span {
-    font-family: 'futura-black', Arial, sans-serif;
-    font-weight: 800;
-}
-
-.home-txt h2 {
-    font-family: 'futura-black', Arial, sans-serif;
-    font-weight: 800;
-    font-size: 42px;
-    margin-top: 0;
-    color: #e94e20;
-    margin: 10px 0 60px 0;
-}
-
-.home-txt aside {
-    margin-left: 15px;
-}
-
-a.button1 {
-    padding: 0.8rem 2.8rem;
-    width: auto;
-    display: inline-block;
-    background-color: #e94e20;
-    font-family: 'futura-light', Arial, sans-serif;
-    font-weight: 300;
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 25px;
-    font-size: 14px;
-    letter-spacing: .7px;
-    text-transform: uppercase;
-}
-
-a.button1:hover {
-    background-color: #000;
-    color: #fff;
-    transition: all .4s ease-in;
-}
-
-/*slider section ends here*/
-
-/*intro section starts here*/
-.intro {
-    background-image: url(../images/vec-background.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    display: grid;
-    align-content: center;
-    padding: 4.5rem 0;
-}
-
-
-.intro h1 {
-    margin: 0;
-    color: #565659;
-    font-size: 2.5rem;
-}
-
-.intro .intro-text p {
-    color: #000000;
-    font-family: 'futura-medium', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 45px 0;
-}
-
-.intro .img-box img {
-    width: 500px;
-    padding-top: 20px;
-}
-
-/* intro section ends here*/
-
-/* Range section starts here*/
-
-.range .range-strip {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 3rem;
-    height: 178px;
-    position: relative;
-}
-
-.range .range-img img {
-    width: 100%;
-    height: 100%
-}
-
-.range .range-strip .our-rng h2 {
-    color: #e94e20;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-family: 'futura-book', Arial, sans-serif;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-.range .range-strip .our-rng h2 span {
-    font-family: 'futura-black', Arial, sans-serif;
-    font-weight: bold;
-    color: #172c60;
-}
-
-.range .range-strip .our-rng p {
-    font-family: 'futura-regular', Arial, sans-serif;
-    font-weight: 400;
-    color: #282828;
-    font-size: 15px;
-    letter-spacing: 0.7px;
-    line-height: 1.5;
-}
-
-.range .range-strip .our-rng span.explore {
-    display: flex;
-    flex-direction: row;
-    font-size: 13px;
-    color: #282828;
-    margin: 15px 0;
-}
-
-.explore img {
-    width: 20px;
-    height: 14px;
-    margin: 0px 0 0 20px;
-}
-
-
-.catalogue {
-    display: flex;
-    flex-direction: revert;
-    align-items: center;
-}
-
-.catalogue img {
-    height: 30px;
-    margin-right: 20px;
-}
-
-.catalogue p {
-    color: #092A67;
-    font-family: 'futura-medium', Arial, sans-serif;
-    font-weight: 600;
-}
-
-
-.mid {
-    height: 250px;
-    width: 500px;
-    position: absolute;
-    z-index: 1;
-    background: #fff;
-}
-
-.mar {
-    width: 80%;
-    margin: 42px auto 0 auto;
-}
-
-
-.experience {
-    display: flex;
-    margin: 5rem 3rem;
-    justify-content: space-between;
-}
-
-.exp-txt h2:first-child {
-    font-family: 'futura-medium', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 35px;
-    color: #333333;
-}
-
-.exp-txt h2:nth-child(2) {
-    color: #172C60;
-    font-family: 'futura-medium', Arial, sans-serif;
-    font-weight: 600;
-    font-size: 40px;
-}
-
-.exp-txt h2 span {
-    font-family: 'futura-black', Arial, sans-serif;
-    font-weight: 900;
-}
-
-.exp-txt h1 {
-    margin: 0 0 20px 0;
-    font-family: 'futura-book', Arial, sans-serif;
-    font-weight: 500;
-    font-size: 41px;
-}
-
-
-.exp-icons {
-    display: flex;
-    flex-direction: row;
-}
-
-.exp-img-box img {
-    width: 160px;
-}
-
-.exp-img-box {
-    text-align: center;
-    width: 175px;
-}
-
-.exp-img-box.bord {
-    border-right: 1.5px solid #707070;
-}
-
-.exp-img-box span {
-    font-family: 'futura-regular', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 12px;
-    color: #707070;
-}
-
-
-.state-art {
-    background: url(../images/state-of-art.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 110vh;
-    text-align: center;
-    display: grid;
-    align-content: center;
-}
-
-
-.state-art h2 {
-    color: #e94e20;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    font-family: 'futura-medium', Arial, sans-serif;
-    font-weight: 600;
-    margin-top: 60px;
-}
-
-.state-art h2 span {
-    color: #fff;
-    font-family: 'futura-black', Arial, sans-serif;
-    font-weight: 800;
-    font-size: 2.7rem;
-}
-
-.state-art p {
-    color: #ffffff;
-    font-family: 'futura-regular', Arial, sans-serif;
-    font-weight: 400;
-    margin-top: 40px;
-}
-
-.watch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.watch img {
-    height: 35px;
-}
-
-.watch span {
-    color: #ffffff;
-    font-family: 'futura-regular', Arial, sans-serif;
-    font-weight: 400;
-    margin-left: 10px;
-}
-
-
-
 /*-------------About Us starts here-----------*/
 
 .about-banner {
@@ -430,7 +121,9 @@ h2.vhead span {
     text-align: center;
 }
 
+
 .man-video {
+    /*
     background: url(../images/manufacturing/state-of-art.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -439,11 +132,76 @@ h2.vhead span {
     display: flex;
     justify-content: center;
     align-items: center;
+*/
+    position: relative;
 }
 
+.man-videobg img.stateofart {
+    width: 100%;
+}
 
-.man-video img {
+.man-videobg img.stateofartmob {
+    display: none;
+}
+
+.manufacturingvideo {
+    display: none;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: #fff url(../images/loading.gif) no-repeat center center;
+}
+
+.manufacturingvideoClose {
+    z-index: 3;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #e94e20;
+    cursor: pointer;
+    transition: all .4s ease-out;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.manufacturingvideoClose:hover {
+    background-color: #152c55;
+    color: #fff;
+    transition: all .4s ease-in;
+}
+
+.manufacturingvideoiframe {
+    z-index: 2;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.man-videobg {
+    position: relative;
+}
+
+.man-video img#manu-play {
     width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .res-banner {
@@ -808,7 +566,7 @@ img.mob-ban {
     }
 
     .discover-txt h2.vhead {
-        margin-top: 3rem;
+        padding-top: 3rem;
     }
 
 
@@ -869,7 +627,10 @@ img.mob-ban {
         font-size: 17px;
     }
 
-    ..about-txt h4{1.8rem;}
+    ..about-txt h4 {
+        1.8rem;
+    }
+
     .about-txt h2 {
         font-size: 2rem;
     }
@@ -911,9 +672,11 @@ img.mob-ban {
     h2.vhead {
         font-size: 2rem;
     }
-    .d-head h2{
+
+    .d-head h2 {
         font-size: 2rem;
     }
+
     .manufacture h2 {
         font-size: 2rem;
     }
@@ -925,8 +688,21 @@ img.mob-ban {
 
 @media only screen and (max-width:479px) {
 
-    .m-head , .r-head, .s-head, .d-head, .cont-head, .about-txt{top: 16%;}
-    
+    .m-head,
+    .r-head,
+    .s-head,
+    .d-head,
+    .cont-head,
+        {
+        top: 16%;
+    }
+
+    .about-txt {
+        top: 8%;
+    }
+    .man-video img#manu-play{top: 65%;}
+    .man-videobg img.stateofart{display: none;}
+    .man-videobg img.stateofartmob{display: block;width: 100%;height: 100%;}
     .discover {
         height: auto;
         display: block;
@@ -1013,6 +789,12 @@ img.mob-ban {
     }
 }
 
+@media only screen and (max-width:376px) {
+    .about-txt {
+        top: 16%;
+    }
+}
+
 @media only screen and (max-width:367px) {
     .manufacture h2 {
         top: 14%;
@@ -1021,5 +803,9 @@ img.mob-ban {
 
     .lorem-box {
         padding: 20px 15px;
+    }
+
+    .about-txt {
+        top: 8%;
     }
 }

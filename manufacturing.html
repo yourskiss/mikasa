@@ -104,10 +104,11 @@
 
         <container>
             <div class="manufacture">
-               <img src="images/manufacturing/manufacture-banner.jpg" alt="" class="desktop-ban">
-               <img src="images/manufacturing/manufacture-banner-mob.jpg" alt="" class="mob-ban">
-               <div class="m-head">
-                <h2>manufacturing</h2></div>
+                <img src="images/manufacturing/manufacture-banner.jpg" alt="" class="desktop-ban">
+                <img src="images/manufacturing/manufacture-banner-mob.jpg" alt="" class="mob-ban">
+                <div class="m-head">
+                    <h2>manufacturing</h2>
+                </div>
             </div>
             <div class="next-gen">
                 <div class="ran-text">
@@ -117,8 +118,18 @@
                     <p class="headtxt">We prioritize the safety and well-being of our workers. To ensure this, we provide a cool and well-ventilated working<br>environment with insulated rooftop and side cladding, superior handling systems, and an excellent canteen facility.<br>Additionally, our residential facilities, RO drinking water, and modernized fire protection system with a fire alarm facility<br>ensure that our employees are comfortable and secure while at work.</p>
                 </div>
             </div>
+
             <div class="man-video">
-                <a href="#"><img src="images/watch-logo.png" alt=""></a>
+               <div class="man-videobg">
+                   <img src="images/manufacturing/state-of-art.jpg" alt="" class="stateofart">
+                   <img src="images/manufacturing/state-of-art-mob.jpg" alt="" class="stateofartmob">
+               </div>
+                <img src="images/watch-logo.png" alt="" onclick="manufacturingVideoPlay('show','qM-a-jivEEU')" id="manu-play"> 
+
+                <div class="manufacturingvideo" id="manufacturingvideo" >
+                    <aside class="manufacturingvideoClose" onclick="manufacturingVideoPlay('hide','')"><i class="fa fa-times" aria-hidden="true"></i></aside>
+                    <iframe class="manufacturingvideoiframe" id="manufacturingiframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+                </div>
             </div>
         </container>
 
@@ -267,8 +278,27 @@
     </div>
     <!-- loader === end -->
 
+    <!-- success case ===== start -->
+    <div class="msgcontainer" id="case_success">
+        <section>
+            <h2>Success Message Here</h2>
+            <p>
+                <span onclick="showHideSuccessCase('hide');">OK</span>
+            </p>
+        </section>
+    </div>
+    <!-- success case ===== end -->
 
-
+    <!-- error case ===== start -->
+    <div class="msgcontainer" id="case_error">
+        <section>
+            <h2>Error Message Here</h2>
+            <p>
+                <span onclick="showHideErrorCase('hide');">OK</span>
+            </p>
+        </section>
+    </div>
+    <!-- error case ===== end -->
 
     <!-- getintouch  start -->
     <div class="enquirenowpopup" id="EnquireNowPopup">
@@ -337,7 +367,28 @@
     <script src="scripts/jquery-min.js"></script>
     <script src="scripts/slick.min.js"></script>
     <script src="scripts/common.js"></script>
+    <script>
+    // watchVideoPlay === start
+function manufacturingVideoPlay(val, src)
+{
+    debugger;
+    var setSrc = "https://www.youtube.com/embed/"+src+"?rel=0&autoplay=1&mute=0&loop=0&showinfo=0&controls=0&modestbranding=1&playsinline=1";
+    if(val == 'show')
+    {
+        $("#manufacturingiframe").attr('src',setSrc)
+        $("#manufacturingvideo").fadeIn(500)
+    }
+    else if(val == 'hide')
+    {
+        $("#manufacturingvideo").fadeOut(500)
+        $("#manufacturingiframe").attr('src', src)
+    }
+    else 
+    {
+        // nothing
+    }
+}
+// watchVideoPlay === end
+    </script>
 
-</body>
-
-</html>
+</body></html>

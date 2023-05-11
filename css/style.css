@@ -15,13 +15,15 @@ body {
 
 .about-txt {
     position: absolute;
-    width: 100%;
-    height: 80%;
     top: 19%;
+    height: 80%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
 }
 
 .about-txt h4 {
@@ -684,6 +686,7 @@ img.mob-ban {
     .lorem-box {
         padding: 25px 15px;
     }
+
 }
 
 @media only screen and (max-width:479px) {
@@ -697,12 +700,21 @@ img.mob-ban {
         top: 16%;
     }
 
-    .about-txt {
-        top: 8%;
+
+    .man-video img#manu-play {
+        top: 65%;
     }
-    .man-video img#manu-play{top: 65%;}
-    .man-videobg img.stateofart{display: none;}
-    .man-videobg img.stateofartmob{display: block;width: 100%;height: 100%;}
+
+    .man-videobg img.stateofart {
+        display: none;
+    }
+
+    .man-videobg img.stateofartmob {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
     .discover {
         height: auto;
         display: block;
@@ -786,12 +798,6 @@ img.mob-ban {
         width: 90%;
         margin: 10px auto;
         padding: 30px 30px;
-    }
-}
-
-@media only screen and (max-width:376px) {
-    .about-txt {
-        top: 16%;
     }
 }
 

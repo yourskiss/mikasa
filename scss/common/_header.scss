@@ -106,13 +106,13 @@
                     li { 
                         margin: 0; display:block; width: 100%; float: left;
                         &.enquirenow_li {
-                            padding: 1rem;
+                            padding: 1rem 4%;
                             a { border-bottom:none;} 
                             .enquirenowBtn { float: left; padding: 0.8rem 0; width: 170px; font-size: 12px; }
                         }
                         &.search_li { display: none; }
                         a { 
-                            float: left; width: 100%; padding:1rem 2rem; text-align: left;  color:$black2; border-bottom: solid 1px $black2;   
+                            float: left; width: 100%; padding:1.5rem 4%; text-align: left;  color:$black2; border-bottom: solid 1px $black2;   
                             &:hover, &.active { border-bottom-color: $orange; color:$orange;  @include inT(); }
                         }
                         &:hover {
@@ -120,7 +120,7 @@
                             .dropdownmenu {
                                 position:relative; left: 0; top:0; width:100%;  border-bottom: solid 1px $black2;
                                     a { 
-                                        float: left; width: 100%; padding:0.7rem 3rem; background:none; @include outT();   text-align: left;  color:$black2; @include tdn(); @include fbook();  border-bottom: dotted 1px $gray;  font-size: 12px; letter-spacing:normal; line-height: 1;
+                                        float: left; width: 100%; padding:1rem 6%; background:none; @include outT();   text-align: left;  color:$black2; @include tdn(); @include fbook();  border-bottom: dotted 1px $gray;  font-size: 12px; letter-spacing:normal; line-height: 1;
                                         &:hover, &.active { border-bottom: dotted 1px $gray; background:none; color:$orange;  @include inT(); }
                                         &:last-child {  border-bottom: dotted 1px $gray; }
                                     }
@@ -134,10 +134,4 @@
     }
 }
  
- 
-@media only screen and (max-width:599px) 
-{
-
-    
-}
  

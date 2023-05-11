@@ -314,10 +314,10 @@ $(function($)
     if($(".homeadvantageslider").length > 0)
     {
         $('.homeadvantageslider').slick({
-            slidesToShow:1,
+            slidesToShow:4,
             slidesToScroll: 1,
             dots: false,
-            arrows: true,
+            arrows: false,
             autoplay: true,
             autoplaySpeed: 3000,
             infinite: true,
@@ -331,8 +331,12 @@ $(function($)
                     settings: "unslick"
                 },
                 {
+                    breakpoint: 599,
+                     settings: { slidesToShow:2 }
+                },
+                {
                     breakpoint: 479,
-                     settings: { infinite: true }
+                     settings: { slidesToShow:1 }
                 }
             ]
         });

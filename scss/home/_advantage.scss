@@ -1,7 +1,7 @@
  .homeadvantage { 
-    background:$white; width: 100%;  float: left; padding:4rem;  
+    background:$white; width: 100%;  float: left; padding:4rem 0;  
    .warrper { 
-       max-width: 100%; @include fBC();
+        @include fBC();
        .homeadvantageleft { 
             width:30%;  float: left; 
             h2{width: 100%; float: left; text-align: left; @include fmedium(); color:$black5; font-size: 30px; line-height: 1;  letter-spacing: normal;    }
@@ -41,8 +41,56 @@
 }
 
 
-                /*
-                .homeadvantageslider.slick-slider }
+ 
+
+@media only screen and (max-width:1300px) 
+{
+    .homeadvantage { 
+        padding:3rem 0;  
+       .warrper { 
+           .homeadvantageleft { 
+                width:35%;  
+                h2{ font-size: 23px;  }
+                h3{ margin:0.5rem 0;  font-size: 32px; }
+                h4 { font-size:32px;  }
+                aside { margin-top:1.5rem; } 
+           }
+           .homeadvantageright { 
+                width:62%;  
+                .homeadvantageslider{  
+                    .homeadvantagebox { border-right: solid 1px $gray5; } 
+                }
+           }
+       }
+    }
+}
+
+@media only screen and (max-width:1023px) 
+{
+    .homeadvantage {  
+       .warrper { 
+            flex-wrap: wrap;
+           .homeadvantageleft { 
+                width:100%; margin-bottom: 2rem;  
+                h2{ text-align: center;  }
+                h3{ text-align: center;   }
+                h4 { text-align: center;   }
+                aside { text-align: center;   } 
+            }
+           .homeadvantageright { width:100%;  }
+       }
+    }
+
+}
+
+
+@media only screen and (max-width:599px) 
+{
+    .homeadvantage {  
+       .warrper { 
+        .homeadvantageleft { margin-bottom: 1rem;   }
+           .homeadvantageright { 
+                .homeadvantageslider.slick-slider {
                     .slick-list {   
                         z-index: 2; margin: 0; padding: 0; overflow: hidden; 
                         .slick-track {  
@@ -51,15 +99,18 @@
                                 height: 100%; margin: 0; padding: 0; height: inherit; 
                                 div { height: 100%; margin: 0; padding: 0; }
                                 .homeadvantagebox { 
-                                    width: 100%; height: 100%;  padding:3rem 1.5rem 2rem 1.5rem; float: left; background-color:$gray;  @include fCC(); flex-direction: column; border-bottom: solid 8px transparent; cursor: pointer; background: rgba(223,223,224, 0.9); border-right: solid 2px $gray5;
-                                    h2{ width: 100%; margin: 0 0 1rem 0; float: left; text-align: center; @include fmedium(); color:$black; font-size: 21px; line-height: 1;  letter-spacing:0.84px;  text-transform: uppercase; }
-                                    p { width: 100%;  float: left;  text-align: center; @include fbook();  color:$black; font-size: 12px; line-height: 1.3; letter-spacing: 0.72px; }
-                                }
-                                &.slick-current { 
-                                    .homeadvantagebox { background: $white; border-bottom-color:$orange; cursor: none; }
+                                    width: 100%; padding:0; float: left; background-color:none; border: none; 
+                                    aside { 
+                                        text-align: center; margin: 0 0 0.5rem 0;
+                                        img { max-width: 100%; display: inline-block; float: none; margin: 0 auto; }
+                                    }
+                                    p {  text-align: center;  }
                                 }
                             }
                         }
                     }
                 }
-                */
+            }
+       }
+    }
+}

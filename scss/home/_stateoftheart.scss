@@ -26,9 +26,9 @@
        }
 
        .home_sm_video_wrap {
-           display: none; z-index: 3; position: absolute; left:0; top: 0; height: 100%; width:100%; float: left; margin: 0; padding: 0;
+           display: none; z-index: 3; position: absolute; left:0; top: 0; height: 100%; width:100%; float: left; margin: 0; padding: 0; background: $white url('../images/loading.gif') no-repeat center center;
            aside { 
-                z-index: 3; position: absolute;  right:10px; top:10px; height: 35px; width:35px; background-color: $orange; cursor: pointer;   @include outT(); color: $white; @include fCC(); font-size: 24px;
+                z-index: 3; position: absolute;  right:0; top:0; height:40px; width:40px; background-color: $orange; cursor: pointer;   @include outT(); color: $white; @include fCC(); font-size: 24px;
                 &:hover { background-color: $blue; color: $white; @include inT(); }
             }
            iframe { z-index: 2; position: relative; height: 100%; width:100%; float: left; margin: 0; padding: 0; border: 0; }
@@ -36,3 +36,37 @@
 
    }
  
+
+@media only screen and (max-width:1023px) 
+{
+    .homestatemanufacturing {  
+        .hsm_desktop { display: none;  }
+        .hsm_ipad { display: block;  }
+        .hsm_mobile { display: none;   }
+        .home_sm_container { 
+            h2 {font-size:28px; }
+            h3 { margin:1rem 0; font-size: 15px; }
+       }
+    }
+
+}
+
+
+@media only screen and (max-width:479px) 
+{
+    .homestatemanufacturing {  
+        .hsm_desktop { display: none;  }
+        .hsm_ipad { display: none;  }
+        .hsm_mobile { display: block; }
+        .home_sm_container { 
+            h2 {font-size:32px; line-height: 1.1;  letter-spacing:0.66px; }
+            h3 { margin:2rem 0 1rem 0; font-size: 17px; line-height:27px; letter-spacing:1.02px; }
+            aside {
+                span { 
+                    img {  margin-right: 0.5rem;  }
+                } 
+            } 
+       }
+    }
+    
+}

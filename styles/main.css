@@ -3839,7 +3839,7 @@ template {
     float: left;
   }
   .header .warrper .headerRight ul li.enquirenow_li {
-    padding: 1rem;
+    padding: 1rem 4%;
   }
   .header .warrper .headerRight ul li.enquirenow_li a {
     border-bottom: none;
@@ -3856,7 +3856,7 @@ template {
   .header .warrper .headerRight ul li a {
     float: left;
     width: 100%;
-    padding: 1rem 2rem;
+    padding: 1.5rem 4%;
     text-align: left;
     color: #565659;
     border-bottom: solid 1px #565659;
@@ -3880,7 +3880,7 @@ template {
   .header .warrper .headerRight ul li:hover .dropdownmenu a {
     float: left;
     width: 100%;
-    padding: 0.7rem 3rem;
+    padding: 1rem 6%;
     background: none;
     transition: all 0.4s ease-out;
     text-align: left;
@@ -4316,7 +4316,8 @@ template {
   padding: 5rem 0;
 }
 .getintouchwrap .warrper {
-  max-width: 1000px;
+  width: 1000px;
+  max-width: 92%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4467,9 +4468,6 @@ template {
   .getintouchwrap {
     padding: 3rem 0;
   }
-  .getintouchwrap .warrper {
-    max-width: 90%;
-  }
   .getintouchwrap .warrper .getintouchInfo {
     width: 30%;
   }
@@ -4479,7 +4477,6 @@ template {
 }
 @media only screen and (max-width: 767px) {
   .getintouchwrap .warrper {
-    max-width: 90%;
     display: flex;
     justify-content: center;
     align-items: flex-start;

@@ -3,8 +3,7 @@
 .getintouchwrap { 
     @include fCC();  background-color: $white; width: 100%; float: left;  padding:5rem 0;
    .warrper { 
-       max-width: 1000px; @include fBC();
-       
+       width: 1000px; max-width: 92%; @include fBC();
         .getintouchInfo{
             width: 30%;  float: left;
             h2 { 
@@ -75,13 +74,15 @@
 }
  
 
+ 
+
+
 @media only screen and (max-width:1023px) 
 {
 
     .getintouchwrap { 
         padding:3rem 0;
        .warrper { 
-            max-width: 90%;
             .getintouchInfo{ width: 30%;  }
             .getintouchForm { width: 65%;  }
         }
@@ -97,8 +98,7 @@
 
     .getintouchwrap { 
         .warrper { 
-            max-width: 90%; @include fCS(); flex-wrap: wrap;
-            
+           @include fCS(); flex-wrap: wrap;
                 .getintouchInfo{
                     width: 100%; 
                     h2 {

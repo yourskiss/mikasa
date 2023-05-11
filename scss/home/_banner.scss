@@ -1,8 +1,15 @@
- 
 .homebanner { 
     background-color: $white; width: 100%;  float: left;  position: relative;
     .homebanner_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
     .homebanner_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
+    .homebannercounter {
+        z-index: 3; position: absolute; opacity:1; top:auto; bottom:10%; left:12%;  width:80px; height:2px; border-radius: 0; margin: 0; padding: 0; border:0; background: $white;  
+        span { 
+            position: absolute; top: 50%; transform: translateY(-50%); width:30px; height:auto; border-radius: 0; margin: 0; padding: 0; border:0; color: $white; @include fmedium(); font-size: 14px; line-height: 1; letter-spacing: normal; text-align: center; 
+            &:first-child { left:-30px;}
+            &:last-child { right:-30px;} 
+        }
+    }
     .homebannerslider.slick-slider { width: 100%;  height: 100%; float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  }
     .homebannerslider.slick-slider .slick-list {  height: 100%; z-index: 2; margin: 0; padding: 0; overflow: hidden; }
     .homebannerslider.slick-slider .slick-track {  height: 100%; display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;  }
@@ -18,14 +25,8 @@
     .homebannerslider.slick-slider .slick-arrow:hover:before {  color:$white; @include inT();  }
     .homebannerslider.slick-slider .slick-next:before { content: "\f107"; }
     .homebannerslider.slick-slider .slick-prev:before { content: "\f106"; }
-    .homebannercounter {
-        z-index: 3; position: absolute; opacity:1; top:auto; bottom:10%; left:12%;  width:80px; height:2px; border-radius: 0; margin: 0; padding: 0; border:0; background: $white;  
-        span { 
-            position: absolute; top: 50%; transform: translateY(-50%); width:30px; height:auto; border-radius: 0; margin: 0; padding: 0; border:0; color: $white; @include fmedium(); font-size: 14px; line-height: 1; letter-spacing: normal; text-align: center; 
-            &:first-child { left:-30px;}
-            &:last-child { right:-30px;} 
-        }
-    }
+
+
 
 
     .homebanneritem { 
@@ -50,6 +51,89 @@
             .homebannerright { 
                 width: 35%;  float: left;
                 img { width: 100%; max-width:250px;}
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:1255px) 
+{
+
+    .homebanner { 
+        .homebanneritem { 
+            .homebannercontainer { 
+                 top:25%; left: 10%; width: 80%;  
+                .homebannerleft { width: 60%; }
+                .homebannerright { 
+                    width: 40%;  
+                    img { max-width:180px;}
+                }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width:1023px) 
+{
+    .homebanner { 
+        .homebannercounter { display: none; }
+        .homebanneritem { 
+            .homebannercontainer { 
+                 top:20%; left: 10%; width: 80%;  
+                .homebannerleft { 
+                    width: 60%; 
+                    h4{font-size: 28px; line-height: 32px;  letter-spacing: normal; }
+                    p{font-size: 16px; line-height:24px; letter-spacing:2px; }
+                    aside {
+                        margin-top:1rem;
+                        .bs_knowmore { padding:0.6rem 1.5rem; font-size: 12px; letter-spacing:1px; line-height:18px; }
+                    }
+                }
+                .homebannerright { 
+                    width: 40%;  
+                    img { max-width:130px;}
+                }
+            }
+        }
+        .homebannerslider.slick-slider .slick-arrow {  bottom:0;  width:42px; height:42px; background:$white; }
+        .homebannerslider.slick-slider .slick-next  { right:1rem; } 
+        .homebannerslider.slick-slider .slick-prev { right:4rem; }
+        .homebannerslider.slick-slider .slick-arrow:before {  font-size:24px; }
+    }
+}
+
+@media only screen and (max-width:599px) 
+{
+    .homebanner { 
+        .homebanneritem { 
+            .homebannercontainer { 
+                 top:10%; left: 5%;  
+                 .homebannerleft { width: 70%;  }
+                 .homebannerright { width: 30%;   }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:479px) 
+{
+    .homebanner { 
+        .homebanner_desktop { display: none; }
+        .homebanner_mobile { display:block; }
+        .homebanneritem { 
+            .homebannercontainer { 
+                 top:10%; left: 5%; width: 90%;  
+                .homebannerleft { 
+                    width: 100%; 
+                    h4{font-size: 40px; line-height: 48px;  letter-spacing: normal; }
+                    p{font-size: 24px; line-height: 34px; letter-spacing: 4px; }
+                }
+                .homebannerright { display: none; width: 100%;  }
             }
         }
     }

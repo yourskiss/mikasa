@@ -545,29 +545,32 @@
   float: none;
   margin: 0;
   background-color: transparent;
-  font-family: "futura-medium", Arial, sans-serif;
-  font-weight: 600;
-  color: #333333;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.4s ease-out;
-  border-radius: 25px;
+}
+.homeproductrange .warrper .homeproducthead .hp_head_left aside a span {
+  margin-right: 0.5rem;
+  font-family: "futura-medium", Arial, sans-serif;
+  font-weight: 600;
+  color: #333333;
   font-size: 14px;
   letter-spacing: 0.24px;
   line-height: 1;
   text-transform: uppercase;
-}
-.homeproductrange .warrper .homeproducthead .hp_head_left aside a i.fa {
-  padding-left: 1rem;
   transition: all 0.4s ease-out;
 }
-.homeproductrange .warrper .homeproducthead .hp_head_left aside a:hover {
+.homeproductrange .warrper .homeproducthead .hp_head_left aside a img {
+  max-width: 100%;
+  margin-bottom: -2px;
+  transition: all 0.4s ease-out;
+}
+.homeproductrange .warrper .homeproducthead .hp_head_left aside a:hover span {
   color: #E94E20;
   transition: all 0.4s ease-in;
 }
-.homeproductrange .warrper .homeproducthead .hp_head_left aside a:hover i.fa {
-  padding-left: 0.5rem;
+.homeproductrange .warrper .homeproducthead .hp_head_left aside a:hover img {
+  filter: invert(60%) sepia(30%) saturate(1000%) hue-rotate(350deg);
   transition: all 0.4s ease-in;
 }
 .homeproductrange .warrper .homeproducthead .hp_head_right {
@@ -996,29 +999,32 @@
   float: none;
   margin: 0;
   background-color: transparent;
-  font-family: "futura-medium", Arial, sans-serif;
-  font-weight: 600;
-  color: #333333;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.4s ease-out;
-  border-radius: 25px;
+}
+.homeadvantage .warrper .homeadvantageleft aside a span {
+  margin-right: 0.5rem;
+  font-family: "futura-medium", Arial, sans-serif;
+  font-weight: 600;
+  color: #333333;
   font-size: 14px;
   letter-spacing: 0.24px;
   line-height: 1;
   text-transform: uppercase;
-}
-.homeadvantage .warrper .homeadvantageleft aside a i.fa {
-  padding-left: 1rem;
   transition: all 0.4s ease-out;
 }
-.homeadvantage .warrper .homeadvantageleft aside a:hover {
+.homeadvantage .warrper .homeadvantageleft aside a img {
+  max-width: 100%;
+  margin-bottom: -2px;
+  transition: all 0.4s ease-out;
+}
+.homeadvantage .warrper .homeadvantageleft aside a:hover span {
   color: #E94E20;
   transition: all 0.4s ease-in;
 }
-.homeadvantage .warrper .homeadvantageleft aside a:hover i.fa {
-  padding-left: 0.5rem;
+.homeadvantage .warrper .homeadvantageleft aside a:hover img {
+  filter: invert(60%) sepia(30%) saturate(1000%) hue-rotate(350deg);
   transition: all 0.4s ease-in;
 }
 .homeadvantage .warrper .homeadvantageright {

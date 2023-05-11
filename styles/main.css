@@ -3504,7 +3504,7 @@ template {
 .header .warrper .headerRight ul li {
   position: relative;
   list-style: none;
-  margin: 0 1rem;
+  margin: 0;
   display: inline-block;
 }
 .header .warrper .headerRight ul li.enquirenow_li {
@@ -3514,9 +3514,10 @@ template {
   margin: 0 1rem;
 }
 .header .warrper .headerRight ul li a {
+  background: #E94E20;
   float: left;
   width: auto;
-  padding: 0.5rem 0;
+  padding: 1rem 1rem;
   transition: all 0.4s ease-out;
   text-align: center;
   color: #000000;
@@ -3586,135 +3587,204 @@ template {
 }
 .header .warrper .headerRight ul li .dropdownmenu {
   display: none;
-}
-.header .warrper .headerRight ul li:hover a {
-  color: #E94E20;
-}
-.header .warrper .headerRight ul li:hover .dropdownmenu {
-  display: block;
+  background: #152c55;
+  padding: 0 1rem 1rem 1rem;
   z-index: 2;
   position: absolute;
   left: 0;
   top: 100%;
-  width: 160px;
+  width: 170px;
   float: left;
 }
-.header .warrper .headerRight ul li:hover .dropdownmenu a {
+.header .warrper .headerRight ul li .dropdownmenu a {
+  position: relative;
   float: left;
   width: 100%;
-  padding: 0.7rem 1rem;
-  background: #E94E20;
+  padding: 0.8rem 0;
+  margin: 0.2rem;
+  background: #152c55;
   transition: all 0.4s ease-out;
   text-align: left;
   color: #ffffff;
   text-decoration: none;
-  font-family: "futura-book", Arial, sans-serif;
-  font-weight: 500;
-  border-bottom: solid 1px #ffffff;
-  font-size: 12px;
+  font-family: "futura-medium", Arial, sans-serif;
+  font-weight: 600;
+  font-weight: normal;
+  border-bottom: none;
+  font-size: 13px;
   letter-spacing: normal;
   line-height: 1;
+  text-transform: uppercase;
 }
-.header .warrper .headerRight ul li:hover .dropdownmenu a:hover, .header .warrper .headerRight ul li:hover .dropdownmenu a.active {
+.header .warrper .headerRight ul li .dropdownmenu a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: #E94E20;
+  line-height: 1px;
+  font-size: 1px;
+}
+.header .warrper .headerRight ul li .dropdownmenu a:hover, .header .warrper .headerRight ul li .dropdownmenu a.active {
   background: #152c55;
-  color: #ffffff;
+  color: #E94E20;
   transition: all 0.4s ease-in;
 }
-.header .warrper .headerRight ul li:hover .dropdownmenu a:last-child {
-  border-bottom: 0px;
+.header .warrper .headerRight ul li:hover a {
+  background-color: #152c55;
+  color: #ffffff;
+}
+.header .warrper .headerRight ul li:hover .dropdownmenu {
+  display: block;
 }
 .header .warrper .headermenumobile {
   display: none;
 }
-.header .warrper .searchinheader {
+
+.searchpopup {
   display: none;
-  z-index: 1;
+  z-index: 4;
   position: absolute;
   right: 0;
-  top: 83px;
+  top: 0;
   width: 100%;
-  max-width: 350px;
-  background: #ccc;
+  height: 100%;
+  background: #000000;
+  background-color: rgba(36, 52, 75, 0.9);
 }
-.header .warrper .searchinheader article {
-  display: block;
+.searchpopup article {
+  display: none;
   z-index: 1;
   position: fixed;
   left: 0;
-  top: 83px;
+  top: 0;
   width: 100%;
-  height: calc(100% - 83px);
-  background: #000;
-  background: rgba(0, 0, 0, 0);
+  height: 100%;
+  background: #000000;
+  background-color: rgba(36, 52, 75, 0.9);
 }
-.header .warrper .searchinheader section {
-  z-index: 2;
-  position: relative;
-  width: 100%;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-items: stretch;
-}
-.header .warrper .searchinheader section .searchHeadBack {
-  background: #F0F0F0;
-  width: 30px;
+.searchpopup .searchHeadclose {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   float: left;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.8rem 0;
+  padding: 0;
   text-decoration: none;
-  font-size: 20px;
-  color: #152c55;
+  font-size: 24px;
+  color: #E94E20;
   line-height: 1;
   transition: all 0.4s ease-out;
   cursor: pointer;
   text-decoration: none;
 }
-.header .warrper .searchinheader section .searchHeadBack:hover {
-  color: #E94E20;
+.searchpopup .searchHeadclose:hover {
+  background: #E94E20;
+  color: #ffffff;
   transition: all 0.4s ease-in;
 }
-.header .warrper .searchinheader section .searchHeadInput {
-  width: calc(100% - 130px);
+.searchpopup section {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  max-width: 600px;
+  float: right;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+.searchpopup section .searchcontainer {
+  width: 100%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchpopup section .searchcontainer .searchHeadInput {
+  width: calc(100% - 120px);
   float: left;
-  padding: 0.8rem 0.5rem;
+  padding: 1rem;
   background: #F0F0F0;
   outline: none;
   border: none;
   text-align: left;
   font-size: 14px;
   line-height: 1;
-  color: #000;
-  font-family: "futura-book", Arial, sans-serif;
-  font-weight: 500;
+  color: #000000;
+  font-family: "futuraLT", Arial, sans-serif;
+  font-weight: 300;
 }
-.header .warrper .searchinheader section .searchHeadButton {
-  width: 100px;
+.searchpopup section .searchcontainer .searchHeadButton {
+  width: 120px;
   float: left;
   text-align: center;
   text-decoration: none;
-  padding: 0.8rem 0;
+  padding: 1rem;
   border: none;
   outline: none;
   cursor: pointer;
   text-decoration: none;
   background-color: #E94E20;
   color: #ffffff;
-  font-family: "futura-book", Arial, sans-serif;
-  font-weight: 500;
+  font-family: "futuraLT", Arial, sans-serif;
+  font-weight: 300;
   font-size: 14px;
   letter-spacing: normal;
   line-height: 1;
   text-transform: uppercase;
   transition: all 0.4s ease-out;
 }
-.header .warrper .searchinheader section .searchHeadButton:hover {
+.searchpopup section .searchcontainer .searchHeadButton:hover {
   transition: all 0.4s ease-in;
   color: #ffffff;
   background: #152c55;
+}
+.searchpopup section .searchErrorMessage {
+  display: none;
+  width: 100%;
+  float: left;
+  margin-top: 0.5rem;
+  font-size: 12px;
+  line-height: 1;
+  color: #F22310;
+  font-family: "futuraLT", Arial, sans-serif;
+  font-weight: 300;
+}
+.searchpopup section .searchsuggestions {
+  width: 100%;
+  float: left;
+  margin-top: 1.5rem;
+}
+.searchpopup section .searchsuggestions li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  font-size: 14px;
+  line-height: 1;
+  color: #152c55;
+  font-family: "futura-medium", Arial, sans-serif;
+  font-weight: 600;
+}
+.searchpopup section .searchsuggestions li a {
+  text-decoration: none;
+  color: #565659;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  transition: all 0.4s ease-out;
+}
+.searchpopup section .searchsuggestions li a:hover {
+  color: #E94E20;
+  transition: all 0.4s ease-in;
 }
 
 @media only screen and (max-width: 1255px) {
@@ -3807,20 +3877,15 @@ template {
     color: #E94E20;
     transition: all 0.4s ease-in;
   }
-  .header .warrper .searchinheader {
-    position: fixed;
-    top: 82px;
-    max-width: 100%;
-  }
   .header .warrper .headerRight {
     display: none;
     position: fixed;
-    top: 82px;
+    top: 76px;
     right: 0;
     width: 100%;
-    height: calc(100vh - 82px);
+    height: calc(100vh - 76px);
     background: #e5e5e5;
-    padding: 1rem 0;
+    padding: 0;
     margin: 0;
     overflow: hidden;
     overflow-y: scroll;
@@ -3862,45 +3927,54 @@ template {
     border-bottom: solid 1px #565659;
   }
   .header .warrper .headerRight ul li a:hover, .header .warrper .headerRight ul li a.active {
-    border-bottom-color: #E94E20;
-    color: #E94E20;
+    color: #ffffff;
     transition: all 0.4s ease-in;
   }
-  .header .warrper .headerRight ul li:hover a {
-    border-bottom-color: #E94E20;
-    color: #E94E20;
-  }
-  .header .warrper .headerRight ul li:hover .dropdownmenu {
+  .header .warrper .headerRight ul li .dropdownmenu {
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
+    padding: 0 4% 1rem 4%;
     border-bottom: solid 1px #565659;
   }
-  .header .warrper .headerRight ul li:hover .dropdownmenu a {
+  .header .warrper .headerRight ul li .dropdownmenu a {
     float: left;
     width: 100%;
-    padding: 1rem 6%;
+    padding: 1rem 0;
     background: none;
     transition: all 0.4s ease-out;
     text-align: left;
-    color: #565659;
+    color: #ffffff;
     text-decoration: none;
     font-family: "futura-book", Arial, sans-serif;
     font-weight: 500;
-    border-bottom: dotted 1px #F0F0F0;
     font-size: 12px;
     letter-spacing: normal;
     line-height: 1;
   }
-  .header .warrper .headerRight ul li:hover .dropdownmenu a:hover, .header .warrper .headerRight ul li:hover .dropdownmenu a.active {
-    border-bottom: dotted 1px #F0F0F0;
+  .header .warrper .headerRight ul li .dropdownmenu a:hover, .header .warrper .headerRight ul li .dropdownmenu a.active {
     background: none;
     color: #E94E20;
     transition: all 0.4s ease-in;
   }
-  .header .warrper .headerRight ul li:hover .dropdownmenu a:last-child {
-    border-bottom: dotted 1px #F0F0F0;
+}
+@media only screen and (max-width: 479px) {
+  .searchpopup .searchHeadclose {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+  .searchpopup section {
+    padding: 2rem 1rem;
+  }
+  .searchpopup section .searchcontainer .searchHeadInput {
+    width: calc(100% - 90px);
+    padding: 1rem 0.5rem;
+  }
+  .searchpopup section .searchcontainer .searchHeadButton {
+    width: 90px;
+    padding: 1rem 0.5rem;
   }
 }
 .footer {
@@ -4554,7 +4628,7 @@ template {
 .enquirenowpopup section {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   width: 96%;
   max-width: 1000px;
   position: absolute;
@@ -4571,8 +4645,8 @@ template {
   right: 1rem;
   z-index: 4;
   width: 19px;
-  height: 20px;
-  background: url("../images/enquire-close.png") no-repeat center center;
+  height: 19px;
+  background: url("../images/icon_close.png") no-repeat center center;
   background-size: 100% 100%;
   cursor: pointer;
   text-decoration: none;
@@ -4580,11 +4654,13 @@ template {
 }
 .enquirenowpopup section .enquireClose:hover {
   transform: scale(1.1);
+  filter: invert(60%) sepia(30%) saturate(1000%) hue-rotate(350deg);
   transition: all 0.4s ease-in;
 }
 .enquirenowpopup section .enquirenowInfo {
   width: 40%;
   float: left;
+  margin-top: 1rem;
 }
 .enquirenowpopup section .enquirenowInfo h2 {
   width: 100%;
@@ -4674,8 +4750,8 @@ template {
   text-overflow: "";
   -webkit-appearance: none;
   appearance: none;
-  background: transparent url("../images/getintouch_dropdown.png") no-repeat;
-  background-position: right 8px center;
+  background: transparent url("../images/icon_dropdown.png") no-repeat;
+  background-position: right 5px center;
 }
 .enquirenowpopup section .enquirenowForm .enquirenowField .enquirenowButton {
   position: relative;
@@ -4731,6 +4807,7 @@ template {
   }
   .enquirenowpopup section .enquirenowInfo {
     width: 100%;
+    margin-top: 0;
   }
   .enquirenowpopup section .enquirenowInfo h2 {
     text-align: center;

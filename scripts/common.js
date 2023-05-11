@@ -48,11 +48,8 @@ function isLetter(e)
 
 
 /* show/hide menu === start */
-$("#menubar").click(function(e)
+$("#menubar").click(function()
 {
-    e.preventDefault();
-    e.stopPropagation();
-    hideSearchBar();
     if($(this).hasClass("active"))
     {
         $("#menubar").removeClass("active");
@@ -68,10 +65,11 @@ $("#menubar").click(function(e)
 });
 function menuMobileClose()
 {
-    if($(window).width() < 1256)
+    if(window.innerWidth <= 1255)
     {
-        $("#menucontainer").slideUp(300);
         $("#menubar").removeClass("active");
+        $("#menucontainer").slideUp(300);
+        $('body').css('overflow','auto');
     }
 }
 /* show/hide menu === end */
@@ -80,17 +78,24 @@ function menuMobileClose()
 
 
 /* search bar in header === start */
-function showSearchBar()
+function showHideSearchBar(val)
 {
-    $("#searchinheader").slideDown(300);
-    $('body').css('overflow','hidden');
     menuMobileClose();
-}
-function hideSearchBar()
-{
-    $("#searchinheader").slideUp(300);
-    $("#searchInput").val('');
-    $('body').css('overflow','auto');
+    if(val == 'show')
+    {
+        $("#searchinheader").fadeIn(300);
+        $('body').css('overflow','hidden');  
+    }
+    else if(val == 'hide')
+    {
+        $("#searchinheader").fadeOut(300);
+        $('body').css('overflow','auto');
+        $("#searchInput").val('');
+    }
+    else 
+    {
+        alert("Condition false");
+    }
 }
 /* search bar in header === end */
 
@@ -100,7 +105,6 @@ function hideSearchBar()
 function showHideEnquireNow(val)
 {
     menuMobileClose();
-    hideSearchBar();
     if(val == 'show')
     {
         $("#EnquireNowPopup").fadeIn(500);
@@ -117,6 +121,25 @@ function showHideEnquireNow(val)
      }
 }
 /* Enquire Now popup  === end */
+
+
+/* search validation === start */
+function searchvalidation()
+{
+    if($("#searchInput").val() == '')
+    {
+        $("#searchError").show().html('Please enter keywords');
+        return false;
+    }
+    else 
+    {
+        showHideSearchBar('hide'); // hide search box
+        $("#searchError").show().html(' ');
+        return true;
+    }
+}
+/* search validation === start */
+
 
 /* getInTouch validation === start */
 function getInTouchValidation()

@@ -14,11 +14,12 @@
                 aside {
                     width: 100%; float:right; text-align: left;
                     a { 
-                         display: inline-block; padding:0; width:auto; float: none; margin: 0; background-color:transparent;  @include fmedium();  color:$black5;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 25px; font-size: 14px; letter-spacing:0.24px; line-height: 1; text-transform: uppercase;
-                         i.fa { padding-left: 1rem; @include outT(); }
+                        display: inline-block; padding:0; width:auto; float: none; margin: 0; background-color:transparent;  text-align: center; cursor: pointer; @include tdn();   
+                        span { margin-right: 0.5rem; @include fmedium();   color:$black5;  font-size: 14px; letter-spacing:0.24px; line-height: 1; text-transform: uppercase;  @include outT();  }
+                        img { max-width: 100%;  margin-bottom: -2px; @include outT(); }
                         &:hover { 
-                            color:$orange; @include inT();  
-                            i.fa { padding-left: 0.5rem;  @include inT();  }
+                            span { color:$orange; @include inT();   }
+                            img{ filter: invert(60%) sepia(30%) saturate(1000%) hue-rotate(350deg); @include inT();  }
                         } 
                     }
                 } 

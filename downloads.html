@@ -49,58 +49,73 @@
     <main class="main">
 
 
-        <!-- header start -->
-        <header class="header">
-            <div class="warrper">
-                <a href="/" class="logo"><img src="images/logo.png" alt="logo" /></a>
-                <div class="headermenumobile">
-                    <i onclick="showSearchBar();" class="fa fa-search" aria-hidden="true"></i>
-                    <aside id="menubar">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </aside>
-                </div>
-                <div id="searchinheader" class="searchinheader">
-                    <article onclick="hideSearchBar();"></article>
-                    <section>
-                        <span class="searchHeadBack" onclick="hideSearchBar();"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
-                        <input class="searchHeadInput" type="text" name="searchInput" id="searchInput" placeholder="Enter keyword">
-                        <input class="searchHeadButton" type="submit" name="searchButton" id="searchButton" value="Search">
-                    </section>
-                </div>
-                <div class="headerRight" id="menucontainer">
-                    <ul>
-                        <li><a href="#">HOME</a></li>
-                        <li>
-                            <a href="#">ABOUT US <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <div class="dropdownmenu">
-                                <a href="#">Company Overview</a>
-                                <a href="#">Manufacturing</a>
-                                <a href="#">Sustainability</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">PRODUCTS <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                            <div class="dropdownmenu">
-                                <a href="#">SAPPHIRE</a>
-                                <a href="#">MARINE BLUE</a>
-                                <a href="#">MARINE</a>
-                                <a href="#">FIRE GUARDIAN</a>
-                                <a href="#">MR+</a>
-                            </div>
-                        </li>
-                        <li><a href="#">RESOURCES </a></li>
-                        <li><a href="#">DOWNLOADS</a></li>
-                        <li><a href="#">CONTACT US</a></li>
-                        <li class="search_li"><span class="searchBtn" onclick="showSearchBar();"><i class="fa fa-search" aria-hidden="true"></i></span></li>
-                        <li class="enquirenow_li"><span class="enquirenowBtn" onclick="showHideEnquireNow('show');">ENQUIRE NOW</span></li>
-                    </ul>
-                </div>
-
+    <!-- header start -->
+    <header class="header">
+        <div class="warrper">
+            <a href="/" class="logo"><img  src="images/logo.png" alt="logo" /></a>
+            <div class="headermenumobile">
+                <i onclick="showHideSearchBar('show');" class="fa fa-search" aria-hidden="true"></i>
+                <aside id="menubar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </aside>
             </div>
-        </header>
-        <!-- header end -->
+            <div class="headerRight" id="menucontainer">
+                <ul> 
+                    <li><a href="#">HOME</a></li>
+                    <li>
+                        <a href="#">ABOUT US <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="dropdownmenu">
+                            <a href="#">Company Overview</a>
+                            <a href="#">Manufacturing</a>
+                            <a href="#">Sustainability</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">PRODUCTS <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <div class="dropdownmenu">
+                            <a href="#">SAPPHIRE</a>
+                            <a href="#">MARINE BLUE</a>
+                            <a href="#">MARINE</a>
+                            <a href="#">FIRE GUARDIAN</a>
+                            <a href="#">MR+</a>
+                        </div>
+                    </li>
+                    <li><a href="#">RESOURCES </a></li>
+                    <li><a href="#">DOWNLOADS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li class="search_li"><span class="searchBtn"  onclick="showHideSearchBar('show');"><i class="fa fa-search" aria-hidden="true"></i></span></li>
+                    <li class="enquirenow_li"><span class="enquirenowBtn" onclick="showHideEnquireNow('show');">ENQUIRE NOW</span></li>
+                </ul> 
+            </div>
+            
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- search start -->
+    <div id="searchinheader" class="searchpopup">
+        <article onclick="showHideSearchBar('hide');"></article>
+        <aside class="searchHeadclose" onclick="showHideSearchBar('hide');"><i class="fa fa-times" aria-hidden="true"></i></aside>
+        <section>
+            <div class="searchcontainer">
+                <input class="searchHeadInput" type="text" name="searchInput" id="searchInput" placeholder="Enter keyword" />
+                <input class="searchHeadButton" type="submit" name="searchButton" id="searchButton" value="Search" onclick="searchvalidation();" />
+            </div>
+            <div class="searchErrorMessage"  id="searchError">Error message</div>
+            <ul class="searchsuggestions">
+                <li>Most Popular:</li>
+                <li><a href="#">Sapphire</a></li>
+                <li><a href="#">Marine Blue</a></li>
+                <li><a href="#">Marine</a></li>
+                <li><a href="#">Fire Guardian</a></li>
+                <li><a href="#">MR+</a></li>
+            </ul>
+        </section>
+    </div>
+    <!-- search end -->
 
         <container>
             <div class="download-banner">

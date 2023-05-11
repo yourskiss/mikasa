@@ -1349,6 +1349,17 @@
     font-size: 15px;
   }
 }
+@media only screen and (max-width: 676px) {
+  .homestatemanufacturing .home_sm_video_wrap section {
+    max-width: 450px;
+    max-height: 253px;
+  }
+  .homestatemanufacturing .home_sm_video_wrap aside {
+    height: 32px;
+    width: 32px;
+    font-size: 20px;
+  }
+}
 @media only screen and (max-width: 479px) {
   .homestatemanufacturing .hsm_desktop {
     display: none;
@@ -1375,13 +1386,19 @@
   }
   .homestatemanufacturing .home_sm_video_wrap section {
     max-width: 320px;
-    max-height: auto;
-    height: 180px;
+    max-height: 180px;
   }
-  .homestatemanufacturing .home_sm_video_wrap aside {
-    height: 32px;
-    width: 32px;
-    font-size: 20px;
+}
+@media only screen and (max-width: 359px) {
+  .homestatemanufacturing .home_sm_container h2 {
+    font-size: 28px;
+  }
+  .homestatemanufacturing .home_sm_container h3 {
+    font-size: 16px;
+  }
+  .homestatemanufacturing .home_sm_video_wrap section {
+    max-width: 290px;
+    max-height: 165px;
   }
 }
 .homesustainable {

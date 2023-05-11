@@ -53,6 +53,22 @@
 }
 
 
+@media only screen and (max-width:676px) 
+{
+    .homestatemanufacturing {  
+
+       .home_sm_video_wrap {
+            section { max-width: 450px; max-height: 253px; }
+            aside {  height:32px; width:32px; font-size: 20px; }
+        }
+
+
+    }
+
+}
+
+
+
 @media only screen and (max-width:479px) 
 {
     .homestatemanufacturing {  
@@ -68,13 +84,22 @@
                 } 
             } 
        }
-
        .home_sm_video_wrap {
-            section { max-width: 320px; max-height: auto; height: 180px;  }
-            aside {  height:32px; width:32px; font-size: 20px; }
+            section { max-width: 320px; max-height: 180px;  }
         }
-
-
     }
     
+}
+
+@media only screen and (max-width:359px) 
+{
+    .homestatemanufacturing {  
+        .home_sm_container { 
+            h2 {font-size:28px;   }
+            h3 {  font-size: 16px;  }
+       }
+       .home_sm_video_wrap {
+            section { max-width: 290px; max-height: 165px;  }
+        }
+    }
 }

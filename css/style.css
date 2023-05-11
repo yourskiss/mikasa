@@ -314,16 +314,22 @@ a.button1:hover {
 
 /*-------------About Us starts here-----------*/
 
+.about-banner {
+    position: relative;
+}
 
 .about-banner img {
     width: 100%;
-    position: relative;
 }
 
 .about-txt {
     position: absolute;
-    top: 38%;
-    left: 40%;
+    width: 100%;
+    height: 80%;
+    top: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -382,10 +388,23 @@ h2.vhead span {
 }
 
 
+.manufacture {
+    position: relative;
+}
 
 .manufacture img {
     width: 100%;
-    position: relative;
+
+}
+
+.m-head {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .manufacture h2 {
@@ -394,9 +413,6 @@ h2.vhead span {
     font-weight: 800;
     font-size: 2.7rem;
     text-transform: uppercase;
-    position: absolute;
-    top: 43%;
-    left: 34%;
 }
 
 .next-gen {
@@ -430,11 +446,22 @@ h2.vhead span {
     width: 120px;
 }
 
-
+.res-banner {
+    position: relative;
+}
 
 .res-banner img {
     width: 100%;
-    position: relative;
+}
+
+.r-head {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .res-banner h2 {
@@ -443,9 +470,6 @@ h2.vhead span {
     font-weight: 800;
     font-size: 2.7rem;
     text-transform: uppercase;
-    position: absolute;
-    top: 40%;
-    left: 40%;
 }
 
 .unlock {
@@ -483,8 +507,17 @@ h2.vhead span {
     margin-right: 15px;
 }
 
+.down a:hover img {
+    transition: all .4s ease-in;
+    filter: invert(100%) saturate(10000%);
+}
+
 .down {
     display: flex;
+}
+
+.down a:hover {
+    transition: all .4s ease-in;
 }
 
 .lorem-box p {
@@ -501,11 +534,23 @@ h2.vhead span {
 }
 
 
-
+.contact-banner {
+    position: relative;
+}
 
 .contact-banner img {
     width: 100%;
-    position: relative;
+
+}
+
+.cont-head {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-banner h2 {
@@ -514,16 +559,25 @@ h2.vhead span {
     font-weight: 800;
     font-size: 2.7rem;
     text-transform: uppercase;
-    position: absolute;
-    top: 42%;
-    left: 39%;
 }
 
-
+.download-banner {
+    position: relative;
+}
 
 .download-banner img {
     width: 100%;
-    position: relative;
+
+}
+
+.d-head {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .download-banner h2 {
@@ -532,9 +586,6 @@ h2.vhead span {
     font-weight: 800;
     font-size: 2.7rem;
     text-transform: uppercase;
-    position: absolute;
-    top: 45%;
-    left: 39%;
 }
 
 .down-head {
@@ -596,15 +647,35 @@ h2.vhead span {
     letter-spacing: 1px;
 }
 
+.down-bord a:hover {
+    transition: all .4s ease-in;
+}
+
 .down-bord img {
     height: 25px;
 }
 
+.down-bord a:hover img {
+    transition: all .4s ease-in;
+    filter: invert(100%) saturate(10000%);
+}
 
+.sustain-banner {
+    position: relative;
+}
 
 .sustain-banner img {
     width: 100%;
-    position: relative;
+}
+
+.s-head {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    top: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sustain-banner h2 {
@@ -613,9 +684,6 @@ h2.vhead span {
     font-weight: 800;
     font-size: 2.7rem;
     text-transform: uppercase;
-    position: absolute;
-    top: 42%;
-    left: 36%;
 }
 
 .eco-friendly {
@@ -707,76 +775,17 @@ h2.vhead span {
     padding-bottom: 5px;
 }
 
-
+img.mob-ban {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
 
 /*---------------Responsive--------------*/
 
-@media only screen and (max-width:1440px) {
-    .res-banner h2 {
-        top: 53%;
-    }
-
-    .about-txt {
-        top: 45%;
-    }
-
-    .contact-banner h2 {
-        top: 52%;
-    }
-
-    .download-banner h2 {
-        top: 56%;
-        left: 39.5%;
-    }
-
-    .manufacture h2 {
-        top: 53%;
-    }
-
-    .sustain-banner h2 {
-        top: 52%
-    }
-}
-
-
-@media only screen and (max-width:1300px) {
-    .sustain-banner h2 {
-        top: 42%;
-        left: 36%;
-    }
-
-    .download-banner h2 {
-        top: 45%;
-        left: 39%;
-    }
-
-    .contact-banner h2 {
-        top: 42%;
-        left: 39%;
-    }
-
-    .about-txt {
-        top: 38%;
-        left: 40%;
-    }
-
-    .manufacture h2 {
-        top: 43%;
-        left: 34%;
-    }
-
-    .res-banner h2 {
-        top: 40%;
-        left: 40%;
-    }
-}
 
 @media only screen and (max-width:1255px) {
-    .sustain-banner h2 {
-        top: 27%;
-        left: 35%;
-    }
-
     .eco-friendly {
         height: 60vh;
     }
@@ -793,27 +802,15 @@ h2.vhead span {
         font-size: 18px;
     }
 
-    .contact-banner h2 {
-        top: 25%;
-        left: 38%;
-    }
 
     .discover {
         height: auto;
-    }
-
-    .about-txt {
-        top: 23%;
-        left: 39%;
     }
 
     .discover-txt h2.vhead {
         margin-top: 3rem;
     }
 
-    .download-banner h2 {
-        top: 32%;
-    }
 
     .manufacture h2 {
         top: 26%;
@@ -831,20 +828,10 @@ h2.vhead span {
         height: 90vh;
     }
 
-    .res-banner h2 {
-        top: 27%;
-        left: 38.7%;
-    }
 }
 
 
 @media only screen and (max-width:920px) {
-    .sustain-banner h2 {
-        top: 0;
-        left: 0;
-        font-size: 2rem;
-        margin: 23% 34%;
-    }
 
     p.headtxt br,
     .eco-text p:nth-last-child(1) br {
@@ -882,28 +869,11 @@ h2.vhead span {
         font-size: 17px;
     }
 
-    .contact-banner h2 {
-        top: 0;
-        left: 0;
-        margin: 22% 32%;
-        font-size: 2.3rem;
-    }
-
-    .about-txt {
-        top: 0;
-        left: 0;
-        margin: 17% 37%;
-    }
-
+    ..about-txt h4{1.8rem;}
     .about-txt h2 {
-        font-size: 36px;
+        font-size: 2rem;
     }
 
-    .download-banner h2 {
-        top: 0;
-        left: 0;
-        margin: 23% 36%;
-    }
 
     .d-txt p br {
         display: none;
@@ -914,9 +884,6 @@ h2.vhead span {
     }
 
     .manufacture h2 {
-        top: 0;
-        left: 0;
-        margin: 21% 34%;
         font-size: 2rem;
     }
 
@@ -925,10 +892,7 @@ h2.vhead span {
     }
 
     .res-banner h2 {
-        top: 0;
-        left: 0;
         font-size: 2rem;
-        margin: 22% 38%;
     }
 
     .lorem-box {
@@ -939,28 +903,19 @@ h2.vhead span {
 }
 
 @media only screen and (max-width:767px) {
-    .sustain-banner h2 {
-        top: 50%;
-        left: 32%;
-        margin: 0;
-    }
 
     .contact-banner h2 {
-        top: 0;
-        left: 26px;
-        margin: 22% 32%;
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     h2.vhead {
         font-size: 2rem;
     }
-
+    .d-head h2{
+        font-size: 2rem;
+    }
     .manufacture h2 {
-        top: 42%;
-        left: 34%;
-        margin: 0;
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     .lorem-box {
@@ -970,11 +925,23 @@ h2.vhead span {
 
 @media only screen and (max-width:479px) {
 
+    .m-head , .r-head, .s-head, .d-head, .cont-head, .about-txt{top: 16%;}
+    
+    .discover {
+        height: auto;
+        display: block;
+    }
+
+    img.mob-ban {
+        display: block;
+    }
+
+    img.desktop-ban {
+        display: none;
+    }
+
     .sustain-banner h2 {
-        top: 15%;
-        left: 26%;
-        font-size: 1.5rem;
-        margin: 0;
+        font-size: 2rem;
     }
 
     h2.vhead {
@@ -998,31 +965,19 @@ h2.vhead span {
     }
 
     .contact-banner h2 {
-        top: 14%;
-        left: 29%;
-        margin: 0;
-        font-size: 1.3rem;
-    }
-
-    .about-txt {
-        top: 10%;
-        left: 35%;
-        margin: 0;
+        font-size: 2rem;
     }
 
     .about-txt h4 {
-        font-size: 20px;
+        font-size: 1.8rem;
     }
 
     .about-txt h2 {
-        font-size: 22px;
+        font-size: 2rem;
     }
 
     .download-banner h2 {
-        top: 15%;
-        left: 36%;
-        margin: auto;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .down-bord {
@@ -1039,10 +994,7 @@ h2.vhead span {
     }
 
     .manufacture h2 {
-        top: 14%;
-        left: 33%;
-        margin: 0;
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 
     .man-video {
@@ -1050,52 +1002,14 @@ h2.vhead span {
     }
 
     .res-banner h2 {
-        top: 15%;
-        left: 30%;
-        font-size: 1.5rem;
-        margin: 0;
+        font-size: 2rem;
+
     }
 
     .lorem-box {
         width: 90%;
         margin: 10px auto;
         padding: 30px 30px;
-    }
-}
-
-
-@media only screen and (max-width:376px) {
-    .sustain-banner h2 {
-        top: 18%;
-        left: 25%;
-    }
-
-    .contact-banner h2 {
-        top: 18%;
-        left: 30%;
-    }
-
-    .contact-banner h2 {
-        top: 16%;
-        left: 30%;
-        font-size: 1.1rem;
-    }
-
-    .about-txt h4 {
-        font-size: 19px;
-    }
-
-    .about-txt h2 {
-        font-size: 22px;
-    }
-
-    .about-txt {
-        top: 13%;
-        left: 33%;
-    }
-
-    .manufacture h2 {
-        top: 18%;
     }
 }
 

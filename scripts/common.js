@@ -238,9 +238,9 @@ function enquirenowValidation()
  
 
 // watchVideoPlay === start
-function watchVideoPlay(val)
+function watchVideoPlay(val, src)
 {
-    var setSrc = "https://www.youtube.com/embed/qM-a-jivEEU?rel=0&autoplay=1&mute=0&loop=0&showinfo=0&controls=0&modestbranding=1&playsinline=1";
+    var setSrc = "https://www.youtube.com/embed/"+src+"?rel=0&autoplay=1&mute=0&loop=0&showinfo=0&controls=0&modestbranding=1&playsinline=1";
     if(val == 'show')
     {
         $(".home_sm_video_wrap iframe").attr('src',setSrc)
@@ -249,7 +249,7 @@ function watchVideoPlay(val)
     else if(val == 'hide')
     {
         $(".home_sm_video_wrap").fadeOut(500)
-        $(".home_sm_video_wrap iframe").attr('src','')
+        $(".home_sm_video_wrap iframe").attr('src', src)
     }
     else 
     {

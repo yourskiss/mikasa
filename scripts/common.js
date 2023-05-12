@@ -397,7 +397,7 @@ $(function($)
             slidesToScroll: 1,
             dots: false,
             arrows: false,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             infinite: true,
             adaptiveHeight: false,

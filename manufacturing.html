@@ -382,28 +382,6 @@
     <script src="scripts/jquery-min.js"></script>
     <script src="scripts/slick.min.js"></script>
     <script src="scripts/common.js"></script>
-    <script>
-    // watchVideoPlay === start
-function manufacturingVideoPlay(val, src)
-{
-    debugger;
-    var setSrc = "https://www.youtube.com/embed/"+src+"?rel=0&autoplay=1&mute=0&loop=0&showinfo=0&controls=0&modestbranding=1&playsinline=1";
-    if(val == 'show')
-    {
-        $("#manufacturingiframe").attr('src',setSrc)
-        $("#manufacturingvideo").fadeIn(500)
-    }
-    else if(val == 'hide')
-    {
-        $("#manufacturingvideo").fadeOut(500)
-        $("#manufacturingiframe").attr('src', src)
-    }
-    else 
-    {
-        // nothing
-    }
-}
-// watchVideoPlay === end
-    </script>
+
 
 </body></html>

@@ -1,22 +1,65 @@
+@keyframes fadeInUpBanner {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInDownBanner {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInLeftBanner {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes zoomInBanner {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+@keyframes zoomOutBanner {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*
+.fadeInUpBanner { animation-name: fadeInUpBanner; }
+.fadeInDownBanner { animation-name: fadeInDownBanner; }
+.fadeInLeftBanner { animation-name: fadeInLeftBanner; }
+.zoomInBanner {  animation-name: zoomInBanner; }
+.zoomOutBanner { animation-name: zoomOutBanner; }
+*/
 .homebanner {
   background-color: #ffffff;
   width: 100%;
   float: left;
   position: relative;
-}
-.homebanner .homebanner_desktop {
-  display: block;
-  width: 100%;
-  height: 100%;
-  float: left;
-  object-fit: fill;
-}
-.homebanner .homebanner_mobile {
-  display: none;
-  width: 100%;
-  height: 100%;
-  float: left;
-  object-fit: fill;
 }
 .homebanner .homebannercounter {
   z-index: 3;
@@ -147,11 +190,30 @@
 .homebanner .homebannerslider.slick-slider .slick-prev:before {
   content: "\f106";
 }
+.homebanner .slick-active .slide-content {
+  animation-name: fadeInUpSD;
+  animation-duration: 1s;
+  opacity: 1;
+}
 .homebanner .homebanneritem {
   position: relative;
   width: 100%;
   height: 100%;
   float: left;
+}
+.homebanner .homebanneritem .homebanner_desktop {
+  display: block;
+  width: 100%;
+  height: 100%;
+  float: left;
+  object-fit: fill;
+}
+.homebanner .homebanneritem .homebanner_mobile {
+  display: none;
+  width: 100%;
+  height: 100%;
+  float: left;
+  object-fit: fill;
 }
 .homebanner .homebanneritem .homebannercontainer {
   position: absolute;
@@ -234,6 +296,30 @@
 .homebanner .homebanneritem .homebannercontainer .homebannerright img {
   width: 100%;
   max-width: 250px;
+}
+.homebanner .slick-active .homebanneritem .homebanner_desktop {
+  animation-name: zoomInBanner;
+  animation-duration: 4s;
+}
+.homebanner .slick-active .homebanneritem .homebanner_mobile {
+  animation-name: zoomInBanner;
+  animation-duration: 4s;
+}
+.homebanner .slick-active .homebanneritem .homebannercontainer .homebannerleft h4 {
+  animation-name: fadeInDownBanner;
+  animation-duration: 1.5s;
+}
+.homebanner .slick-active .homebanneritem .homebannercontainer .homebannerleft p {
+  animation-name: fadeInDownBanner;
+  animation-duration: 1.5s;
+}
+.homebanner .slick-active .homebanneritem .homebannercontainer .homebannerleft aside {
+  animation-name: fadeInUpBanner;
+  animation-duration: 1.5s;
+}
+.homebanner .slick-active .homebanneritem .homebannercontainer .homebannerright img {
+  animation-name: fadeInLeftBanner;
+  animation-duration: 1.5s;
 }
 
 @media only screen and (max-width: 1255px) {
@@ -318,10 +404,10 @@
   }
 }
 @media only screen and (max-width: 479px) {
-  .homebanner .homebanner_desktop {
+  .homebanner .homebanneritem .homebanner_desktop {
     display: none;
   }
-  .homebanner .homebanner_mobile {
+  .homebanner .homebanneritem .homebanner_mobile {
     display: block;
   }
   .homebanner .homebanneritem .homebannercontainer {
@@ -475,6 +561,24 @@
   }
   .homeintroducing .warrper h3 span {
     font-size: 12px;
+  }
+}
+@keyframes zoomInRange {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  55% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 .homeproductrange {
@@ -631,7 +735,7 @@
   padding: 0;
   overflow: hidden;
 }
-.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-list .slick-track {
+.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-track {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -640,13 +744,35 @@
   margin: 0;
   padding: 0;
 }
-.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-list .slick-track .slick-slide {
+.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide {
   height: 100%;
   margin: 0;
   padding: 0;
 }
-.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-list .slick-track .slick-slide div {
+.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide div {
   height: 100%;
+}
+.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide .hpitem {
+  width: 100%;
+  float: left;
+}
+.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide .hpitem .homeproduct_desktop {
+  display: block;
+  width: 100%;
+  height: 100%;
+  float: left;
+  object-fit: fill;
+}
+.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide .hpitem .homeproduct_mobile {
+  display: none;
+  width: 100%;
+  height: 100%;
+  float: left;
+  object-fit: fill;
+}
+.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide.slick-active .hpitem {
+  animation-name: zoomInRange;
+  animation-duration: 8s;
 }
 .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-arrow {
   z-index: 3;
@@ -705,24 +831,6 @@
 }
 .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-arrow.slick-prev:before {
   content: "\f104";
-}
-.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .hpitem {
-  width: 100%;
-  float: left;
-}
-.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .hpitem .homeproduct_desktop {
-  display: block;
-  width: 100%;
-  height: 100%;
-  float: left;
-  object-fit: fill;
-}
-.homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .hpitem .homeproduct_mobile {
-  display: none;
-  width: 100%;
-  height: 100%;
-  float: left;
-  object-fit: fill;
 }
 .homeproductrange .warrper .homeproductcontainer .homeproductthumb {
   position: absolute;
@@ -911,10 +1019,10 @@
   .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-arrow {
     bottom: 19%;
   }
-  .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .hpitem .homeproduct_desktop {
+  .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide .hpitem .homeproduct_desktop {
     display: none;
   }
-  .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .hpitem .homeproduct_mobile {
+  .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide .hpitem .homeproduct_mobile {
     display: block;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav {

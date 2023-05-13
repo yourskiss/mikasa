@@ -49,29 +49,29 @@
 }
 
 .searchpopup {
-    display: none;z-index: 4;position: absolute;right: 0;top: 0;width: 100%; height:100%; background: $black; background-color: rgba(36, 52, 75, 0.9);
-    article {display: none;z-index: 1;position: fixed;left: 0;top:0; width: 100%; height:100%; background: $black; background-color: rgba(36, 52, 75, 0.9); }
+    display: none;z-index: 4;position: absolute;right: 0;top: 0;width: 100%; height:100%; background: $blue; background-color: rgba(36, 52, 75, 0.95);
+    article {display: none;z-index: 1;position: fixed;left: 0;top:0; width: 100%; height:100%; background: $blue; background-color: rgba(36, 52, 75, 0.95); }
     .searchHeadclose {
         position: absolute;right:1rem;top: 1rem; background: $white; width:40px; height: 40px; border-radius: 50%; float: left; @include fCC(); padding:0; text-decoration: none; font-size: 24px; color:$orange; line-height: 1; @include outT(); cursor: pointer; text-decoration: none;
         &:hover {  background: $orange; color:$white; @include inT();  }
     }
     section {
-        z-index: 2; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 92%; max-width:600px; float: right; background-color: $white; padding: 2rem;
+        z-index: 2; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 92%; max-width:600px; float: right; background-color:transparent; padding: 2rem;
         .searchcontainer { 
             width: 100%; float: right;@include fCC();
             .searchHeadInput {width: calc(100% - 120px);float: left;padding:1rem;background: $gray; outline: none;border: none;text-align: left; font-size: 14px;line-height: 1;color: $black; @include flt(); }
             .searchHeadButton {
-                width: 120px;float: left;text-align: center;text-decoration: none;padding:1rem; border: none;outline: none;cursor: pointer;text-decoration: none;background-color:$orange;color: $white; @include flt(); font-size: 14px;letter-spacing: normal;line-height: 1;text-transform: uppercase; @include outT();
-                &:hover { @include inT(); color:$white;background: $blue; }
+                width: 120px;float: left;text-align: center;text-decoration: none;padding:1.1rem 1rem; border: none;outline: none;cursor: pointer;text-decoration: none;background-color:$orange;color: $white; @include flt(); font-size: 14px;letter-spacing: normal;line-height: 1;text-transform: uppercase; @include outT();
+                &:hover { @include inT(); color:$black;background: $orange; }
             }
         }
         .searchErrorMessage { display: none; width: 100%; float:left;  margin-top: 0.5rem;  font-size: 12px; line-height: 1; color: $red; @include flt(); }
         .searchsuggestions { 
             width: 100%; float:left;  margin-top: 1.5rem;  
             li { 
-                list-style: none; display: inline-block; margin: 0 0.5rem 0.5rem 0; font-size: 14px; line-height: 1; color: $blue; @include fmedium();
+                list-style: none; display: inline-block; margin: 0 0.5rem 0.5rem 0; font-size: 14px; line-height: 1; color: $orange; @include fmedium();
                 a { 
-                    text-decoration: none;  color: $black2; @include fbook();  @include outT();
+                    text-decoration: none;  color: $white; @include fbook();  @include outT();
                     &:hover { color: $orange; @include inT(); }
                 }
             }

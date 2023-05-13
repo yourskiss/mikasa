@@ -1,3 +1,9 @@
+@keyframes zoomInRange {
+    0% { opacity: 0; transform: scale(1); }
+    45% { opacity: 1; transform: scale(1.1); }
+    55% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
 .homeproductrange { 
      background:$white; width: 100%;  float: left;  position: relative; padding:3rem 0 0 0;
     .warrper { 
@@ -43,13 +49,19 @@
             width: 100%; margin:-60px 0 0 0; float: left; position: relative;
             .homeproductslider.slick-slider { 
                 width: 100%;  height: 100%; float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  
-                .slick-list { 
-                    height: 100%; z-index: 2; margin: 0; padding: 0; overflow: hidden; 
-                    .slick-track { 
-                        height: 100%; display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;  
-                        .slick-slide { 
-                            height: 100%; margin: 0; padding: 0; 
-                            div { height: 100%; }
+                .slick-list { height: 100%; z-index: 2; margin: 0; padding: 0; overflow: hidden; }
+                .slick-track { height: 100%; display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;   }
+                .slick-slide { 
+                    height: 100%; margin: 0; padding: 0; 
+                    div { height: 100%; }
+                    .hpitem { 
+                        width: 100%;  float: left; 
+                        .homeproduct_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
+                        .homeproduct_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
+                    }
+                    &.slick-active {
+                        .hpitem { 
+                            animation-name: zoomInRange; animation-duration:8s;
                         }
                     }
                 }
@@ -70,11 +82,7 @@
                         &:before { content: "\f104"; }
                     }
                 }
-                .hpitem { 
-                    width: 100%;  float: left; 
-                    .homeproduct_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
-                    .homeproduct_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
-                }
+                
             }
             
 
@@ -254,9 +262,11 @@
               margin:0; 
                .homeproductslider.slick-slider { 
                    .slick-arrow { bottom:19%;   }
-                   .hpitem { 
-                        .homeproduct_desktop { display:none; }
-                        .homeproduct_mobile { display:block; }
+                   .slick-slide { 
+                        .hpitem { 
+                            .homeproduct_desktop { display:none; }
+                            .homeproduct_mobile { display:block; }
+                        }
                     }
                }
                .homeproductthumb { 

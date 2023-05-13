@@ -6,6 +6,7 @@ $(window).on('orientationchange', function ()
 /* page refresh on orientation change === END */
 
 
+
 /* onLoad === start */
 $(window).on('load', function() 
 {
@@ -340,6 +341,7 @@ $(function($)
             slidesToScroll: 1,
             dots: false,
             arrows: true,
+            fade: true,
             autoplay: true,
             autoplaySpeed: 3000,
             infinite: true,
@@ -365,6 +367,7 @@ $(function($)
             dots: false,
             arrows: true,
             autoplay: false,
+            fade: true,
             infinite: true,
             adaptiveHeight: false,
             centerMode: false,
@@ -451,6 +454,7 @@ $(function($)
             slidesToScroll: 1,
             dots:false,
             arrows: true,
+            fade: false,
             autoplay: true,
             autoplaySpeed: 3000,
             infinite: true,

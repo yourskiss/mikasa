@@ -1515,33 +1515,64 @@
     max-height: 165px;
   }
 }
+@keyframes zoomInOutSustainable {
+  0% {
+    transform: scale(1);
+  }
+  47% {
+    transform: scale(1.2);
+  }
+  53% {
+    transform: scale(1.2);
+  }
+  95% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .homesustainable {
   position: relative;
   background: #ffffff;
   width: 100%;
   float: left;
   margin: 3rem 0 0 0;
+  overflow: hidden;
 }
-.homesustainable .hsf_desktop {
+.homesustainable img {
+  background-size: cover;
+  animation-name: zoomInOutSustainable;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  width: 100%;
+  height: 100%;
+  float: left;
+  object-fit: fill;
+}
+.homesustainable img.hsf_desktop {
   display: block;
-  width: 100%;
-  height: 100%;
-  float: left;
-  object-fit: fill;
 }
-.homesustainable .hsf_ipad {
+.homesustainable img.hsf_ipad {
   display: none;
-  width: 100%;
-  height: 100%;
-  float: left;
-  object-fit: fill;
 }
-.homesustainable .hsf_mobile {
+.homesustainable img.hsf_mobile {
   display: none;
-  width: 100%;
+}
+.homesustainable .homesustainablesection {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
+  width: 100%;
   float: left;
-  object-fit: fill;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/home/sustainability_bg.png") no-repeat center center;
 }
 .homesustainable .home_sf_container {
   z-index: 2;
@@ -1551,9 +1582,9 @@
   transform: translate(-50%, -50%);
   height: auto;
   width: 50%;
+  margin: 0 auto;
   float: left;
-  margin: 0;
-  padding: 0;
+  display: block;
 }
 .homesustainable .home_sf_container h2 {
   width: 100%;
@@ -1620,13 +1651,22 @@
 }
 
 @media only screen and (max-width: 1023px) {
-  .homesustainable .hsf_desktop {
+  .homesustainable img {
+    background-size: cover;
+    animation-name: zoomInBanner;
+    animation-duration: 4s;
+    width: 100%;
+    height: 100%;
+    float: left;
+    object-fit: fill;
+  }
+  .homesustainable img.hsf_desktop {
     display: none;
   }
-  .homesustainable .hsf_ipad {
+  .homesustainable img.hsf_ipad {
     display: block;
   }
-  .homesustainable .hsf_mobile {
+  .homesustainable img.hsf_mobile {
     display: none;
   }
   .homesustainable .home_sf_container {
@@ -1646,13 +1686,22 @@
   }
 }
 @media only screen and (max-width: 479px) {
-  .homesustainable .hsf_desktop {
+  .homesustainable img {
+    background-size: cover;
+    animation-name: zoomInBanner;
+    animation-duration: 4s;
+    width: 100%;
+    height: 100%;
+    float: left;
+    object-fit: fill;
+  }
+  .homesustainable img.hsf_desktop {
     display: none;
   }
-  .homesustainable .hsf_ipad {
+  .homesustainable img.hsf_ipad {
     display: none;
   }
-  .homesustainable .hsf_mobile {
+  .homesustainable img.hsf_mobile {
     display: block;
   }
   .homesustainable .home_sf_container h2 {

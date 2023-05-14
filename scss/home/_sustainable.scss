@@ -15,7 +15,7 @@
     }
     
     .homesustainablesection {  
-        z-index: 2; position: absolute; left:0; top: 0; height: 100%; width:100%; float: left; margin: 0; padding: 0; @include fCC(); background: url('../images/home/sustainability_bg.png') no-repeat center center; 
+        z-index: 2; position: absolute; left:0; top: 0; height: 100%; width:100%; float: left; margin: 0; padding: 0; @include fCC(); background: url('../images/home/sustainability_bg.png') no-repeat center center; background-size: cover;
     }
        .home_sf_container { 
         z-index: 2; position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); height: auto; width:50%;  margin: 0 auto; float: left; display: block;

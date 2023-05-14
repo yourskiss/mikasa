@@ -30,21 +30,35 @@
 }
 @keyframes zoomInBanner {
   0% {
-    opacity: 0;
     transform: scale(1);
   }
-  100% {
-    opacity: 1;
+  5% {
+    transform: scale(1);
+  }
+  50% {
     transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @keyframes zoomOutBanner {
   0% {
-    opacity: 0;
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  60% {
     transform: scale(1.1);
   }
   100% {
-    opacity: 1;
     transform: scale(1);
   }
 }
@@ -190,11 +204,6 @@
 .homebanner .homebannerslider.slick-slider .slick-prev:before {
   content: "\f106";
 }
-.homebanner .slick-active .slide-content {
-  animation-name: fadeInUpSD;
-  animation-duration: 1s;
-  opacity: 1;
-}
 .homebanner .homebanneritem {
   position: relative;
   width: 100%;
@@ -299,11 +308,11 @@
 }
 .homebanner .slick-active .homebanneritem .homebanner_desktop {
   animation-name: zoomInBanner;
-  animation-duration: 4s;
+  animation-duration: 8s;
 }
 .homebanner .slick-active .homebanneritem .homebanner_mobile {
   animation-name: zoomInBanner;
-  animation-duration: 4s;
+  animation-duration: 8s;
 }
 .homebanner .slick-active .homebanneritem .homebannercontainer .homebannerleft h4 {
   animation-name: fadeInDownBanner;
@@ -654,6 +663,23 @@
     transform: none;
   }
 }
+@keyframes zoomInPro {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .productsliderwrap {
   background: #ffffff;
   width: 100%;
@@ -726,6 +752,14 @@
   line-height: 1;
   letter-spacing: normal;
   text-transform: uppercase;
+}
+.productsliderwrap .pro_slider .slick-slide.slick-active .pro_short_desktop {
+  animation-name: zoomInPro;
+  animation-duration: 8s;
+}
+.productsliderwrap .pro_slider .slick-slide.slick-active .pro_short_mobile {
+  animation-name: zoomInPro;
+  animation-duration: 8s;
 }
 .productsliderwrap .pro_slider .slick-slide.slick-active h2 {
   animation-name: fadeInDownPro;
@@ -815,7 +849,7 @@
   .productsliderwrap .pro_slider .slick-arrow.slick-prev {
     right: 3.5rem;
   }
-  .productsliderwrap .pro_slider .pro_item h2 {
+  .productsliderwrap .pro_slider .slick-slide .pro_item h2 {
     width: 100%;
     padding: 2rem 100px 2rem 4%;
     color: #ffffff;
@@ -824,10 +858,10 @@
   }
 }
 @media only screen and (max-width: 479px) {
-  .productsliderwrap .pro_slider .pro_item .pro_short_desktop {
+  .productsliderwrap .pro_slider .slick-slide .pro_item .pro_short_desktop {
     display: none;
   }
-  .productsliderwrap .pro_slider .pro_item .pro_short_mobile {
+  .productsliderwrap .pro_slider .slick-slide .pro_item .pro_short_mobile {
     display: block;
   }
 }

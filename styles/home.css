@@ -30,21 +30,35 @@
 }
 @keyframes zoomInBanner {
   0% {
-    opacity: 0;
     transform: scale(1);
   }
-  100% {
-    opacity: 1;
+  5% {
+    transform: scale(1);
+  }
+  50% {
     transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 @keyframes zoomOutBanner {
   0% {
-    opacity: 0;
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  60% {
     transform: scale(1.1);
   }
   100% {
-    opacity: 1;
     transform: scale(1);
   }
 }
@@ -190,11 +204,6 @@
 .homebanner .homebannerslider.slick-slider .slick-prev:before {
   content: "\f106";
 }
-.homebanner .slick-active .slide-content {
-  animation-name: fadeInUpSD;
-  animation-duration: 1s;
-  opacity: 1;
-}
 .homebanner .homebanneritem {
   position: relative;
   width: 100%;
@@ -299,11 +308,11 @@
 }
 .homebanner .slick-active .homebanneritem .homebanner_desktop {
   animation-name: zoomInBanner;
-  animation-duration: 4s;
+  animation-duration: 8s;
 }
 .homebanner .slick-active .homebanneritem .homebanner_mobile {
   animation-name: zoomInBanner;
-  animation-duration: 4s;
+  animation-duration: 8s;
 }
 .homebanner .slick-active .homebanneritem .homebannercontainer .homebannerleft h4 {
   animation-name: fadeInDownBanner;
@@ -565,19 +574,15 @@
 }
 @keyframes zoomInRange {
   0% {
-    opacity: 0;
     transform: scale(1);
   }
   45% {
-    opacity: 1;
     transform: scale(1.1);
   }
   55% {
-    opacity: 1;
     transform: scale(1.1);
   }
   100% {
-    opacity: 1;
     transform: scale(1);
   }
 }
@@ -755,6 +760,7 @@
 .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide .hpitem {
   width: 100%;
   float: left;
+  transition: all 0.4s ease-out;
 }
 .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide .hpitem .homeproduct_desktop {
   display: block;
@@ -773,6 +779,7 @@
 .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide.slick-active .hpitem {
   animation-name: zoomInRange;
   animation-duration: 8s;
+  transition: all 0.4s ease-in;
 }
 .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-arrow {
   z-index: 3;
@@ -1573,6 +1580,7 @@
   justify-content: center;
   align-items: center;
   background: url("../images/home/sustainability_bg.png") no-repeat center center;
+  background-size: cover;
 }
 .homesustainable .home_sf_container {
   z-index: 2;

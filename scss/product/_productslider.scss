@@ -2,6 +2,13 @@
     0% { opacity: 0; transform: translateY(-100px); }
     100% { opacity: 1; transform: none; }
 }
+@keyframes zoomInPro {
+    0% {  transform: scale(1); }
+    5% {  transform: scale(1); }
+    50% {  transform: scale(1.1); }
+    60% {  transform: scale(1.1); }
+    100% {  transform: scale(1); }
+}
 .productsliderwrap { 
     background:$white; width: 100%;  float: left;  position: relative; padding:0; 
     .pro_slider {
@@ -18,6 +25,8 @@
                 h2 { z-index: 2; position: absolute; bottom: 0; right: 0; background: $white; background: rgba(255,255,255, 0.8); padding: 2rem 200px 2rem 3rem;  text-align: left; @include fbold(); color:$black2; font-size: 28px; line-height: 1;  letter-spacing: normal; text-transform:uppercase; }
             }
             &.slick-active {
+                .pro_short_desktop { animation-name: zoomInPro;animation-duration: 8s; }
+                .pro_short_mobile { animation-name: zoomInPro;animation-duration: 8s; }
                 h2 { animation-name: fadeInDownPro;animation-duration: 1.5s;  }
             }
         }
@@ -60,10 +69,11 @@
                 &.slick-next  { right:1rem; } 
                 &.slick-prev { right:3.5rem; }
             }
-            .pro_item { 
-                h2 { width: 100%; padding:2rem 100px 2rem 4%; color: $white; background: #878686;background: linear-gradient(to bottom,  #878686 0%,#878687 11%,#8b8b8b 15%,#a6a5a5 28%,#aeacac 34%,#b5b3b3 44%,#c6c2be 60%,#cac6c3 79%,#c9c6c4 100%); }
+            .slick-slide {
+                .pro_item { 
+                    h2 { width: 100%; padding:2rem 100px 2rem 4%; color: $white; background: #878686;background: linear-gradient(to bottom,  #878686 0%,#878687 11%,#8b8b8b 15%,#a6a5a5 28%,#aeacac 34%,#b5b3b3 44%,#c6c2be 60%,#cac6c3 79%,#c9c6c4 100%); }
+                }
             }
-     
     
         }
     }
@@ -74,12 +84,12 @@
 {
     .productsliderwrap { 
         .pro_slider {
-            .pro_item { 
-                .pro_short_desktop { display:none; }
-                .pro_short_mobile { display:block; }  
-            }
-     
-    
+            .slick-slide {
+                .pro_item { 
+                    .pro_short_desktop { display:none; }
+                    .pro_short_mobile { display:block; }  
+                }
+            } 
         }
     }
 }

@@ -46,11 +46,11 @@
             &:last-child { right:-30px;} 
         }
     }
-    .homebannerslider.slick-slider { width: 100%;  height: 100%; float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  }
-    .homebannerslider.slick-slider .slick-list {  height: 100%; z-index: 2; margin: 0; padding: 0; overflow: hidden; }
-    .homebannerslider.slick-slider .slick-track {  height: 100%; display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;  }
-    .homebannerslider.slick-slider .slick-slide {  height: 100%; margin: 0; padding: 0;  }
-    .homebannerslider.slick-slider .slick-slide div {  height: 100%; }
+    .homebannerslider.slick-slider { width: 100%;   float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  }
+    .homebannerslider.slick-slider .slick-list {   z-index: 2; margin: 0; padding: 0; overflow: hidden; }
+    .homebannerslider.slick-slider .slick-track {   display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;  }
+    .homebannerslider.slick-slider .slick-slide {   margin: 0; padding: 0;  }
+    .homebannerslider.slick-slider .slick-slide div { width: 100%; height: auto;  margin: 0; padding: 0; }
 
     .homebannerslider.slick-slider .slick-arrow { z-index: 3; opacity:1; top:auto; bottom:1rem;  width:50px; height:50px; border-radius: 50%; margin: 0; padding: 0; border:0; line-height: 1; background-color:$white; color:$black; @include fCC(); @include outT(); background: rgba(255,255,255,0.6); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
     .homebannerslider.slick-slider .slick-arrow:hover { background-color:$orange; color:$white; @include inT(); }
@@ -65,9 +65,9 @@
 
  
     .homebanneritem { 
-        position: relative; width: 100%; height: 100%; float: left; 
-        .homebanner_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
-        .homebanner_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
+        position: relative; width: 100%;  float: left; 
+        .homebanner_desktop { display: block; width: 100%;   float: left;  margin: 0; padding: 0;  }
+        .homebanner_mobile { display: none; width: 100%;  float: left;  margin: 0; padding: 0;  }
         .homebannercontainer { 
             position: absolute; z-index: 2; top:25%; left: 10%; width: 1000px; height: auto !important; @include fBC();
             .homebannerleft {

@@ -116,21 +116,18 @@
 }
 .homebanner .homebannerslider.slick-slider {
   width: 100%;
-  height: 100%;
   float: right;
   overflow: hidden;
   margin: 0 !important;
   padding: 0 !important;
 }
 .homebanner .homebannerslider.slick-slider .slick-list {
-  height: 100%;
   z-index: 2;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
 .homebanner .homebannerslider.slick-slider .slick-track {
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -139,12 +136,14 @@
   padding: 0;
 }
 .homebanner .homebannerslider.slick-slider .slick-slide {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 .homebanner .homebannerslider.slick-slider .slick-slide div {
-  height: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
 .homebanner .homebannerslider.slick-slider .slick-arrow {
   z-index: 3;
@@ -207,22 +206,21 @@
 .homebanner .homebanneritem {
   position: relative;
   width: 100%;
-  height: 100%;
   float: left;
 }
 .homebanner .homebanneritem .homebanner_desktop {
   display: block;
   width: 100%;
-  height: 100%;
   float: left;
-  object-fit: fill;
+  margin: 0;
+  padding: 0;
 }
 .homebanner .homebanneritem .homebanner_mobile {
   display: none;
   width: 100%;
-  height: 100%;
   float: left;
-  object-fit: fill;
+  margin: 0;
+  padding: 0;
 }
 .homebanner .homebanneritem .homebannercontainer {
   position: absolute;
@@ -686,10 +684,12 @@
   float: left;
   position: relative;
   padding: 0;
+  overflow: hidden;
 }
 .productsliderwrap .pro_slider {
   width: 100%;
   float: left;
+  overflow: hidden;
 }
 .productsliderwrap .pro_slider .slick-list {
   z-index: 2;
@@ -710,7 +710,7 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  height: inherit;
+  overflow: hidden;
 }
 .productsliderwrap .pro_slider .slick-slide div {
   height: 100%;
@@ -721,20 +721,21 @@
   width: 100%;
   float: left;
   position: relative;
+  overflow: hidden;
 }
 .productsliderwrap .pro_slider .slick-slide .pro_item .pro_short_desktop {
   display: block;
   width: 100%;
-  height: 100%;
   float: left;
-  object-fit: fill;
+  margin: 0;
+  padding: 0;
 }
 .productsliderwrap .pro_slider .slick-slide .pro_item .pro_short_mobile {
   display: none;
   width: 100%;
-  height: 100%;
   float: left;
-  object-fit: fill;
+  margin: 0;
+  padding: 0;
 }
 .productsliderwrap .pro_slider .slick-slide .pro_item h2 {
   z-index: 2;
@@ -878,13 +879,15 @@
   display: block;
   width: 57%;
   float: left;
-  object-fit: fill;
+  padding: 0;
+  margin: 0;
 }
 .decaedgetechnology .decaedgetech_mobile {
   display: none;
   width: 100%;
   float: left;
-  object-fit: fill;
+  padding: 0;
+  margin: 0;
 }
 .decaedgetechnology .warrper {
   position: absolute;

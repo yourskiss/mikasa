@@ -10,18 +10,18 @@
     100% {  transform: scale(1); }
 }
 .productsliderwrap { 
-    background:$white; width: 100%;  float: left;  position: relative; padding:0; 
+    background:$white; width: 100%;  float: left;  position: relative; padding:0;  overflow: hidden;
     .pro_slider {
-        width: 100%; float:left;
+        width: 100%; float:left; overflow: hidden; 
         .slick-list {   z-index: 2; margin: 0; padding: 0; overflow: hidden;  height: auto !important;}
         .slick-track {  display: flex; justify-content:center; align-items: stretch; height: inherit; margin: 0; padding: 0;  }
         .slick-slide { 
-            height: 100%; margin: 0; padding: 0; height: inherit; 
+            height: 100%; margin: 0; padding: 0;  overflow: hidden;
             div { height: 100%; margin: 0; padding: 0; }
             .pro_item { 
-                width: 100%;  float: left; position: relative;
-                .pro_short_desktop { display: block; width: 100%; height: 100%; float: left; object-fit: fill; }
-                .pro_short_mobile { display: none; width: 100%; height: 100%; float: left; object-fit: fill; }
+                width: 100%;  float: left; position: relative;  overflow: hidden;
+                .pro_short_desktop { display: block; width: 100%;   float: left;  margin: 0; padding: 0;  }
+                .pro_short_mobile { display: none; width: 100%;   float: left;   margin: 0; padding: 0;  }
                 h2 { z-index: 2; position: absolute; bottom: 0; right: 0; background: $white; background: rgba(255,255,255, 0.8); padding: 2rem 200px 2rem 3rem;  text-align: left; @include fbold(); color:$black2; font-size: 28px; line-height: 1;  letter-spacing: normal; text-transform:uppercase; }
             }
             &.slick-active {

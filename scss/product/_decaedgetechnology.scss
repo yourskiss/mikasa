@@ -1,7 +1,7 @@
 .decaedgetechnology { 
     position: relative; background:$white; width: 100%;  float: left;  position: relative; padding:0; overflow: hidden;
-    .decaedgetech_desktop { display: block; width: 57%; float: left; object-fit: fill; }
-    .decaedgetech_mobile { display: none; width: 100%;  float: left; object-fit: fill; }
+    .decaedgetech_desktop { display: block; width: 57%; float: left; padding:0; margin: 0; }
+    .decaedgetech_mobile { display: none; width: 100%;  float: left; padding:0; margin: 0; }
     .warrper {
         position: absolute; left:50%; top: 50%; transform: translate(-50%, -50%); max-width: 80%;  height: 100%; @include fEC(); flex-wrap: wrap;  
          .decaedgetech_content { 

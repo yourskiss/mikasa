@@ -193,7 +193,7 @@
  
     <!-- productbedcrum  start -->
     <section class="productbedcrum">
-        <ul>
+        <ul data-aos="fade-up">
             <li><a href="#">Home</a></li>
             <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
             <li><a href="#">Product</a></li>
@@ -212,7 +212,7 @@
     <section class="productinfo">
         <div class="warrper">
             
-            <div class="productinfoleft">
+            <div class="productinfoleft" data-aos="fade-right">
                 <div class="productinfoslider">
                     <div class="productinfoitem">
                         <img src="images/product/productinfo.jpg" class="thumbnails" data-large="images/product/productinfo_large.jpg" alt="productinfo" />
@@ -228,7 +228,7 @@
                     <img src="images/product/info-mob.png" alt="productinfo" />
                 </div>
             </div>
-            <div class="productinforight">
+            <div class="productinforight" data-aos="fade-left">
                 <h2>
                     MARINE <span>BLUE</span>
                 </h2>
@@ -283,10 +283,10 @@
 
     <!-- decaedgetechnology start -->
     <section class="decaedgetechnology">
-        <img class="decaedgetech_desktop" src="images/product/decca-edge-bg-web.png" alt="decca edge" />
-        <img class="decaedgetech_mobile" src="images/product/decca-edge-bg-mob.png" alt="decca edge" />
-        <div class="warrper">
-            <div class="decaedgetech_content">
+        <img class="decaedgetech_desktop"  data-aos="fade-right" src="images/product/decca-edge-bg-web.png" alt="decca edge" />
+        <img class="decaedgetech_mobile"  data-aos="fade-down" src="images/product/decca-edge-bg-mob.png" alt="decca edge" />
+        <div class="warrper" >
+            <div class="decaedgetech_content" data-aos="fade-left">
                 <h2>The Power of<br>Deca Edge Technology</h2>
                 <p>
                     MikasaPly takes precision to the next level with its meticulously calibrated plywood, made possible by the innovative Deca Edge Technology. This cutting-edge innovation guarantees superior quality with minimal emission and a smooth finish. The added Fungicide Treatment ensures a flawless surface, making every MikasaPly product a reliable and high-performing choice. This technology is used across the entire range of MikasaPly.
@@ -315,7 +315,7 @@
         <div class="warrper">
             
             <div class="ps_header">
-                <div class="ps_head_left">
+                <div class="ps_head_left" data-aos="fade-right">
                     <h2>Technical <span>Specification</span></h2>
                     <ul>
                         <li>
@@ -328,7 +328,7 @@
                         <li>Also available in Blockboard</li>
                     </ul>
                 </div>
-                <div class="ps_head_right">
+                <div class="ps_head_right" data-aos="fade-left">
                     <img src="images/product/marineblue.png" alt="marineblue" />
                 </div>
             </div>
@@ -336,7 +336,7 @@
 
 
             <div class="ps_container">
-                <ul class="ps_cont_left">
+                <ul class="ps_cont_left" data-aos="fade-right">
                     <li class="nobordertop">
                         <span><b>Thickness in mm</b></span>
                         <span><b>Number of Plies</b></span>
@@ -398,7 +398,7 @@
                         <span>Yes</span>
                     </li>
                 </ul>
-                <ul class="ps_cont_right">
+                <ul class="ps_cont_right" data-aos="fade-left">
                     <li class="nobordertop">
                         <span><b>Adhesives of Plies</b></span>
                     </li>
@@ -476,7 +476,7 @@
     <!-- getintouch  start -->
     <section class="getintouchwrap"> 
         <div class="warrper">
-            <div class="getintouchInfo">
+            <div class="getintouchInfo" data-aos="fade-right">
                 <h2>GET IN<span>TOUCH</span></h2>
                 <h3>Lorem ipsum dolor sit amet, conetur adipiscing elit. Sed congue neque</h3>
                 <p>
@@ -488,7 +488,7 @@
                 </p>
             </div>
             
-            <div class="getintouchForm">
+            <div class="getintouchForm" data-aos="fade-left">
                 <div class="getintouchField">
                     <input class="getintouchInput" type="text" name="name" id="fullname" placeholder="NAME" maxlength="50" onkeypress="return isLetter(event)" />
                     <span class="getintouchError" id="name_error">Name</span>
@@ -712,10 +712,14 @@
 <script src="scripts/jquery-min.js"></script>
 <script src="scripts/slick.min.js"></script>
 <script src="scripts/common.js"></script>
-
 <script src="scripts/zoomio.js"></script>
-
-
+<script src="scripts/aos.js"></script>
+<script>
+AOS.init();
+$(window).on('load', function() {
+  setTimeout(function() { AOS.refresh(); }, 500);
+});
+</script>
 
 </body>
 </html>

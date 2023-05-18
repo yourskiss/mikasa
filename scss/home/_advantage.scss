@@ -14,11 +14,11 @@
                 width: 100%; float:right; text-align: left; margin-top:2rem;
                 a { 
                     display: inline-block; padding:0; width:auto; float: none; margin: 0; background-color:transparent;  text-align: center; cursor: pointer; @include tdn();   
-                    span { margin-right: 0.5rem; @include fmedium();   color:$black5;  font-size: 14px; letter-spacing:0.24px; line-height: 1; text-transform: uppercase;  @include outT();  }
-                    img { max-width: 100%; margin-bottom: -2px; @include outT(); }
+                    span {  @include fmedium();   color:$black5;  font-size: 14px; letter-spacing:0.24px; line-height: 1; text-transform: uppercase;  @include outT();  }
+                    img { padding:0 5px; max-width: 100%; margin-bottom: -2px; @include outT(); }
                     &:hover { 
                         span { color:$orange; @include inT();   }
-                        img { filter: invert(60%) sepia(30%) saturate(1000%) hue-rotate(350deg); @include inT(); }
+                        img { padding:0 0 0 10px;  filter: invert(60%) sepia(30%) saturate(1000%) hue-rotate(350deg); @include inT(); }
                     } 
                 }
             } 

@@ -5,7 +5,289 @@
   box-sizing: border-box;
   font-weight: normal;
   line-height: 1.2;
-} /* Font Awesome 4.7.0 */
+} /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+html {
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button; /* 2 */
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+@font-face {
+  font-family: "futura-black";
+  src: url("../fonts/futura_black.woff2") format("woff2"), url("../fonts/futura_black.woff") format("woff");
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "futura-bold";
+  src: url("../fonts/futura_bold.woff2") format("woff2"), url("../fonts/futura_bold.woff") format("woff");
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "futura-medium";
+  src: url("../fonts/futura_medium.woff2") format("woff2"), url("../fonts/futura_medium.woff") format("woff");
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "futura-book";
+  src: url("../fonts/futura_book.woff2") format("woff2"), url("../fonts/futura_book.woff") format("woff");
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "futura-regular";
+  src: url("../fonts/futura_regular.woff2") format("woff2"), url("../fonts/futura_regular.woff") format("woff");
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "futura-light";
+  src: url("../fonts/futura_light.woff2") format("woff2"), url("../fonts/futura_light.woff") format("woff");
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "futuraLT";
+  src: url("../fonts/futura_lt.woff2") format("woff2"), url("../fonts/futura_lt.woff") format("woff");
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+}
+/* Font Awesome 4.7.0 */
 @font-face {
   font-family: "FontAwesome";
   src: url("../fonts/fontawesome.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome.woff?v=4.7.0") format("woff");
@@ -4135,298 +4417,27 @@
   transform: perspective(2500px) rotateX(0);
 }
 
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-html {
-  line-height: 1.15; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-body {
-  margin: 0;
-}
-
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-figcaption,
-figure,
-main {
-  display: block;
-}
-
-figure {
-  margin: 1em 40px;
-}
-
-hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
-
-pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-a {
-  background-color: transparent; /* 1 */
-  -webkit-text-decoration-skip: objects; /* 2 */
-}
-
-abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
-
-b,
-strong {
-  font-weight: inherit;
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-code,
-kbd,
-samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
-dfn {
-  font-style: italic;
-}
-
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-audio,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-img {
-  border-style: none;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: sans-serif; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
-button,
-input { /* 1 */
-  overflow: visible;
-}
-
-button,
-select { /* 1 */
-  text-transform: none;
-}
-
-button,
-html [type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button; /* 2 */
-}
-
-button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-
-legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
-
-progress {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
-}
-
-textarea {
-  overflow: auto;
-}
-
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-[type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-[type=search]::-webkit-search-cancel-button,
-[type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-details,
-menu {
-  display: block;
-}
-
-summary {
-  display: list-item;
-}
-
-canvas {
-  display: inline-block;
-}
-
-template {
-  display: none;
-}
-
-[hidden] {
-  display: none;
-}
-
-@font-face {
-  font-family: "futura-black";
-  src: url("../fonts/futura_black.woff2") format("woff2"), url("../fonts/futura_black.woff") format("woff");
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "futura-bold";
-  src: url("../fonts/futura_bold.woff2") format("woff2"), url("../fonts/futura_bold.woff") format("woff");
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "futura-medium";
-  src: url("../fonts/futura_medium.woff2") format("woff2"), url("../fonts/futura_medium.woff") format("woff");
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "futura-book";
-  src: url("../fonts/futura_book.woff2") format("woff2"), url("../fonts/futura_book.woff") format("woff");
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "futura-regular";
-  src: url("../fonts/futura_regular.woff2") format("woff2"), url("../fonts/futura_regular.woff") format("woff");
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "futura-light";
-  src: url("../fonts/futura_light.woff2") format("woff2"), url("../fonts/futura_light.woff") format("woff");
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "futuraLT";
-  src: url("../fonts/futura_lt.woff2") format("woff2"), url("../fonts/futura_lt.woff") format("woff");
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-}
 .header {
-  position: relative;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
   z-index: 4;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
   width: 100%;
+  max-width: 1600px;
   float: left;
   padding: 1.5rem 0;
+}
+.header.headerfixed {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  max-width: 1600px;
 }
 .header .warrper {
   display: flex;
@@ -4499,11 +4510,11 @@ template {
   padding: 0.6rem 1.5rem;
   width: 100%;
   float: right;
-  background-color: #152c55;
+  background-color: #E94E20;
   font-family: "futura-bold", Arial, sans-serif;
   font-weight: 700;
   font-weight: normal;
-  color: #C2D1F9;
+  color: #ffffff;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -4513,7 +4524,7 @@ template {
   line-height: 14px;
 }
 .header .warrper .headerRight ul li .enquirenowBtn:hover {
-  background-color: #E94E20;
+  background-color: #152c55;
   color: #ffffff;
   transition: all 0.4s ease-in;
 }
@@ -4667,7 +4678,7 @@ template {
 .searchpopup section .searchcontainer .searchHeadInput {
   width: calc(100% - 120px);
   float: left;
-  padding: 1rem;
+  padding: 16px 1rem;
   background: #F0F0F0;
   outline: none;
   border: none;
@@ -4683,7 +4694,7 @@ template {
   float: left;
   text-align: center;
   text-decoration: none;
-  padding: 1.1rem 1rem;
+  padding: 18px 1rem;
   border: none;
   outline: none;
   cursor: pointer;
@@ -4924,11 +4935,11 @@ template {
   }
   .searchpopup section .searchcontainer .searchHeadInput {
     width: calc(100% - 90px);
-    padding: 1rem 0.5rem;
+    padding: 16px 0.5rem;
   }
   .searchpopup section .searchcontainer .searchHeadButton {
     width: 90px;
-    padding: 1.1rem 0.5rem;
+    padding: 18px 0.5rem;
   }
 }
 .footer {
@@ -5901,7 +5912,7 @@ html, body {
   float: left;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 103px 0 0 0;
   overflow: hidden;
 }
 
@@ -5952,8 +5963,8 @@ html, body {
     margin: 0 auto;
   }
 }
-@media only screen and (max-width: 1100px) {
-  .fitheight {
-    min-height: auto;
+@media only screen and (max-width: 1255px) {
+  .main {
+    padding: 76px 0 0 0;
   }
 }

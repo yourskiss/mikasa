@@ -657,7 +657,6 @@
   text-decoration: none;
 }
 .homeproductrange .warrper .homeproducthead .hp_head_left aside a span {
-  margin-right: 0.5rem;
   font-family: "futura-medium", Arial, sans-serif;
   font-weight: 600;
   color: #333333;
@@ -668,6 +667,7 @@
   transition: all 0.4s ease-out;
 }
 .homeproductrange .warrper .homeproducthead .hp_head_left aside a img {
+  padding: 0 5px;
   max-width: 100%;
   margin-bottom: -2px;
   transition: all 0.4s ease-out;
@@ -677,6 +677,7 @@
   transition: all 0.4s ease-in;
 }
 .homeproductrange .warrper .homeproducthead .hp_head_left aside a:hover img {
+  padding: 0 0 0 10px;
   filter: invert(60%) sepia(30%) saturate(1000%) hue-rotate(350deg);
   transition: all 0.4s ease-in;
 }
@@ -912,7 +913,7 @@
   font-family: "futura-book", Arial, sans-serif;
   font-weight: 500;
   color: #000000;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.3;
   letter-spacing: 0.72px;
 }
@@ -963,7 +964,7 @@
     margin: 0;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-arrow {
-    bottom: 18%;
+    bottom: 50px;
     width: 44px;
     height: 44px;
   }
@@ -983,19 +984,12 @@
     border-bottom-width: 5px;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav h2 {
-    margin: 0 0 0.5rem 0;
+    margin: 0;
     font-size: 14px;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav p {
+    display: none;
     font-size: 10px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .homeproductrange .warrper .homeproductcontainer {
-    margin: 0;
-  }
-  .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-arrow {
-    bottom: 30%;
   }
 }
 @media only screen and (max-width: 599px) {
@@ -1003,7 +997,7 @@
     margin: 0;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-arrow {
-    bottom: 20%;
+    bottom: 55px;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav {
     padding: 1rem;
@@ -1015,6 +1009,7 @@
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav p {
     display: none;
+    font-size: 8px;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -1022,7 +1017,7 @@
     margin: 0;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-arrow {
-    bottom: 19%;
+    bottom: 120px;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-slide .hpitem .homeproduct_desktop {
     display: none;
@@ -1117,7 +1112,6 @@
   text-decoration: none;
 }
 .homeadvantage .warrper .homeadvantageleft aside a span {
-  margin-right: 0.5rem;
   font-family: "futura-medium", Arial, sans-serif;
   font-weight: 600;
   color: #333333;
@@ -1128,6 +1122,7 @@
   transition: all 0.4s ease-out;
 }
 .homeadvantage .warrper .homeadvantageleft aside a img {
+  padding: 0 5px;
   max-width: 100%;
   margin-bottom: -2px;
   transition: all 0.4s ease-out;
@@ -1137,6 +1132,7 @@
   transition: all 0.4s ease-in;
 }
 .homeadvantage .warrper .homeadvantageleft aside a:hover img {
+  padding: 0 0 0 10px;
   filter: invert(60%) sepia(30%) saturate(1000%) hue-rotate(350deg);
   transition: all 0.4s ease-in;
 }

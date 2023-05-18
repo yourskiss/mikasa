@@ -8,10 +8,10 @@
                 width: 100%;  float: left; margin-bottom: 1rem; text-align: left; color: $gray6; font-size: 35px; line-height: 1.3; @include fbold();
             }
             ul { 
-                width: 100%;  float: left;  
+                width: 100%;  float: left;  @include fSC(); align-items: stretch;
                 li { 
                     list-style: none; margin: 0; padding: 0; float: left; color: $black5; font-size: 13px; line-height: 1.3; letter-spacing: 0.18px; @include fmedium();
-                    &.ps_head_line { margin: 0 2rem; }
+                    &.ps_head_line { width: 1px; margin: 0 2rem; background-color: $black5; line-height: 1; font-size: 0; }
                     a { 
                         @include fSC(); text-decoration: none; @include outT(); color: $black5;  
                         img { max-height: 16px; filter: none; @include outT(); }
@@ -69,7 +69,7 @@
                   span { display: block; }
                }
                ul { 
-                    @include fCS();
+                   justify-content: center;
                    li { 
                         font-size: 12px; line-height: 1.2; letter-spacing: 0.17px; 
                        &.ps_head_line { margin: 0 0.5rem; }

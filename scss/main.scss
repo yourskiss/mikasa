@@ -2,12 +2,13 @@
 @import "common/_var.scss";
 @import "common/_mixin.scss"; 
 
+@import "common/_normalize.scss";
+@import "common/_fonts.scss";
+
 @import "common/_fontawesome.scss";
 @import "common/_slick.scss";
 @import "common/_aos.scss";
 
-@import "common/_normalize.scss";
-@import "common/_fonts.scss";
 @import "common/_header.scss";
 @import "common/_footer.scss";
 @import "common/_copyright.scss";
@@ -16,7 +17,7 @@
 @import "common/_msgpopup.scss";
 
 html, body { margin:0; padding:0; @include fbook(); font-weight: 400;line-height:1.2; letter-spacing: normal;letter-spacing: normal;color: #000000;background-color: #fff;box-sizing:border-box; }
-.main { display: block; float: left; width: 100%; margin: 0; padding: 0; overflow: hidden; }
+.main { display: block; float: left; width: 100%; margin: 0; padding:103px 0 0 0; overflow: hidden; }
 .fitheight { min-height: calc(100vh - 110px); }
 .warrper { display: flow-root; width: 100%; max-width: 92%; margin: 0 auto; float:none; }
 
@@ -32,12 +33,12 @@ html, body { margin:0; padding:0; @include fbook(); font-weight: 400;line-height
 
 @media only screen and (min-width:1601px) 
 {
-  .main {display:flow-root; float:none; max-width: 1600px; margin: 0 auto; }
+  .main { display:flow-root; float:none; max-width: 1600px; margin: 0 auto; }
 }
 
-@media only screen and (max-width:1100px) 
+@media only screen and (max-width:1255px) 
 {
-  .fitheight { min-height:auto; }
+  .main { padding:76px 0 0 0;  }
 
 }
 

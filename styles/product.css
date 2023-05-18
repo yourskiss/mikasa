@@ -1066,6 +1066,10 @@
 .productspecification .ps_header .ps_head_left ul {
   width: 100%;
   float: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-items: stretch;
 }
 .productspecification .ps_header .ps_head_left ul li {
   list-style: none;
@@ -1080,7 +1084,11 @@
   font-weight: 600;
 }
 .productspecification .ps_header .ps_head_left ul li.ps_head_line {
+  width: 1px;
   margin: 0 2rem;
+  background-color: #333333;
+  line-height: 1;
+  font-size: 0;
 }
 .productspecification .ps_header .ps_head_left ul li a {
   display: flex;
@@ -1192,9 +1200,7 @@
     display: block;
   }
   .productspecification .ps_header .ps_head_left ul {
-    display: flex;
     justify-content: center;
-    align-items: flex-start;
   }
   .productspecification .ps_header .ps_head_left ul li {
     font-size: 12px;

@@ -1,5 +1,6 @@
 .header { 
-     position: relative; z-index: 4; @include fCC();  background-color: $white; width: 100%; float: left; padding: 1.5rem 0;
+    position: fixed; left:50%; top: 0; transform: translateX(-50%); z-index: 4; @include fCC();  background-color: $white; width: 100%; max-width: 1600px;  float: left; padding: 1.5rem 0; 
+     &.headerfixed { position: fixed; left:50%; top: 0; transform: translateX(-50%);  max-width: 1600px; }
     .warrper { 
         @include fBC();  position: relative; max-width: 96%;
         .logo {
@@ -20,8 +21,8 @@
                             i.fa-angle-down { margin-left: 0.3rem; font-weight: 400; line-height: 1; font-size: 120%; }
                         }
                         .enquirenowBtn { 
-                            position: relative; padding:0.6rem 1.5rem; width: 100%; float: right; background-color: $blue;  @include fbold(); font-weight: normal; color:#C2D1F9;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:9px; letter-spacing:0.7px; line-height: 14px;
-                            &:hover { background-color: $orange; color:$white; @include inT();  } 
+                            position: relative; padding:0.6rem 1.5rem; width: 100%; float: right; background-color: $orange;  @include fbold(); font-weight: normal; color:$white;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:9px; letter-spacing:0.7px; line-height: 14px;
+                            &:hover { background-color: $blue; color:$white; @include inT();  } 
                         }
                         .searchBtn { 
                             position: relative; padding:0; width:auto; float: right; background-color:transparent;  @include fbold(); font-weight: normal; color:$blue;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:24px; letter-spacing:normal; line-height: 1;
@@ -59,9 +60,9 @@
         z-index: 2; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 92%; max-width:600px; float: right; background-color:transparent; padding: 2rem;
         .searchcontainer { 
             width: 100%; float: right;@include fCC();
-            .searchHeadInput {width: calc(100% - 120px);float: left;padding:1rem;background: $gray; outline: none;border: none;text-align: left; font-size: 14px;line-height: 1;color: $black; @include flt(); }
+            .searchHeadInput {width: calc(100% - 120px);float: left;padding:16px 1rem;background: $gray; outline: none;border: none;text-align: left; font-size: 14px;line-height: 1;color: $black; @include flt(); }
             .searchHeadButton {
-                width: 120px;float: left;text-align: center;text-decoration: none;padding:1.1rem 1rem; border: none;outline: none;cursor: pointer;text-decoration: none;background-color:$orange;color: $white; @include flt(); font-size: 14px;letter-spacing: normal;line-height: 1;text-transform: uppercase; @include outT();
+                width: 120px;float: left;text-align: center;text-decoration: none;padding:18px 1rem; border: none;outline: none;cursor: pointer;text-decoration: none;background-color:$orange;color: $white; @include flt(); font-size: 14px;letter-spacing: normal;line-height: 1;text-transform: uppercase; @include outT();
                 &:hover { @include inT(); color:$black;background: $orange; }
             }
         }
@@ -155,8 +156,8 @@
         section {
            padding: 2rem 1rem;
             .searchcontainer { 
-                .searchHeadInput {width: calc(100% - 90px); padding:1rem 0.5rem; }
-                .searchHeadButton { width: 90px;padding:1.1rem 0.5rem;  }
+                .searchHeadInput {width: calc(100% - 90px); padding:16px 0.5rem; }
+                .searchHeadButton { width: 90px;padding:18px 0.5rem;  }
             }
         }
     }

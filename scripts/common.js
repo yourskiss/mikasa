@@ -48,6 +48,23 @@ function isLetter(e)
 
 
 
+/* header fixed on scroll === start */
+$(document).scroll(function() 
+{
+    var heightlocation = $(this).scrollTop();
+        if (heightlocation > 120) 
+        {
+          $('#pageheader').addClass("headerfixed");
+        } 
+        else 
+        {
+            $('#pageheader').removeClass("headerfixed");
+        }
+});
+/* header fixed on scroll === end */
+
+
+
 /* show/hide menu === start */
 $("#menubar").click(function()
 {

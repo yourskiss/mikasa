@@ -64,10 +64,11 @@
  
     .homebanneritem { 
         position: relative; width: 100%;  float: left; 
-        .homebanner_desktop { display: block; width: 100%;   float: left;  margin: 0; padding: 0;  }
-        .homebanner_mobile { display: none; width: 100%;  float: left;  margin: 0; padding: 0;  }
+        &:after { content: ''; z-index: 2; position: absolute; left: 0; top: 0; height: 100%; width: 45%; background: url('../images/banner-design-web.png') no-repeat top left; background-size: 100% 100%; }
+        .homebanner_desktop { z-index: 1; position: relative;  display: block; width: 100%;   float: left;  margin: 0; padding: 0;  }
+        .homebanner_mobile { z-index: 1; position: relative;  display: none; width: 100%;  float: left;  margin: 0; padding: 0;  }
         .homebannercontainer { 
-            position: absolute; z-index: 2; top:25%; left: 10%; width: 1000px; height: auto !important; @include fBC();
+            position: absolute; z-index: 3; top:25%; left: 10%; width: 1000px; height: auto !important; @include fBC();
             .homebannerleft {
                 width: 60%;  float: left;
                 h4{width: 100%;  float: left; text-align: left; @include fbold(); color:$orange;  font-size: 40px; line-height: 48px;  letter-spacing: normal;  text-transform: uppercase; }
@@ -177,6 +178,7 @@
     .homebanner { 
         
         .homebanneritem { 
+            &:after {  width: 60%; background: url('../images/banner-design-mob.png') no-repeat top left; background-size: 100% 100%; }
             .homebanner_desktop { display: none; }
             .homebanner_mobile { display:block; }
             .homebannercontainer { 

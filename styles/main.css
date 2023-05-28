@@ -4610,8 +4610,8 @@ template {
 
 .searchpopup {
   display: none;
-  z-index: 4;
-  position: absolute;
+  z-index: 5;
+  position: fixed;
   right: 0;
   top: 0;
   width: 100%;

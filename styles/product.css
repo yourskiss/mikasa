@@ -62,20 +62,13 @@
     transform: scale(1);
   }
 }
-/*
-.fadeInUpBanner { animation-name: fadeInUpBanner; }
-.fadeInDownBanner { animation-name: fadeInDownBanner; }
-.fadeInLeftBanner { animation-name: fadeInLeftBanner; }
-.zoomInBanner {  animation-name: zoomInBanner; }
-.zoomOutBanner { animation-name: zoomOutBanner; }
-*/
-.homebanner {
+.product_banner {
   background-color: #ffffff;
   width: 100%;
   float: left;
   position: relative;
 }
-.homebanner .homebannercounter {
+.product_banner .product_banner_counter {
   z-index: 3;
   position: absolute;
   opacity: 1;
@@ -90,7 +83,7 @@
   border: 0;
   background: #ffffff;
 }
-.homebanner .homebannercounter span {
+.product_banner .product_banner_counter span {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -108,26 +101,26 @@
   letter-spacing: normal;
   text-align: center;
 }
-.homebanner .homebannercounter span:first-child {
+.product_banner .product_banner_counter span:first-child {
   left: -30px;
 }
-.homebanner .homebannercounter span:last-child {
+.product_banner .product_banner_counter span:last-child {
   right: -30px;
 }
-.homebanner .homebannerslider.slick-slider {
+.product_banner .product_banner_slider.slick-slider {
   width: 100%;
   float: right;
   overflow: hidden;
   margin: 0 !important;
   padding: 0 !important;
 }
-.homebanner .homebannerslider.slick-slider .slick-list {
+.product_banner .product_banner_slider.slick-slider .slick-list {
   z-index: 2;
   margin: 0;
   padding: 0;
   overflow: hidden;
 }
-.homebanner .homebannerslider.slick-slider .slick-track {
+.product_banner .product_banner_slider.slick-slider .slick-track {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -135,17 +128,17 @@
   margin: 0;
   padding: 0;
 }
-.homebanner .homebannerslider.slick-slider .slick-slide {
+.product_banner .product_banner_slider.slick-slider .slick-slide {
   margin: 0;
   padding: 0;
 }
-.homebanner .homebannerslider.slick-slider .slick-slide div {
+.product_banner .product_banner_slider.slick-slider .slick-slide div {
   width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
 }
-.homebanner .homebannerslider.slick-slider .slick-arrow {
+.product_banner .product_banner_slider.slick-slider .slick-arrow {
   z-index: 3;
   opacity: 1;
   top: auto;
@@ -167,25 +160,25 @@
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
-.homebanner .homebannerslider.slick-slider .slick-arrow:hover {
+.product_banner .product_banner_slider.slick-slider .slick-arrow:hover {
   background-color: #E94E20;
   color: #ffffff;
   transition: all 0.4s ease-in;
 }
-.homebanner .homebannerslider.slick-slider .slick-arrow.slick-disabled {
+.product_banner .product_banner_slider.slick-slider .slick-arrow.slick-disabled {
   opacity: 0.4;
   user-select: none;
   pointer-events: none;
 }
-.homebanner .homebannerslider.slick-slider .slick-next {
+.product_banner .product_banner_slider.slick-slider .slick-next {
   left: auto;
   right: 20px;
 }
-.homebanner .homebannerslider.slick-slider .slick-prev {
+.product_banner .product_banner_slider.slick-slider .slick-prev {
   left: auto;
   right: 80px;
 }
-.homebanner .homebannerslider.slick-slider .slick-arrow:before {
+.product_banner .product_banner_slider.slick-slider .slick-arrow:before {
   color: #000000;
   text-align: center;
   font-size: 36px;
@@ -193,36 +186,36 @@
   font-family: "fontawesome";
   transition: all 0.4s ease-out;
 }
-.homebanner .homebannerslider.slick-slider .slick-arrow:hover:before {
+.product_banner .product_banner_slider.slick-slider .slick-arrow:hover:before {
   color: #ffffff;
   transition: all 0.4s ease-in;
 }
-.homebanner .homebannerslider.slick-slider .slick-next:before {
+.product_banner .product_banner_slider.slick-slider .slick-next:before {
   content: "\f107";
 }
-.homebanner .homebannerslider.slick-slider .slick-prev:before {
+.product_banner .product_banner_slider.slick-slider .slick-prev:before {
   content: "\f106";
 }
-.homebanner .homebanneritem {
+.product_banner .product_banner_item {
   position: relative;
   width: 100%;
   float: left;
 }
-.homebanner .homebanneritem .homebanner_desktop {
+.product_banner .product_banner_item .product_banner_desktop {
   display: block;
   width: 100%;
   float: left;
   margin: 0;
   padding: 0;
 }
-.homebanner .homebanneritem .homebanner_mobile {
+.product_banner .product_banner_item .product_banner_mobile {
   display: none;
   width: 100%;
   float: left;
   margin: 0;
   padding: 0;
 }
-.homebanner .homebanneritem .homebannercontainer {
+.product_banner .product_banner_item .product_banner_container {
   position: absolute;
   z-index: 2;
   top: 25%;
@@ -233,11 +226,11 @@
   justify-content: space-between;
   align-items: center;
 }
-.homebanner .homebanneritem .homebannercontainer .homebannerleft {
+.product_banner .product_banner_item .product_banner_container .product_banner_left {
   width: 60%;
   float: left;
 }
-.homebanner .homebanneritem .homebannercontainer .homebannerleft h4 {
+.product_banner .product_banner_item .product_banner_container .product_banner_left h4 {
   width: 100%;
   float: left;
   text-align: left;
@@ -249,7 +242,7 @@
   letter-spacing: normal;
   text-transform: uppercase;
 }
-.homebanner .homebanneritem .homebannercontainer .homebannerleft p {
+.product_banner .product_banner_item .product_banner_container .product_banner_left p {
   width: 100%;
   float: left;
   text-align: left;
@@ -262,17 +255,17 @@
   letter-spacing: 4px;
   text-transform: uppercase;
 }
-.homebanner .homebanneritem .homebannercontainer .homebannerleft p b {
+.product_banner .product_banner_item .product_banner_container .product_banner_left p b {
   display: block;
   font-family: "futura-bold", Arial, sans-serif;
   font-weight: 700;
 }
-.homebanner .homebanneritem .homebannercontainer .homebannerleft aside {
+.product_banner .product_banner_item .product_banner_container .product_banner_left aside {
   width: 100%;
   float: right;
   margin-top: 2rem;
 }
-.homebanner .homebanneritem .homebannercontainer .homebannerleft aside .bs_knowmore {
+.product_banner .product_banner_item .product_banner_container .product_banner_left aside .bs_knowmore {
   padding: 0.8rem 3rem;
   width: auto;
   float: left;
@@ -291,151 +284,151 @@
   line-height: 21px;
   text-transform: uppercase;
 }
-.homebanner .homebanneritem .homebannercontainer .homebannerleft aside .bs_knowmore:hover {
+.product_banner .product_banner_item .product_banner_container .product_banner_left aside .bs_knowmore:hover {
   background-color: #000000;
   color: #ffffff;
   transition: all 0.4s ease-in;
 }
-.homebanner .homebanneritem .homebannercontainer .homebannerright {
+.product_banner .product_banner_item .product_banner_container .product_banner_right {
   width: 35%;
   float: left;
 }
-.homebanner .homebanneritem .homebannercontainer .homebannerright img {
+.product_banner .product_banner_item .product_banner_container .product_banner_right img {
   width: 100%;
   max-width: 250px;
 }
-.homebanner .slick-active .homebanneritem .homebanner_desktop {
+.product_banner .slick-active .product_banner_item .product_banner_desktop {
   animation-name: zoomInBanner;
   animation-duration: 8s;
 }
-.homebanner .slick-active .homebanneritem .homebanner_mobile {
+.product_banner .slick-active .product_banner_item .product_banner_mobile {
   animation-name: zoomInBanner;
   animation-duration: 8s;
 }
-.homebanner .slick-active .homebanneritem .homebannercontainer .homebannerleft h4 {
+.product_banner .slick-active .product_banner_item .product_banner_container .product_banner_left h4 {
   animation-name: fadeInDownBanner;
   animation-duration: 1.5s;
 }
-.homebanner .slick-active .homebanneritem .homebannercontainer .homebannerleft p {
+.product_banner .slick-active .product_banner_item .product_banner_container .product_banner_left p {
   animation-name: fadeInDownBanner;
   animation-duration: 1.5s;
 }
-.homebanner .slick-active .homebanneritem .homebannercontainer .homebannerleft aside {
+.product_banner .slick-active .product_banner_item .product_banner_container .product_banner_left aside {
   animation-name: fadeInUpBanner;
   animation-duration: 1.5s;
 }
-.homebanner .slick-active .homebanneritem .homebannercontainer .homebannerright img {
+.product_banner .slick-active .product_banner_item .product_banner_container .product_banner_right img {
   animation-name: fadeInLeftBanner;
   animation-duration: 1.5s;
 }
 
 @media only screen and (max-width: 1255px) {
-  .homebanner .homebanneritem .homebannercontainer {
+  .product_banner .product_banner_item .product_banner_container {
     top: 25%;
     left: 10%;
     width: 80%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left {
     width: 60%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerright {
+  .product_banner .product_banner_item .product_banner_container .product_banner_right {
     width: 40%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerright img {
+  .product_banner .product_banner_item .product_banner_container .product_banner_right img {
     max-width: 180px;
   }
 }
 @media only screen and (max-width: 1023px) {
-  .homebanner .homebannercounter {
+  .product_banner .product_banner_counter {
     display: none;
   }
-  .homebanner .homebanneritem .homebannercontainer {
+  .product_banner .product_banner_item .product_banner_container {
     top: 20%;
     left: 10%;
     width: 80%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left {
     width: 60%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft h4 {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left h4 {
     font-size: 28px;
     line-height: 32px;
     letter-spacing: normal;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft p {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left p {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 2px;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft aside {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left aside {
     margin-top: 1rem;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft aside .bs_knowmore {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left aside .bs_knowmore {
     padding: 0.6rem 1.5rem;
     font-size: 12px;
     letter-spacing: 1px;
     line-height: 18px;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerright {
+  .product_banner .product_banner_item .product_banner_container .product_banner_right {
     width: 40%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerright img {
+  .product_banner .product_banner_item .product_banner_container .product_banner_right img {
     max-width: 130px;
   }
-  .homebanner .homebannerslider.slick-slider .slick-arrow {
+  .product_banner .product_banner_slider.slick-slider .slick-arrow {
     bottom: 0;
     width: 42px;
     height: 42px;
     background: #ffffff;
   }
-  .homebanner .homebannerslider.slick-slider .slick-next {
+  .product_banner .product_banner_slider.slick-slider .slick-next {
     right: 1rem;
   }
-  .homebanner .homebannerslider.slick-slider .slick-prev {
+  .product_banner .product_banner_slider.slick-slider .slick-prev {
     right: 4rem;
   }
-  .homebanner .homebannerslider.slick-slider .slick-arrow:before {
+  .product_banner .product_banner_slider.slick-slider .slick-arrow:before {
     font-size: 24px;
   }
 }
 @media only screen and (max-width: 599px) {
-  .homebanner .homebanneritem .homebannercontainer {
+  .product_banner .product_banner_item .product_banner_container {
     top: 10%;
     left: 5%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left {
     width: 70%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerright {
+  .product_banner .product_banner_item .product_banner_container .product_banner_right {
     width: 30%;
   }
 }
 @media only screen and (max-width: 479px) {
-  .homebanner .homebanneritem .homebanner_desktop {
+  .product_banner .product_banner_item .product_banner_desktop {
     display: none;
   }
-  .homebanner .homebanneritem .homebanner_mobile {
+  .product_banner .product_banner_item .product_banner_mobile {
     display: block;
   }
-  .homebanner .homebanneritem .homebannercontainer {
+  .product_banner .product_banner_item .product_banner_container {
     top: 10%;
     left: 5%;
     width: 90%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left {
     width: 100%;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft h4 {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left h4 {
     font-size: 40px;
     line-height: 48px;
     letter-spacing: normal;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerleft p {
+  .product_banner .product_banner_item .product_banner_container .product_banner_left p {
     font-size: 24px;
     line-height: 34px;
     letter-spacing: 4px;
   }
-  .homebanner .homebanneritem .homebannercontainer .homebannerright {
+  .product_banner .product_banner_item .product_banner_container .product_banner_right {
     display: none;
     width: 100%;
   }
@@ -674,6 +667,9 @@
   60% {
     transform: scale(1.1);
   }
+  90% {
+    transform: scale(1);
+  }
   100% {
     transform: scale(1);
   }
@@ -755,12 +751,10 @@
   text-transform: uppercase;
 }
 .productsliderwrap .pro_slider .slick-slide.slick-active .pro_short_desktop {
-  animation-name: zoomInPro;
-  animation-duration: 8s;
+  animation: zoomInPro 10s infinite;
 }
 .productsliderwrap .pro_slider .slick-slide.slick-active .pro_short_mobile {
-  animation-name: zoomInPro;
-  animation-duration: 8s;
+  animation: zoomInPro 7s infinite;
 }
 .productsliderwrap .pro_slider .slick-slide.slick-active h2 {
   animation-name: fadeInDownPro;

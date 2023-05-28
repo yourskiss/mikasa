@@ -368,8 +368,10 @@ $(function($)
             initialSlide:0
         }).on("afterChange", function(event, slick, currentSlide){
             $("#homebannercurrentslide").html(minTwoDigits(currentSlide+1));
-            $("#homebannertotalslide").html(minTwoDigits(slick.slideCount));
         });
+        var totalcount= $('.homebannerslider').slick('getSlick').slideCount;
+        $("#homebannertotalslide").html(minTwoDigits(totalcount));
+        $("#homebannercurrentslide").html(minTwoDigits(1));
     }   
     // home banner slider   === end  
     
@@ -462,9 +464,11 @@ $(function($)
             centerPadding: '0',
             initialSlide:0
         }).on("afterChange", function(event, slick, currentSlide){
-            $("#homebannercurrentslide").html(minTwoDigits(currentSlide+1));
-            $("#homebannertotalslide").html(minTwoDigits(slick.slideCount));
+            $("#productcurrentslide").html(minTwoDigits(currentSlide+1));
         });
+        var totalcount= $('.product_banner_slider').slick('getSlick').slideCount;
+        $("#producttotalslide").html(minTwoDigits(totalcount));
+        $("#productcurrentslide").html(minTwoDigits(1));
     }   
     // product banner slider   === end 
     

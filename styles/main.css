@@ -4966,6 +4966,7 @@ template {
 }
 .footer .warrper .footerLeft aside img {
   max-width: 100%;
+  margin: 0;
 }
 .footer .warrper .footerLeft h2 {
   float: left;
@@ -4996,7 +4997,7 @@ template {
 .footer .warrper .footerLeft p img {
   display: inline-block;
   max-width: 20px;
-  margin-right: 0.3rem;
+  margin: 0 0.3rem 0 0;
 }
 .footer .warrper .footerLeft p a {
   color: #000000;

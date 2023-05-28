@@ -445,6 +445,30 @@ $(function($)
 
 
     
+    // product banner slider   === start
+    if($(".product_banner_slider").length > 0)
+    {
+        $('.product_banner_slider').slick({
+            slidesToShow:1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            infinite: true,
+            adaptiveHeight: false,
+            centerMode: false,
+            centerPadding: '0',
+            initialSlide:0
+        }).on("afterChange", function(event, slick, currentSlide){
+            $("#homebannercurrentslide").html(minTwoDigits(currentSlide+1));
+            $("#homebannertotalslide").html(minTwoDigits(slick.slideCount));
+        });
+    }   
+    // product banner slider   === end 
+    
+    
     // product info slider   === start
     if($(".productinfoslider").length > 0)
     {

@@ -4926,8 +4926,8 @@ template {
 }
 @media only screen and (max-width: 479px) {
   .searchpopup .searchHeadclose {
-    right: 1rem;
-    top: 1rem;
+    right: 1.5rem;
+    top: 1.5rem;
     width: 36px;
     height: 36px;
     font-size: 20px;

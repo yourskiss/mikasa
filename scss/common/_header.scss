@@ -53,7 +53,7 @@
     display: none;z-index: 5;position: fixed;right: 0;top: 0;width: 100%; height:100%; background: $blue; background-color: rgba(36, 52, 75, 0.95);
     article {display: none;z-index: 1;position: fixed;left: 0;top:0; width: 100%; height:100%; background: $blue; background-color: rgba(36, 52, 75, 0.95); }
     .searchHeadclose {
-        position: absolute;right:1rem;top: 1rem; background: $white; width:40px; height: 40px; border-radius: 50%; float: left; @include fCC(); padding:0; text-decoration: none; font-size: 24px; color:$orange; line-height: 1; @include outT(); cursor: pointer; text-decoration: none;
+        position: absolute;right:2.5rem;top:2.5rem; background: $white; width:40px; height: 40px; border-radius: 50%; float: left; @include fCC(); padding:0; text-decoration: none; font-size: 24px; color:$orange; line-height: 1; @include outT(); cursor: pointer; text-decoration: none;
         &:hover {  background: $orange; color:$white; @include inT();  }
     }
     section {
@@ -148,11 +148,11 @@
  
  
 
-
+ 
 @media only screen and (max-width:479px) 
 {
     .searchpopup {
-        .searchHeadclose {width:32px; height: 32px;   font-size: 20px;   }
+        .searchHeadclose { right:1rem;top:1rem;  width:36px; height:36px;   font-size: 20px;   }
         section {
            padding: 2rem 1rem;
             .searchcontainer { 

@@ -4632,8 +4632,8 @@ template {
 }
 .searchpopup .searchHeadclose {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 2.5rem;
+  top: 2.5rem;
   background: #ffffff;
   width: 40px;
   height: 40px;
@@ -4926,8 +4926,10 @@ template {
 }
 @media only screen and (max-width: 479px) {
   .searchpopup .searchHeadclose {
-    width: 32px;
-    height: 32px;
+    right: 1rem;
+    top: 1rem;
+    width: 36px;
+    height: 36px;
     font-size: 20px;
   }
   .searchpopup section {

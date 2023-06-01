@@ -63,28 +63,28 @@
             </div>
             <div class="headerRight" id="menucontainer">
                 <ul> 
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="homepage.html">HOME</a></li>
                     <li>
-                        <a href="#">ABOUT US <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <a href="javascript:void(0);">ABOUT US <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                         <div class="dropdownmenu">
-                            <a href="#">Company Overview</a>
-                            <a href="#">Manufacturing</a>
-                            <a href="#">Sustainability</a>
+                            <a href="about-us.html">Company Overview</a>
+                            <a href="manufacturing.html">Manufacturing</a>
+                            <a href="sustainability.html">Sustainability</a>
                         </div>
                     </li>
                     <li>
-                        <a href="#">PRODUCTS <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                        <a href="javascript:void(0);">PRODUCTS <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                         <div class="dropdownmenu">
-                            <a href="#">SAPPHIRE</a>
-                            <a href="#">MARINE BLUE</a>
-                            <a href="#">MARINE</a>
-                            <a href="#">FIRE GUARDIAN</a>
-                            <a href="#">MR+</a>
+                            <a href="product-sapphire.html">SAPPHIRE</a>
+                            <a href="product-marine-blue.html">MARINE BLUE</a>
+                            <a href="product-marine.html">MARINE</a>
+                            <a href="product-fire-guardian.html">FIRE GUARDIAN</a>
+                            <a href="product-mr-plus.html">MR+</a>
                         </div>
                     </li>
-                    <li><a href="#">RESOURCES </a></li>
-                    <li><a href="#">DOWNLOADS</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="resources.html">RESOURCES </a></li>
+                    <li><a href="downloads.html">DOWNLOADS</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
                     <li class="search_li"><span class="searchBtn"  onclick="showHideSearchBar('show');"><i class="fa fa-search" aria-hidden="true"></i></span></li>
                     <li class="enquirenow_li"><span class="enquirenowBtn" onclick="showHideEnquireNow('show');">ENQUIRE NOW</span></li>
                 </ul> 
@@ -101,17 +101,17 @@
         <aside class="searchHeadclose" onclick="showHideSearchBar('hide');"><i class="fa fa-times" aria-hidden="true"></i></aside>
         <section>
             <div class="searchcontainer">
-                <input class="searchHeadInput" type="text" name="searchInput" id="searchInput" placeholder="Enter keyword">
+                <input class="searchHeadInput" type="text" name="searchInput" id="searchInput" placeholder="Enter keyword" />
                 <input class="searchHeadButton" type="submit" name="searchButton" id="searchButton" value="Search" onclick="searchvalidation();" />
             </div>
-            <div class="searchErrorMessage" id="searchError">Error message</div>
+            <div class="searchErrorMessage"  id="searchError">Error message</div>
             <ul class="searchsuggestions">
                 <li>Most Popular:</li>
-                <li><a href="#">Sapphire</a></li>
-                <li><a href="#">Marine Blue</a></li>
-                <li><a href="#">Marine</a></li>
-                <li><a href="#">Fire Guardian</a></li>
-                <li><a href="#">MR+</a></li>
+                <li><a href="product-sapphire.html">SAPPHIRE</a></li>
+                <li><a href="product-marine-blue.html">MARINE BLUE</a></li>
+                <li><a href="product-marine.html">MARINE</a></li>
+                <li><a href="product-fire-guardian.html">FIRE GUARDIAN</a></li>
+                <li><a href="product-mr-plus.html">MR+</a></li>
             </ul>
         </section>
     </div>
@@ -463,11 +463,12 @@
     <!-- productspecification  start -->
     
 
+ 
 
     <!-- getintouch  start -->
     <section class="getintouchwrap"> 
         <div class="warrper">
-            <div class="getintouchInfo" data-aos="fade-right">
+            <div class="getintouchInfo"   data-aos="fade-right">
                 <h2>GET IN<span>TOUCH</span></h2>
                 <h3>Whether you have a question or need support, our experts are just a click away.</h3>
                 <p>
@@ -479,7 +480,7 @@
                 </p>
             </div>
             
-            <div class="getintouchForm" data-aos="fade-left">
+            <div class="getintouchForm"  data-aos="fade-left">
                 <div class="getintouchField">
                     <input class="getintouchInput" type="text" name="name" id="fullname" placeholder="NAME" maxlength="50" onkeypress="return isLetter(event)" />
                     <span class="getintouchError" id="name_error">Name</span>
@@ -497,13 +498,12 @@
                 
                 <div class="getintouchField">
                     <select  class="getintouchSelect"  name="typeofquery" id="typeofquery">
-                        <option value="0" selected="" disabled="">TYPE OF QUERY</option>
-                        <option>Billing/Finance</option>
-                        <option>Complaint</option>
-                        <option>Emergency</option>
-                        <option>General Enquiry</option>
-                        <option>New Connection</option>
-                        <option>Technical</option>
+                            <option value="0" selected disabled>TYPE OF QUERY</option>
+                            <option value="Catalogue or Sample">Catalogue or Sample</option>
+                            <option value="Dealership Query">Dealership Query</option>
+                            <option value="Price Enquiry">Price Enquiry</option>
+                            <option value="Product Enquiry">Product Enquiry</option>
+                            <option value="Vendor Enquiry">Vendor Enquiry</option>
                     </select>
                     <span class="getintouchError" id="typeofquery_error">Type of Query</span>
                 </div>
@@ -530,7 +530,7 @@
                  <aside>
                     <img src="images/footer.png" alt="logo" />
                  </aside>
-                 <h2>If you have any queries,<br>get in touch with us</h2>
+                 <h2>You have queries,<br>get in touch with us</h2>
                  <p>
                     <img src="images/icon_email.png" alt="email" />
                     <a href="mailto:info@greenlam.com">info@greenlam.com</a>
@@ -544,26 +544,25 @@
                 <div class="footbox">
                     <h2>About Us</h2>
                     <ul>      
-                        <li><a href="#">Company Overview</a></li>
-                        <li><a href="#">Manufacturing</a></li>
-                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="about-us.html">Company Overview</a></li>
+                        <li><a href="manufacturing.html">Manufacturing</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
                     </ul>
                 </div>
                 <div class="footbox">
                     <h2>Products</h2>
                     <ul>          
-                        <li><a href="#">Sapphire</a></li>
-                        <li><a href="#">Marine Blue</a></li>
-                        <li><a href="#">Marine</a></li>
-                        <li><a href="#">Fire Guardian</a></li>
-                        <li><a href="#">MR+</a></li>
+                        <li><a href="product-sapphire.html">Sapphire</a></li>
+                        <li><a href="product-marine-blue.html">Marine Blue</a></li>
+                        <li><a href="product-marine.html">Marine</a></li>
+                        <li><a href="product-fire-guardian.html">Fire Guardian</a></li>
+                        <li><a href="product-mr-plus.html">MR+</a></li>
                     </ul>
                 </div>
                 <div class="footbox">
                     <h2>Resources</h2>
                     <ul>      
                         <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Press Releases</a></li>
                         <li><a href="#">Videos</a></li>
                     </ul>
                 </div>
@@ -572,9 +571,9 @@
                 <aside><img src="images/greenlam.png" alt="greenlam" /></aside>
                 <h2>Let’s Connect</h2>
                 <ul>      
-                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 </ul>
            </div>
@@ -588,11 +587,11 @@
     <section class="copyrights"> 
         <div class="warrper">
             <ul>      
-                <li><a href="#">Terms & Condition</a></li>
+                <li><a href="terms-and-condition.html">Terms & Condition</a></li>
                 <li> | </li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="terms-and-condition.html">Privacy Policy</a></li>
             </ul>
-            <p>Copyright 2023. Greenlam Industries limited. All rights Revered.</p>
+            <p>Copyright 2023. Greenlam Industries Limited. All rights Revered.</p>
         </div>
     </section>
     <!-- copyrights end -->
@@ -607,6 +606,8 @@
     <div><i class="fa fa-spinner fa-spin"></i></div>
 </div>
 <!-- loader === end -->
+
+
 
 
 
@@ -631,6 +632,9 @@
     </section>
 </div>
 <!-- error case ===== end -->
+
+
+
 
 
     <!-- getintouch  start -->
@@ -670,13 +674,12 @@
                 
                 <div class="enquirenowField">
                     <select  class="enquirenowSelect"  name="typeofquery" id="enq_typeofquery">
-                        <option value="0" selected="" disabled="">TYPE OF QUERY</option>
-                        <option>Billing/Finance</option>
-                        <option>Complaint</option>
-                        <option>Emergency</option>
-                        <option>General Enquiry</option>
-                        <option>New Connection</option>
-                        <option>Technical</option>
+                        <option value="0" selected disabled>TYPE OF QUERY</option>
+                        <option value="Catalogue or Sample">Catalogue or Sample</option>
+                        <option value="Dealership Query">Dealership Query</option>
+                        <option value="Price Enquiry">Price Enquiry</option>
+                        <option value="Product Enquiry">Product Enquiry</option>
+                        <option value="Vendor Enquiry">Vendor Enquiry</option>
                     </select>
                     <span class="enquirenowError" id="enq_typeofquery_error">Type of Query</span>
                 </div>
@@ -693,12 +696,6 @@
         </section>
     </div>
     <!-- getintouch end -->
-    
-  
-
- 
-
-
 
 <script src="scripts/jquery-min.js"></script>
 <script src="scripts/slick.min.js"></script>

@@ -1,0 +1,51 @@
+
+.main_banner { 
+    background-color: $white; width: 100%;  float: left;
+    .warrper {
+         position: relative;
+         &:after { content: ''; z-index: 2; position: absolute; left: 0; top: 0; height: 100%; width: 35%; background: url('../images/banner-design-web.png') no-repeat top left; background-size: 100% 100%; }
+         .main_banner_desktop { z-index: 1; position: relative;  display: block; width: 100%;   float: left;  margin: 0; padding: 0;  }
+        .main_banner_mobile { z-index: 1; position: relative; display: none; width: 100%;  float: left;  margin: 0; padding: 0;  }
+     }
+        
+        
+        .main_banner_container { 
+            position: absolute; z-index: 3; top:50%; left: 10%; transform: translateY(-50%); width: 80%; height: auto !important; @include fBC();
+                h2{width: 100%;  float: left; text-align: left; @include fbold(); color:$orange;  font-size: 40px; line-height: 1;  letter-spacing: normal;  text-transform: uppercase; }
+                p{width: 100%;  float: left; text-align: left; @include fmedium(); font-weight: normal; color:$white;  font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: uppercase;}
+        }
+    
+}
+
+ 
+@media only screen and (max-width:1023px) 
+{
+
+    .main_banner { 
+        .warrper { max-width: 100%; }
+            .main_banner_container { 
+                    h2{font-size: 28px; }
+                    p{font-size: 20px;  }
+            }
+        
+    }
+
+ 
+}
+ 
+
+
+@media only screen and (max-width:479px) 
+{
+    .main_banner { 
+        .warrper {
+            &:after {  width: 40%; background: url('../images/banner-design-mob.png') no-repeat top left; background-size: 100% 100%; }
+            .main_banner_desktop {  display:none; }
+            .main_banner_mobile { display:block; }
+        }
+        .main_banner_container { 
+            h2{font-size: 30px;  }
+            p{font-size: 16px;  }
+        }
+    }
+}

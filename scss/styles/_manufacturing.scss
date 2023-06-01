@@ -1,0 +1,36 @@
+ 
+.manufacturevideo {
+    width: 100%; float: left;   position: relative; 
+    .manufacturevideo_desktop { display: block; width: 100%;   float: left;  margin: 0; padding: 0;  }
+    .manufacturevideo_mobile { display: none; width: 100%;  float: left;  margin: 0; padding: 0;  }
+    .manufacturevideoPlay { z-index: 2; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) !important; width: 120px; cursor: pointer; }
+}
+
+
+
+@media only screen and (max-width:1023px) 
+{
+
+ 
+
+    
+    .manufacturevideo {
+        .manufacturevideoPlay { width:90px;  }
+    }
+}
+
+@media only screen and (max-width:479px) 
+{
+
+ 
+
+
+    .manufacturevideo {
+        .manufacturevideo_desktop { display:none; }
+        .manufacturevideo_mobile { display:block; }
+        .manufacturevideoPlay { width: 75px; }
+    }
+ 
+}
+ 
+ 

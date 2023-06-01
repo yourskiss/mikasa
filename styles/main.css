@@ -4976,7 +4976,7 @@ template {
   margin: 1rem 0;
   padding-right: 25%;
   text-align: left;
-  color: #000000;
+  color: #565659;
   font-family: "futura-medium", Arial, sans-serif;
   font-weight: 600;
   font-size: 13px;
@@ -5896,6 +5896,90 @@ template {
   transition: all 0.4s ease-in;
 }
 
+.videopopup {
+  display: none;
+  z-index: 5;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.8);
+}
+.videopopup section {
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  max-width: 740px;
+  max-height: 416px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #ffffff url("../images/loading.gif") no-repeat center center;
+}
+.videopopup aside {
+  z-index: 3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  background-color: #E94E20;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.videopopup aside:hover {
+  background-color: #152c55;
+  color: #ffffff;
+  transition: all 0.4s ease-in;
+}
+.videopopup iframe {
+  z-index: 2;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@media only screen and (max-width: 676px) {
+  .videopopup section {
+    max-width: 450px;
+    max-height: 253px;
+  }
+  .videopopup aside {
+    height: 32px;
+    width: 32px;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .videopopup section {
+    max-width: 320px;
+    max-height: 180px;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .videopopup section {
+    max-width: 290px;
+    max-height: 165px;
+  }
+}
 html, body {
   margin: 0;
   padding: 0;

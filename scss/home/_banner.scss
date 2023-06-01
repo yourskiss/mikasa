@@ -26,13 +26,6 @@
     60% {  transform: scale(1.1); }
     100% {  transform: scale(1); }
 }
-/*
-.fadeInUpBanner { animation-name: fadeInUpBanner; }
-.fadeInDownBanner { animation-name: fadeInDownBanner; }
-.fadeInLeftBanner { animation-name: fadeInLeftBanner; }
-.zoomInBanner {  animation-name: zoomInBanner; }
-.zoomOutBanner { animation-name: zoomOutBanner; }
-*/
 .homebanner { 
     background-color: $white; width: 100%;  float: left;  position: relative;
     
@@ -68,7 +61,7 @@
         .homebanner_desktop { z-index: 1; position: relative;  display: block; width: 100%;   float: left;  margin: 0; padding: 0;  }
         .homebanner_mobile { z-index: 1; position: relative;  display: none; width: 100%;  float: left;  margin: 0; padding: 0;  }
         .homebannercontainer { 
-            position: absolute; z-index: 3; top:25%; left: 10%; width: 1000px; height: auto !important; @include fBC();
+            position: absolute; z-index: 3; top:30%; left: 10%; width: 1000px; height: auto !important; @include fBC();
             .homebannerleft {
                 width: 60%;  float: left;
                 h4{width: 100%;  float: left; text-align: left; @include fbold(); color:$orange;  font-size: 40px; line-height: 48px;  letter-spacing: normal;  text-transform: uppercase; }

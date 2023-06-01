@@ -64,6 +64,7 @@ $(document).scroll(function()
 /* header fixed on scroll === end */
 
 
+ 
 
 /* show/hide menu === start */
 $("#menubar").click(function()
@@ -286,15 +287,17 @@ function watchVideoPlay(val, src)
     {
         $("#manufacturevideoIframe").attr('src',setSrc);
         $("#manufacturevideoWrap").fadeIn(500);
+        $('body').css('overflow','hidden');  
     }
     else if(val == 'hide')
     {
         $("#manufacturevideoIframe").attr('src', src);
         $("#manufacturevideoWrap").fadeOut(500);
+        $('body').css('overflow','auto');  
     }
     else 
     {
-        // nothing
+        alert('error');
     }
 }
 // watchVideoPlay === end

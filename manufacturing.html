@@ -155,11 +155,6 @@
                    <img src="images/manufacturing/state-of-art-mob.jpg" alt="" class="stateofartmob">
                </div>
                 <img src="images/watch-logo.png" alt="" onclick="watchVideoPlay('show','qM-a-jivEEU')" id="manu-play"  data-aos="zoom-in" /> 
-
-                <div class="manufacturingvideo" id="manufacturevideoWrap">
-                    <aside class="manufacturingvideoClose" onclick="watchVideoPlay('hide','')"><i class="fa fa-times" aria-hidden="true"></i></aside>
-                    <iframe  id="manufacturevideoIframe" class="manufacturingvideoiframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-                </div>
             </div>
         </container>
 
@@ -399,6 +394,14 @@
     <!-- getintouch end -->
 
 
+    <!-- video popup start -->
+    <div class="videopopup" id="manufacturevideoWrap">
+        <section>
+            <aside onclick="watchVideoPlay('hide','')"><i class="fa fa-times" aria-hidden="true"></i></aside>
+            <iframe id="manufacturevideoIframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </section>
+    </div>
+    <!-- video popup end -->
 
 
     <script src="scripts/jquery-min.js"></script>

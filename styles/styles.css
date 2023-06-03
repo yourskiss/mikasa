@@ -344,6 +344,8 @@
   padding: 2rem;
   margin-bottom: 2rem;
   border: solid 1px #F0F0F0;
+  text-decoration: none;
+  transition: all 0.4s ease-out;
 }
 .downloadwrap .downloadcontainer:last-child {
   margin-bottom: 0;
@@ -357,25 +359,13 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 1.3;
-}
-.downloadwrap .downloadcontainer a {
-  width: 30px;
-  float: right;
-  text-align: center;
-  text-decoration: none;
   transition: all 0.4s ease-out;
 }
-.downloadwrap .downloadcontainer a img {
+.downloadwrap .downloadcontainer img {
   max-width: 20px;
+  float: right;
   filter: none;
   transition: all 0.4s ease-out;
-}
-.downloadwrap .downloadcontainer a:hover {
-  transition: all 0.4s ease-in;
-}
-.downloadwrap .downloadcontainer a:hover img {
-  filter: invert(100%) saturate(10000%);
-  transition: all 0.4s ease-in;
 }
 .downloadwrap .downloadcontainer p {
   width: calc(100% - 60px);
@@ -387,6 +377,56 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1.3;
+  transition: all 0.4s ease-out;
+}
+.downloadwrap .downloadcontainer:hover {
+  text-decoration: none;
+  transition: all 0.4s ease-in;
+}
+.downloadwrap .downloadcontainer:hover span {
+  color: #000000;
+  transition: all 0.4s ease-in;
+}
+.downloadwrap .downloadcontainer:hover img {
+  filter: invert(100%) saturate(10000%);
+  transition: all 0.4s ease-in;
+}
+.downloadwrap .downloadcontainer:hover p {
+  color: #000000;
+  transition: all 0.4s ease-in;
+}
+
+.viewbuttoncontener {
+  width: 100%;
+  float: left;
+  padding: 0 5% 2rem 5%;
+  background: #ffffff;
+  text-align: center;
+}
+.viewbuttoncontener a {
+  padding: 0.8rem 1.5rem;
+  width: auto;
+  float: none;
+  margin: 0 auto;
+  display: inline-block;
+  background-color: #E94E20;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.4s ease-out;
+}
+.viewbuttoncontener a:hover {
+  background-color: #152c55;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.4s ease-in;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -401,15 +441,16 @@
     width: 20px;
     font-size: 18px;
   }
-  .downloadwrap .downloadcontainer a {
-    width: 20px;
-  }
-  .downloadwrap .downloadcontainer a img {
+  .downloadwrap .downloadcontainer img {
     max-width: 16px;
   }
   .downloadwrap .downloadcontainer p {
     width: calc(100% - 40px);
     padding: 0 1rem;
+    font-size: 14px;
+  }
+  .viewbuttoncontener a {
+    padding: 0.7rem 1rem;
     font-size: 14px;
   }
 }
@@ -513,6 +554,81 @@
     width: 98%;
     padding: 1rem;
     margin: 0.5rem 1%;
+  }
+}
+.videoswrap {
+  width: 100%;
+  float: left;
+  padding: 0 0 3rem 0;
+  background: #ffffff;
+}
+.videoswrap .videoscontainer {
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.videoswrap .videoscontainer .videosbox {
+  width: 31.3%;
+  margin: 1rem 1%;
+}
+.videoswrap .videoscontainer .videosbox h3 {
+  width: 100%;
+  margin: 0 0 0.7rem 0;
+  float: left;
+  text-align: left;
+  color: #565659;
+  font-family: "futura-medium", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.videoswrap .videoscontainer .videosbox aside {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+.videoswrap .videoscontainer .videosbox aside img {
+  margin: 0;
+  width: 100%;
+  float: left;
+  border: 0;
+  display: block;
+}
+.videoswrap .videoscontainer .videosbox aside span {
+  transition: all 0.4s ease-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 39px;
+  height: 37px;
+  background: url("../images/video_white.png") no-repeat center center;
+  background-size: 100% 100%;
+  cursor: pointer;
+  filter: none;
+}
+.videoswrap .videoscontainer .videosbox aside span:hover {
+  filter: invert(100%) saturate(10000%);
+  transition: all 0.4s ease-in;
+}
+
+@media only screen and (max-width: 1023px) {
+  .videoswrap {
+    padding: 0 0 2rem 0;
+  }
+  .videoswrap .videoscontainer .videosbox {
+    width: 46%;
+    margin: 1rem 2%;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .videoswrap .videoscontainer .videosbox {
+    width: 100%;
+    margin: 0 0 2rem 0;
   }
 }
 .termandprivacywrap {

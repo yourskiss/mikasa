@@ -340,7 +340,27 @@ function showHideSuccessFailure(val, status)
 
 
 
- 
+
+
+// DecaEdge popup === start
+function showHideDecaEdge(val)
+{
+    if(val == 'hide')
+    {
+        $("#decaedgetechnology").fadeOut(300);
+        $("body").css("overflow","auto");
+    }
+    else if(val == 'show')
+    {
+        $("#decaedgetechnology").fadeIn(300);
+        $("body").css("overflow","hidden");
+    }
+    else 
+    {
+        alert('error');
+    }
+}
+// DecaEdge popup === end
 
 
 

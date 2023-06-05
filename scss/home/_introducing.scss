@@ -1,0 +1,51 @@
+ .homeintroducing { 
+     background:$white url('../images/home/introducing_bg.png') no-repeat center center; background-size: auto 100%; width: 100%;  float: left;  position: relative; padding: 5rem 0; border-bottom: solid 1px $gray;
+    .warrper { 
+        max-width: 60%;
+        h2{width: 100%; margin: 0 0 0.5rem 0; float: left; text-align: center; @include fmedium(); color:$black2; font-size: 40px; line-height: 44px;  letter-spacing: normal;  text-transform: uppercase; }
+        h3{
+            width: 100%;  float: left; text-align: center; @include fCC();
+            img { width: 80%; max-width: 350px; }
+            span { margin-left: 1rem; padding-left: 1.5rem; border-left: solid 2px $black2; text-align: left; color:$black2; font-size: 19px; line-height:1;  letter-spacing: -0.76px;  text-transform: uppercase;  @include fbold(); }
+        }
+        p { width: 100%;  float: left; margin: 3rem 0; text-align: center; @include flt();  color:$black; font-size: 16px; line-height: 27px; letter-spacing: 0.96px; }
+        aside {
+            width: 100%; float:right; text-align: center;
+            a { 
+                 display: inline-block; padding:0.8rem 3rem; width:auto; float: none; margin: 0 auto; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 25px; font-size: 13px; letter-spacing:1px; line-height: 21px; text-transform: uppercase;
+                &:hover { background-color: $black;  color:$white; @include inT();  } 
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:1023px) 
+{
+    .homeintroducing { 
+        padding:4rem 0; 
+       .warrper { 
+           max-width: 90%;
+           h2{ margin:0; font-size:24px; line-height: 28px;  }
+           h3{
+               img { width:220px; }
+               span { margin-left:0.7rem; padding-left: 1rem;  font-size: 14px; letter-spacing:-0.48px; }
+           }
+           p {  margin: 2rem 0;  }
+       }
+   }
+}
+
+@media only screen and (max-width:479px) 
+{
+    .homeintroducing { 
+        padding:3rem 0; 
+       .warrper { 
+           h3{
+               img { width:180px; }
+               span {  font-size: 12px;   }
+           }
+       }
+   }
+}

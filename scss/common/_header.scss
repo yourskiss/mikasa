@@ -1,0 +1,165 @@
+.header { 
+    position: fixed; left:50%; top: 0; transform: translateX(-50%); z-index: 4; @include fCC();  background-color: $white; width: 100%; max-width: 1600px;  float: left; padding: 1.5rem 0; 
+     &.headerfixed { position: fixed; left:50%; top: 0; transform: translateX(-50%);  max-width: 1600px; }
+    .warrper { 
+        @include fBC();  position: relative; max-width: 96%;
+        .logo {
+             width:220px; float: left; 
+             img { width: 100%; }
+        }
+        .headerRight { 
+            display: block;  width: auto; float:right; margin: 0.4rem 1rem 0 0; 
+                ul { 
+                    @include fCC(); width: auto; float: left; 
+                    li { 
+                        position: relative; list-style: none; margin: 0; display: inline-block;
+                        &.enquirenow_li { margin: 0; }
+                        &.search_li { margin:0 1rem; }
+                        a { 
+                           background: $orange;  float: left; width: auto; padding:1rem 1rem; @include outT(); text-align: center;  color:$black; @include tdn(); @include fmedium(); background: none; border: none;  font-size: 13px; letter-spacing: 1px; line-height: 16px;
+                            &:hover, &.active { color:$orange;  @include inT(); }
+                            i.fa-angle-down { margin-left: 0.3rem; font-weight: 400; line-height: 1; font-size: 120%; }
+                        }
+                        .enquirenowBtn { 
+                            position: relative; padding:0.6rem 1.5rem; width: 100%; float: right; background-color: $orange;  @include fbold(); font-weight: normal; color:$white;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:9px; letter-spacing:0.7px; line-height: 14px;
+                            &:hover { background-color: $blue; color:$white; @include inT();  } 
+                        }
+                        .searchBtn { 
+                            position: relative; padding:0; width:auto; float: right; background-color:transparent;  @include fbold(); font-weight: normal; color:$blue;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:24px; letter-spacing:normal; line-height: 1;
+                            &:hover { color:$orange; @include inT();  } 
+                        }
+                        .dropdownmenu { 
+                            display: none; background:$blue; padding:0 1rem 1rem 1rem;  z-index: 2; position:absolute; left: 0; top:100%; width:170px; float: left; 
+                            a { 
+                                position: relative; float: left; width: 100%; padding:0.8rem 0; margin: 0.2rem; background: $blue; @include outT(); text-align: left; color:$white; @include tdn(); @include fmedium(); font-weight: normal;  border-bottom:none;  font-size: 13px; letter-spacing:normal; line-height:1; text-transform: uppercase;
+                                &:after { position: absolute; bottom: 0;left: 0; content: ''; width: 30px; height: 2px; background: $orange; line-height: 1px; font-size: 1px; }
+                                &:hover, &.active { background: $blue; color:$orange;  @include inT(); }
+                            }
+                        }
+                        &:hover {
+                            a { background-color: $blue; color: $white; }
+                            .dropdownmenu { display: block;  }
+                        }
+                    }
+                }  
+        }
+        .headermenumobile { display: none; }
+
+
+    }
+}
+
+.searchpopup {
+    display: none;z-index: 5;position: fixed;right: 0;top: 0;width: 100%; height:100%; background: $blue; background-color: rgba(36, 52, 75, 0.95);
+    article {display: none;z-index: 1;position: fixed;left: 0;top:0; width: 100%; height:100%; background: $blue; background-color: rgba(36, 52, 75, 0.95); }
+    .searchHeadclose {
+        position: absolute;right:2.5rem;top:2.5rem; background: $white; width:40px; height: 40px; border-radius: 50%; float: left; @include fCC(); padding:0; text-decoration: none; font-size: 24px; color:$orange; line-height: 1; @include outT(); cursor: pointer; text-decoration: none;
+        &:hover {  background: $orange; color:$white; @include inT();  }
+    }
+    section {
+        z-index: 2; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 92%; max-width:600px; float: right; background-color:transparent; padding: 2rem;
+        .searchcontainer { 
+            width: 100%; float: right;@include fCC();
+            .searchHeadInput {width: calc(100% - 120px);float: left;padding:16px 1rem;background: $gray; outline: none;border: none;text-align: left; font-size: 14px;line-height: 1;color: $black; @include flt(); }
+            .searchHeadButton {
+                width: 120px;float: left;text-align: center;text-decoration: none;padding:18px 1rem; border: none;outline: none;cursor: pointer;text-decoration: none;background-color:$orange;color: $white; @include flt(); font-size: 14px;letter-spacing: normal;line-height: 1;text-transform: uppercase; @include outT();
+                &:hover { @include inT(); color:$black;background: $orange; }
+            }
+        }
+        .searchErrorMessage { display: none; width: 100%; float:left;  margin-top: 0.5rem;  font-size: 12px; line-height: 1; color: $red; @include flt(); }
+        .searchsuggestions { 
+            width: 100%; float:left;  margin-top: 1.5rem;  
+            li { 
+                list-style: none; display: inline-block; margin: 0 0.5rem 0.5rem 0; font-size: 14px; line-height: 1; color: $orange; @include fmedium();
+                a { 
+                    text-decoration: none;  color: $white; @include fbook();  @include outT();
+                    &:hover { color: $orange; @include inT(); }
+                }
+            }
+        }
+
+    }
+}
+ 
+@media only screen and (max-width:1255px) 
+{
+    .header { 
+        padding: 1rem 0;
+        .warrper { 
+            max-width: 92%;
+            .logo { width:183px;  }
+            .headermenumobile{
+                @include fBC(); float: right; width: auto;   position: relative; line-height: 1; margin: 0.2rem 0 0 1.5rem;
+                aside { 
+                    display: block; float: right; width: 30px; height: 25px; position: relative; line-height: 1; margin: 4px 0 0 1rem; cursor: pointer;
+                    span {
+                       position: absolute;  float: left; width:100%; height: 4px; background-color: $gray6; line-height:4px; font-size: 4px; border-radius: 0; padding: 0;
+                        &:first-child { left: 0;  top: 0; @include outT(); }
+                        &:nth-child(2) {left: 0;  top: 9px; @include outT(); }
+                        &:last-child { right: 0;  top: 18px; @include outT(); }
+                    }
+                    &.active { 
+                        span {
+                            background-color: $orange;
+                            &:first-child {top: 45%; transform: rotate(45deg);  @include inT(); }
+                            &:nth-child(2) { display: none; @include inT(); }
+                            &:last-child {top: 45%; transform: rotate(-45deg); @include inT(); }
+                        }
+                    }
+                }
+                i.fa-search {
+                    width:auto;   background-color:transparent; font-weight: normal; color:$blue;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:24px; letter-spacing:normal; line-height: 1;
+                    &:hover { color:$orange; @include inT();  } 
+                }
+            }
+ 
+           
+            .headerRight { 
+                display: none; position: fixed;top:76px; right: 0; width: 100%; height: calc(100vh - 76px); background: $gray5; padding:0;  margin: 0; overflow: hidden; overflow-y: scroll;
+                ul { 
+                    @include fSS(); width: 100%; flex-wrap: wrap;
+                    li { 
+                        margin: 0; display:block; width: 100%; float: left;
+                        &.enquirenow_li {
+                            padding: 1rem 4%;
+                            a { border-bottom:none;} 
+                            .enquirenowBtn { float: left; padding: 0.8rem 0; width: 170px; font-size: 12px; }
+                        }
+                        &.search_li { display: none; }
+                        a { 
+                            float: left; width: 100%; padding:1.5rem 4%; text-align: left;  color:$black2; border-bottom: solid 1px $black2;   
+                            &:hover, &.active {  color:$white;  @include inT(); }
+                        }
+                            .dropdownmenu {
+                                position:relative; left: 0; top:0; width:100%; padding:0 4% 1rem 4%; border-bottom: solid 1px $black2;
+                                    a { 
+                                        float: left; width: 100%; padding:1rem 0; background:none; @include outT();   text-align: left;  color:$white; @include tdn(); @include fbook();  font-size: 12px; letter-spacing:normal; line-height: 1;
+                                        &:hover, &.active {  background:none; color:$orange;  @include inT(); }
+                                    }
+                            }
+                        
+                    }
+                } 
+            }
+        }
+        
+    }
+}
+ 
+ 
+
+ 
+@media only screen and (max-width:479px) 
+{
+    .searchpopup {
+        .searchHeadclose { right:1.5rem;top:1.5rem;  width:36px; height:36px;   font-size: 20px;   }
+        section {
+           padding: 2rem 1rem;
+            .searchcontainer { 
+                .searchHeadInput {width: calc(100% - 90px); padding:16px 0.5rem; }
+                .searchHeadButton { width: 90px;padding:18px 0.5rem;  }
+            }
+        }
+    }
+
+}

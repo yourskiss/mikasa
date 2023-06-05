@@ -1,0 +1,189 @@
+
+@keyframes fadeInUpBanner {
+    0% { opacity: 0; transform: translateY(100px); }
+    100% { opacity: 1; transform: none; }
+}
+@keyframes fadeInDownBanner {
+    0% { opacity: 0; transform: translateY(-100px); }
+    100% { opacity: 1; transform: none; }
+}
+@keyframes fadeInLeftBanner {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: none; }
+}
+
+@keyframes zoomInBanner {
+    0% {  transform: scale(1); }
+    5% {  transform: scale(1); }
+    50% {  transform: scale(1.1); }
+    60% {  transform: scale(1.1); }
+    100% {  transform: scale(1); }
+}
+@keyframes zoomOutBanner {
+ 
+    0% {  transform: scale(1); }
+    5% {  transform: scale(1); }
+    50% {  transform: scale(1.1); }
+    60% {  transform: scale(1.1); }
+    100% {  transform: scale(1); }
+}
+ 
+.product_banner { 
+    background-color: $white; width: 100%;  float: left;  position: relative;
+    
+    .product_banner_counter {
+        z-index: 3; position: absolute; opacity:1; top:auto; bottom:10%; left:12%;  width:80px; height:2px; border-radius: 0; margin: 0; padding: 0; border:0; background: $white;  
+        span { 
+            position: absolute; top: 50%; transform: translateY(-50%); width:30px; height:auto; border-radius: 0; margin: 0; padding: 0; border:0; color: $white; @include fmedium(); font-size: 14px; line-height: 1; letter-spacing: normal; text-align: center; 
+            &:first-child { left:-30px;}
+            &:last-child { right:-30px;} 
+        }
+    }
+    .product_banner_slider.slick-slider { width: 100%; float: right;  overflow:hidden; margin:0 !important; padding:0 !important;  }
+    .product_banner_slider.slick-slider .slick-list { z-index: 2; margin: 0; padding: 0; overflow: hidden; }
+    .product_banner_slider.slick-slider .slick-track { display: flex; justify-content: space-between;align-items: stretch;height: inherit; margin: 0; padding: 0;  }
+    .product_banner_slider.slick-slider .slick-slide { margin: 0; padding: 0;  }
+    .product_banner_slider.slick-slider .slick-slide div { width: 100%; height: auto;  margin: 0; padding: 0; }
+
+    .product_banner_slider.slick-slider .slick-arrow { z-index: 3; opacity:1; top:auto; bottom:1rem;  width:50px; height:50px; border-radius: 50%; margin: 0; padding: 0; border:0; line-height: 1; background-color:$white; color:$black; @include fCC(); @include outT(); background: rgba(255,255,255,0.6); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); }
+    .product_banner_slider.slick-slider .slick-arrow:hover { background-color:$orange; color:$white; @include inT(); }
+    .product_banner_slider.slick-slider .slick-arrow.slick-disabled { opacity: 0.4; user-select: none; pointer-events:none; }
+    .product_banner_slider.slick-slider .slick-next  { left: auto; right:20px; } 
+    .product_banner_slider.slick-slider .slick-prev {left: auto; right:80px; }
+    .product_banner_slider.slick-slider .slick-arrow:before { color: $black; text-align: center; font-size:36px; line-height:0; font-family: 'fontawesome';  @include outT(); }
+    .product_banner_slider.slick-slider .slick-arrow:hover:before {  color:$white; @include inT();  }
+    .product_banner_slider.slick-slider .slick-next:before { content: "\f107"; }
+    .product_banner_slider.slick-slider .slick-prev:before { content: "\f106"; }
+
+
+ 
+    .product_banner_item { 
+        position: relative; width: 100%;  float: left; 
+        &:after { content: ''; z-index: 2; position: absolute; left: 0; top: 0; height: 100%; width: 45%; background: url('../images/banner-design-web.png') no-repeat top left; background-size: 100% 100%; }
+        .product_banner_desktop { z-index: 1; position: relative;  display: block; width: 100%;   float: left;  margin: 0; padding: 0;  }
+        .product_banner_mobile { z-index: 1; position: relative; display: none; width: 100%;  float: left;  margin: 0; padding: 0;  }
+        .product_banner_container { 
+            position: absolute; z-index: 3; top:25%; left: 10%; width: 1000px; height: auto !important; @include fBC();
+            .product_banner_left {
+                width: 60%;  float: left;
+                h4{width: 100%;  float: left; text-align: left; @include fbold(); color:$orange;  font-size: 40px; line-height: 48px;  letter-spacing: normal;  text-transform: uppercase; }
+                p{
+                    width: 100%;  float: left; text-align: left; @include fmedium(); font-weight: normal; color:$white;  font-size: 24px; line-height: 34px; letter-spacing: 4px; text-transform: uppercase;
+                    b { display: block; @include fbold(); }
+                }
+                aside {
+                    width: 100%; float:right; margin-top: 2rem;
+                    .bs_knowmore { 
+                         padding:0.8rem 3rem; width:auto; float: left; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 25px; font-size: 13px; letter-spacing:1px; line-height: 21px; text-transform: uppercase;
+                        &:hover { background-color: $black;  color:$white; @include inT();  } 
+                    }
+                }
+            }
+            .product_banner_right { 
+                width: 35%;  float: left;
+                img { width: 100%; max-width:250px;}
+            }
+        }
+    }
+    .slick-active .product_banner_item { 
+        .product_banner_desktop {  animation-name: zoomInBanner; animation-duration: 8s;  }
+        .product_banner_mobile { animation-name: zoomInBanner; animation-duration: 8s;  }
+        .product_banner_container { 
+            .product_banner_left {
+                h4{ animation-name: fadeInDownBanner;animation-duration: 1.5s;   }
+                p{ animation-name: fadeInDownBanner;animation-duration: 1.5s;  }
+                aside { animation-name: fadeInUpBanner;animation-duration: 1.5s; }
+            }
+            .product_banner_right { 
+                img { animation-name: fadeInLeftBanner;animation-duration: 1.5s;  }
+            }
+        }
+    }
+ 
+    
+}
+
+
+
+
+@media only screen and (max-width:1255px) 
+{
+
+    .product_banner { 
+        .product_banner_item { 
+            .product_banner_container { 
+                 top:25%; left: 10%; width: 80%;  
+                .product_banner_left { width: 60%; }
+                .product_banner_right { 
+                    width: 40%;  
+                    img { max-width:180px;}
+                }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width:1023px) 
+{
+    .product_banner { 
+        .product_banner_counter { display: none; }
+        .product_banner_item { 
+            .product_banner_container { 
+                 top:20%; left: 10%; width: 80%;  
+                .product_banner_left { 
+                    width: 60%; 
+                    h4{font-size: 28px; line-height: 32px;  letter-spacing: normal; }
+                    p{font-size: 16px; line-height:24px; letter-spacing:2px; }
+                    aside {
+                        margin-top:1rem;
+                        .bs_knowmore { padding:0.6rem 1.5rem; font-size: 12px; letter-spacing:1px; line-height:18px; }
+                    }
+                }
+                .product_banner_right { 
+                    width: 40%;  
+                    img { max-width:130px;}
+                }
+            }
+        }
+        .product_banner_slider.slick-slider .slick-arrow {  bottom:0;  width:42px; height:42px; background:$white; }
+        .product_banner_slider.slick-slider .slick-next  { right:1rem; } 
+        .product_banner_slider.slick-slider .slick-prev { right:4rem; }
+        .product_banner_slider.slick-slider .slick-arrow:before {  font-size:24px; }
+    }
+}
+
+@media only screen and (max-width:599px) 
+{
+    .product_banner { 
+        .product_banner_item { 
+            .product_banner_container { 
+                 top:10%; left: 5%;  
+                 .product_banner_left { width: 70%;  }
+                 .product_banner_right { width: 30%;   }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:479px) 
+{
+    .product_banner { 
+        .product_banner_item { 
+            &:after {  width: 60%; background: url('../images/banner-design-mob.png') no-repeat top left; background-size: 100% 100%; }
+            .product_banner_desktop { display: none; }
+            .product_banner_mobile { display:block; }
+            .product_banner_container { 
+                 top:10%; left: 5%; width: 90%;  
+                .product_banner_left { 
+                    width: 100%; 
+                    h4{font-size: 40px; line-height: 48px;  letter-spacing: normal; }
+                    p{font-size: 24px; line-height: 34px; letter-spacing: 4px; }
+                }
+                .product_banner_right { display: none; width: 100%;  }
+            }
+        }
+    }
+}

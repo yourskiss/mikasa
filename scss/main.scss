@@ -1,0 +1,72 @@
+* { margin:0;  padding:0;  box-sizing:border-box; font-weight: normal; line-height: 1.2; } 
+@import "common/_var.scss";
+@import "common/_mixin.scss"; 
+@import "common/_normalize.scss";
+@import "common/_fonts.scss";
+@import "common/_slick.scss";
+@import "common/_header.scss";
+@import "common/_footer.scss";
+@import "common/_copyright.scss";
+@import "common/_getintouch.scss";
+@import "common/_enquirenow.scss";
+@import "common/_msgpopup.scss";
+@import "common/_videopopup.scss";
+
+
+html, body { margin:0; padding:0; @include fbook(); font-weight: 400;line-height:1.2; letter-spacing: normal;letter-spacing: normal;color: #000000;background-color: #fff;box-sizing:border-box; }
+.main { display: block; float: left; width: 100%; margin: 0; padding:103px 0 0 0; overflow: hidden; }
+.fitheight { min-height: calc(100vh - 110px); }
+.warrper { display: flow-root; width: 100%; max-width: 92%; margin: 0 auto; float:none; }
+
+
+/* ################### Loader ################### */
+.pageloader { 
+    display: none; position: fixed; left: 0; top: 0; z-index:999; width: 100%;  height: 100%; margin: 0; padding: 0; background: #424242; background: rgba(0,0,0,0.4); text-align: center; 
+    div { 
+        position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); 
+        i.fa.fa-spinner { font-weight: 900; color:#f76a29; font-size:72px; }
+    }
+}
+
+@media only screen and (min-width:1601px) 
+{
+  .main { display:flow-root; float:none; max-width: 1600px; margin: 0 auto; }
+}
+
+@media only screen and (max-width:1255px) 
+{
+  .main { padding:76px 0 0 0;  }
+
+}
+
+ 
+
+
+// homepage
+@import "home/_banner.scss";
+@import "home/_introducing.scss";
+@import "home/_ourrang.scss";
+@import "home/_advantage.scss";
+@import "home/_stateoftheart.scss";
+@import "home/_sustainable.scss";
+
+// product pages
+@import "product/_banner.scss";
+@import "product/_bedcrum.scss";
+@import "product/_productinfo.scss";
+@import "product/_productslider.scss";
+@import "product/_decaedgetechnology.scss";
+@import "product/_specification.scss";
+@import "product/_zoomio.scss";
+ 
+// inner pages
+@import "styles/_banner.scss";
+@import "styles/_aboutus.scss"; 
+@import "styles/_manufacturing.scss";
+@import "styles/_sustainability.scss";
+@import "styles/_downloads.scss";
+@import "styles/_resourses.scss";
+@import "styles/_videos.scss";
+@import "styles/_termandprivacy.scss"; 
+@import "styles/_notfound404.scss"; 
+@import "styles/_search.scss"; 

@@ -1,0 +1,36 @@
+.copyrights { 
+    @include fCC(); background-color: $gray; width: 100%;  float: left;  
+    
+    .warrper { 
+        @include fBC(); position: relative; padding: 1.5rem 0;
+        &:before { position: absolute; top: 0; left: 0; content: ''; width: 100%; float: left; margin: 0; padding: 0; background-color: $gray2; height: 1px; font-size: 1px; line-height: 1px; }
+        ul { 
+            float: right; width:auto;  @include fSC(); 
+            li { 
+                list-style: none; display: inline-block; margin:0 0.5rem 0 0;    color: $black; text-align: left;  @include flt(); font-size: 12px; line-height: 16px;
+                a {  
+                    color: $black; cursor: pointer;  @include tdn(); @include outT(); 
+                    &:hover {  color: $orange; @include inT(); }
+                }
+            }
+        } 
+        p { float: left; width:auto;  color: $black; text-align: left;  @include flt(); font-size: 12px; line-height: 16px; }
+    }
+}
+
+ 
+
+@media only screen and (max-width:1023px) 
+{
+    .copyrights { 
+        .warrper { 
+            @include fCC(); flex-direction: column; padding: 2rem 0;
+            ul { 
+                width:100%; @include fCC(); margin:0 0 0.5rem 0;
+                li {  margin:0 0.5rem; color: $black; font-size: 13px; line-height: 16px; letter-spacing: 0.78px; }
+            } 
+            p {  width:100%;  text-align: center;   color: $black;  font-size: 16px; line-height: 23px; letter-spacing: 0.96px; }
+            
+        }
+    }
+}

@@ -1,0 +1,25 @@
+/* ######################## resultsWrap ######################## */
+.notfoundwrap { 
+    width: 100%; float: left; padding:5rem 0 3rem 0; background-color:$white;
+    h2 { width: 100%; float: left;  text-align:center;  color:$black; font-size:120px; letter-spacing: normal; line-height:1;  text-transform: uppercase; @include fbold(); }
+    h3 { width: 100%; float: left; text-align: center; color:$black; font-size:36px;  line-height: 1.2; @include fmedium();  }
+    h4 { width: 100%; float: left;  margin-top:2rem; text-align: center; color:$black; font-size:18;  line-height: 1.2; @include fbook();  }
+    p {
+        width: 100%; float: left; margin-top: 2rem; text-align: center;
+        a { 
+            display: inline-block; width:auto; text-align: center; text-decoration: none; @include outT(); margin: 0 auto; padding:10px 20px; border:none; background-color:$orange; color: $white; @include fbook(); font-size:18; letter-spacing:normal; line-height:20px; text-transform: uppercase;
+            &:hover {  @include inT(); background-color:$blue;  color: $white;    }
+        }
+    }
+}
+  
+ 
+ 
+
+
+
+
+ 
+ 
+
+ 

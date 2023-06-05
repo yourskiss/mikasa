@@ -1,0 +1,62 @@
+
+.resourseswrap {
+    width: 100%; float: left; padding:0 0 3rem 0; background: $white;
+    .resoursescontainer { 
+        width: 100%; float: left; @include fBS(); align-items: stretch; flex-wrap: wrap;
+        .resoursesbox {
+            width: 31.3%; padding:2rem; margin:1rem 1%; border: solid 1px $gray;
+            h5 { width:100%; float: left; text-align: left;   color: $black7; @include flt();  font-size:14px; line-height: 1; }
+            p { margin:0.5rem 0 1rem 0; width:100%; float: left; text-align: left; color: $black; @include fbook();  font-size: 16px; line-height: 1.3;  }
+            a { 
+                    width: auto; float: left; @include fSC(); text-align: left; text-decoration: none;  @include outT();
+                    img {margin: 0; width:12px; filter: none;  @include outT();}
+                    span { padding: 0 0 0 1rem; float: left; text-align: left; color: $black2; @include fbook();  font-size: 14px; line-height: 1.2; }
+                    &:hover {
+                        @include inT();
+                        img { filter: invert(100%) saturate(10000%);  @include inT();}
+                        span { color: $orange; @include inT(); }
+                    }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1255px) 
+{
+    .resourseswrap {
+       .resoursescontainer { 
+           .resoursesbox {
+               padding:1rem;  
+           }
+       }
+   }
+}
+ 
+@media only screen and (max-width:1023px) 
+{
+    .resourseswrap {
+         padding:0 0 2rem 0;
+        .resoursescontainer { 
+            .resoursesbox {
+                width: 46%; padding:1rem; margin:1rem 2%;  
+            }
+        }
+    }
+ 
+ 
+}
+
+
+ 
+@media only screen and (max-width:599px) 
+{
+    .resourseswrap {
+        .resoursescontainer { 
+            .resoursesbox {
+                width: 98%; padding:1rem; margin:0.5rem 1%;  
+            }
+        }
+    }
+ 
+ 
+}

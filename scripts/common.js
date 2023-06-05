@@ -209,8 +209,8 @@ function getInTouchValidation()
     }
     else 
     {
-        showHideErrorCase('show'); // error
-       // showHideSuccessCase('show'); // success 
+        showHideSuccessFailure('show', false); // true = success or false = failure
+
 
         $(".getintouchError").hide().html('');
         return true;
@@ -268,9 +268,7 @@ function enquirenowValidation()
     }
     else 
     {
-        
-       // showHideErrorCase('show'); // error
-        showHideSuccessCase('show'); // success 
+       showHideSuccessFailure('show', true); // true = success or false = failure
 
         showHideEnquireNow('hide');
         $(".enquirenowError").hide().html('');
@@ -307,17 +305,30 @@ function watchVideoPlay(val, src)
 
 
 
-// success cass popup === start
-function showHideSuccessCase(val)
+// success/failure popup === start
+function showHideSuccessFailure(val, status)
 {
     if(val == 'hide')
     {
-        $("#case_success").fadeOut(300);
+        $("#success_failure_container").fadeOut(300);
         $("body").css("overflow","auto");
     }
     else if(val == 'show')
     {
-        $("#case_success").fadeIn(300);
+        if(status == true)
+        {
+            $("#success_failure_msg").html('Success');
+        }
+        else if(status == false)
+        {
+            $("#success_failure_msg").html('Failure');
+        }
+        else 
+        {
+            $("#success_failure_msg").html('');
+        }
+
+        $("#success_failure_container").fadeIn(300);
         $("body").css("overflow","hidden");
     }
     else 
@@ -325,28 +336,10 @@ function showHideSuccessCase(val)
         // nothing
     }
 }
-// success cass popup === end
+// success/failure popup === end
 
 
-// error cass popup === start
-function showHideErrorCase(val)
-{
-    if(val == 'hide')
-    {
-        $("#case_error").fadeOut(300);
-        $("body").css("overflow","auto");
-    }
-    else if(val == 'show')
-    {
-        $("#case_error").fadeIn(300);
-        $("body").css("overflow","hidden");
-    }
-    else 
-    {
-        // nothing
-    }
-}
-// error cass popup === end
+
  
 
 

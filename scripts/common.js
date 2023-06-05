@@ -405,7 +405,7 @@ $(function($)
             asNavFor: '.homeproductslider',
             dots: false,
             arrows: false,
-            infinite: false,
+            infinite: true,
             focusOnSelect: true,
             adaptiveHeight: false,
             centerMode: false,

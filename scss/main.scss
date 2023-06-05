@@ -3,7 +3,6 @@
 @import "common/_mixin.scss"; 
 @import "common/_normalize.scss";
 @import "common/_fonts.scss";
-@import "common/_slick.scss";
 @import "common/_header.scss";
 @import "common/_footer.scss";
 @import "common/_copyright.scss";
@@ -57,7 +56,7 @@ html, body { margin:0; padding:0; @include fbook(); font-weight: 400;line-height
 @import "product/_productslider.scss";
 @import "product/_decaedgetechnology.scss";
 @import "product/_specification.scss";
-@import "product/_zoomio.scss";
+
  
 // inner pages
 @import "styles/_banner.scss";

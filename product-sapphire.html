@@ -154,7 +154,7 @@
     <!-- productbedcrum  start -->
     <section class="productbedcrum">
         <ul data-aos="fade-up">
-            <li><a href="#">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
             <li><a href="#">Product</a></li>
             <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
@@ -180,9 +180,6 @@
                     </div>
                     
                 </div>
-                <div class="pinfo_short_mobile">
-                    <img src="images/product/info-mob.png" alt="productinfo" />
-                </div>
             </div>
             <div class="productinforight" data-aos="fade-left">
                 <h2>Sapphire</h2>
@@ -190,7 +187,8 @@
                     Sapphire is a superior-grade plywood composed of premium hardwood with 0.6mm face veneer thickness on each side. It is manufactured using E0 certified resin, ensuring that it has zero emissions, making it an eco-friendly option. This high-strength product is molded from 100% composed veneer ensuring optimal quality. Sapphire is fire-retardant, providing safety against fire hazards. It is vacuum-pressed and chemically treated, making it resistant to fungus, bacteria, borer, and termite. With a lifetime warranty, Sapphire is the ultimate choice for those who demand nothing but the finest quality in their plywood products.
                 </p>
                 <div class="pinfo_short_desktop">
-                    <img src="images/product/info-web.png" alt="productinfo" />
+                    <img src="images/product/icon_eo.png" alt="productinfo" />
+                    <img src="images/product/icon_sapphire.png" alt="productinfo" />
                 </div>
             </div>
         </div>
@@ -240,8 +238,12 @@
                 <p>
                     MikasaPly takes precision to the next level with its meticulously calibrated plywood, made possible by the innovative Deca Edge Technology. This cutting-edge innovation guarantees superior quality with minimal emission and a smooth finish. The added Fungicide Treatment ensures a flawless surface, making every MikasaPly product a reliable and high-performing choice. This technology is used across the entire range of MikasaPly.
                 </p>
+                <aside>
+                    <span class="decaedgeCTA" onclick="showHideDecaEdge('show');">View More</span>
+                </aside>
             </div>
-            <div class="decaedgetech_bottom">
+            
+            <!-- <div class="decaedgetech_bottom">
                 <h3>
                     <span>VPCT:</span> 
                     Vacuum Pressure Chemical Treatment
@@ -249,7 +251,8 @@
                 <aside>
                     <i class="fa fa-angle-right" aria-hidden="true"></i>
                 </aside>
-            </div>
+            </div> -->
+
         </div>
 
     </section>
@@ -299,7 +302,7 @@
                     </li>
                     <li class="nobordertop">
                         <span><em>Glue Shear Strength (N)</em></span>
-                        <span>&gt; 1755</span>
+                        <span>&ge; 1755</span>
                     </li>
                     <li class="nobordertop">
                         <span><em>Visual Inspection </em></span>
@@ -321,22 +324,22 @@
                     </li>
                     <li class="nobordertop">
                         <span><em>Along the Grain</em></span>
-                        <span>&gt; 60</span>
+                        <span>&ge; 60</span>
                     </li>
                     <li class="nobordertop">
                         <span><em>Across the Grain</em></span>
-                        <span>&gt; 45</span>
+                        <span>&ge; 45</span>
                     </li>
                     <li class="nobordertop">
                         <span><b>Module of Elasticity (MOE):</b></span>
                     </li>
                     <li class="nobordertop">
                         <span><em>Along the Grain</em></span>
-                        <span>&gt; 9000</span>
+                        <span>&ge; 9000</span>
                     </li>
                     <li class="nobordertop">
                         <span><em>Across the Grain</em></span>
-                        <span>&gt; 5200</span>
+                        <span>&ge; 5200</span>
                     </li>
                     <li>
                         <span><b>Adhesive</b></span>
@@ -402,11 +405,11 @@
                     </li>
                     <li>
                         <span><b>Nail holding Strength (kg)</b></span>
-                        <span>&gt; 150</span>
+                        <span>&ge; 150</span>
                     </li>
                     <li>
                         <span><b>Screw Holding Strength (kg)</b></span>
-                        <span>&gt; 275</span>
+                        <span>&ge; 275</span>
                     </li>
                     <li>
                         <span><b>Impact Resistance</b></span>
@@ -649,6 +652,20 @@
     <!-- enquirenow end -->
 
     
+
+    <!-- decaedgetechnology popup start -->
+    <div class="decaedgepopup" id="decaedgetechnology">
+        <section class="decaedgepopupInner">
+            <aside class="decaedgepopupclose" onclick="showHideDecaEdge('hide')"><i class="fa fa-times" aria-hidden="true"></i></aside>
+             <div class="decaedgepopupcontainer">
+                <img class="decaedgepopup_web" src="images/product/decca-edge-popup-web.jpg" alt="decaedgetechnology" />
+                <img class="decaedgepopup_mob" src="images/product/decca-edge-popup-mob.jpg" alt="decaedgetechnology" />
+             </div>
+        </section>
+    </div>
+    <!-- decaedgetechnology popup end -->
+
+
 
 <script src="scripts/jquery-min.js"></script>
 <script src="scripts/aos.js"></script>

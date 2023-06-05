@@ -2,7 +2,7 @@
 .resourseswrap {
     width: 100%; float: left; padding:0 0 3rem 0; background: $white;
     .resoursescontainer { 
-        width: 100%; float: left; @include fBS(); align-items: stretch; flex-wrap: wrap;
+        width: 100%; float: left; @include fCS(); align-items: stretch; flex-wrap: wrap;
         .resoursesbox {
             width: 31.3%; padding:2rem; margin:1rem 1%; border: solid 1px $gray;
             h5 { width:100%; float: left; text-align: left;   color: $black7; @include flt();  font-size:14px; line-height: 1; }

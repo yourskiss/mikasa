@@ -9,6 +9,15 @@
     &.dowanloadinfo { background: $white; min-height: auto; }
 }
 
+
+.viewbuttoncontener {
+    width: 100%; float: left; padding:0 5% 2rem 5%; background: $white; text-align: center;
+    a { 
+        padding: 0.8rem 1.5rem; width: auto; float: none; margin: 0 auto; display: inline-block; background-color:$orange; @include fbook(); color:$white; text-align: center; border-radius: 0;font-size:16px;line-height: 1; cursor: pointer; text-transform: uppercase;  text-decoration: none; @include outT(); 
+        &:hover { background-color:$blue; color:$white; text-decoration: none;  @include inT();  }
+    }
+}
+ 
  
 @media only screen and (max-width:1023px) 
 {
@@ -23,6 +32,13 @@
         }
     }
  
+
+
+
+
+    .viewbuttoncontener {
+        a { padding: 0.7rem 1rem; font-size:14px;  }
+    }
 }
 
 @media only screen and (max-width:479px) 

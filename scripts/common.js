@@ -152,8 +152,9 @@ function searchvalidation()
     }
     else 
     {
-        showHideSearchBar('hide'); // hide search box
-        $("#searchError").show().html(' ');
+        window.location.href = "search-result.html"; // page redirection
+      //  showHideSearchBar('hide'); // hide search box
+      //  $("#searchError").show().html(' '); // hide error msg
         return true;
     }
 }

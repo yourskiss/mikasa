@@ -98,9 +98,9 @@
                                 height: 100%; margin: 0; padding: 0; height: inherit; 
                                 div { height: 100%; margin: 0; padding: 0; }
                                 .hpnav { 
-                                    width: 100%; height: 100%;  padding:3rem 1.5rem 2rem 1.5rem; float: left; background-color:$gray;  @include fCC(); flex-direction: column; border-bottom: solid 8px transparent; cursor: pointer; background: rgba(223,223,224, 0.9); border-right: solid 2px $gray5;
-                                    h2{ width: 100%; margin: 0 0 1rem 0; float: left; text-align: center; @include fmedium(); color:$black; font-size: 21px; line-height: 1;  letter-spacing:0.84px;  text-transform: uppercase; }
-                                    p { width: 100%;  float: left;  text-align: center; @include fbook();  color:$black; font-size: 14px; line-height: 1.3; letter-spacing: 0.72px; }
+                                    width: 100%; height: 100%;  padding:2rem 1rem 1rem 1rem; float: left; background-color:$gray;  @include fCC(); flex-direction: column; border-bottom: solid 8px transparent; cursor: pointer; background: rgba(223,223,224, 0.9); border-right: solid 2px $gray5;
+                                    h2{ width: 100%; margin: 0 0 0.5rem 0; float: left; text-align: center; @include fmedium(); color:$black; font-size: 21px; line-height: 1;  letter-spacing:0.84px;  text-transform: uppercase; }
+                                    p { width: 100%;  float: left;  text-align: center; @include fbook();  color:$black; font-size: 12px; line-height: 1.3; letter-spacing: 0.72px; }
                                 }
                                 &.slick-current { 
                                     .hpnav { background: $white; border-bottom-color:$orange; cursor: none; }
@@ -124,7 +124,7 @@
            .homeproductcontainer {
                .homeproductslider.slick-slider { 
                    .slick-arrow { 
-                        bottom:30%;  
+                        bottom:25%;  
                    }
                }
                .homeproductthumb { 
@@ -133,9 +133,9 @@
                             .slick-track {    
                                 .slick-slide { 
                                     .hpnav { 
-                                        padding:1.3rem;  border-bottom-width: 6px;
-                                        h2{ margin:0 0 0.5rem 0;font-size:16px; }
-                                        p {  font-size: 12px;   }
+                                         border-bottom-width: 6px;
+                                        h2{  font-size:16px; }
+                                        p {  font-size: 10px;   }
                                     }
                                 }
                             }
@@ -184,7 +184,7 @@
                                    .hpnav { 
                                        padding:1rem;  border-bottom-width: 5px;
                                         h2{ margin:0;font-size:14px; }
-                                       p { display: none; font-size: 10px;   }
+                                       p { display: none; }
                                    }
                                }
                            }
@@ -218,9 +218,9 @@
                            .slick-track {    
                                .slick-slide { 
                                    .hpnav { 
-                                       padding:1rem;  border-bottom-width: 4px;
-                                        h2{ margin: 0 0 0.5rem 0;font-size:12px; }
-                                       p { display: none; font-size:8px;  }
+                                        border-bottom-width: 4px;
+                                        h2{  font-size:12px; }
+                                       p { display: none;   }
                                    }
                                }
                            }

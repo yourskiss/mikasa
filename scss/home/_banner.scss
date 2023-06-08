@@ -61,9 +61,9 @@
         .homebanner_desktop { z-index: 1; position: relative;  display: block; width: 100%;   float: left;  margin: 0; padding: 0;  }
         .homebanner_mobile { z-index: 1; position: relative;  display: none; width: 100%;  float: left;  margin: 0; padding: 0;  }
         .homebannercontainer { 
-            position: absolute; z-index: 3; top:30%; left: 10%; width: 1000px; height: auto !important; @include fBC();
+            position: absolute; z-index: 3; top:30%; left: 10%; width: 1000px; height: auto !important; @include fSC();
             .homebannerleft {
-                width: 60%;  float: left;
+                width: 45% !important;  float: left;
                 h4{width: 100%;  float: left; text-align: left; @include fbold(); color:$orange;  font-size: 40px; line-height: 48px;  letter-spacing: normal;  text-transform: uppercase; }
                 p{
                     width: 100%;  float: left; text-align: left; @include fmedium(); font-weight: normal; color:$white;  font-size: 24px; line-height: 34px; letter-spacing: 4px; text-transform: uppercase;
@@ -78,8 +78,8 @@
                 }
             }
             .homebannerright { 
-                width: 35%;  float: left;
-                img { width: 100%; max-width:250px;}
+                width: 35%  !important;  float: left; text-align: left;
+                img { width: 100%; max-width:210px;}
             }
         }
     }
@@ -111,9 +111,9 @@
         .homebanneritem { 
             .homebannercontainer { 
                  top:25%; left: 10%; width: 80%;  
-                .homebannerleft { width: 60%; }
+                .homebannerleft { width: 50%  !important; }
                 .homebannerright { 
-                    width: 40%;  
+                    width: 40%  !important;  
                     img { max-width:180px;}
                 }
             }
@@ -131,7 +131,7 @@
             .homebannercontainer { 
                  top:20%; left: 10%; width: 80%;  
                 .homebannerleft { 
-                    width: 60%; 
+                    width: 55%  !important; 
                     h4{font-size: 28px; line-height: 32px;  letter-spacing: normal; }
                     p{font-size: 16px; line-height:24px; letter-spacing:2px; }
                     aside {
@@ -140,7 +140,7 @@
                     }
                 }
                 .homebannerright { 
-                    width: 40%;  
+                    width: 40%  !important;  
                     img { max-width:130px;}
                 }
             }
@@ -158,8 +158,8 @@
         .homebanneritem { 
             .homebannercontainer { 
                  top:10%; left: 5%;  
-                 .homebannerleft { width: 70%;  }
-                 .homebannerright { width: 30%;   }
+                 .homebannerleft { width: 70%  !important;  }
+                 .homebannerright { width: 30%  !important;   }
             }
         }
     }
@@ -177,11 +177,11 @@
             .homebannercontainer { 
                  top:10%; left: 5%; width: 90%;  
                 .homebannerleft { 
-                    width: 100%; 
+                    width: 100% !important; 
                     h4{font-size: 40px; line-height: 48px;  letter-spacing: normal; }
                     p{font-size: 24px; line-height: 34px; letter-spacing: 4px; }
                 }
-                .homebannerright { display: none; width: 100%;  }
+                .homebannerright { display: none; width: 100%  !important;  }
             }
         }
     }

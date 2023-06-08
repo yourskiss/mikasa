@@ -12,6 +12,13 @@
             p { 
                 width: 100%;  float: left; text-align: left; @include flt();  color:$black2; font-size: 16px; line-height: 27px; letter-spacing: 0.96px; 
             }
+            aside { 
+                float: right; width: 100%; margin: 1.5rem 0 0 0; text-align: left;
+                .decaedgeCTA { 
+                    display: inline-block; margin: 0 auto; float:none; padding:0.8rem 2rem 0.6rem 2rem;  text-decoration: none; @include outT(); @include flt();  color:$white; font-size: 16px; line-height: 1; letter-spacing:normal;  background-color: #e94e20; text-align: center; cursor: pointer; text-decoration: none; border-radius: 25px; text-transform: uppercase;
+                    &:hover { background: $black; color:$white;  @include inT(); }
+                }
+            }
          }
         .decaedgetech_bottom { 
             position: absolute; bottom: 2rem; right: 0; width:60%;  float: left;  background: $white; padding:2rem;  @include fBC();
@@ -50,6 +57,7 @@
                 width: 100%; margin:0; width: 100%; padding:3rem 4%; 
                 h2 { text-align: center; }
                 p { text-align: center; }
+                aside { text-align: center; }
             }
             .decaedgetech_bottom {
                  background: $white2; position: static; left: 0; top: 0; width: 100%; padding:1.5rem 4%; bottom: 0;  

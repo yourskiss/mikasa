@@ -2174,11 +2174,11 @@ html, body {
   width: 1000px;
   height: auto !important;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 .homebanner .homebanneritem .homebannercontainer .homebannerleft {
-  width: 60%;
+  width: 45% !important;
   float: left;
 }
 .homebanner .homebanneritem .homebannercontainer .homebannerleft h4 {
@@ -2241,12 +2241,13 @@ html, body {
   transition: all 0.4s ease-in;
 }
 .homebanner .homebanneritem .homebannercontainer .homebannerright {
-  width: 35%;
+  width: 35% !important;
   float: left;
+  text-align: left;
 }
 .homebanner .homebanneritem .homebannercontainer .homebannerright img {
   width: 100%;
-  max-width: 250px;
+  max-width: 210px;
 }
 .homebanner .slick-active .homebanneritem .homebanner_desktop {
   animation-name: zoomInBanner;
@@ -2280,10 +2281,10 @@ html, body {
     width: 80%;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerleft {
-    width: 60%;
+    width: 50% !important;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerright {
-    width: 40%;
+    width: 40% !important;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerright img {
     max-width: 180px;
@@ -2299,7 +2300,7 @@ html, body {
     width: 80%;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerleft {
-    width: 60%;
+    width: 55% !important;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerleft h4 {
     font-size: 28px;
@@ -2321,7 +2322,7 @@ html, body {
     line-height: 18px;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerright {
-    width: 40%;
+    width: 40% !important;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerright img {
     max-width: 130px;
@@ -2348,10 +2349,10 @@ html, body {
     left: 5%;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerleft {
-    width: 70%;
+    width: 70% !important;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerright {
-    width: 30%;
+    width: 30% !important;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -2372,7 +2373,7 @@ html, body {
     width: 90%;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerleft {
-    width: 100%;
+    width: 100% !important;
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerleft h4 {
     font-size: 40px;
@@ -2386,7 +2387,7 @@ html, body {
   }
   .homebanner .homebanneritem .homebannercontainer .homebannerright {
     display: none;
-    width: 100%;
+    width: 100% !important;
   }
 }
 .homeintroducing {
@@ -2830,7 +2831,7 @@ html, body {
 .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav {
   width: 100%;
   height: 100%;
-  padding: 3rem 1.5rem 2rem 1.5rem;
+  padding: 2rem 1rem 1rem 1rem;
   float: left;
   background-color: #F0F0F0;
   display: flex;
@@ -2844,7 +2845,7 @@ html, body {
 }
 .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav h2 {
   width: 100%;
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
   float: left;
   text-align: center;
   font-family: "futura-medium", Arial, sans-serif;
@@ -2862,7 +2863,7 @@ html, body {
   font-family: "futura-book", Arial, sans-serif;
   font-weight: 500;
   color: #000000;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.3;
   letter-spacing: 0.72px;
 }
@@ -2874,18 +2875,16 @@ html, body {
 
 @media only screen and (max-width: 1255px) {
   .homeproductrange .warrper .homeproductcontainer .homeproductslider.slick-slider .slick-arrow {
-    bottom: 30%;
+    bottom: 25%;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav {
-    padding: 1.3rem;
     border-bottom-width: 6px;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav h2 {
-    margin: 0 0 0.5rem 0;
     font-size: 16px;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav p {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 @media only screen and (max-width: 1023px) {
@@ -2938,7 +2937,6 @@ html, body {
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav p {
     display: none;
-    font-size: 10px;
   }
 }
 @media only screen and (max-width: 599px) {
@@ -2949,16 +2947,13 @@ html, body {
     bottom: 55px;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav {
-    padding: 1rem;
     border-bottom-width: 4px;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav h2 {
-    margin: 0 0 0.5rem 0;
     font-size: 12px;
   }
   .homeproductrange .warrper .homeproductcontainer .homeproductthumb .homeproductnav.slick-slider .slick-list .slick-track .slick-slide .hpnav p {
     display: none;
-    font-size: 8px;
   }
 }
 @media only screen and (max-width: 479px) {
@@ -3730,7 +3725,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
-.product_banner .product_banner_slider.slick-slider .slick-slide div {
+.product_banner .product_banner_slider.slick-slider .slick-slide > div {
   width: 100%;
   height: auto;
   margin: 0;
@@ -3831,31 +3826,16 @@ html, body {
 .product_banner .product_banner_item .product_banner_container {
   position: absolute;
   z-index: 3;
-  top: 25%;
+  top: 50%;
   left: 10%;
+  transform: translateY(-50%);
   width: 1000px;
   height: auto !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.product_banner .product_banner_item .product_banner_container .product_banner_left {
-  width: 60%;
-  float: left;
-}
-.product_banner .product_banner_item .product_banner_container .product_banner_left h4 {
-  width: 100%;
-  float: left;
-  text-align: left;
-  font-family: "futura-bold", Arial, sans-serif;
-  font-weight: 700;
-  color: #E94E20;
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: normal;
-  text-transform: uppercase;
-}
-.product_banner .product_banner_item .product_banner_container .product_banner_left p {
+.product_banner .product_banner_item .product_banner_container p {
   width: 100%;
   float: left;
   text-align: left;
@@ -3868,47 +3848,21 @@ html, body {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
-.product_banner .product_banner_item .product_banner_container .product_banner_left p b {
-  display: block;
+.product_banner .product_banner_item .product_banner_container p b {
+  display: inline-block;
   font-family: "futura-bold", Arial, sans-serif;
   font-weight: 700;
 }
-.product_banner .product_banner_item .product_banner_container .product_banner_left aside {
-  width: 100%;
-  float: right;
-  margin-top: 2rem;
-}
-.product_banner .product_banner_item .product_banner_container .product_banner_left aside .bs_knowmore {
-  padding: 0.8rem 3rem;
-  width: auto;
-  float: left;
-  background-color: #E94E20;
-  font-family: "futura-medium", Arial, sans-serif;
-  font-weight: 600;
-  font-weight: normal;
-  color: #ffffff;
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.4s ease-out;
-  border-radius: 25px;
-  font-size: 13px;
-  letter-spacing: 1px;
-  line-height: 21px;
+.product_banner .product_banner_item .product_banner_container p span {
+  display: inline-block;
+  text-align: left;
+  font-family: "futura-bold", Arial, sans-serif;
+  font-weight: 700;
+  color: #E94E20;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: normal;
   text-transform: uppercase;
-}
-.product_banner .product_banner_item .product_banner_container .product_banner_left aside .bs_knowmore:hover {
-  background-color: #000000;
-  color: #ffffff;
-  transition: all 0.4s ease-in;
-}
-.product_banner .product_banner_item .product_banner_container .product_banner_right {
-  width: 35%;
-  float: left;
-}
-.product_banner .product_banner_item .product_banner_container .product_banner_right img {
-  width: 100%;
-  max-width: 250px;
 }
 .product_banner .slick-active .product_banner_item .product_banner_desktop {
   animation-name: zoomInBanner;
@@ -3918,75 +3872,30 @@ html, body {
   animation-name: zoomInBanner;
   animation-duration: 8s;
 }
-.product_banner .slick-active .product_banner_item .product_banner_container .product_banner_left h4 {
-  animation-name: fadeInDownBanner;
-  animation-duration: 1.5s;
-}
-.product_banner .slick-active .product_banner_item .product_banner_container .product_banner_left p {
-  animation-name: fadeInDownBanner;
-  animation-duration: 1.5s;
-}
-.product_banner .slick-active .product_banner_item .product_banner_container .product_banner_left aside {
+.product_banner .slick-active .product_banner_item .product_banner_container p {
   animation-name: fadeInUpBanner;
-  animation-duration: 1.5s;
-}
-.product_banner .slick-active .product_banner_item .product_banner_container .product_banner_right img {
-  animation-name: fadeInLeftBanner;
   animation-duration: 1.5s;
 }
 
 @media only screen and (max-width: 1255px) {
   .product_banner .product_banner_item .product_banner_container {
-    top: 25%;
     left: 10%;
     width: 80%;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left {
-    width: 60%;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_right {
-    width: 40%;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_right img {
-    max-width: 180px;
   }
 }
 @media only screen and (max-width: 1023px) {
   .product_banner .product_banner_counter {
     display: none;
   }
-  .product_banner .product_banner_item .product_banner_container {
-    top: 20%;
-    left: 10%;
-    width: 80%;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left {
-    width: 60%;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left h4 {
-    font-size: 28px;
-    line-height: 32px;
-    letter-spacing: normal;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left p {
+  .product_banner .product_banner_item .product_banner_container p {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 2px;
   }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left aside {
-    margin-top: 1rem;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left aside .bs_knowmore {
-    padding: 0.6rem 1.5rem;
-    font-size: 12px;
-    letter-spacing: 1px;
-    line-height: 18px;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_right {
-    width: 40%;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_right img {
-    max-width: 130px;
+  .product_banner .product_banner_item .product_banner_container p span {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: normal;
   }
   .product_banner .product_banner_slider.slick-slider .slick-arrow {
     bottom: 0;
@@ -4004,18 +3913,6 @@ html, body {
     font-size: 24px;
   }
 }
-@media only screen and (max-width: 599px) {
-  .product_banner .product_banner_item .product_banner_container {
-    top: 10%;
-    left: 5%;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left {
-    width: 70%;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_right {
-    width: 30%;
-  }
-}
 @media only screen and (max-width: 479px) {
   .product_banner .product_banner_item:after {
     width: 60%;
@@ -4029,26 +3926,19 @@ html, body {
     display: block;
   }
   .product_banner .product_banner_item .product_banner_container {
-    top: 10%;
+    transform: translateY(-65%);
     left: 5%;
     width: 90%;
   }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left {
-    width: 100%;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left h4 {
-    font-size: 40px;
-    line-height: 48px;
-    letter-spacing: normal;
-  }
-  .product_banner .product_banner_item .product_banner_container .product_banner_left p {
+  .product_banner .product_banner_item .product_banner_container p {
     font-size: 24px;
     line-height: 34px;
     letter-spacing: 4px;
   }
-  .product_banner .product_banner_item .product_banner_container .product_banner_right {
-    display: none;
-    width: 100%;
+  .product_banner .product_banner_item .product_banner_container p span {
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: normal;
   }
 }
 .productbedcrum {
@@ -4168,17 +4058,6 @@ html, body {
 .productinfo .warrper .productinfoleft .productinfoslider .productinfoitem img {
   width: 100%;
 }
-.productinfo .warrper .productinfoleft .pinfo_short_mobile {
-  display: none;
-  margin-top: 2rem;
-  width: 100%;
-  float: left;
-  text-align: center;
-}
-.productinfo .warrper .productinfoleft .pinfo_short_mobile img {
-  width: 100%;
-  max-width: 350px;
-}
 .productinfo .warrper .productinforight {
   width: 65%;
   float: right;
@@ -4220,7 +4099,10 @@ html, body {
   text-align: left;
 }
 .productinfo .warrper .productinforight .pinfo_short_desktop img {
-  max-width: 100%;
+  display: inline-block;
+  float: none;
+  max-width: 150px;
+  margin: 0 1rem;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -4245,12 +4127,9 @@ html, body {
     width: 100%;
     float: left;
   }
-  .productinfo .warrper .productinfoleft .pinfo_short_mobile {
-    display: block;
-  }
   .productinfo .warrper .productinforight {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
   .productinfo .warrper .productinforight h2 {
     text-align: center;
@@ -4259,7 +4138,12 @@ html, body {
     text-align: center;
   }
   .productinfo .warrper .productinforight .pinfo_short_desktop {
-    display: none;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .productinfo .warrper .productinforight .pinfo_short_desktop img {
+    max-width: 120px;
+    margin: 0 0.5rem;
   }
 }
 @keyframes fadeInDownPro {
@@ -4543,6 +4427,37 @@ html, body {
   line-height: 27px;
   letter-spacing: 0.96px;
 }
+.decaedgetechnology .warrper .decaedgetech_content aside {
+  float: right;
+  width: 100%;
+  margin: 1.5rem 0 0 0;
+  text-align: left;
+}
+.decaedgetechnology .warrper .decaedgetech_content aside .decaedgeCTA {
+  display: inline-block;
+  margin: 0 auto;
+  float: none;
+  padding: 0.8rem 2rem 0.6rem 2rem;
+  text-decoration: none;
+  transition: all 0.4s ease-out;
+  font-family: "futuraLT", Arial, sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: normal;
+  background-color: #e94e20;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+}
+.decaedgetechnology .warrper .decaedgetech_content aside .decaedgeCTA:hover {
+  background: #000000;
+  color: #ffffff;
+  transition: all 0.4s ease-in;
+}
 .decaedgetechnology .warrper .decaedgetech_bottom {
   position: absolute;
   bottom: 2rem;
@@ -4609,6 +4524,9 @@ html, body {
     text-align: center;
   }
   .decaedgetechnology .warrper .decaedgetech_content p {
+    text-align: center;
+  }
+  .decaedgetechnology .warrper .decaedgetech_content aside {
     text-align: center;
   }
   .decaedgetechnology .warrper .decaedgetech_bottom {
@@ -4847,6 +4765,96 @@ html, body {
   }
   .productspecification .ps_container ul li span {
     font-size: 12px;
+  }
+}
+.decaedgepopup {
+  display: none;
+  z-index: 5;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  background: rgba(0, 0, 0, 0.8);
+}
+.decaedgepopup .decaedgepopupInner {
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  max-width: 800px;
+  max-height: 95%;
+  border: solid 2px #ffffff;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+.decaedgepopup .decaedgepopupInner .decaedgepopupclose {
+  z-index: 3;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  height: 32px;
+  width: 32px;
+  background-color: #E94E20;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.decaedgepopup .decaedgepopupInner .decaedgepopupclose:hover {
+  background-color: #152c55;
+  color: #ffffff;
+  transition: all 0.4s ease-in;
+}
+.decaedgepopup .decaedgepopupInner .decaedgepopupcontainer {
+  width: 100%;
+  float: left;
+}
+.decaedgepopup .decaedgepopupInner .decaedgepopupcontainer .decaedgepopup_web {
+  display: block;
+  width: 100%;
+  float: left;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.decaedgepopup .decaedgepopupInner .decaedgepopupcontainer .decaedgepopup_mob {
+  display: none;
+  width: 100%;
+  float: left;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+  .decaedgepopup .decaedgepopupInner {
+    max-width: 360px;
+    max-height: 95%;
+    border-width: 1px;
+  }
+  .decaedgepopup .decaedgepopupInner .decaedgepopupcontainer {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .decaedgepopup .decaedgepopupInner .decaedgepopupcontainer .decaedgepopup_web {
+    display: none;
+  }
+  .decaedgepopup .decaedgepopupInner .decaedgepopupcontainer .decaedgepopup_mob {
+    display: block;
   }
 }
 .main_banner {
@@ -5226,30 +5234,19 @@ html, body {
 .downloadwrap .downloadcontainer {
   width: 100%;
   float: left;
-}
-
-.resourseswrap {
-  width: 100%;
-  float: left;
-  padding: 0 0 3rem 0;
-  background: #ffffff;
-}
-.resourseswrap .resoursescontainer {
-  width: 100%;
-  float: left;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
 }
-.resourseswrap .resoursescontainer .resoursesbox {
+.downloadwrap .downloadcontainer .downloadbox {
   width: 31.3%;
   padding: 2rem;
   margin: 1rem 1%;
   border: solid 1px #F0F0F0;
 }
-.resourseswrap .resoursescontainer .resoursesbox h5 {
+.downloadwrap .downloadcontainer .downloadbox h5 {
   width: 100%;
   float: left;
   text-align: left;
@@ -5259,7 +5256,7 @@ html, body {
   font-size: 14px;
   line-height: 1;
 }
-.resourseswrap .resoursescontainer .resoursesbox p {
+.downloadwrap .downloadcontainer .downloadbox p {
   margin: 0.5rem 0 1rem 0;
   width: 100%;
   float: left;
@@ -5270,7 +5267,7 @@ html, body {
   font-size: 16px;
   line-height: 1.3;
 }
-.resourseswrap .resoursescontainer .resoursesbox a {
+.downloadwrap .downloadcontainer .downloadbox a {
   width: auto;
   float: left;
   display: flex;
@@ -5280,13 +5277,13 @@ html, body {
   text-decoration: none;
   transition: all 0.4s ease-out;
 }
-.resourseswrap .resoursescontainer .resoursesbox a img {
+.downloadwrap .downloadcontainer .downloadbox a img {
   margin: 0;
   width: 12px;
   filter: none;
   transition: all 0.4s ease-out;
 }
-.resourseswrap .resoursescontainer .resoursesbox a span {
+.downloadwrap .downloadcontainer .downloadbox a span {
   padding: 0 0 0 1rem;
   float: left;
   text-align: left;
@@ -5296,40 +5293,51 @@ html, body {
   font-size: 14px;
   line-height: 1.2;
 }
-.resourseswrap .resoursescontainer .resoursesbox a:hover {
+.downloadwrap .downloadcontainer .downloadbox a:hover {
   transition: all 0.4s ease-in;
 }
-.resourseswrap .resoursescontainer .resoursesbox a:hover img {
+.downloadwrap .downloadcontainer .downloadbox a:hover img {
   filter: invert(100%) saturate(10000%);
   transition: all 0.4s ease-in;
 }
-.resourseswrap .resoursescontainer .resoursesbox a:hover span {
+.downloadwrap .downloadcontainer .downloadbox a:hover span {
   color: #E94E20;
   transition: all 0.4s ease-in;
 }
 
 @media only screen and (max-width: 1255px) {
-  .resourseswrap .resoursescontainer .resoursesbox {
+  .downloadwrap .downloadcontainer .downloadbox {
     padding: 1rem;
   }
 }
 @media only screen and (max-width: 1023px) {
-  .resourseswrap {
+  .downloadwrap {
     padding: 0 0 2rem 0;
   }
-  .resourseswrap .resoursescontainer .resoursesbox {
+  .downloadwrap .downloadcontainer .downloadbox {
     width: 46%;
     padding: 1rem;
     margin: 1rem 2%;
   }
 }
 @media only screen and (max-width: 599px) {
-  .resourseswrap .resoursescontainer .resoursesbox {
+  .downloadwrap .downloadcontainer .downloadbox {
     width: 98%;
     padding: 1rem;
     margin: 0.5rem 1%;
   }
 }
+.resourcewrap {
+  width: 100%;
+  float: left;
+  padding: 0 0 3rem 0;
+  background: #ffffff;
+}
+.resourcewrap .resourcecontainer {
+  width: 100%;
+  float: left;
+}
+
 .videoswrap {
   width: 100%;
   float: left;

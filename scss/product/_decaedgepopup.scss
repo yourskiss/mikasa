@@ -1,0 +1,36 @@
+
+.decaedgepopup {
+    display: none; z-index: 5; position: fixed; left:0; top: 0; height: 100%; width:100%; float: left; margin: 0; padding: 0; background:$black; background:rgba(0,0,0,0.8);
+    .decaedgepopupInner { 
+        z-index:2; position: fixed; left: 50%;top: 50%; transform: translate(-50%, -50%); width: 95%; max-width:800px; max-height: 95%;  border: solid 2px $white; margin: 0; padding: 0;  background:$white; 
+        .decaedgepopupclose { 
+            z-index: 3; position: absolute;  right:-8px; top:-8px; height:32px; width:32px; background-color: $orange; cursor: pointer;   @include outT(); color: $white; @include fCC(); font-size: 24px;
+            &:hover { background-color: $blue; color: $white; @include inT(); }
+        }
+        .decaedgepopupcontainer {
+            width: 100%; float: left;  
+            .decaedgepopup_web { display: block; width: 100%; float: left; height: auto; margin: 0; padding: 0; }
+            .decaedgepopup_mob {  display: none; width: 100%; float: left; height: auto; margin: 0; padding: 0; }
+        }
+    }
+
+}
+
+
+
+
+@media only screen and (max-width:1023px) 
+{
+
+    .decaedgepopup {
+        .decaedgepopupInner { 
+             max-width:360px; max-height: 95%;  border-width:1px;   
+            .decaedgepopupcontainer {
+               height: 100%; margin: 0; padding: 0; overflow: hidden; overflow-y: scroll;
+                .decaedgepopup_web { display:none;  }
+                .decaedgepopup_mob {  display: block;  }
+            }
+        }
+    
+    }
+}

@@ -3827,7 +3827,7 @@ html, body {
   position: absolute;
   z-index: 3;
   top: 50%;
-  left: 10%;
+  left: 14%;
   transform: translateY(-50%);
   width: 1000px;
   height: auto !important;
@@ -3888,12 +3888,12 @@ html, body {
     display: none;
   }
   .product_banner .product_banner_item .product_banner_container p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     letter-spacing: 2px;
   }
   .product_banner .product_banner_item .product_banner_container p span {
-    font-size: 28px;
+    font-size: 24px;
     line-height: 32px;
     letter-spacing: normal;
   }
@@ -3926,14 +3926,14 @@ html, body {
     display: block;
   }
   .product_banner .product_banner_item .product_banner_container {
-    transform: translateY(-65%);
+    transform: translateY(-70%);
     left: 5%;
     width: 90%;
   }
   .product_banner .product_banner_item .product_banner_container p {
     font-size: 24px;
-    line-height: 34px;
-    letter-spacing: 4px;
+    line-height: 30px;
+    letter-spacing: 1px;
   }
   .product_banner .product_banner_item .product_banner_container p span {
     font-size: 28px;

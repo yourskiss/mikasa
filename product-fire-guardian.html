@@ -23,20 +23,19 @@
     <meta name="theme-color" content="#ffffff">
 
 
-	<title>mikasaply</title>
-    <meta name="description" content="At mikasaply, you will find a range of premium engineered ply options." />
+	<title>Mikasaply</title>
+    <meta name="description" content="Mikasaply" />
 
-    <meta property="og:title" content="mikasaply - Wooden Flooring Company India" />
+    <meta property="og:title" content="mikasaply" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="images/favicon/social.png" />
+    <meta property="og:image" content="favicon/social.png" />
     <meta property="og:url" content="http://mikasaply.com/" />
-    <meta property="og:description" content="At Mikasa Floors, you will find a range of premium engineered wooden flooring options." />
+    <meta property="og:description" content="mikasaply" />
     <meta property="og:site_name" content="mikasaply" />
-    <meta name="twitter:title" content="Mikasa - Wooden Flooring Company Indias" />
-    <meta name="twitter:description" content="At Mikasa Floors, you will find a range of premium engineered wooden flooring options." />
-    <meta property="og:image" content="images/favicon/social.png" />
+    <meta name="twitter:title" content="mikasaply" />
+    <meta name="twitter:description" content="mikasaply" />
+    <meta property="og:image" content="favicon/social.png" />
     <meta name="twitter:card" content="summary_large_image" />
-
 
 
     <link rel="stylesheet" href="css/aos.css" />
@@ -327,7 +326,7 @@
                         <span>Yes</span>
                     </li>
                     <li>
-                        <span><b>Veneer treatment</b></span>
+                        <span><b>Veneer Treatment</b></span>
                         <span>Each veneer is treated with preservative before pressing through Vacuum Pressure Technology</span>
                     </li>
                     <li>
@@ -440,39 +439,88 @@
             </div>
             
             <div class="getintouchForm"  data-aos="fade-left">
-                <div class="getintouchField">
+                <div class="getintouchField width50">
                     <input class="getintouchInput" type="text" name="name" id="fullname" placeholder="NAME" maxlength="50" onkeypress="return isLetter(event)" />
                     <span class="getintouchError" id="name_error">Name</span>
                 </div>
-                
-                <div class="getintouchField">
-                    <input  class="getintouchInput"  type="text" name="contactno" id="contactno" placeholder="CONTACT US" maxlength="10"  onkeypress="return isNumber(event)" />
-                    <span class="getintouchError" id="contactno_error">Contact No.</span>
-                </div>
-                
-                <div class="getintouchField">
+
+                <div class="getintouchField width50">
                     <input  class="getintouchInput"  type="text" name="emailid" id="emailid" placeholder="EMAIL ID" maxlength="50" />
                     <span class="getintouchError" id="emailid_error">Email ID</span>
                 </div>
                 
-                <div class="getintouchField">
+                <div class="getintouchField width50">
+                    <input  class="getintouchInput"  type="text" name="contactno" id="contactno" placeholder="CONTACT NO" maxlength="10"  onkeypress="return isNumber(event)" />
+                    <span class="getintouchError" id="contactno_error">Contact No.</span>
+                </div>
+                
+                <div class="getintouchField width50">
+                    <input  class="getintouchInput"  type="text" name="firmname" id="firmname" placeholder="FIRM NAME" maxlength="50" />
+                    <span class="getintouchError" id="firmname_error">Firm Name</span>
+                </div>
+                
+                <div class="getintouchField width100">
                     <select  class="getintouchSelect"  name="typeofquery" id="typeofquery">
-                        <option value="0" selected disabled>TYPE OF QUERY</option>
+                            <option value="0" selected>TYPE OF ENQUIRY</option>
                             <option value="Catalogue or Sample">Catalogue or Sample</option>
                             <option value="Dealership Query">Dealership Query</option>
                             <option value="Price Enquiry">Price Enquiry</option>
                             <option value="Product Enquiry">Product Enquiry</option>
                             <option value="Vendor Enquiry">Vendor Enquiry</option>
                     </select>
-                    <span class="getintouchError" id="typeofquery_error">Type of Query</span>
+                    <span class="getintouchError" id="typeofquery_error">Type of Enquiry</span>
+                </div>
+                <div class="getintouchField width100">
+                    <select  class="getintouchSelect" name="typeofvisitor" id="typeofvisitor">
+                        <option value="0" selected>TYPE OF VISITOR</option>
+                        <option value="Architect">Architect</option>
+                        <option value="Interior Designer">Interior Designer</option>
+                        <option value="Contractor">Contractor</option>
+                        <option value="Builder/ Developer">Builder/ Developer</option>
+                        <option value="OEM">OEM</option>
+                        <option value="PMC">PMC</option>
+                        <option value="Dealer">Dealer</option>
+                        <option value="Distributor">Distributor</option>
+                        <option value="Corporate">Corporate</option>
+                        <option value="Home Owner">Home Owner</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <span class="getintouchError" id="typeofvisitor_error">Type of Visitor</span>
+                </div>
+
+                <div class="getintouchField width100" id="visitorother" style="display: none;">
+                    <input  class="getintouchInput"  type="text" name="othervisitor" id="othervisitor" placeholder="Enter" maxlength="50" />
+                    <span class="getintouchError" id="othervisitor_error">Other Sisitor</span>
                 </div>
                 
-                <div class="getintouchField">
+                <div class="getintouchField width50">
+                    <select  class="getintouchSelect"  name="countryname" id="countryname">
+                        <option value="0" selected>SELECT COUNTRY</option>
+                        <option value="India">India</option>
+                    </select>
+                    <span class="getintouchError" id="countryname_error">Country Name</span>
+                </div>
+
+                <div class="getintouchField width50">
+                    <select  class="getintouchSelect"  name="statename" id="statename">
+                        <option value="0" selected>SELECT STATE</option>
+                    </select>
+                    <span class="getintouchError" id="statename_error">State Name</span>
+                </div>
+
+                <div class="getintouchField width100">
+                    <select  class="getintouchSelect"  name="cityname" id="cityname">
+                        <option value="0" selected>SELECT CITY</option>
+                    </select>
+                    <span class="getintouchError" id="cityname_error">City Name</span>
+                </div>
+
+                <div class="getintouchField width100">
                     <textarea class="getintouchTextarea" name="message" id="message" placeholder="MESSAGE"  maxlength="500"></textarea>
                     <span class="getintouchError" id="message_error">Message</span>
                 </div>
                 
-                <div class="getintouchField">
+                <div class="getintouchField width100">
                     <span class="getintouchButton" onclick="getInTouchValidation();">Submit</span>
                 </div>
             </div>
@@ -588,9 +636,10 @@
 
 
 
+
     <!-- enquirenow  start -->
     <div class="enquirenowpopup" id="EnquireNowPopup"> 
-        <article onclick="showHideEnquireNow('hide');"></article>
+        <article></article>
         <section>
             <div class="enquireClose" onclick="showHideEnquireNow('hide');">&nbsp;</div>
 
@@ -599,7 +648,7 @@
                 <h3>Whether you have a question or need support, our experts are just a click away.</h3>
                 <p>
                     <img src="images/icon_email.png" alt="email" />
-                    <a href="mailto:info@mikasaply.com">info@mikasaply.com</a>
+                    <a href="mailto:info@greenlam.com">info@greenlam.com</a>
                 </p>
                 <p>
                     <img src="images/icon_call.png" alt="call" />
@@ -608,39 +657,84 @@
             </div>
             
             <div class="enquirenowForm">
-                <div class="enquirenowField">
+                <div class="enquirenowField width50">
                     <input class="enquirenowInput" type="text" name="name" id="enq_fullname" placeholder="NAME" maxlength="50" onkeypress="return isLetter(event)" />
                     <span class="enquirenowError" id="enq_name_error">Name</span>
                 </div>
-                
-                <div class="enquirenowField">
-                    <input  class="enquirenowInput"  type="text" name="contactno" id="enq_contactno" placeholder="CONTACT US" maxlength="10"  onkeypress="return isNumber(event)" />
-                    <span class="enquirenowError" id="enq_contactno_error">Contact No.</span>
-                </div>
-                
-                <div class="enquirenowField">
+                <div class="enquirenowField width50">
                     <input  class="enquirenowInput"  type="text" name="emailid" id="enq_emailid" placeholder="EMAIL ID" maxlength="50" />
                     <span class="enquirenowError" id="enq_emailid_error">Email ID</span>
                 </div>
-                
-                <div class="enquirenowField">
+                <div class="enquirenowField width50">
+                    <input  class="enquirenowInput"  type="text" name="contactno" id="enq_contactno" placeholder="CONTACT NO" maxlength="10"  onkeypress="return isNumber(event)" />
+                    <span class="enquirenowError" id="enq_contactno_error">Contact No.</span>
+                </div>
+                <div class="enquirenowField width50">
+                    <input  class="enquirenowInput"  type="text" name="firmname" id="enq_firmname" placeholder="FIRM NAME" maxlength="50" />
+                    <span class="enquirenowError" id="enq_firmname_error">Firm Name</span>
+                </div>
+                <div class="enquirenowField width100">
                     <select  class="enquirenowSelect"  name="typeofquery" id="enq_typeofquery">
-                        <option value="0" selected disabled>TYPE OF QUERY</option>
-                        <option value="Catalogue or Sample">Catalogue or Sample</option>
-                        <option value="Dealership Query">Dealership Query</option>
-                        <option value="Price Enquiry">Price Enquiry</option>
-                        <option value="Product Enquiry">Product Enquiry</option>
-                        <option value="Vendor Enquiry">Vendor Enquiry</option>
+                            <option value="0" selected>TYPE OF ENQUIRY</option>
+                            <option value="Catalogue or Sample">Catalogue or Sample</option>
+                            <option value="Dealership Query">Dealership Query</option>
+                            <option value="Price Enquiry">Price Enquiry</option>
+                            <option value="Product Enquiry">Product Enquiry</option>
+                            <option value="Vendor Enquiry">Vendor Enquiry</option>
                     </select>
-                    <span class="enquirenowError" id="enq_typeofquery_error">Type of Query</span>
+                    <span class="enquirenowError" id="enq_typeofquery_error">Type of Enquiry</span>
+                </div>
+                <div class="enquirenowField width100">
+                    <select  class="enquirenowSelect" name="typeofvisitor" id="enq_typeofvisitor">
+                        <option value="0" selected>TYPE OF VISITOR</option>
+                        <option value="Architect">Architect</option>
+                        <option value="Interior Designer">Interior Designer</option>
+                        <option value="Contractor">Contractor</option>
+                        <option value="Builder/ Developer">Builder/ Developer</option>
+                        <option value="OEM">OEM</option>
+                        <option value="PMC">PMC</option>
+                        <option value="Dealer">Dealer</option>
+                        <option value="Distributor">Distributor</option>
+                        <option value="Corporate">Corporate</option>
+                        <option value="Home Owner">Home Owner</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <span class="enquirenowError" id="enq_typeofvisitor_error">Type of Visitor</span>
+                </div>
+
+                <div class="enquirenowField width100" id="enq_visitorother" style="display: none;">
+                    <input  class="enquirenowInput"  type="text" name="othervisitor" id="enq_othervisitor" placeholder="Enter" maxlength="50" />
+                    <span class="enquirenowError" id="enq_othervisitor_error">Other Sisitor</span>
                 </div>
                 
-                <div class="enquirenowField">
+                <div class="enquirenowField width50">
+                    <select  class="enquirenowSelect" name="countryname" id="enq_countryname">
+                        <option value="0" selected>SELECT COUNTRY</option>
+                        <option value="India">India</option>
+                    </select>
+                    <span class="enquirenowError" id="enq_countryname_error">Country Name</span>
+                </div>
+
+                <div class="enquirenowField width50">
+                    <select  class="enquirenowSelect"  name="statename" id="enq_statename">
+                        <option value="0" selected>SELECT STATE</option>
+                    </select>
+                    <span class="enquirenowError" id="enq_statename_error">State Name</span>
+                </div>
+
+                <div class="enquirenowField width100">
+                    <select  class="enquirenowSelect"  name="cityname" id="enq_cityname">
+                        <option value="0" selected>SELECT CITY</option>
+                    </select>
+                    <span class="enquirenowError" id="enq_cityname_error">City Name</span>
+                </div>
+                
+                <div class="enquirenowField width100">
                     <textarea class="enquirenowTextarea" name="message" id="enq_message" placeholder="MESSAGE"  maxlength="500"></textarea>
                     <span class="enquirenowError" id="enq_message_error">Message</span>
                 </div>
                 
-                <div class="enquirenowField">
+                <div class="enquirenowField width100">
                     <span class="enquirenowButton" onclick="enquirenowValidation();">Submit</span>
                 </div>
             </div>
@@ -649,15 +743,77 @@
     <!-- enquirenow end -->
 
 
+
     <!-- decaedgetechnology popup start -->
     <div class="decaedgepopup" id="decaedgetechnology">
-        <section class="decaedgepopupInner">
-            <aside class="decaedgepopupclose" onclick="showHideDecaEdge('hide')"><i class="fa fa-times" aria-hidden="true"></i></aside>
-             <div class="decaedgepopupcontainer">
-                <img class="decaedgepopup_web" src="images/product/decca-edge-popup-web.jpg" alt="decaedgetechnology" />
-                <img class="decaedgepopup_mob" src="images/product/decca-edge-popup-mob.jpg" alt="decaedgetechnology" />
-             </div>
-        </section>
+        <div class="decaedgepopupInner">
+            <div class="decaedgepopupclose" onclick="showHideDecaEdge('hide')"><i class="fa fa-times" aria-hidden="true"></i></div>
+             <section>
+                <aside>
+                    <img src="images/product/icon_deccaedge.png" alt="decaedgetechnology" />
+                </aside>
+                <ul>  
+                    <li>
+                        <img src="images/product/img1.png" alt="decaedgetechnology" />
+                        <h4>VPCT:</h4>
+                        <h5>Vacuum Pressure Chemical Treatment</h5>
+                    </li>
+                    <li>
+                        <img src="images/product/img2.png" alt="decaedgetechnology" />
+                        <h4>CMD:</h4>
+                        <h5>Conditioning through Mechanized Drying</h5>
+                    </li>
+                    <li>
+                        <img src="images/product/img3.png" alt="decaedgetechnology" />
+                        <h4>MCG:</h4>
+                        <h5>Mechanized Core Composers</h5>
+                    </li>
+                    <li>
+                        <img src="images/product/img4.png" alt="decaedgetechnology" />
+                        <h4>MTST:</h4>
+                        <h5>Modified Triple-Stage Technology</h5>
+                    </li>
+                    <li>
+                        <img src="images/product/img5.png" alt="decaedgetechnology" />
+                        <h4>ATAB:</h4>
+                        <h5>An-Termite & Anti-Borer</h5>
+                    </li>
+                    <li>
+                        <img src="images/product/img6.png" alt="decaedgetechnology" />
+                        <h4>QCPT:</h4>
+                        <h5>QuadCore Press Technology</h5>
+                    </li>
+                    <li>
+                        <img src="images/product/img7.png" alt="decaedgetechnology" />
+                        <h4>PCT:</h4>
+                        <h5>Precision Calibration Technology</h5>
+                    </li>
+                    <li>
+                        <img src="images/product/img8.png" alt="decaedgetechnology" />
+                        <h4>HIRT:</h4>
+                        <h5>High-Impact Resistant Technology</h5>
+                    </li>
+                    <li>
+                        <img src="images/product/img9.png" alt="decaedgetechnology" />
+                        <h4>AFAB:</h4>
+                        <h5>Anti-Fungal & Anti-Bacterial</h5>
+                    </li>
+                    <li>
+                        <img src="images/product/img10.png" alt="decaedgetechnology" />
+                        <h4>HTS:</h4>
+                        <h5>High-Tensile Strength</h5>
+                    </li>
+                </ul>
+                
+             </section>
+             <dl>
+                <dt>Sapphire</dt>
+                <dt>Marine Blue</dt>
+                <dt>Marine</dt>
+                <dt>Fire Guardian</dt>
+                <dt>MR+</dt>
+             </dl>
+        </div>
     </div>
     <!-- decaedgetechnology popup end -->
 

@@ -25,7 +25,7 @@
                             &:hover { background-color: $blue; color:$white; @include inT();  } 
                         }
                         .searchBtn { 
-                            position: relative; padding:0; width:auto; float: right; background-color:transparent;  @include fbold(); font-weight: normal; color:$blue;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:24px; letter-spacing:normal; line-height: 1;
+                            position: relative; padding:0; width:auto; float: right; background-color:transparent; font-weight: normal; color:$blue;  text-align: center;cursor: pointer; @include tdn(); border-radius:25px; font-size:24px; letter-spacing:normal; line-height: 1;
                             &:hover { color:$orange; @include inT();  } 
                         }
                         .dropdownmenu { 

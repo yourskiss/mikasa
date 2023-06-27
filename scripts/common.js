@@ -167,9 +167,20 @@ function getInTouchValidation()
     // debugger;
     var emailReg = /( )|(^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$)/;
     $(".getintouchError").hide().html('');
+    $("#typeofvisitor").val() == 'Others' ? $("#visitorother").show() : $("#visitorother").hide();
     if($("#fullname").val() == '')
     {
         $("#name_error").show().html('Please enter your name');
+        return false;
+    }
+    else if($("#emailid").val() == '')
+    {
+        $("#emailid_error").show().html('Please enter your email id');
+        return false;
+    }
+    else if (!emailReg.test($("#emailid").val())) 
+    {
+        $("#emailid_error").show().html('Please enter valid email id');
         return false;
     }
     else if($("#contactno").val() == '')
@@ -187,19 +198,39 @@ function getInTouchValidation()
         $("#contactno_error").show().html('Mobile number start with digits like 9, 8, 7, 6');
         return false;
     }
-    else if($("#emailid").val() == '')
+    else if($("#firmname").val() == '')
     {
-        $("#emailid_error").show().html('Please enter your email id');
+        $("#firmname_error").show().html('Please enter firm name');
         return false;
     }
-    else if (!emailReg.test($("#emailid").val())) 
-    {
-        $("#emailid_error").show().html('Please enter valid email id');
-        return false;
-    }
-    else if($("#typeofquery").val() == null || $("#typeofquery").val() == '' || $("#typeofquery").val() == 0)
+    else if($("#typeofquery").val() == null || $("#typeofquery").val() == 0)
     {
         $("#typeofquery_error").show().html('Please select entery type');
+        return false;
+    }
+    else if($("#typeofvisitor").val() == null || $("#typeofvisitor").val() == 0)
+    {
+        $("#typeofvisitor_error").show().html('Please select type of visitor');
+        return false;
+    }
+    else if($("#typeofvisitor").val() == 'Others' && $("#othervisitor").val() == '')
+    {
+        $("#othervisitor_error").show().html('Please Enter other visitor information');
+        return false;
+    }
+    else if($("#countryname").val() == null || $("#countryname").val() == 0)
+    {
+        $("#countryname_error").show().html('Please select country');
+        return false;
+    }
+    else if($("#statename").val() == null || $("#statename").val() == 0)
+    {
+        $("#statename_error").show().html('Please select  state');
+        return false;
+    }
+    else if($("#cityname").val() == null || $("#cityname").val() == 0)
+    {
+        $("#cityname_error").show().html('Please select city');
         return false;
     }
     else if($("#message").val() == '')
@@ -209,9 +240,19 @@ function getInTouchValidation()
     }
     else 
     {
-        showHideSuccessFailure('show', false); // true = success or false = failure
+        var get_fullname = $("#fullname").val();
+        var get_emailid = $("#emailid").val();
+        var get_contactno = $("#contactno").val();
+        var get_firmname = $("#firmname").val();
+        var get_typeofquery = $("#typeofquery").val();
+        var get_typeofvisitor = $("#typeofvisitor").val();
+        var get_othervisitor = $("#othervisitor").val();
+        var get_countryname = $("#countryname").val();
+        var get_statename = $("#statename").val();
+        var get_cityname = $("#cityname").val();
+        var get_message = $("#message").val();
 
-
+        SubmitUserQuery(get_fullname, get_emailid, get_contactno, get_firmname, get_typeofquery, get_typeofvisitor, get_othervisitor, get_countryname, get_statename, get_cityname, get_message);
         $(".getintouchError").hide().html('');
         return true;
     }
@@ -226,9 +267,20 @@ function enquirenowValidation()
     // debugger;
     var emailRegex = /( )|(^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$)/;
     $(".enquirenowError").hide().html('');
+    $("#enq_typeofvisitor").val() == 'Others' ? $("#enq_visitorother").show() : $("#enq_visitorother").hide();
     if($("#enq_fullname").val() == '')
     {
         $("#enq_name_error").show().html('Please enter your name');
+        return false;
+    }
+    else if($("#enq_emailid").val() == '')
+    {
+        $("#enq_emailid_error").show().html('Please enter your email id');
+        return false;
+    }
+    else if (!emailRegex.test($("#enq_emailid").val())) 
+    {
+        $("#enq_emailid_error").show().html('Please enter valid email id');
         return false;
     }
     else if($("#enq_contactno").val() == '')
@@ -246,19 +298,39 @@ function enquirenowValidation()
         $("#enq_contactno_error").show().html('Mobile number start with digits like 9, 8, 7, 6');
         return false;
     }
-    else if($("#enq_emailid").val() == '')
+    if($("#enq_firmname").val() == '')
     {
-        $("#enq_emailid_error").show().html('Please enter your email id');
+        $("#enq_firmname_error").show().html('Please enter firm name');
         return false;
     }
-    else if (!emailRegex.test($("#enq_emailid").val())) 
-    {
-        $("#enq_emailid_error").show().html('Please enter valid email id');
-        return false;
-    }
-    else if($("#enq_typeofquery").val() == null || $("#enq_typeofquery").val() == '' || $("#enq_typeofquery").val() == 0)
+    else if($("#enq_typeofquery").val() == null || $("#enq_typeofquery").val() == 0)
     {
         $("#enq_typeofquery_error").show().html('Please select entery type');
+        return false;
+    }
+    else if($("#enq_typeofvisitor").val() == null || $("#enq_typeofvisitor").val() == 0)
+    {
+        $("#enq_typeofvisitor_error").show().html('Please select type of visitor');
+        return false;
+    }
+    else if($("#enq_typeofvisitor").val() == 'Others' && $("#enq_othervisitor").val() == '')
+    {
+        $("#enq_othervisitor_error").show().html('Please Enter other visitor information');
+        return false;
+    }
+    else if($("#enq_countryname").val() == null || $("#enq_countryname").val() == 0)
+    {
+        $("#enq_countryname_error").show().html('Please select country');
+        return false;
+    }
+    else if($("#enq_statename").val() == null || $("#enq_statename").val() == 0)
+    {
+        $("#enq_statename_error").show().html('Please select  state');
+        return false;
+    }
+    else if($("#enq_cityname").val() == null || $("#enq_cityname").val() == 0)
+    {
+        $("#enq_cityname_error").show().html('Please select city');
         return false;
     }
     else if($("#enq_message").val() == '')
@@ -268,15 +340,63 @@ function enquirenowValidation()
     }
     else 
     {
-       showHideSuccessFailure('show', true); // true = success or false = failure
+        var enq_fullname = $("#enq_fullname").val();
+        var enq_emailid = $("#enq_emailid").val();
+        var enq_contactno = $("#enq_contactno").val();
+        var enq_firmname = $("#enq_firmname").val();
+        var enq_typeofquery = $("#enq_typeofquery").val();
+        var enq_typeofvisitor = $("#enq_typeofvisitor").val();
+        var enq_othervisitor = $("#enq_othervisitor").val();
+        var enq_countryname = $("#enq_countryname").val();
+        var enq_statename = $("#enq_statename").val();
+        var enq_cityname = $("#enq_cityname").val();
+        var enq_message = $("#message").val();
 
+        SubmitUserQuery(enq_fullname, enq_emailid, enq_contactno, enq_firmname, enq_typeofquery, enq_typeofvisitor, enq_othervisitor, enq_countryname, enq_statename, enq_cityname, enq_message);
+  
         showHideEnquireNow('hide');
         $(".enquirenowError").hide().html('');
         return true;
     }
 }
 /* enquirenow validation === end */
- 
+
+
+
+/* getintouch === onchange show other visitor  === start */
+$("#typeofvisitor").change(function()
+{
+    var getintouchValue = $(this).val();
+   // var getintouchValue = event.value || event.options[event.selectedIndex].value;
+    if(getintouchValue == 'Others')
+    {
+        $("#visitorother").slideDown(300);
+    }
+    else 
+    {
+        $("#visitorother").slideUp(300);
+    }
+});
+/* getintouch === onchange show other visitor  === end */
+
+
+/* enquirynow === onchange show other visitor  === start */
+$("#enq_typeofvisitor").change(function()
+{
+    var enquiryValue = $(this).val();
+    // var enquiryValue = event.value || event.options[event.selectedIndex].value;
+    if(enquiryValue == 'Others')
+    {
+        $("#enq_visitorother").slideDown(300);
+    }
+    else 
+    {
+        $("#enq_visitorother").slideUp(300);
+    }
+});
+/* enquirynow === onchange show other visitor  === end */
+
+
 
 // watchVideoPlay === start
 function watchVideoPlay(val, src)
@@ -312,22 +432,16 @@ function showHideSuccessFailure(val, status)
     {
         $("#success_failure_container").fadeOut(300);
         $("body").css("overflow","auto");
+
+        $(".getintouchInput, .getintouchTextarea, .enquirenowInput, .enquirenowTextarea").val('');
+        $('.getintouchSelect , .enquirenowSelect').each( function() {
+            $(this).val($(this).find("option[selected]").val() );
+        });
+
     }
     else if(val == 'show')
     {
-        if(status == true)
-        {
-            $("#success_failure_msg").html('Success');
-        }
-        else if(status == false)
-        {
-            $("#success_failure_msg").html('Failure');
-        }
-        else 
-        {
-            $("#success_failure_msg").html('');
-        }
-
+        $("#success_failure_msg").html(status);
         $("#success_failure_container").fadeIn(300);
         $("body").css("overflow","hidden");
     }
@@ -532,3 +646,110 @@ $(function($)
 
 
 
+
+// query summit   === start
+function SubmitUserQuery(name, mobile, email, contact_type, message) 
+{
+    $("#pageloader").show();
+    jQuery.ajax(
+           {
+               type: "POST",
+               contentType: "application/json; charset=utf-8",
+               dataType: "json",
+               data: "{'name':'" + name + "','mobile':'" + mobile + "','email':'" + email + "','contact_type':'" + contact_type + "','message':'" + message + "'}",
+               url: "leadsubmit.aspx/SaveUserData",
+               error: function (xhr, status, error) {
+                    showHideSuccessFailure('show', "Oops, something wasn't right");  
+                    $("#pageloader").hide();
+               },
+               success: function (response) {
+                   //   debugger;
+                   if (response.d == "success") {
+                        showHideSuccessFailure('show', "Thank you for getting in touch!"); 
+                   }
+                   $("#pageloader").hide();
+               }
+           });
+}
+// query summit   === end
+
+
+
+// state list   === start
+function fnState(type) 
+{
+            jQuery.ajax(
+           {
+               type: "POST",
+               contentType: "application/json; charset=utf-8",
+               dataType: "json",
+               data: "",
+               url: "leadsubmit.aspx/StateAPI",
+               error: function (xhr, status, error) {
+               },
+               success: function (response) {
+                   console.log(response.d);
+                   if(type == 'enquirenow')
+                   {
+                        $("#enq_statename").find('option').remove().end().append("<option value='0' selected disabled>SELECT STATE</option>").val(0);
+                        $("#enq_statename").append(response.d);
+                   }
+                   if(type == 'getintouch')
+                   {
+                        $("#statename").find('option').remove().end().append("<option value='0' selected disabled>SELECT STATE</option>").val(0);
+                        $("#statename").append(response.d);
+                   }
+               }
+           });
+}
+$("#countryname").change(function()
+{
+    fnState('getintouch'); 
+});
+$("#enq_countryname").change(function()
+{
+    fnState('enquirenow'); 
+});
+// state list   === end
+
+
+
+
+// city list   === start
+function fnCity(type, state) 
+{
+            jQuery.ajax(
+           {
+               type: "POST",
+               contentType: "application/json; charset=utf-8",
+               dataType: "json",
+               data: "{'state':'" + state + "'}",
+               url: "leadsubmit.aspx/CityAPI",
+               error: function (xhr, status, error) {
+               },
+               success: function (response) {
+                   console.log(response.d);
+                   if(type == 'enquirenow')
+                   {
+                        $("#enq_cityname").find('option').remove().end().append("<option value='0' selected>SELECT CITY</option>").val(0);
+                        $("#enq_cityname").append(response.d);
+                   }
+                   if(type == 'getintouch')
+                   {
+                        $("#cityname").find('option').remove().end().append("<option value='0' selected>SELECT CITY</option>").val(0);
+                        $("#cityname").append(response.d);
+                   }
+               }
+            });
+}
+$("#statename").change(function()
+{
+    var statename = $(this).val();
+    fnCity('getintouch', statename); 
+});
+$("#enq_statename").change(function()
+{
+    var statename = $(this).val();
+    fnCity('enquirenow', statename); 
+});
+// city list   === end

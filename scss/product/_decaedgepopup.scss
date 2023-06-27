@@ -2,15 +2,33 @@
 .decaedgepopup {
     display: none; z-index: 5; position: fixed; left:0; top: 0; height: 100%; width:100%; float: left; margin: 0; padding: 0; background:$black; background:rgba(0,0,0,0.8);
     .decaedgepopupInner { 
-        z-index:2; position: fixed; left: 50%;top: 50%; transform: translate(-50%, -50%); width: 95%; max-width:800px; max-height: 95%;  border: solid 2px $white; margin: 0; padding: 0;  background:$white; 
+        z-index:2; position: fixed; left: 50%;top: 50%; transform: translate(-50%, -50%); width: 95%; max-width:800px; max-height: 95%; min-height: 550px;  border: solid 1px $white; margin: 0; padding:2rem; background:$white url('../images/product/decca-edge-bg.jpg') no-repeat; background-position: center center; background-size: cover;
         .decaedgepopupclose { 
             z-index: 3; position: absolute;  right:-8px; top:-8px; height:32px; width:32px; background-color: $orange; cursor: pointer;   @include outT(); color: $white; @include fCC(); font-size: 24px;
             &:hover { background-color: $blue; color: $white; @include inT(); }
         }
-        .decaedgepopupcontainer {
-            width: 100%; float: left;  
-            .decaedgepopup_web { display: block; width: 100%; float: left; height: auto; margin: 0; padding: 0; }
-            .decaedgepopup_mob {  display: none; width: 100%; float: left; height: auto; margin: 0; padding: 0; }
+        section {
+             width: 100%;  float: left;  @include fCC(); 
+            aside { 
+                width:120px; margin-right: 20px;
+                img { width: 100%; }
+            }
+            ul { 
+                width: auto; float: left;
+                li { 
+                    list-style: none;  @include fSC(); margin: 0 0 7px 0;  
+                    img { width: 29px;  float: left;  }
+                    h4 { width:45px; margin:0 0 0 11px; float: left; padding: 0 0 3px 0; border-bottom: solid 1px $orange; text-align: left; color: $white; @include fmedium(); font-size: 14px;  }
+                    h5 { width: calc(100% - 85px); float: left; padding: 0 0 3px 8px; border-bottom: solid 1px $white; text-align: left; color: $white; @include fbook(); font-size: 14px; }
+                }
+            }
+            
+        }
+        dl {
+            position: absolute; bottom: 2rem; left: 0; width: 100%; float: left;  @include fCC();
+            dt  { 
+                display: inline-block; padding:0.6rem 0.4rem; margin: 0 0.4rem; width:120px; float: none; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 0; font-size: 14px; letter-spacing:normal; line-height: 1; text-transform: uppercase;
+            }
         }
     }
 
@@ -19,18 +37,71 @@
 
 
 
-@media only screen and (max-width:1023px) 
+@media only screen and (max-width:767px) 
 {
+    .decaedgepopup {
+        .decaedgepopupInner {  
+            min-height: auto;
+            dl { display: none; }
+        }
+    }
+}
 
+
+@media only screen and (max-width:479px) 
+{
+    .decaedgepopup {
+        .decaedgepopupInner {  
+            background-position: right top; padding:2rem 1rem 1rem 1rem; width: 95%; max-width: 350px;
+           section {
+             flex-direction: column; justify-content: center; align-items:center;
+            aside { width: 80px; margin:0;}
+            ul { 
+                width: auto; float: left; margin-top: 0.5rem;
+                li { 
+                    margin: 0 0 6px 0;  
+                    img { width: 25px;   }
+                    h4 { width:35px; margin:0 0 0 10px; padding: 0 0 3px 0; font-size: 12px;  }
+                    h5 { width: calc(100% - 70px);  padding: 0 0 3px 5px; font-size: 12px; }
+                }
+            }
+           }
+        }
+    }
+}
+
+
+@media only screen and (max-width:359px) 
+{
+    .decaedgepopup {
+        .decaedgepopupInner {  
+
+           section {
+            ul { 
+                li { 
+                    h4 {font-size: 10px;  }
+                    h5 {font-size: 10px; }
+                }
+            }
+           }
+        }
+    }
+}
+
+
+
+@media only screen and (min-device-width:500px) and (max-device-width:1000px) and (orientation : landscape)  
+{
     .decaedgepopup {
         .decaedgepopupInner { 
-             max-width:360px; max-height: 95%;  border-width:1px;   
-            .decaedgepopupcontainer {
-               height: 100%; margin: 0; padding: 0; overflow: hidden; overflow-y: scroll;
-                .decaedgepopup_web { display:none;  }
-                .decaedgepopup_mob {  display: block;  }
-            }
+            min-height: auto; max-width:auto; height:300px; padding:1.5rem;
+           section { 
+               height: 100%; overflow: hidden;  align-items: flex-start;
+               ul { 
+                    height: 100%; overflow: hidden; overflow-y: scroll; 
+               }
+           }  
+            dl { display: none; }
         }
-    
     }
 }

@@ -22,6 +22,10 @@
                         b {  color:$orange; @include inT();     }
                     }
                 } 
+                a { 
+                    display: inline-block; padding:0.8rem 3rem; margin: 0 auto; width:auto; float: none; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center; cursor: pointer; @include tdn();  @include outT(); border-radius: 25px; font-size: 14px; letter-spacing:1px; line-height: 21px; text-transform: uppercase;
+                    &:hover { background-color: $blue;  color:$white; @include inT();  } 
+                }
             } 
        }
 

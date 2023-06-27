@@ -4,12 +4,12 @@
         @include fBC();
        .homeadvantageleft { 
             width:30%;  float: left; 
-            h2{width: 100%; float: left; text-align: left; @include fmedium(); color:$black5; font-size: 30px; line-height: 1;  letter-spacing: normal;    }
+            h2{width: 100%; float: left; text-align: left; @include fmedium(); color:$black5; font-size: 26px; line-height: 1;  letter-spacing: normal; text-transform: uppercase; }
             h3{
-                width: 100%; margin:0.7rem 0;  float: left; text-align: left;  color:$blue; font-size: 40px; line-height:1;  letter-spacing: normal;  @include flt(); 
+                width: 100%; margin:0.5rem 0;  float: left; text-align: left;  color:$blue; font-size: 36px; line-height:1;  letter-spacing: normal;  @include flt();  text-transform: uppercase;
                 span { @include fbold();  }
             }
-            h4 { width: 100%; float: left; text-align: left; @include flt(); font-weight: 500; color:$black5; font-size: 40px; line-height: 1; letter-spacing: normal; }
+            h4 { width: 100%; float: left; text-align: left; @include flt(); font-weight: 500; color:$black5; font-size: 32px; line-height: 1; letter-spacing: normal; text-transform: uppercase; }
             aside {
                 width: 100%; float:right; text-align: left; margin-top:2rem;
                 a { 
@@ -53,7 +53,7 @@
                 width:35%;  
                 h2{ font-size: 23px;  }
                 h3{ margin:0.5rem 0;  font-size: 32px; }
-                h4 { font-size:32px;  }
+                h4 { font-size:29px;  }
                 aside { margin-top:1.5rem; } 
            }
            .homeadvantageright { 

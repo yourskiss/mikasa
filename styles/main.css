@@ -131,6 +131,10 @@ audio:not([controls]) {
 
 img {
   border-style: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
 }
 
 svg:not(:root) {
@@ -413,8 +417,6 @@ template {
   width: auto;
   float: right;
   background-color: transparent;
-  font-family: "futura-bold", Arial, sans-serif;
-  font-weight: 700;
   font-weight: normal;
   color: #152c55;
   text-align: center;
@@ -1307,21 +1309,33 @@ template {
   transition: all 0.4s ease-in;
 }
 .getintouchwrap .warrper .getintouchForm {
-  width: 55%;
+  width: 60%;
   float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .getintouchwrap .warrper .getintouchForm .getintouchField {
   width: 100%;
   float: left;
   margin-bottom: 1.5rem;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 .getintouchwrap .warrper .getintouchForm .getintouchField:last-child {
   margin-bottom: 0;
 }
+.getintouchwrap .warrper .getintouchForm .getintouchField.width100 {
+  width: 96%;
+}
+.getintouchwrap .warrper .getintouchForm .getintouchField.width50 {
+  width: 46%;
+}
 .getintouchwrap .warrper .getintouchForm .getintouchField .getintouchInput, .getintouchwrap .warrper .getintouchForm .getintouchField .getintouchSelect, .getintouchwrap .warrper .getintouchForm .getintouchField .getintouchTextarea {
   width: 100%;
   float: right;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background: transparent;
   outline: none;
   border: none;
@@ -1337,7 +1351,7 @@ template {
   border-color: #E94E20;
 }
 .getintouchwrap .warrper .getintouchForm .getintouchField .getintouchTextarea {
-  height: 90px;
+  height: 70px;
   resize: none;
 }
 .getintouchwrap .warrper .getintouchForm .getintouchField .getintouchSelect {
@@ -1346,7 +1360,7 @@ template {
   -webkit-appearance: none;
   appearance: none;
   background: transparent url("../images/icon_dropdown.png") no-repeat;
-  background-position: right 8px center;
+  background-position: right 4px center;
 }
 .getintouchwrap .warrper .getintouchForm .getintouchField .getintouchButton {
   position: relative;
@@ -1376,7 +1390,7 @@ template {
   display: none;
   width: 100%;
   float: left;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   margin-top: 10px;
   font-size: 12px;
   color: #F22310;
@@ -1484,7 +1498,7 @@ template {
   z-index: 3;
   transform: translate(-50%, -50%);
   background: #ffffff;
-  padding: 3rem 4rem 2rem 2rem;
+  padding: 2rem 4rem 2rem 2rem;
 }
 .enquirenowpopup section .enquireClose {
   position: fixed;
@@ -1561,19 +1575,31 @@ template {
 .enquirenowpopup section .enquirenowForm {
   width: 55%;
   float: right;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 .enquirenowpopup section .enquirenowForm .enquirenowField {
   width: 100%;
   float: left;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 .enquirenowpopup section .enquirenowForm .enquirenowField:last-child {
   margin-bottom: 0;
 }
+.enquirenowpopup section .enquirenowForm .enquirenowField.width100 {
+  width: 96%;
+}
+.enquirenowpopup section .enquirenowForm .enquirenowField.width50 {
+  width: 46%;
+}
 .enquirenowpopup section .enquirenowForm .enquirenowField .enquirenowInput, .enquirenowpopup section .enquirenowForm .enquirenowField .enquirenowSelect, .enquirenowpopup section .enquirenowForm .enquirenowField .enquirenowTextarea {
   width: 100%;
   float: right;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
   background: transparent;
   outline: none;
   border: none;
@@ -1598,7 +1624,7 @@ template {
   -webkit-appearance: none;
   appearance: none;
   background: transparent url("../images/icon_dropdown.png") no-repeat;
-  background-position: right 5px center;
+  background-position: right 4px center;
 }
 .enquirenowpopup section .enquirenowForm .enquirenowField .enquirenowButton {
   position: relative;
@@ -1628,7 +1654,7 @@ template {
   display: none;
   width: 100%;
   float: left;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   margin-top: 10px;
   font-size: 12px;
   color: #F22310;
@@ -3006,21 +3032,23 @@ html, body {
   font-family: "futura-medium", Arial, sans-serif;
   font-weight: 600;
   color: #333333;
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1;
   letter-spacing: normal;
+  text-transform: uppercase;
 }
 .homeadvantage .warrper .homeadvantageleft h3 {
   width: 100%;
-  margin: 0.7rem 0;
+  margin: 0.5rem 0;
   float: left;
   text-align: left;
   color: #152c55;
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1;
   letter-spacing: normal;
   font-family: "futuraLT", Arial, sans-serif;
   font-weight: 300;
+  text-transform: uppercase;
 }
 .homeadvantage .warrper .homeadvantageleft h3 span {
   font-family: "futura-bold", Arial, sans-serif;
@@ -3034,9 +3062,10 @@ html, body {
   font-weight: 300;
   font-weight: 500;
   color: #333333;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 1;
   letter-spacing: normal;
+  text-transform: uppercase;
 }
 .homeadvantage .warrper .homeadvantageleft aside {
   width: 100%;
@@ -3140,7 +3169,7 @@ html, body {
     font-size: 32px;
   }
   .homeadvantage .warrper .homeadvantageleft h4 {
-    font-size: 32px;
+    font-size: 29px;
   }
   .homeadvantage .warrper .homeadvantageleft aside {
     margin-top: 1.5rem;
@@ -3327,6 +3356,32 @@ html, body {
 }
 .homestatemanufacturing .home_sm_container aside span:hover b {
   color: #E94E20;
+  transition: all 0.4s ease-in;
+}
+.homestatemanufacturing .home_sm_container aside a {
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  margin: 0 auto;
+  width: auto;
+  float: none;
+  background-color: #E94E20;
+  font-family: "futura-medium", Arial, sans-serif;
+  font-weight: 600;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s ease-out;
+  border-radius: 25px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.homestatemanufacturing .home_sm_container aside a:hover {
+  background-color: #152c55;
+  color: #ffffff;
   transition: all 0.4s ease-in;
 }
 
@@ -3675,6 +3730,7 @@ html, body {
   padding: 0;
   border: 0;
   background: #ffffff;
+  display: none;
 }
 .product_banner .product_banner_counter span {
   position: absolute;
@@ -4057,6 +4113,9 @@ html, body {
 }
 .productinfo .warrper .productinfoleft .productinfoslider .productinfoitem img {
   width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 .productinfo .warrper .productinforight {
   width: 65%;
@@ -4103,6 +4162,8 @@ html, body {
   float: none;
   max-width: 150px;
   margin: 0 1rem;
+  padding: 0;
+  border: 0;
 }
 
 @media only screen and (max-width: 1023px) {
@@ -4790,10 +4851,13 @@ html, body {
   width: 95%;
   max-width: 800px;
   max-height: 95%;
-  border: solid 2px #ffffff;
+  min-height: 550px;
+  border: solid 1px #ffffff;
   margin: 0;
-  padding: 0;
-  background: #ffffff;
+  padding: 2rem;
+  background: #ffffff url("../images/product/decca-edge-bg.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .decaedgepopup .decaedgepopupInner .decaedgepopupclose {
   z-index: 3;
@@ -4816,45 +4880,164 @@ html, body {
   color: #ffffff;
   transition: all 0.4s ease-in;
 }
-.decaedgepopup .decaedgepopupInner .decaedgepopupcontainer {
+.decaedgepopup .decaedgepopupInner section {
   width: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decaedgepopup .decaedgepopupInner section aside {
+  width: 120px;
+  margin-right: 20px;
+}
+.decaedgepopup .decaedgepopupInner section aside img {
+  width: 100%;
+}
+.decaedgepopup .decaedgepopupInner section ul {
+  width: auto;
   float: left;
 }
-.decaedgepopup .decaedgepopupInner .decaedgepopupcontainer .decaedgepopup_web {
-  display: block;
-  width: 100%;
-  float: left;
-  height: auto;
-  margin: 0;
-  padding: 0;
+.decaedgepopup .decaedgepopupInner section ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 7px 0;
 }
-.decaedgepopup .decaedgepopupInner .decaedgepopupcontainer .decaedgepopup_mob {
-  display: none;
+.decaedgepopup .decaedgepopupInner section ul li img {
+  width: 29px;
+  float: left;
+}
+.decaedgepopup .decaedgepopupInner section ul li h4 {
+  width: 45px;
+  margin: 0 0 0 11px;
+  float: left;
+  padding: 0 0 3px 0;
+  border-bottom: solid 1px #E94E20;
+  text-align: left;
+  color: #ffffff;
+  font-family: "futura-medium", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+}
+.decaedgepopup .decaedgepopupInner section ul li h5 {
+  width: calc(100% - 85px);
+  float: left;
+  padding: 0 0 3px 8px;
+  border-bottom: solid 1px #ffffff;
+  text-align: left;
+  color: #ffffff;
+  font-family: "futura-book", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+.decaedgepopup .decaedgepopupInner dl {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
   width: 100%;
   float: left;
-  height: auto;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decaedgepopup .decaedgepopupInner dl dt {
+  display: inline-block;
+  padding: 0.6rem 0.4rem;
+  margin: 0 0.4rem;
+  width: 120px;
+  float: none;
+  background-color: #E94E20;
+  font-family: "futura-medium", Arial, sans-serif;
+  font-weight: 600;
+  font-weight: normal;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s ease-out;
+  border-radius: 0;
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 767px) {
   .decaedgepopup .decaedgepopupInner {
-    max-width: 360px;
-    max-height: 95%;
-    border-width: 1px;
+    min-height: auto;
   }
-  .decaedgepopup .decaedgepopupInner .decaedgepopupcontainer {
-    height: 100%;
+  .decaedgepopup .decaedgepopupInner dl {
+    display: none;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .decaedgepopup .decaedgepopupInner {
+    background-position: right top;
+    padding: 2rem 1rem 1rem 1rem;
+    width: 95%;
+    max-width: 350px;
+  }
+  .decaedgepopup .decaedgepopupInner section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .decaedgepopup .decaedgepopupInner section aside {
+    width: 80px;
     margin: 0;
-    padding: 0;
+  }
+  .decaedgepopup .decaedgepopupInner section ul {
+    width: auto;
+    float: left;
+    margin-top: 0.5rem;
+  }
+  .decaedgepopup .decaedgepopupInner section ul li {
+    margin: 0 0 6px 0;
+  }
+  .decaedgepopup .decaedgepopupInner section ul li img {
+    width: 25px;
+  }
+  .decaedgepopup .decaedgepopupInner section ul li h4 {
+    width: 35px;
+    margin: 0 0 0 10px;
+    padding: 0 0 3px 0;
+    font-size: 12px;
+  }
+  .decaedgepopup .decaedgepopupInner section ul li h5 {
+    width: calc(100% - 70px);
+    padding: 0 0 3px 5px;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .decaedgepopup .decaedgepopupInner section ul li h4 {
+    font-size: 10px;
+  }
+  .decaedgepopup .decaedgepopupInner section ul li h5 {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-device-width: 500px) and (max-device-width: 1000px) and (orientation: landscape) {
+  .decaedgepopup .decaedgepopupInner {
+    min-height: auto;
+    max-width: auto;
+    height: 300px;
+    padding: 1.5rem;
+  }
+  .decaedgepopup .decaedgepopupInner section {
+    height: 100%;
+    overflow: hidden;
+    align-items: flex-start;
+  }
+  .decaedgepopup .decaedgepopupInner section ul {
+    height: 100%;
     overflow: hidden;
     overflow-y: scroll;
   }
-  .decaedgepopup .decaedgepopupInner .decaedgepopupcontainer .decaedgepopup_web {
+  .decaedgepopup .decaedgepopupInner dl {
     display: none;
-  }
-  .decaedgepopup .decaedgepopupInner .decaedgepopupcontainer .decaedgepopup_mob {
-    display: block;
   }
 }
 .main_banner {

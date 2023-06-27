@@ -24,14 +24,16 @@
            }
         }
        .getintouchForm {
-            width: 55%;  float: right;
+            width: 60%;  float: right; @include fBS(); flex-wrap: wrap;
             .getintouchField {  
-                width: 100%;  float: left; margin-bottom:1.5rem; 
+                width: 100%;  float: left; margin-bottom:1.5rem; margin-left: 2%; margin-right: 2%;  
                 &:last-child { margin-bottom: 0; }
+                &.width100 { width: 96%; }
+                &.width50 { width: 46%; }
                 .getintouchInput, .getintouchSelect, .getintouchTextarea {
                     width: 100%;
                     float: right;
-                    padding: 0.5rem 1rem;
+                    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
                     background:transparent;
                     outline: none;
                     border: none;
@@ -43,14 +45,14 @@
                     @include fmedium();
                 }
                 .getintouchInput:focus, .getintouchSelect:focus, .getintouchTextarea:focus {border-color:$orange; }
-                .getintouchTextarea { height: 90px; resize: none;}
+                .getintouchTextarea { height: 70px; resize: none;}
                 .getintouchSelect {
                     text-indent: 1px;
                     text-overflow: "";
                     -webkit-appearance: none;
                     appearance: none;
                     background:transparent url('../images/icon_dropdown.png') no-repeat;
-                    background-position: right 8px center;
+                    background-position: right 4px center;
                 }
                 .getintouchButton {
                     position: relative; padding:0.8rem 3rem; width: auto; float: left; background-color: $orange;  @include fmedium(); font-weight: normal; color:$white;  text-align: center;cursor: pointer; @include tdn(); border-radius: 25px; font-size: 14px; letter-spacing: 0.7px; line-height: 19px; text-transform: uppercase;
@@ -60,7 +62,7 @@
                     display: none;
                     width: 100%;
                     float: left;
-                    padding-left: 1rem;
+                    padding-left: 0.5rem;
                     margin-top: 10px;
                     font-size: 12px;
                     color: $red; 

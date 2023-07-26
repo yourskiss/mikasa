@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+
+	<title>test</title>
+      
+</head>
+<body>
+<div class="test" id="os"></div>
+
+
+ <script src="scripts/jquery-min.js"></script>
+<script>
+// operating sytem info ==== start
+var source = "Unknown OS";
+if (navigator.appVersion.indexOf("Win") != -1) { source = "Windows"; }
+if (navigator.appVersion.indexOf("Mac") != -1)  { source = "MacOS"; }
+if (navigator.appVersion.indexOf("X11") != -1) {  source = "UNIX"; }
+if (navigator.appVersion.indexOf("Linux") != -1) {  source = "Linux"; }
+if (navigator.userAgent.indexOf("Android") != -1)  { source = "Android"; }
+if (navigator.userAgent.indexOf("like Mac") != -1) {  source = "iOS"; }
+// operating sytem info ==== start
+
+$("#os").text(source)
+</script>
+
+</body>
+</html>

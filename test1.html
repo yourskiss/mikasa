@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+
+	<title>test</title>
+      
+</head>
+<body>
+<div class="test" id="os"></div>
+<span class="abcx" id="data">show</span>
+ 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+// operating system info ==== start
+var source = "Unknown OS";
+if (navigator.appVersion.indexOf("Win") != -1) { source = "Windows"; }
+if (navigator.appVersion.indexOf("Mac") != -1)  { source = "MacOS"; }
+if (navigator.appVersion.indexOf("X11") != -1) {  source = "UNIX"; }
+if (navigator.appVersion.indexOf("Linux") != -1) {  source = "Linux"; }
+if (navigator.userAgent.indexOf("Android") != -1)  { source = "Android"; }
+if (navigator.userAgent.indexOf("like Mac") != -1) {  source = "iOS"; }
+// operating system info ==== start
+$("#os").text(source);
+
+
+
+ function abc()
+ {
+        if (navigator.userAgent.indexOf("Win") != -1) {return "Windows OS";}
+        else if (navigator.userAgent.indexOf("Mac") != -1) {return "Macintosh";}
+        else if (navigator.appVersion.indexOf("X11") != -1) {  source = "UNIX"; }
+        else if (navigator.userAgent.indexOf("Linux") != -1) {return "Linux OS";}
+        else if (navigator.userAgent.indexOf("Android") != -1) {return "Android OS";}
+        else if (navigator.userAgent.indexOf("like Mac") != -1) {return "iOS";}
+        else { return "Unknown OS"; }
+
+
+  }
+  var xyz = abc();
+ $("#data").text(xyz);
+</script>
+
+</body>
+</html>
